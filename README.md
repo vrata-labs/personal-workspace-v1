@@ -4,7 +4,7 @@ Local review candidate for the FEAT-032 owner-bound private workspace. This is a
 
 ## Boundary
 
-The repository owns one scene ID, `personal-workspace-v1`, and one review release, `0.1.0`. Human rights approval for public staging review was recorded on 2026-08-29; human visual acceptance remains pending. Nothing in this tree is current, production-active, or publication-ready.
+The repository owns one scene ID, `personal-workspace-v1`, and two immutable review releases, `0.1.0` and `0.1.1`. Human rights approval for public staging review was recorded on 2026-08-29; human visual acceptance remains pending. Nothing in this tree is current, production-active, or publication-ready.
 
 The source contract uses semantic Y-up coordinates. Release manifests use the explicit runtime adapter `x=x, y=y, z=-z` for the main spawn, owner seat, and `workspace-main` media surface.
 
@@ -19,6 +19,7 @@ source/review-candidate.blend
 source/review/{entry,workspace,reading,diagonal-overview}.webp
 provenance/*.json
 assets/scenes/personal-workspace-v1/0.1.0/
+assets/scenes/personal-workspace-v1/0.1.1/
 manifest.json
 ```
 
@@ -26,15 +27,15 @@ manifest.json
 
 ```bash
 pnpm install
-BLENDER_BIN=/path/to/blender pnpm build
+pnpm build
 pnpm test
 pnpm validate
 pnpm inspect
 BLENDER_BIN=/path/to/blender pnpm verify:reproducibility
 ```
 
-When `BLENDER_BIN` is unset, the scripts use the `blender` executable from `PATH`. If neither is available, they fail before modifying build outputs and explain how to configure Blender.
+The `0.1.0` source contract, saved Blend, review imagery, generation ledger, release artifact ledger, and contract lock remain historical authoring evidence. `pnpm build` does not invoke Blender or rewrite that evidence: it reproducibly creates or verifies the metadata-only `0.1.1` release from immutable `0.1.0` shared artifacts, then refreshes only the root manifest and `provenance/metadata-release-0.1.1.json`.
 
-`pnpm build` authors the scene from scratch, saves the Blend, performs a separate saved-Blend review render, converts the four views with `cwebp -q 90`, exports twice from the same saved Blend, requires byte identity, and derives all hashes and metrics from the resulting files.
+The pinned Blender reproducibility gate remains mandatory. `pnpm verify:reproducibility` requires `BLENDER_BIN`, verifies Blender 4.5.12 LTS build `84afd5f785f7` and its binary hash, exports the saved Blend twice through `source/export_scene.py`, and requires byte identity with the historical `0.1.0` GLB. It then materializes `0.1.1` twice and compares all four generated files with the release.
 
 The visual acceptance boundary remains open. Rights permit public staging review and the uses listed in the release notice, but a later human visual gate is still required before production activation or final publication.

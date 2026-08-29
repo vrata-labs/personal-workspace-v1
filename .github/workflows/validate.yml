@@ -66,4 +66,6 @@ jobs:
           pnpm --dir .platform --filter @vrata/asset-pipeline build
 
       - name: Validate exact Scene Bundle contract
-        run: node .platform/packages/asset-pipeline/dist/cli.js scenes validate assets/scenes/personal-workspace-v1/0.1.0
+        run: |
+          node .platform/packages/asset-pipeline/dist/cli.js scenes validate assets/scenes/personal-workspace-v1/0.1.0
+          node .platform/packages/asset-pipeline/dist/cli.js scenes validate assets/scenes/personal-workspace-v1/0.1.1
