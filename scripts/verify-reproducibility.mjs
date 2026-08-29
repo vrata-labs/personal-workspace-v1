@@ -1,47 +1,92 @@
 import { spawnSync } from "node:child_process";
-import { mkdir, rm } from "node:fs/promises";
+import { copyFile, mkdir, rm, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 
-import { hashFile, readJson } from "./lib.mjs";
+import {
+  BLENDER_BINARY_SHA256,
+  BLENDER_BUILD_HASH,
+  BLENDER_VERSION,
+  RELEASE_FILES,
+  SCENE_ID,
+  SHARED_RELEASE_FILES,
+  SOURCE_VERSION,
+  VERSION,
+  assert,
+  createMetadataReleaseScene,
+  fileRecord,
+  hashFile,
+  readJson
+} from "./lib.mjs";
 
 const root = resolve(import.meta.dirname, "..");
-const blender = process.env.BLENDER_BIN?.trim() || "blender";
+const blender = process.env.BLENDER_BIN?.trim();
 const outputDir = join(root, "build", "reproducibility");
+const sourceReleaseDir = join(root, "assets", "scenes", SCENE_ID, SOURCE_VERSION);
+const releaseDir = join(root, "assets", "scenes", SCENE_ID, VERSION);
+const sourceDir = join(root, "source");
 
-function requireBlender() {
-  const result = spawnSync(blender, ["--version"], { cwd: root, encoding: "utf8" });
-  if (result.error?.code === "ENOENT") {
-    throw new Error("blender_not_found: set BLENDER_BIN=/path/to/blender or install blender on PATH");
-  }
-  if (result.error || result.status !== 0) {
-    throw new Error(`blender_unavailable: set BLENDER_BIN=/path/to/blender or provide a working blender on PATH (${result.error?.message ?? result.stderr?.trim() ?? result.status})`);
-  }
+function assertRecord(actual, expected, code) {
+  assert(actual?.sha256 === expected?.sha256 && actual?.sizeBytes === expected?.sizeBytes, code);
 }
 
-requireBlender();
-const lock = await readJson(join(root, "source", "review-candidate-lock.json"));
-await rm(outputDir, { recursive: true, force: true });
-await mkdir(outputDir, { recursive: true });
+function runBlender(args, code) {
+  const result = spawnSync(blender, args, { cwd: root, stdio: "inherit" });
+  if (result.error?.code === "ENOENT") throw new Error("blender_not_found: set BLENDER_BIN to the pinned Blender binary");
+  if (result.error || result.status !== 0) throw new Error(`${code}:${result.error?.message ?? result.status}`);
+}
 
-function exportRun(name) {
+async function exportHistoricalRun(name) {
   const output = join(outputDir, name);
-  const result = spawnSync(blender, [
+  runBlender([
     "--background",
-    join(root, lock.source.blendPath),
+    join(sourceDir, "review-candidate.blend"),
     "--python",
-    join(root, "source", "export_scene.py"),
+    join(sourceDir, "export_scene.py"),
     "--",
     "--output",
     output
-  ], { cwd: root, stdio: "inherit" });
-  if (result.status !== 0) throw new Error(`reproducibility_export_failed:${name}:${result.status}`);
-  return output;
+  ], `historical_export_failed:${name}`);
+  return fileRecord(output);
 }
 
-const first = exportRun("run-1.glb");
-const second = exportRun("run-2.glb");
-const firstHash = await hashFile(first);
-const secondHash = await hashFile(second);
-if (firstHash !== secondHash) throw new Error(`two_run_glb_mismatch:${firstHash}:${secondHash}`);
-if (firstHash !== lock.reproducibility.sha256) throw new Error(`locked_glb_mismatch:${firstHash}:${lock.reproducibility.sha256}`);
-process.stdout.write(`Two saved-Blend exports are byte-identical: ${firstHash}\n`);
+async function materializeMetadataRun(name) {
+  const directory = join(outputDir, name);
+  await mkdir(directory, { recursive: true });
+  for (const file of SHARED_RELEASE_FILES) await copyFile(join(sourceReleaseDir, file), join(directory, file));
+  const sourceScene = await readJson(join(sourceReleaseDir, "scene.json"));
+  await writeFile(join(directory, "scene.json"), `${JSON.stringify(createMetadataReleaseScene(sourceScene), null, 2)}\n`);
+  return Object.fromEntries(await Promise.all(RELEASE_FILES.map(async (file) => [file, await fileRecord(join(directory, file))])));
+}
+
+assert(blender, "blender_bin_required: set BLENDER_BIN to the pinned Blender binary");
+const versionResult = spawnSync(blender, ["--version"], { cwd: root, encoding: "utf8" });
+if (versionResult.error?.code === "ENOENT") throw new Error("blender_not_found: set BLENDER_BIN to the pinned Blender binary");
+if (versionResult.error || versionResult.status !== 0) throw new Error(`blender_unavailable:${versionResult.error?.message ?? versionResult.stderr?.trim() ?? versionResult.status}`);
+assert(versionResult.stdout.includes(`Blender ${BLENDER_VERSION}`), `unexpected_blender_version:${versionResult.stdout.split("\n")[0]}`);
+assert(versionResult.stdout.includes(BLENDER_BUILD_HASH), "unexpected_blender_build_hash");
+assert(await hashFile(blender) === BLENDER_BINARY_SHA256, "unexpected_blender_binary_sha256");
+
+const candidateLock = await readJson(join(sourceDir, "review-candidate-lock.json"));
+assert(candidateLock.version === SOURCE_VERSION, "historical_candidate_version_drift");
+assertRecord(await fileRecord(join(sourceDir, "review-candidate.blend")), candidateLock.source, "historical_blend_drift");
+assertRecord(await fileRecord(join(sourceDir, "export_scene.py")), candidateLock.source.scripts["export_scene.py"], "historical_export_script_drift");
+assertRecord(await fileRecord(join(sourceReleaseDir, "scene.glb")), candidateLock.release.files["scene.glb"], "historical_release_glb_drift");
+
+await rm(outputDir, { recursive: true, force: true });
+await mkdir(outputDir, { recursive: true });
+const historicalFirst = await exportHistoricalRun("historical-run-1.glb");
+const historicalSecond = await exportHistoricalRun("historical-run-2.glb");
+assertRecord(historicalFirst, historicalSecond, "historical_two_run_glb_mismatch");
+assert(historicalFirst.sha256 === candidateLock.reproducibility.sha256, "historical_locked_glb_mismatch");
+assertRecord(historicalFirst, candidateLock.release.files["scene.glb"], "historical_release_glb_mismatch");
+
+const metadataFirst = await materializeMetadataRun("metadata-run-1");
+const metadataSecond = await materializeMetadataRun("metadata-run-2");
+for (const file of RELEASE_FILES) {
+  const released = await fileRecord(join(releaseDir, file));
+  assertRecord(metadataFirst[file], metadataSecond[file], `metadata_two_run_mismatch:${file}`);
+  assertRecord(metadataFirst[file], released, `metadata_release_mismatch:${file}`);
+}
+
+process.stdout.write(`Historical ${SOURCE_VERSION} saved-Blend exports are byte-identical: ${historicalFirst.sha256}\n`);
+process.stdout.write(`Metadata-only ${VERSION} materializations are byte-identical and match all four release files.\n`);

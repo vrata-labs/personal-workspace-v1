@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "kind": "metadata-only-review-release",
+  "platformValidatorCommit": "61736f6289f941e290f4fe156f17efdd64ef876b",
+  "baseVersion": "0.1.0",
+  "targetVersion": "0.1.1",
+  "renderProfile": "neutral-pbr",
+  "spawnYaw": 0.6669082042393105,
+  "status": "review",
+  "acceptanceStatus": "pending-human-acceptance",
+  "visualAcceptanceStatus": "pending-human-acceptance",
+  "rightsApprovalStatus": "approved-for-public-staging-review",
+  "rightsApproved": true,
+  "isCurrent": false,
+  "publicationReady": false,
+  "humanVisualAccepted": false,
+  "productionActivation": false,
+  "sharedFiles": {
+    "LICENSES.md": {
+      "sha256": "2995aa215efbf9ccc456068d4670ebe3d1ab532040b14350dd3231341380ebad",
+      "sizeBytes": 846
+    },
+    "preview.webp": {
+      "sha256": "b42d34d02d3ae91581515893a13907e62b63412b8f780133cfde3a1d4b282d09",
+      "sizeBytes": 62918
+    },
+    "scene.glb": {
+      "sha256": "2fd43651c3db923c011c85e66d61c2d91529fb8bd84c48374eddb327e0c660f5",
+      "sizeBytes": 2927584
+    }
+  },
+  "sceneJson": {
+    "sha256": "8487b2e6d071c8fbe00f6084f5855a86781f418ee8649bdc5eecd9d724a73b8a",
+    "sizeBytes": 2838
+  }
+}

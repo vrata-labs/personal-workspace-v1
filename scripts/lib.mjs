@@ -6,10 +6,19 @@ import { NodeIO } from "@gltf-transform/core";
 import { ALL_EXTENSIONS } from "@gltf-transform/extensions";
 
 export const SCENE_ID = "personal-workspace-v1";
-export const VERSION = "0.1.0";
-export const PLATFORM_COMMIT = "9153bb9818a2907fb33ba96375f7b31c1641f12f";
+export const SOURCE_VERSION = "0.1.0";
+export const VERSION = "0.1.1";
+export const RELEASE_VERSIONS = [SOURCE_VERSION, VERSION];
+export const HISTORICAL_PLATFORM_COMMIT = "9153bb9818a2907fb33ba96375f7b31c1641f12f";
+export const PLATFORM_COMMIT = "61736f6289f941e290f4fe156f17efdd64ef876b";
+export const BLENDER_VERSION = "4.5.12 LTS";
+export const BLENDER_BUILD_HASH = "84afd5f785f7";
+export const BLENDER_BINARY_SHA256 = "33ac108ebce3c271f5357e5c664d0488717263bcf2145c80300edd0b12c31880";
 export const REVIEW_VIEWS = ["entry", "workspace", "reading", "diagonal-overview"];
 export const RELEASE_FILES = ["LICENSES.md", "preview.webp", "scene.glb", "scene.json"];
+export const SHARED_RELEASE_FILES = ["LICENSES.md", "preview.webp", "scene.glb"];
+export const RENDER_PROFILE = "neutral-pbr";
+export const SPAWN_YAW = 0.6669082042393105;
 export const RIGHTS_APPROVAL_STATUS = "approved-for-public-staging-review";
 export const RIGHTS_APPROVED_ON = "2026-08-29";
 export const RIGHTS_LICENSE_REF = "LicenseRef-Project-Authored-Public-Staging-Review";
@@ -62,6 +71,27 @@ export async function readJson(path) {
 export function toRuntimePosition(position) {
   assert(position && [position.x, position.y, position.z].every(Number.isFinite), "invalid_semantic_position");
   return { x: position.x, y: position.y, z: -position.z };
+}
+
+export function yawToward(from, to) {
+  assert(from && to && [from.x, from.z, to.x, to.z].every(Number.isFinite), "invalid_yaw_positions");
+  return Math.atan2(-(to.x - from.x), -(to.z - from.z));
+}
+
+export function createMetadataReleaseScene(sourceScene) {
+  assert(sourceScene.sceneId === SCENE_ID && sourceScene.version === SOURCE_VERSION, "invalid_metadata_source_scene");
+  const spawn = sourceScene.spawnPoints?.find(({ id }) => id === "main");
+  const surface = sourceScene.mediaSurfaces?.find(({ surfaceId }) => surfaceId === "workspace-main");
+  assert(spawn && surface, "metadata_release_targets_missing");
+  const computedYaw = yawToward(spawn.position, surface.transform);
+  assert(Math.abs(computedYaw - SPAWN_YAW) < 1e-15, `spawn_yaw_constant_drift:${computedYaw}`);
+  return {
+    ...sourceScene,
+    version: VERSION,
+    renderProfile: RENDER_PROFILE,
+    spawnPoints: sourceScene.spawnPoints.map((point) => point.id === "main" ? { ...point, yaw: SPAWN_YAW } : point),
+    isCurrent: false
+  };
 }
 
 function primitiveTriangleCount(primitive) {

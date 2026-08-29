@@ -1,7 +1,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import { extname, join, relative, resolve, sep } from "node:path";
 
-import { REVIEW_VIEWS, SCENE_ID, VERSION, assert } from "./lib.mjs";
+import { RELEASE_VERSIONS, REVIEW_VIEWS, SCENE_ID, assert } from "./lib.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const binaryExtensions = new Set([".blend", ".glb", ".webp", ".png", ".jpg", ".jpeg", ".fbx", ".gltf"]);
@@ -10,8 +10,10 @@ const windowsLocalPathPattern = /(?:^|[\s"'=(])[A-Za-z]:[\\/]/m;
 const allowedBinaries = new Set([
   "source/review-candidate.blend",
   ...REVIEW_VIEWS.map((view) => `source/review/${view}.webp`),
-  `assets/scenes/${SCENE_ID}/${VERSION}/scene.glb`,
-  `assets/scenes/${SCENE_ID}/${VERSION}/preview.webp`
+  ...RELEASE_VERSIONS.flatMap((version) => [
+    `assets/scenes/${SCENE_ID}/${version}/scene.glb`,
+    `assets/scenes/${SCENE_ID}/${version}/preview.webp`
+  ])
 ]);
 
 function posix(path) {
