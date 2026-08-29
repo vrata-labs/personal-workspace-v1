@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "version": "0.1.0",
+  "status": "review",
+  "acceptanceStatus": "pending-human-acceptance",
+  "purpose": "owner-bound private workspace with private notes and a focused workspace surface",
+  "coordinateSystem": {
+    "authoring": "semantic-y-up-meters",
+    "runtime": "gltf-y-up-meters",
+    "adapter": {
+      "x": "x",
+      "y": "y",
+      "z": "-z"
+    }
+  },
+  "room": {
+    "widthM": 6.4,
+    "heightM": 3.1,
+    "depthM": 5.2,
+    "floorY": 0
+  },
+  "spawn": {
+    "id": "main",
+    "position": {
+      "x": 2.25,
+      "y": 0,
+      "z": -1.8
+    },
+    "openRadiusM": 0.8
+  },
+  "seats": [
+    {
+      "id": "owner-desk-seat",
+      "role": "owner-only-optional-desk-seat",
+      "position": {
+        "x": -1.05,
+        "y": 0,
+        "z": 0.92
+      },
+      "yaw": 0,
+      "seatHeight": 0.48,
+      "radius": 0.42,
+      "visualObject": "furniture.owner-chair"
+    }
+  ],
+  "mediaSurfaces": [
+    {
+      "surfaceId": "workspace-main",
+      "label": "Personal workspace",
+      "kind": "wall",
+      "widthM": 1.72,
+      "heightM": 0.97,
+      "widthPx": 1920,
+      "heightPx": 1080,
+      "transform": {
+        "x": -1.08,
+        "y": 1.56,
+        "z": 2.43,
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      "visible": true,
+      "allowedObjectTypes": [
+        "markdown-board",
+        "image-viewer",
+        "video-player"
+      ]
+    }
+  ],
+  "reviewViews": [
+    {
+      "id": "entry",
+      "position": {
+        "x": 2.35,
+        "y": 1.58,
+        "z": -1.92
+      },
+      "target": {
+        "x": -0.55,
+        "y": 1.18,
+        "z": 1.22
+      },
+      "fovDegrees": 58
+    },
+    {
+      "id": "workspace",
+      "position": {
+        "x": 1.1,
+        "y": 1.48,
+        "z": -0.15
+      },
+      "target": {
+        "x": -1.05,
+        "y": 1.35,
+        "z": 1.93
+      },
+      "fovDegrees": 52
+    },
+    {
+      "id": "reading",
+      "position": {
+        "x": 0.55,
+        "y": 1.42,
+        "z": 0.95
+      },
+      "target": {
+        "x": -2.25,
+        "y": 1.0,
+        "z": -0.45
+      },
+      "fovDegrees": 55
+    },
+    {
+      "id": "diagonal-overview",
+      "position": {
+        "x": -1,
+        "y": 2.05,
+        "z": -2.15
+      },
+      "target": {
+        "x": 0.2,
+        "y": 1.08,
+        "z": 0.72
+      },
+      "fovDegrees": 64
+    }
+  ],
+  "budgets": {
+    "glbBytesMax": 15728640,
+    "trianglesMax": 90000,
+    "objectsMax": 500,
+    "meshesMax": 250,
+    "materialsMax": 96,
+    "texturesMax": 48
+  },
+  "visualDirection": {
+    "composition": "asymmetric work wall with separate storage and reading zone",
+    "palette": [
+      "warm oak",
+      "mineral plaster",
+      "muted sage",
+      "soft clay",
+      "charcoal"
+    ],
+    "lighting": "focused side daylight with warm practical pools",
+    "audienceLayout": false
+  },
+  "boundaries": {
+    "projectAuthoredOnly": true,
+    "humanVisualAccepted": false,
+    "humanRightsAccepted": true,
+    "rightsApprovalStatus": "approved-for-public-staging-review",
+    "rightsApprovedOn": "2026-08-29",
+    "publicStagingRightsApproved": true,
+    "publicationReady": false
+  }
+}

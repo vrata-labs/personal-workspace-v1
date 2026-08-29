@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.1.0",
+  "releaseStatus": "review",
+  "acceptanceStatus": "pending-human-acceptance",
+  "visualAcceptanceStatus": "pending-human-acceptance",
+  "rightsApprovalStatus": "approved-for-public-staging-review",
+  "rightsApproved": true,
+  "publicationReady": false,
+  "files": {
+    "scene.json": {
+      "sha256": "f0751c04bc225f8ada1718d2688e11be71c52295aae6ec50b9ce7ca6d9e49b05",
+      "sizeBytes": 2749
+    },
+    "scene.glb": {
+      "sha256": "2fd43651c3db923c011c85e66d61c2d91529fb8bd84c48374eddb327e0c660f5",
+      "sizeBytes": 2927584
+    },
+    "preview.webp": {
+      "sha256": "b42d34d02d3ae91581515893a13907e62b63412b8f780133cfde3a1d4b282d09",
+      "sizeBytes": 62918
+    },
+    "LICENSES.md": {
+      "sha256": "2995aa215efbf9ccc456068d4670ebe3d1ab532040b14350dd3231341380ebad",
+      "sizeBytes": 846
+    }
+  },
+  "stats": {
+    "triangles": 41816,
+    "objects": 232,
+    "meshes": 232,
+    "primitives": 232,
+    "materials": 16,
+    "textures": 0,
+    "animations": 0,
+    "scenes": 1
+  },
+  "rights": {
+    "externalAssets": 0,
+    "originRecord": "provenance/asset-ledger.json",
+    "licenseRef": "provenance/licenses/project-authored-public-staging-review.txt",
+    "decision": "approved-for-public-staging-review",
+    "rightsApproved": true,
+    "approvedOn": "2026-08-29",
+    "approvedBy": "human-rights-owner",
+    "allowedUses": [
+      "staging",
+      "public-web-runtime",
+      "screenshots",
+      "optimization",
+      "derivative-builds",
+      "publicly-downloadable-scene-bundle-redistribution"
+    ],
+    "productionActivation": false,
+    "humanVisualAccepted": false,
+    "publicationReady": false
+  }
+}

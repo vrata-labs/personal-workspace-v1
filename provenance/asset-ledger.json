@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "status": "review",
+  "acceptanceStatus": "pending-human-acceptance",
+  "records": [
+    {
+      "id": "scene-contract",
+      "kind": "project-authored-source",
+      "repositoryPath": "source/scene-contract.json",
+      "sha256": "02a2f82e8dc74ded4fdcf4f9a9aba165067826abe09dd933b76882c06f2cae4f",
+      "externalSource": null,
+      "licenseRef": "provenance/licenses/project-authored-public-staging-review.txt",
+      "approvalStatus": "approved-for-public-staging-review"
+    },
+    {
+      "id": "scene-script-author-scene-py",
+      "kind": "project-authored-source",
+      "repositoryPath": "source/author_scene.py",
+      "sha256": "fffed849341e7934cdc78769b22a626ee9f1ef9f1e20ace35c4461a9ad3ffdf0",
+      "externalSource": null,
+      "licenseRef": "provenance/licenses/project-authored-public-staging-review.txt",
+      "approvalStatus": "approved-for-public-staging-review"
+    },
+    {
+      "id": "scene-script-export-scene-py",
+      "kind": "project-authored-source",
+      "repositoryPath": "source/export_scene.py",
+      "sha256": "7cbd0b4c6932709cdffab2c4400d30d7aadcf50037eda50baa13f9516b259700",
+      "externalSource": null,
+      "licenseRef": "provenance/licenses/project-authored-public-staging-review.txt",
+      "approvalStatus": "approved-for-public-staging-review"
+    },
+    {
+      "id": "scene-script-render-review-py",
+      "kind": "project-authored-source",
+      "repositoryPath": "source/render_review.py",
+      "sha256": "a17882ce383658d62d8138181774a585f53b718dbcf8321aff8933a1b836306a",
+      "externalSource": null,
+      "licenseRef": "provenance/licenses/project-authored-public-staging-review.txt",
+      "approvalStatus": "approved-for-public-staging-review"
+    }
+  ],
+  "externalAssetCount": 0,
+  "downloadedAssetCount": 0,
+  "rightsVerdict": {
+    "decision": "approved-for-public-staging-review",
+    "rightsApproved": true,
+    "approvedOn": "2026-08-29",
+    "approvedBy": "human-rights-owner",
+    "licenseRef": "provenance/licenses/project-authored-public-staging-review.txt",
+    "allowedUses": [
+      "staging",
+      "public-web-runtime",
+      "screenshots",
+      "optimization",
+      "derivative-builds",
+      "publicly-downloadable-scene-bundle-redistribution"
+    ],
+    "productionActivation": false,
+    "humanVisualAccepted": false,
+    "publicationReady": false
+  },
+  "boundaries": {
+    "projectAuthoredOnly": true,
+    "humanVisualAccepted": false,
+    "humanRightsAccepted": true,
+    "publicStagingRightsApproved": true,
+    "publicationReady": false
+  }
+}

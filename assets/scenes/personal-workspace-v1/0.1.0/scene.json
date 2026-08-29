@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "version": "0.1.0",
+  "label": "Personal Workspace",
+  "source": "Vrata project-authored Blender source",
+  "status": "review",
+  "acceptanceStatus": "pending-human-acceptance",
+  "visualAcceptanceStatus": "pending-human-acceptance",
+  "rightsApprovalStatus": "approved-for-public-staging-review",
+  "rightsApproved": true,
+  "publicationReady": false,
+  "glbPath": "scene.glb",
+  "renderMode": "clean",
+  "spawnPoints": [
+    {
+      "id": "main",
+      "position": {
+        "x": 2.25,
+        "y": 0,
+        "z": 1.8
+      },
+      "openRadiusM": 0.8
+    }
+  ],
+  "bounds": {
+    "width": 6.4,
+    "height": 3.1,
+    "depth": 5.2
+  },
+  "anchors": {
+    "teleportFloorY": 0,
+    "seatAnchors": [
+      {
+        "id": "owner-desk-seat",
+        "role": "owner-only-optional-desk-seat",
+        "position": {
+          "x": -1.05,
+          "y": 0,
+          "z": -0.92
+        },
+        "yaw": 0,
+        "seatHeight": 0.48,
+        "radius": 0.42
+      }
+    ]
+  },
+  "mediaSurfaces": [
+    {
+      "surfaceId": "workspace-main",
+      "label": "Personal workspace",
+      "kind": "wall",
+      "widthM": 1.72,
+      "heightM": 0.97,
+      "widthPx": 1920,
+      "heightPx": 1080,
+      "transform": {
+        "x": -1.08,
+        "y": 1.56,
+        "z": -2.43,
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      },
+      "visible": true,
+      "allowedObjectTypes": [
+        "markdown-board",
+        "image-viewer",
+        "video-player"
+      ]
+    }
+  ],
+  "preview": "preview.webp",
+  "visual": {
+    "intentionalDark": false
+  },
+  "rights": {
+    "owner": "vrata",
+    "license": "LicenseRef-Project-Authored-Public-Staging-Review",
+    "approvalStatus": "approved-for-public-staging-review",
+    "rightsApproved": true,
+    "approvedOn": "2026-08-29",
+    "approvedBy": "human-rights-owner",
+    "clearedFor": [
+      "staging",
+      "public-web-runtime",
+      "screenshots",
+      "optimization",
+      "derivative-builds",
+      "publicly-downloadable-scene-bundle-redistribution"
+    ],
+    "sourceAssets": [
+      {
+        "id": "scene-geometry",
+        "type": "mesh",
+        "author": "Vrata project team",
+        "licenseRef": "LICENSES.md"
+      },
+      {
+        "id": "scene-materials",
+        "type": "material",
+        "author": "Vrata project team",
+        "licenseRef": "LICENSES.md"
+      },
+      {
+        "id": "review-imagery",
+        "type": "image",
+        "author": "Vrata project team",
+        "licenseRef": "LICENSES.md"
+      }
+    ]
+  },
+  "notes": "Review candidate with rights approved for public staging review; human visual acceptance remains pending and production activation/publication readiness remain false."
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "status": "review",
+  "acceptanceStatus": "pending-human-acceptance",
+  "platformValidatorCommit": "9153bb9818a2907fb33ba96375f7b31c1641f12f",
+  "contractCanonicalSha256": "11ccdb730ab213993185d413119907a72599d655f89730c02f4f5b209a86a2f5",
+  "contractFileSha256": "02a2f82e8dc74ded4fdcf4f9a9aba165067826abe09dd933b76882c06f2cae4f",
+  "coordinateAdapter": "x=x,y=y,z=-z",
+  "budgets": {
+    "glbBytesMax": 15728640,
+    "trianglesMax": 90000,
+    "objectsMax": 500,
+    "meshesMax": 250,
+    "materialsMax": 96,
+    "texturesMax": 48
+  },
+  "boundaries": {
+    "contractLockedForReview": true,
+    "humanVisualAccepted": false,
+    "humanRightsAccepted": true,
+    "rightsApprovalStatus": "approved-for-public-staging-review",
+    "rightsApprovedOn": "2026-08-29",
+    "publicStagingRightsApproved": true,
+    "publicationReady": false
+  }
+}

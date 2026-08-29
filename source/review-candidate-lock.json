@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "version": "0.1.0",
+  "status": "pending-human-acceptance",
+  "source": {
+    "blendPath": "source/review-candidate.blend",
+    "sha256": "e11280ff35caa8b93cde90bec4e7650d13584be456d1d8a1ca78743dcf894c81",
+    "sizeBytes": 3941123,
+    "scripts": {
+      "author_scene.py": {
+        "sha256": "fffed849341e7934cdc78769b22a626ee9f1ef9f1e20ace35c4461a9ad3ffdf0",
+        "sizeBytes": 27550
+      },
+      "export_scene.py": {
+        "sha256": "7cbd0b4c6932709cdffab2c4400d30d7aadcf50037eda50baa13f9516b259700",
+        "sizeBytes": 1382
+      },
+      "render_review.py": {
+        "sha256": "a17882ce383658d62d8138181774a585f53b718dbcf8321aff8933a1b836306a",
+        "sizeBytes": 1492
+      }
+    }
+  },
+  "reviewViews": [
+    {
+      "id": "entry",
+      "path": "source/review/entry.webp",
+      "sha256": "b42d34d02d3ae91581515893a13907e62b63412b8f780133cfde3a1d4b282d09",
+      "sizeBytes": 62918
+    },
+    {
+      "id": "workspace",
+      "path": "source/review/workspace.webp",
+      "sha256": "8f44928ec02d9bed714f2ced94c8b893699e649d299691e6ec0924db7c07a4f8",
+      "sizeBytes": 32536
+    },
+    {
+      "id": "reading",
+      "path": "source/review/reading.webp",
+      "sha256": "dc04179be221e137ed860aef160ef52a8a161492e42acc0a425aeb2631f3ae27",
+      "sizeBytes": 49380
+    },
+    {
+      "id": "diagonal-overview",
+      "path": "source/review/diagonal-overview.webp",
+      "sha256": "8b9c62314e1d64f8185af575f82301cbbcf90e032237ba0ef26627dc9d339749",
+      "sizeBytes": 73348
+    }
+  ],
+  "release": {
+    "path": "assets/scenes/personal-workspace-v1/0.1.0",
+    "status": "review",
+    "acceptanceStatus": "pending-human-acceptance",
+    "visualAcceptanceStatus": "pending-human-acceptance",
+    "rightsApprovalStatus": "approved-for-public-staging-review",
+    "rightsApproved": true,
+    "publicationReady": false,
+    "files": {
+      "scene.json": {
+        "sha256": "f0751c04bc225f8ada1718d2688e11be71c52295aae6ec50b9ce7ca6d9e49b05",
+        "sizeBytes": 2749
+      },
+      "scene.glb": {
+        "sha256": "2fd43651c3db923c011c85e66d61c2d91529fb8bd84c48374eddb327e0c660f5",
+        "sizeBytes": 2927584
+      },
+      "preview.webp": {
+        "sha256": "b42d34d02d3ae91581515893a13907e62b63412b8f780133cfde3a1d4b282d09",
+        "sizeBytes": 62918
+      },
+      "LICENSES.md": {
+        "sha256": "2995aa215efbf9ccc456068d4670ebe3d1ab532040b14350dd3231341380ebad",
+        "sizeBytes": 846
+      }
+    },
+    "stats": {
+      "triangles": 41816,
+      "objects": 232,
+      "meshes": 232,
+      "primitives": 232,
+      "materials": 16,
+      "textures": 0,
+      "animations": 0,
+      "scenes": 1
+    }
+  },
+  "runtimeCoordinates": {
+    "transform": "x=x,y=y,z=-z",
+    "appliedTo": [
+      "spawn:main",
+      "seat:owner-desk-seat",
+      "media-surface:workspace-main"
+    ]
+  },
+  "reproducibility": {
+    "scope": "same-host-same-saved-blend-same-blender-binary-two-run",
+    "runs": 2,
+    "result": "byte-identical-glb",
+    "sha256": "2fd43651c3db923c011c85e66d61c2d91529fb8bd84c48374eddb327e0c660f5"
+  },
+  "humanGates": {
+    "visual": "pending-human-acceptance",
+    "rights": "approved-for-public-staging-review",
+    "rightsApproved": true,
+    "rightsApprovedOn": "2026-08-29"
+  }
+}
