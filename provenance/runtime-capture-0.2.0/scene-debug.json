@@ -1,0 +1,394 @@
+{
+  "bundleUrl": "local-capture/scene.json",
+  "state": "loaded",
+  "failureReason": null,
+  "loadStage": "loaded",
+  "assetBytesLoaded": 9700504,
+  "assetBytesExpected": 9700504,
+  "label": "Personal Workspace",
+  "source": "Vrata project-authored Blender source",
+  "renderProfile": "baked-pbr-v1",
+  "assetUrl": "local-capture/scene.glb",
+  "assetType": "glb",
+  "spawnPointId": "main",
+  "spawnYaw": 0.6669082042393105,
+  "spawnApplied": true,
+  "loadMs": 617,
+  "renderProfileApplyMs": 103,
+  "objectCount": 234,
+  "meshCount": 232,
+  "materialCount": 16,
+  "texturedMaterialCount": 231,
+  "lightMappedMaterialCount": 15,
+  "geometryCount": 232,
+  "triangleEstimate": 41816,
+  "textureCount": 15,
+  "missingAssets": [],
+  "materialSamples": [
+    {
+      "name": "material.charcoal-metal",
+      "meshCount": 60,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.34,
+      "metalness": 0.58,
+      "color": {
+        "r": 0.018,
+        "g": 0.023,
+        "b": 0.022
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.oak-honey",
+      "meshCount": 36,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.42,
+      "metalness": 0,
+      "color": {
+        "r": 0.503,
+        "g": 0.22,
+        "b": 0.078
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.warm-paper",
+      "meshCount": 33,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.86,
+      "metalness": 0,
+      "color": {
+        "r": 0.807,
+        "g": 0.73,
+        "b": 0.578
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.warm-oak",
+      "meshCount": 26,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.48,
+      "metalness": 0,
+      "color": {
+        "r": 0.328,
+        "g": 0.117,
+        "b": 0.036
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.soft-clay",
+      "meshCount": 17,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.72,
+      "metalness": 0,
+      "color": {
+        "r": 0.397,
+        "g": 0.136,
+        "b": 0.087
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.mineral-plaster",
+      "meshCount": 10,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.88,
+      "metalness": 0,
+      "color": {
+        "r": 0.687,
+        "g": 0.631,
+        "b": 0.521
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.sage-woven",
+      "meshCount": 10,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.92,
+      "metalness": 0,
+      "color": {
+        "r": 0.133,
+        "g": 0.184,
+        "b": 0.133
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.natural-linen",
+      "meshCount": 9,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.9,
+      "metalness": 0,
+      "color": {
+        "r": 0.565,
+        "g": 0.485,
+        "b": 0.347
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.oak-shadow",
+      "meshCount": 8,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.52,
+      "metalness": 0,
+      "color": {
+        "r": 0.159,
+        "g": 0.053,
+        "b": 0.022
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.warm-practical-glow",
+      "meshCount": 6,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.35,
+      "metalness": 0,
+      "color": {
+        "r": 1,
+        "g": 0.631,
+        "b": 0.323
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.plant-leaf",
+      "meshCount": 6,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.8,
+      "metalness": 0,
+      "color": {
+        "r": 0.051,
+        "g": 0.109,
+        "b": 0.065
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.muted-sage",
+      "meshCount": 5,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.76,
+      "metalness": 0,
+      "color": {
+        "r": 0.184,
+        "g": 0.246,
+        "b": 0.191
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.plant-leaf-light",
+      "meshCount": 3,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.82,
+      "metalness": 0,
+      "color": {
+        "r": 0.12,
+        "g": 0.198,
+        "b": 0.1
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.window-glass",
+      "meshCount": 1,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": false,
+      "roughness": 0.16,
+      "metalness": 0,
+      "color": {
+        "r": 0.497,
+        "g": 0.723,
+        "b": 0.753
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.workspace-screen",
+      "meshCount": 1,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.38,
+      "metalness": 0.05,
+      "color": {
+        "r": 0.019,
+        "g": 0.041,
+        "b": 0.037
+      },
+      "mapSource": null
+    },
+    {
+      "name": "material.plant-soil",
+      "meshCount": 1,
+      "hasMap": false,
+      "hasNormalMap": false,
+      "hasAoMap": false,
+      "hasLightMap": true,
+      "roughness": 0.96,
+      "metalness": 0,
+      "color": {
+        "r": 0.033,
+        "g": 0.019,
+        "b": 0.012
+      },
+      "mapSource": null
+    }
+  ],
+  "boundingBox": {
+    "min": {
+      "x": -3.28,
+      "y": -0.12,
+      "z": -2.68
+    },
+    "max": {
+      "x": 3.28,
+      "y": 3.22,
+      "z": 2.68
+    },
+    "size": {
+      "x": 6.56,
+      "y": 3.34,
+      "z": 5.36
+    },
+    "center": {
+      "x": 0,
+      "y": 1.55,
+      "z": 0
+    }
+  },
+  "camera": {
+    "world": {
+      "x": -0.816,
+      "y": 1.977,
+      "z": 1.711
+    },
+    "forward": {
+      "x": 0.368,
+      "y": -0.298,
+      "z": -0.881
+    }
+  },
+  "screenshot": {
+    "width": 320,
+    "height": 180,
+    "centerPixel": {
+      "r": 193,
+      "g": 145,
+      "b": 107,
+      "a": 255
+    },
+    "averageColor": {
+      "r": 168,
+      "g": 152,
+      "b": 133,
+      "a": 255
+    },
+    "darkPixelRatio": 0.0002,
+    "pixelSamples": [
+      {
+        "x": 160,
+        "y": 90,
+        "r": 193,
+        "g": 145,
+        "b": 107,
+        "a": 255
+      },
+      {
+        "x": 32,
+        "y": 18,
+        "r": 210,
+        "g": 204,
+        "b": 194,
+        "a": 255
+      },
+      {
+        "x": 287,
+        "y": 18,
+        "r": 41,
+        "g": 48,
+        "b": 47,
+        "a": 255
+      },
+      {
+        "x": 32,
+        "y": 161,
+        "r": 156,
+        "g": 167,
+        "b": 152,
+        "a": 255
+      },
+      {
+        "x": 287,
+        "y": 161,
+        "r": 212,
+        "g": 178,
+        "b": 147,
+        "a": 255
+      },
+      {
+        "x": 160,
+        "y": 36,
+        "r": 193,
+        "g": 145,
+        "b": 109,
+        "a": 255
+      },
+      {
+        "x": 160,
+        "y": 143,
+        "r": 212,
+        "g": 178,
+        "b": 149,
+        "a": 255
+      }
+    ]
+  }
+}

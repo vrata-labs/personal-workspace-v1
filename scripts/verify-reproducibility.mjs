@@ -3,15 +3,18 @@ import { copyFile, mkdir, rm, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 
 import {
+  BAKED_RELEASE,
+  BAKED_RELEASE_VERSION,
   BLENDER_BINARY_SHA256,
   BLENDER_BUILD_HASH,
   BLENDER_VERSION,
+  METADATA_VERSION,
   RELEASE_FILES,
   SCENE_ID,
   SHARED_RELEASE_FILES,
   SOURCE_VERSION,
-  VERSION,
   assert,
+  createBakedReleaseScene,
   createMetadataReleaseScene,
   fileRecord,
   hashFile,
@@ -22,7 +25,8 @@ const root = resolve(import.meta.dirname, "..");
 const blender = process.env.BLENDER_BIN?.trim();
 const outputDir = join(root, "build", "reproducibility");
 const sourceReleaseDir = join(root, "assets", "scenes", SCENE_ID, SOURCE_VERSION);
-const releaseDir = join(root, "assets", "scenes", SCENE_ID, VERSION);
+const metadataReleaseDir = join(root, "assets", "scenes", SCENE_ID, METADATA_VERSION);
+const bakedReleaseDir = join(root, BAKED_RELEASE.releasePath);
 const sourceDir = join(root, "source");
 
 function assertRecord(actual, expected, code) {
@@ -58,6 +62,30 @@ async function materializeMetadataRun(name) {
   return Object.fromEntries(await Promise.all(RELEASE_FILES.map(async (file) => [file, await fileRecord(join(directory, file))])));
 }
 
+async function materializeBakedRun(name) {
+  const directory = join(outputDir, name);
+  await mkdir(directory, { recursive: true });
+  const exportLightmap = join(directory, "baked-lightmap.png");
+  await copyFile(join(root, BAKED_RELEASE.lightmapPath), exportLightmap);
+  runBlender([
+    "--background",
+    join(root, BAKED_RELEASE.blendPath),
+    "--python",
+    join(root, BAKED_RELEASE.exportScriptPath),
+    "--",
+    "--output",
+    join(directory, "scene.glb"),
+    "--lightmap",
+    exportLightmap
+  ], `baked_export_failed:${name}`);
+  await rm(exportLightmap);
+  await copyFile(join(metadataReleaseDir, "LICENSES.md"), join(directory, "LICENSES.md"));
+  await copyFile(join(root, BAKED_RELEASE.runtimeCapturePath, "preview.webp"), join(directory, "preview.webp"));
+  const metadataScene = await readJson(join(metadataReleaseDir, "scene.json"));
+  await writeFile(join(directory, "scene.json"), `${JSON.stringify(createBakedReleaseScene(metadataScene), null, 2)}\n`);
+  return Object.fromEntries(await Promise.all(RELEASE_FILES.map(async (file) => [file, await fileRecord(join(directory, file))])));
+}
+
 assert(blender, "blender_bin_required: set BLENDER_BIN to the pinned Blender binary");
 const versionResult = spawnSync(blender, ["--version"], { cwd: root, encoding: "utf8" });
 if (versionResult.error?.code === "ENOENT") throw new Error("blender_not_found: set BLENDER_BIN to the pinned Blender binary");
@@ -83,10 +111,23 @@ assertRecord(historicalFirst, candidateLock.release.files["scene.glb"], "histori
 const metadataFirst = await materializeMetadataRun("metadata-run-1");
 const metadataSecond = await materializeMetadataRun("metadata-run-2");
 for (const file of RELEASE_FILES) {
-  const released = await fileRecord(join(releaseDir, file));
+  const released = await fileRecord(join(metadataReleaseDir, file));
   assertRecord(metadataFirst[file], metadataSecond[file], `metadata_two_run_mismatch:${file}`);
   assertRecord(metadataFirst[file], released, `metadata_release_mismatch:${file}`);
 }
 
+const manifest = await readJson(join(root, "manifest.json"));
+const bakedRecord = manifest.releases.find(({ version }) => version === BAKED_RELEASE_VERSION);
+assert(bakedRecord?.releasePath === BAKED_RELEASE.releasePath, "baked_release_record_missing");
+const bakedFirst = await materializeBakedRun("baked-run-1");
+const bakedSecond = await materializeBakedRun("baked-run-2");
+for (const file of RELEASE_FILES) {
+  const released = await fileRecord(join(bakedReleaseDir, file));
+  assertRecord(bakedFirst[file], bakedSecond[file], `baked_two_run_mismatch:${file}`);
+  assertRecord(bakedFirst[file], released, `baked_release_mismatch:${file}`);
+  assertRecord(released, bakedRecord.files[file], `baked_manifest_record_mismatch:${file}`);
+}
+
 process.stdout.write(`Historical ${SOURCE_VERSION} saved-Blend exports are byte-identical: ${historicalFirst.sha256}\n`);
-process.stdout.write(`Metadata-only ${VERSION} materializations are byte-identical and match all four release files.\n`);
+process.stdout.write(`Metadata-only ${METADATA_VERSION} materializations are byte-identical and match all four release files.\n`);
+process.stdout.write(`Baked ${BAKED_RELEASE_VERSION} materializations are byte-identical and match all four release files.\n`);
