@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-runtime-capture-attestation",
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.2.0",
+  "scope": "explicit-local-capture",
+  "humanVisualAccepted": false,
+  "productionActivation": false,
+  "bindings": {
+    "releaseSceneGlb": {
+      "path": "assets/scenes/personal-workspace-v1/0.2.0/scene.glb",
+      "sha256": "b85516333cfcb767640e2ecf830662c8fabb847c1b62007351c3610b0d9331a4",
+      "sizeBytes": 9700504
+    },
+    "releaseSceneJson": {
+      "path": "assets/scenes/personal-workspace-v1/0.2.0/scene.json",
+      "sha256": "f59d2b6ea1cf0ee66d342e3dff412991534279a4fb3eb990bd1e5d1fe6fb2289",
+      "sizeBytes": 2839
+    },
+    "runtimeReview": {
+      "path": "source/runtime-review-0.2.0.json",
+      "sha256": "f55fa0fc668058f9df603e40007380ba7e2271fbcc1548c007ea0f5829e29167",
+      "sizeBytes": 747
+    },
+    "captureImplementationCommit": {
+      "value": "c54edb2239d225a71e9b934316f70792b3faafb6",
+      "valueEncoding": "lowercase-hex",
+      "hashInputEncoding": "utf8",
+      "sha256": "e7ba884cb730872419d0e3a9cc3e7ef264c91ab31dbdbdab1e90a3c31e7ec530",
+      "sizeBytes": 40
+    }
+  },
+  "localRuntime": {
+    "assetBytes": {
+      "loaded": 9700504,
+      "expected": 9700504
+    },
+    "statistics": {
+      "objectCount": 234,
+      "meshCount": 232,
+      "materialCount": 16,
+      "texturedMaterialCount": 231,
+      "lightMappedMaterialCount": 15,
+      "geometryCount": 232,
+      "triangleEstimate": 41816,
+      "textureCount": 15
+    }
+  },
+  "captureFiles": {
+    "entry.png": {
+      "path": "provenance/runtime-capture-0.2.0/entry.png",
+      "sha256": "2e5c242992ac8f00cff28e6637fb69ae4fa9efd4432b0769a9066d37e8a17e11",
+      "sizeBytes": 393470
+    },
+    "workspace.png": {
+      "path": "provenance/runtime-capture-0.2.0/workspace.png",
+      "sha256": "b13773304a650407fb2a4da3296c937a30b333c3e944a9d455471d67325025fe",
+      "sizeBytes": 166605
+    },
+    "reading.png": {
+      "path": "provenance/runtime-capture-0.2.0/reading.png",
+      "sha256": "8ed6b42f21b0972e021c6ba67b9761fcc55705d734c289b6ef680c5d53865d50",
+      "sizeBytes": 436083
+    },
+    "diagonal-overview.png": {
+      "path": "provenance/runtime-capture-0.2.0/diagonal-overview.png",
+      "sha256": "4d4fab0ef7e58325227fec1c4fa31cac6c1429e29f462f4d11df9800277b313c",
+      "sizeBytes": 349301
+    },
+    "scene-debug.json": {
+      "path": "provenance/runtime-capture-0.2.0/scene-debug.json",
+      "sha256": "d6da9945c7ab9a4328c6a80b24fcee790b99e00772a81ef5283d337d038e8793",
+      "sizeBytes": 7735
+    },
+    "capture-settings.json": {
+      "path": "provenance/runtime-capture-0.2.0/capture-settings.json",
+      "sha256": "a4f53bb32e605d7ccce2178c26a99badb5d0eb39623cf99144d202ec4d61ad60",
+      "sizeBytes": 54
+    },
+    "preview.webp": {
+      "path": "provenance/runtime-capture-0.2.0/preview.webp",
+      "sha256": "799adff5172395b48f0a663c5408176bc0f58030b4d5b0b86bc9795a424def62",
+      "sizeBytes": 161832
+    }
+  }
+}

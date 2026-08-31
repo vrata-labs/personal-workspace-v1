@@ -4,15 +4,24 @@ import { join, resolve } from "node:path";
 import validator from "gltf-validator";
 
 import {
+  BAKED_PLATFORM_COMMIT,
+  BAKED_RELEASE,
+  BAKED_RELEASE_VERSION,
+  BAKED_RENDER_PROFILE,
+  BLENDER_REVIEW_HORIZONTAL_FOV_DEGREES,
   BLENDER_BINARY_SHA256,
   BLENDER_BUILD_HASH,
   BLENDER_VERSION,
   HISTORICAL_PLATFORM_COMMIT,
-  PLATFORM_COMMIT,
+  METADATA_PLATFORM_COMMIT,
+  METADATA_RENDER_PROFILE,
+  METADATA_VERSION,
   RELEASE_FILES,
   RELEASE_VERSIONS,
-  RENDER_PROFILE,
   REVIEW_VIEWS,
+  RUNTIME_CAPTURE_ARTIFACT_FILES,
+  RUNTIME_CAPTURE_FILES,
+  RUNTIME_REVIEW_ASPECT_RATIO,
   RIGHTS_ALLOWED_USES,
   RIGHTS_APPROVAL_STATUS,
   RIGHTS_APPROVED_ON,
@@ -23,21 +32,28 @@ import {
   SPAWN_YAW,
   VERSION,
   assert,
+  assertBakedMaterialContract,
   canonicalSha256,
+  createBakedReleaseScene,
   createMetadataReleaseScene,
   fileRecord,
   glbStats,
+  glbTextureRecords,
+  horizontalToVerticalFovDegrees,
+  pngDimensions,
   readJson,
+  sha256,
   toRuntimePosition,
   webpDimensions,
   yawToward
 } from "./lib.mjs";
+import { FINAL_TECHNICAL_VISUAL_PARITY_POLICY } from "./visual-parity-config.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const manifestOnly = process.argv.includes("--manifest-only");
 const releaseRoot = join(root, "assets", "scenes", SCENE_ID);
 
-const [packageManifest, config, manifest, contract, contractLock, candidateLock, assetLedger, generationLedger, releaseLedger, metadataEvidence] = await Promise.all([
+const [packageManifest, config, manifest, contract, contractLock, candidateLock, assetLedger, generationLedger, releaseLedger, metadataEvidence, bakedEvidence, runtimeReview, sceneDebug, captureSettings, captureBinding] = await Promise.all([
   readJson(join(root, "package.json")),
   readJson(join(root, "scene-repository.json")),
   readJson(join(root, "manifest.json")),
@@ -47,11 +63,17 @@ const [packageManifest, config, manifest, contract, contractLock, candidateLock,
   readJson(join(root, "provenance", "asset-ledger.json")),
   readJson(join(root, "provenance", "generation-ledger.json")),
   readJson(join(root, "provenance", "release-artifact-ledger.json")),
-  readJson(join(root, "provenance", `metadata-release-${VERSION}.json`))
+  readJson(join(root, "provenance", `metadata-release-${METADATA_VERSION}.json`)),
+  readJson(join(root, "provenance", `baked-lightmap-${BAKED_RELEASE_VERSION}.json`)),
+  readJson(join(root, BAKED_RELEASE.runtimeReviewPath)),
+  readJson(join(root, BAKED_RELEASE.runtimeCapturePath, "scene-debug.json")),
+  readJson(join(root, BAKED_RELEASE.runtimeCapturePath, "capture-settings.json")),
+  readJson(join(root, BAKED_RELEASE.runtimeCapturePath, "capture-binding.json"))
 ]);
 const validatorLock = (await readFile(join(root, "platform-validator.lock"), "utf8")).trim();
 const releases = new Map(manifest.releases?.map((release) => [release.version, release]));
-const scenes = new Map(await Promise.all(RELEASE_VERSIONS.map(async (version) => [version, await readJson(join(releaseRoot, version, "scene.json"))])));
+const manifestVersions = manifest.releases.map(({ version }) => version);
+const scenes = new Map(await Promise.all(manifestVersions.map(async (version) => [version, await readJson(join(releaseRoot, version, "scene.json"))])));
 
 function assertReviewState(value, code, requireCurrentState = false) {
   assert(value.status === "review" && value.acceptanceStatus === "pending-human-acceptance" && value.visualAcceptanceStatus === "pending-human-acceptance", code);
@@ -67,15 +89,15 @@ assert(packageManifest.version === VERSION && config.releaseVersion === VERSION,
 assert(config.oneSceneOnly === true && config.sceneId === SCENE_ID && config.repository === `vrata-labs/${SCENE_ID}`, "invalid_repository_identity");
 assert(config.releaseStatus === "review" && config.acceptanceStatus === "pending-human-acceptance" && config.visualAcceptanceStatus === "pending-human-acceptance", "invalid_repository_gate_state");
 assert(config.rightsApprovalStatus === RIGHTS_APPROVAL_STATUS && config.rightsApproved === true && config.publicationReady === false, "invalid_repository_gate_state");
-assert(validatorLock === PLATFORM_COMMIT && config.platformValidatorCommit === PLATFORM_COMMIT, "platform_validator_lock_mismatch");
+assert(validatorLock === BAKED_PLATFORM_COMMIT && config.platformValidatorCommit === BAKED_PLATFORM_COMMIT, "platform_validator_lock_mismatch");
 assert(/^[0-9a-f]{40}$/.test(validatorLock), "invalid_platform_validator_sha");
-assert(manifest.sceneId === SCENE_ID && manifest.platformValidatorCommit === PLATFORM_COMMIT, "invalid_root_manifest_identity");
+assert(manifest.sceneId === SCENE_ID && manifest.platformValidatorCommit === BAKED_PLATFORM_COMMIT, "invalid_root_manifest_identity");
 assert(manifest.blenderVersion === BLENDER_VERSION && manifest.blenderBuildHash === BLENDER_BUILD_HASH, "invalid_blender_lock");
 assertReviewState(manifest, "invalid_manifest_review_state");
-assert(JSON.stringify(manifest.releases.map(({ version }) => version)) === JSON.stringify(RELEASE_VERSIONS), "invalid_release_set");
-assert(JSON.stringify((await readdir(releaseRoot)).sort()) === JSON.stringify([...RELEASE_VERSIONS].sort()), "invalid_release_directories");
+assert(JSON.stringify(manifestVersions) === JSON.stringify(RELEASE_VERSIONS), "invalid_release_set");
+assert(JSON.stringify((await readdir(releaseRoot)).sort()) === JSON.stringify([...manifestVersions].sort()), "invalid_release_directories");
 
-for (const version of RELEASE_VERSIONS) {
+for (const version of manifestVersions) {
   const release = releases.get(version);
   const releaseDir = join(releaseRoot, version);
   const scene = scenes.get(version);
@@ -100,7 +122,7 @@ for (const version of RELEASE_VERSIONS) {
 }
 
 const sourceScene = scenes.get(SOURCE_VERSION);
-const metadataScene = scenes.get(VERSION);
+const metadataScene = scenes.get(METADATA_VERSION);
 assert(contract.version === SOURCE_VERSION && candidateLock.version === SOURCE_VERSION, "historical_authoring_version_drift");
 assert(candidateLock.release.path === `assets/scenes/${SCENE_ID}/${SOURCE_VERSION}`, "historical_release_lock_path_drift");
 for (const name of RELEASE_FILES) {
@@ -108,15 +130,15 @@ for (const name of RELEASE_FILES) {
 }
 assert(!("renderProfile" in sourceScene) && !("yaw" in sourceScene.spawnPoints[0]), "historical_scene_metadata_mutated");
 assert(JSON.stringify(metadataScene) === JSON.stringify(createMetadataReleaseScene(sourceScene)), "metadata_only_scene_manifest_drift");
-assert(metadataScene.renderProfile === RENDER_PROFILE, "invalid_render_profile");
+assert(metadataScene.renderProfile === METADATA_RENDER_PROFILE, "invalid_render_profile");
 assert(metadataScene.spawnPoints[0].yaw === SPAWN_YAW, "invalid_spawn_yaw");
 assert(metadataScene.isCurrent === false, "metadata_release_must_not_be_current");
 assert(SPAWN_YAW === yawToward(metadataScene.spawnPoints[0].position, metadataScene.mediaSurfaces[0].transform), "spawn_yaw_formula_drift");
 assert(JSON.stringify(metadataScene.rights) === JSON.stringify(sourceScene.rights), "metadata_release_rights_drift");
 for (const name of SHARED_RELEASE_FILES) {
-  assertRecord(releases.get(VERSION).files[name], releases.get(SOURCE_VERSION).files[name], `shared_release_file_drift:${name}`);
+  assertRecord(releases.get(METADATA_VERSION).files[name], releases.get(SOURCE_VERSION).files[name], `shared_release_file_drift:${name}`);
 }
-assert(releases.get(VERSION).files["scene.json"].sha256 !== releases.get(SOURCE_VERSION).files["scene.json"].sha256, "metadata_manifest_hash_must_change");
+assert(releases.get(METADATA_VERSION).files["scene.json"].sha256 !== releases.get(SOURCE_VERSION).files["scene.json"].sha256, "metadata_manifest_hash_must_change");
 
 assert(JSON.stringify(sourceScene.spawnPoints[0].position) === JSON.stringify(toRuntimePosition(contract.spawn.position)), "spawn_coordinate_adapter_drift");
 assert(sourceScene.anchors.seatAnchors.length === 1 && sourceScene.anchors.seatAnchors[0].id === "owner-desk-seat", "invalid_owner_seat_contract");
@@ -163,16 +185,207 @@ assertRecord(generationLedger.outputs.releaseGlb, releases.get(SOURCE_VERSION).f
 assert(generationLedger.reproducibility.sha256 === releases.get(SOURCE_VERSION).files["scene.glb"].sha256, "historical_reproducibility_drift");
 assert(generationLedger.humanAcceptance === "pending-human-acceptance" && generationLedger.rightsApproval.productionActivation === false && generationLedger.rightsApproval.publicationReady === false, "invalid_generation_rights_state");
 
-assert(metadataEvidence.kind === "metadata-only-review-release" && metadataEvidence.platformValidatorCommit === PLATFORM_COMMIT, "invalid_metadata_evidence_identity");
-assert(metadataEvidence.baseVersion === SOURCE_VERSION && metadataEvidence.targetVersion === VERSION, "invalid_metadata_evidence_versions");
-assert(metadataEvidence.renderProfile === RENDER_PROFILE && metadataEvidence.spawnYaw === SPAWN_YAW, "invalid_metadata_evidence_values");
+assert(metadataEvidence.kind === "metadata-only-review-release" && metadataEvidence.platformValidatorCommit === METADATA_PLATFORM_COMMIT, "invalid_metadata_evidence_identity");
+assert(metadataEvidence.baseVersion === SOURCE_VERSION && metadataEvidence.targetVersion === METADATA_VERSION, "invalid_metadata_evidence_versions");
+assert(metadataEvidence.renderProfile === METADATA_RENDER_PROFILE && metadataEvidence.spawnYaw === SPAWN_YAW, "invalid_metadata_evidence_values");
 assertReviewState(metadataEvidence, "invalid_metadata_evidence_review_state", true);
 assert(metadataEvidence.humanVisualAccepted === false && metadataEvidence.productionActivation === false, "invalid_metadata_evidence_gates");
 for (const name of SHARED_RELEASE_FILES) {
   assertRecord(metadataEvidence.sharedFiles[name], releases.get(SOURCE_VERSION).files[name], `metadata_evidence_shared_file_drift:${name}`);
-  assertRecord(metadataEvidence.sharedFiles[name], releases.get(VERSION).files[name], `metadata_evidence_release_file_drift:${name}`);
+  assertRecord(metadataEvidence.sharedFiles[name], releases.get(METADATA_VERSION).files[name], `metadata_evidence_release_file_drift:${name}`);
 }
-assertRecord(metadataEvidence.sceneJson, releases.get(VERSION).files["scene.json"], "metadata_evidence_scene_json_drift");
+assertRecord(metadataEvidence.sceneJson, releases.get(METADATA_VERSION).files["scene.json"], "metadata_evidence_scene_json_drift");
+
+const bakedScene = scenes.get(BAKED_RELEASE_VERSION);
+const bakedRelease = releases.get(BAKED_RELEASE_VERSION);
+assert(JSON.stringify(bakedScene) === JSON.stringify(createBakedReleaseScene(metadataScene)), "baked_scene_manifest_drift");
+assert(bakedScene.renderProfile === BAKED_RENDER_PROFILE, "invalid_baked_render_profile");
+assert(releases.get(BAKED_RELEASE_VERSION).releasePath === BAKED_RELEASE.releasePath, "invalid_baked_release_path");
+assertRecord(bakedRelease.files["LICENSES.md"], releases.get(METADATA_VERSION).files["LICENSES.md"], "baked_shared_file_drift:LICENSES.md");
+
+assert(bakedEvidence.schemaVersion === 1
+  && bakedEvidence.kind === "baked-lightmap-review-release"
+  && bakedEvidence.sceneId === SCENE_ID
+  && bakedEvidence.releaseVersion === BAKED_RELEASE_VERSION
+  && bakedEvidence.platformValidatorCommit === BAKED_PLATFORM_COMMIT
+  && bakedEvidence.renderProfile === BAKED_RENDER_PROFILE, "invalid_baked_evidence_identity");
+assertReviewState(bakedEvidence, "invalid_baked_evidence_review_state", true);
+assert(bakedEvidence.humanVisualAccepted === false && bakedEvidence.productionActivation === false, "invalid_baked_evidence_gates");
+assert(bakedEvidence.source?.exporter?.path === BAKED_RELEASE.exportScriptPath
+  && bakedEvidence.source?.atlas?.path === BAKED_RELEASE.lightmapPath
+  && bakedEvidence.source?.runtimeReview?.path === BAKED_RELEASE.runtimeReviewPath, "invalid_baked_evidence_source_paths");
+assertRecord(await fileRecord(join(root, BAKED_RELEASE.exportScriptPath)), bakedEvidence.source.exporter, "baked_exporter_record_drift");
+const atlasBytes = await readFile(join(root, BAKED_RELEASE.lightmapPath));
+assertRecord(await fileRecord(join(root, BAKED_RELEASE.lightmapPath)), bakedEvidence.source.atlas, "baked_atlas_record_drift");
+assertRecord(await fileRecord(join(root, BAKED_RELEASE.runtimeReviewPath)), bakedEvidence.source.runtimeReview, "runtime_review_source_record_drift");
+assert(JSON.stringify(pngDimensions(atlasBytes)) === JSON.stringify({ width: 2048, height: 2048 }), "invalid_baked_atlas_dimensions");
+assert(JSON.stringify(bakedEvidence.runtimeReviewAdapter) === JSON.stringify({
+  sourceFovAxis: "horizontal",
+  runtimeFovAxis: "vertical",
+  aspectRatio: RUNTIME_REVIEW_ASPECT_RATIO,
+  formula: "2 * atan(tan(horizontalFov / 2) / aspectRatio)",
+  sourceHorizontalFovDegrees: BLENDER_REVIEW_HORIZONTAL_FOV_DEGREES
+}), "invalid_runtime_review_adapter");
+assert(JSON.stringify(Object.keys(runtimeReview)) === JSON.stringify(["reviewViews"])
+  && JSON.stringify(runtimeReview.reviewViews?.map(({ id }) => id)) === JSON.stringify(REVIEW_VIEWS), "invalid_runtime_review_config_shape");
+for (const view of runtimeReview.reviewViews) {
+  assert(view.position && view.target
+    && [...Object.values(view.position), ...Object.values(view.target)].every(Number.isFinite), `invalid_runtime_review_view:${view.id}`);
+  const expectedFov = horizontalToVerticalFovDegrees(BLENDER_REVIEW_HORIZONTAL_FOV_DEGREES[view.id]);
+  assert(Math.abs(view.fovDegrees - expectedFov) < 1e-9, `runtime_review_vertical_fov_drift:${view.id}`);
+}
+assert(bakedEvidence.runtimeCapture?.path === BAKED_RELEASE.runtimeCapturePath, "invalid_runtime_capture_evidence_path");
+assert(JSON.stringify(Object.keys(bakedEvidence.runtimeCapture.files)) === JSON.stringify(RUNTIME_CAPTURE_FILES), "invalid_runtime_capture_file_set");
+for (const name of RUNTIME_CAPTURE_FILES) {
+  const evidenceFile = bakedEvidence.runtimeCapture.files[name];
+  const expectedPath = `${BAKED_RELEASE.runtimeCapturePath}/${name}`;
+  assert(evidenceFile.path === expectedPath, `runtime_capture_evidence_path_drift:${name}`);
+  assertRecord(await fileRecord(join(root, expectedPath)), evidenceFile, `runtime_capture_evidence_record_drift:${name}`);
+}
+for (const view of REVIEW_VIEWS) {
+  const bytes = await readFile(join(root, BAKED_RELEASE.runtimeCapturePath, `${view}.png`));
+  assert(JSON.stringify(pngDimensions(bytes)) === JSON.stringify({ width: 960, height: 540 }), `invalid_runtime_capture_dimensions:${view}`);
+}
+const capturePreviewBytes = await readFile(join(root, BAKED_RELEASE.runtimeCapturePath, "preview.webp"));
+assert(JSON.stringify(webpDimensions(capturePreviewBytes)) === JSON.stringify({ width: 960, height: 540 }), "invalid_runtime_capture_preview_dimensions");
+assert(JSON.stringify(bakedEvidence.runtimeCapture.normalization) === JSON.stringify({
+  status: "applied",
+  kind: "machine-local-url-replacement",
+  fields: {
+    bundleUrl: "local-capture/scene.json",
+    assetUrl: "local-capture/scene.glb"
+  },
+  machineLocalUrlsRetained: false
+}), "invalid_runtime_capture_normalization");
+assert(sceneDebug.bundleUrl === bakedEvidence.runtimeCapture.normalization.fields.bundleUrl
+  && sceneDebug.assetUrl === bakedEvidence.runtimeCapture.normalization.fields.assetUrl, "runtime_capture_normalized_url_drift");
+assert(JSON.stringify(captureSettings) === JSON.stringify({ environmentIntensity: 0.35, exposure: 1.2 }), "runtime_capture_settings_drift");
+assert(captureBinding.schemaVersion === 1
+  && captureBinding.kind === "local-runtime-capture-attestation"
+  && captureBinding.sceneId === SCENE_ID
+  && captureBinding.releaseVersion === BAKED_RELEASE_VERSION
+  && captureBinding.scope === "explicit-local-capture"
+  && captureBinding.humanVisualAccepted === false
+  && captureBinding.productionActivation === false, "invalid_capture_binding_identity");
+const bindingInputs = [
+  ["releaseSceneGlb", `${BAKED_RELEASE.releasePath}/scene.glb`],
+  ["releaseSceneJson", `${BAKED_RELEASE.releasePath}/scene.json`],
+  ["runtimeReview", BAKED_RELEASE.runtimeReviewPath]
+];
+for (const [name, path] of bindingInputs) {
+  const binding = captureBinding.bindings?.[name];
+  assert(binding?.path === path, `capture_binding_path_drift:${name}`);
+  assertRecord(await fileRecord(join(root, path)), binding, `capture_binding_record_drift:${name}`);
+}
+const implementationBinding = captureBinding.bindings?.captureImplementationCommit;
+assert(implementationBinding?.value === BAKED_PLATFORM_COMMIT
+  && implementationBinding.valueEncoding === "lowercase-hex"
+  && implementationBinding.hashInputEncoding === "utf8"
+  && implementationBinding.sha256 === sha256(implementationBinding.value)
+  && implementationBinding.sizeBytes === Buffer.byteLength(implementationBinding.value, "utf8"), "capture_implementation_binding_drift");
+const runtimeStatistics = Object.fromEntries([
+  "objectCount",
+  "meshCount",
+  "materialCount",
+  "texturedMaterialCount",
+  "lightMappedMaterialCount",
+  "geometryCount",
+  "triangleEstimate",
+  "textureCount"
+].map((name) => [name, sceneDebug[name]]));
+assert(JSON.stringify(captureBinding.localRuntime) === JSON.stringify({
+  assetBytes: { loaded: sceneDebug.assetBytesLoaded, expected: sceneDebug.assetBytesExpected },
+  statistics: runtimeStatistics
+}), "capture_binding_local_runtime_drift");
+assert(captureBinding.localRuntime.assetBytes.loaded === bakedRelease.files["scene.glb"].sizeBytes
+  && captureBinding.localRuntime.assetBytes.expected === bakedRelease.files["scene.glb"].sizeBytes
+  && captureBinding.localRuntime.statistics.meshCount === bakedRelease.stats.meshes
+  && captureBinding.localRuntime.statistics.materialCount === bakedRelease.stats.materials
+  && captureBinding.localRuntime.statistics.triangleEstimate === bakedRelease.stats.triangles, "capture_binding_release_statistics_drift");
+assert(JSON.stringify(Object.keys(captureBinding.captureFiles)) === JSON.stringify(RUNTIME_CAPTURE_ARTIFACT_FILES), "capture_binding_file_set_drift");
+for (const name of RUNTIME_CAPTURE_ARTIFACT_FILES) {
+  const binding = captureBinding.captureFiles[name];
+  const path = `${BAKED_RELEASE.runtimeCapturePath}/${name}`;
+  assert(binding?.path === path, `capture_binding_file_path_drift:${name}`);
+  assertRecord(await fileRecord(join(root, path)), binding, `capture_binding_file_record_drift:${name}`);
+  assertRecord(binding, bakedEvidence.runtimeCapture.files[name], `capture_binding_evidence_record_drift:${name}`);
+}
+assert(JSON.stringify(bakedEvidence.toolchain) === JSON.stringify({
+  blenderVersion: BLENDER_VERSION,
+  blenderBuildHash: BLENDER_BUILD_HASH,
+  blenderBinarySha256: BLENDER_BINARY_SHA256
+}), "invalid_baked_evidence_toolchain");
+assert(JSON.stringify(bakedEvidence.bake) === JSON.stringify({
+  resolution: 2048,
+  samples: 128,
+  scale: 0.25,
+  device: "CUDA",
+  lightMapIntensity: 4,
+  lightMappedMaterials: 15,
+  excludedObject: "architecture.window-glass",
+  transport: "emissiveTexture TEXCOORD_1 with baked-pbr-v1 metadata"
+}), "invalid_baked_evidence_settings");
+assert(bakedEvidence.release?.path === BAKED_RELEASE.releasePath, "invalid_baked_evidence_release_path");
+for (const name of RELEASE_FILES) assertRecord(bakedEvidence.release.files[name], bakedRelease.files[name], `baked_evidence_release_record_drift:${name}`);
+assert(JSON.stringify(bakedEvidence.release.stats) === JSON.stringify(bakedRelease.stats), "baked_evidence_stats_drift");
+assert(JSON.stringify(bakedEvidence.reproducibility) === JSON.stringify({
+  scope: "same-host-same-saved-blend-same-atlas-same-blender-binary-two-run",
+  runs: 2,
+  result: "byte-identical-glb",
+  sha256: bakedRelease.files["scene.glb"].sha256
+}), "invalid_baked_reproducibility_evidence");
+const runtimeEvidenceFromDebug = {
+  status: "passed",
+  state: sceneDebug.state,
+  failureReason: sceneDebug.failureReason,
+  missingAssets: sceneDebug.missingAssets,
+  loadMs: sceneDebug.loadMs,
+  renderProfileApplyMs: sceneDebug.renderProfileApplyMs,
+  renderProfile: sceneDebug.renderProfile,
+  lightMappedMaterialCount: sceneDebug.lightMappedMaterialCount,
+  materialCount: sceneDebug.materialCount,
+  triangleEstimate: sceneDebug.triangleEstimate,
+  darkPixelRatio: sceneDebug.screenshot?.darkPixelRatio,
+  assetBytesLoaded: sceneDebug.assetBytesLoaded,
+  spawnApplied: sceneDebug.spawnApplied
+};
+assert(JSON.stringify(bakedEvidence.localRuntime) === JSON.stringify(runtimeEvidenceFromDebug), "invalid_local_runtime_evidence");
+assert(sceneDebug.state === "loaded"
+  && sceneDebug.failureReason === null
+  && sceneDebug.missingAssets.length === 0
+  && sceneDebug.renderProfile === BAKED_RENDER_PROFILE
+  && sceneDebug.lightMappedMaterialCount === 15
+  && sceneDebug.materialCount === bakedRelease.stats.materials
+  && sceneDebug.triangleEstimate === bakedRelease.stats.triangles
+  && sceneDebug.assetBytesLoaded === bakedRelease.files["scene.glb"].sizeBytes
+  && sceneDebug.spawnApplied === true, "runtime_capture_diagnostics_failed");
+const expectedVisualViews = [
+  { id: "entry", phash: 9.41377, ncc: 0.685611 },
+  { id: "workspace", phash: 17.6007, ncc: 0.758762 },
+  { id: "reading", phash: 24.6839, ncc: 0.508701 },
+  { id: "diagonal-overview", phash: 120.703, ncc: 0.264875 }
+];
+const evidenceTolerance = FINAL_TECHNICAL_VISUAL_PARITY_POLICY.evidenceMetricTolerance;
+const withinTolerance = (actual, expected, tolerance) => Number.isFinite(actual) && Math.abs(actual - expected) <= tolerance;
+assert(bakedEvidence.visualParity.status === "passed"
+  && bakedEvidence.visualParity.tool === "ImageMagick compare"
+  && /^ImageMagick\s+\S+/.test(bakedEvidence.visualParity.toolVersion)
+  && JSON.stringify(bakedEvidence.visualParity.policy) === JSON.stringify(FINAL_TECHNICAL_VISUAL_PARITY_POLICY)
+  && bakedEvidence.visualParity.result === "passed"
+  && bakedEvidence.visualParity.views.length === expectedVisualViews.length, "invalid_visual_parity_evidence");
+for (const { id, phash, ncc } of expectedVisualViews) {
+  const recorded = bakedEvidence.visualParity.views.find((view) => view.id === id);
+  assert(withinTolerance(recorded?.phash, phash, evidenceTolerance.phashAbsolute)
+    && withinTolerance(recorded?.ncc, ncc, evidenceTolerance.nccAbsolute), `visual_evidence_metric_drift:${id}`);
+  const threshold = FINAL_TECHNICAL_VISUAL_PARITY_POLICY.views[id];
+  assert(recorded.phash <= threshold.phashMax && recorded.ncc >= threshold.nccMin, `visual_view_threshold_failed:${id}`);
+}
+const phashTotal = bakedEvidence.visualParity.views.reduce((total, { phash }) => total + phash, 0);
+const nccMean = bakedEvidence.visualParity.views.reduce((total, { ncc }) => total + ncc, 0) / bakedEvidence.visualParity.views.length;
+assert(withinTolerance(bakedEvidence.visualParity.aggregate.phashTotal, phashTotal, evidenceTolerance.phashAbsolute * expectedVisualViews.length)
+  && withinTolerance(bakedEvidence.visualParity.aggregate.nccMean, nccMean, evidenceTolerance.nccAbsolute)
+  && phashTotal <= FINAL_TECHNICAL_VISUAL_PARITY_POLICY.aggregate.phashTotalMax
+  && nccMean >= FINAL_TECHNICAL_VISUAL_PARITY_POLICY.aggregate.nccMeanMin, "visual_aggregate_threshold_failed");
 
 assert(assetLedger.rightsVerdict.decision === RIGHTS_APPROVAL_STATUS && assetLedger.rightsVerdict.rightsApproved === true && assetLedger.rightsVerdict.approvedOn === RIGHTS_APPROVED_ON, "invalid_asset_rights_verdict");
 assert(assetLedger.records.every((record) => record.approvalStatus === RIGHTS_APPROVAL_STATUS && record.licenseRef === assetLedger.rightsVerdict.licenseRef), "invalid_asset_record_rights");
@@ -187,12 +400,13 @@ for (const view of REVIEW_VIEWS) {
   const dimensions = webpDimensions(await readFile(path));
   assert(dimensions.width === 960 && dimensions.height === 540, `invalid_review_dimensions:${view}:${dimensions.width}x${dimensions.height}`);
 }
-for (const version of RELEASE_VERSIONS) {
+for (const version of [SOURCE_VERSION, METADATA_VERSION]) {
   assertRecord(await fileRecord(join(releaseRoot, version, "preview.webp")), await fileRecord(join(root, "source", "review", "entry.webp")), `preview_must_equal_entry_view:${version}`);
 }
+assertRecord(await fileRecord(join(releaseRoot, BAKED_RELEASE_VERSION, "preview.webp")), await fileRecord(join(root, BAKED_RELEASE.runtimeCapturePath, "preview.webp")), "baked_preview_must_equal_runtime_capture");
 
 if (!manifestOnly) {
-  for (const version of RELEASE_VERSIONS) {
+  for (const version of manifestVersions) {
     const release = releases.get(version);
     const glbPath = join(releaseRoot, version, "scene.glb");
     const glbBytes = await readFile(glbPath);
@@ -207,7 +421,15 @@ if (!manifestOnly) {
     assert(stats.meshes <= contract.budgets.meshesMax, `mesh_budget_exceeded:${version}:${stats.meshes}`);
     assert(stats.materials <= contract.budgets.materialsMax, `material_budget_exceeded:${version}:${stats.materials}`);
     assert(stats.textures <= contract.budgets.texturesMax, `texture_budget_exceeded:${version}:${stats.textures}`);
+    if (version === BAKED_RELEASE_VERSION) {
+      await assertBakedMaterialContract(glbPath);
+      const textures = await glbTextureRecords(glbPath);
+      assert(textures.length === 1
+        && textures[0].mimeType === "image/png"
+        && textures[0].sha256 === bakedEvidence.source.atlas.sha256
+        && textures[0].sizeBytes === bakedEvidence.source.atlas.sizeBytes, "embedded_baked_atlas_drift");
+    }
   }
 }
 
-process.stdout.write(`Scene repository is valid (${RELEASE_VERSIONS.join(", ")} ${manifestOnly ? "manifest" : "full"} review check).\n`);
+process.stdout.write(`Scene repository is valid (${manifestVersions.join(", ")} ${manifestOnly ? "manifest" : "full"} review check; target ${VERSION}).\n`);

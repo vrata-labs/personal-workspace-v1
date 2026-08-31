@@ -1,0 +1,28 @@
+{
+  "reviewViews": [
+    {
+      "id": "entry",
+      "position": { "x": 2.35, "y": 1.58, "z": -1.92 },
+      "target": { "x": -0.55, "y": 1.18, "z": 1.22 },
+      "fovDegrees": 34.634836112
+    },
+    {
+      "id": "workspace",
+      "position": { "x": 1.1, "y": 1.48, "z": -0.15 },
+      "target": { "x": -1.05, "y": 1.35, "z": 1.93 },
+      "fovDegrees": 30.6831986916
+    },
+    {
+      "id": "reading",
+      "position": { "x": 0.55, "y": 1.42, "z": 0.95 },
+      "target": { "x": -2.25, "y": 1, "z": -0.45 },
+      "fovDegrees": 32.6420632282
+    },
+    {
+      "id": "diagonal-overview",
+      "position": { "x": -1, "y": 2.05, "z": -2.15 },
+      "target": { "x": 0.2, "y": 1.08, "z": 0.72 },
+      "fovDegrees": 38.7320289609
+    }
+  ]
+}

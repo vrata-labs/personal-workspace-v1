@@ -1,7 +1,18 @@
 import { readFile, readdir } from "node:fs/promises";
 import { extname, join, relative, resolve, sep } from "node:path";
 
-import { RELEASE_VERSIONS, REVIEW_VIEWS, SCENE_ID, assert } from "./lib.mjs";
+import {
+  PUBLISHED_BAKED_VERSIONS,
+  RELEASE_FILES,
+  RELEASE_VERSIONS,
+  REVIEW_VIEWS,
+  RUNTIME_CAPTURE_FILES,
+  SCENE_ID,
+  assert,
+  bakedReleaseBinaryPaths,
+  bakedReleasePaths,
+  readJson
+} from "./lib.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const binaryExtensions = new Set([".blend", ".glb", ".webp", ".png", ".jpg", ".jpeg", ".fbx", ".gltf"]);
@@ -10,6 +21,7 @@ const windowsLocalPathPattern = /(?:^|[\s"'=(])[A-Za-z]:[\\/]/m;
 const allowedBinaries = new Set([
   "source/review-candidate.blend",
   ...REVIEW_VIEWS.map((view) => `source/review/${view}.webp`),
+  ...bakedReleaseBinaryPaths(),
   ...RELEASE_VERSIONS.flatMap((version) => [
     `assets/scenes/${SCENE_ID}/${version}/scene.glb`,
     `assets/scenes/${SCENE_ID}/${version}/preview.webp`
@@ -34,6 +46,19 @@ async function walk(directory) {
 const sceneRoots = (await readdir(join(root, "assets", "scenes"), { withFileTypes: true }))
   .filter((entry) => entry.isDirectory()).map((entry) => entry.name);
 assert(JSON.stringify(sceneRoots) === JSON.stringify([SCENE_ID]), `single_scene_boundary_violated:${sceneRoots.join(",")}`);
+
+for (const version of PUBLISHED_BAKED_VERSIONS) {
+  const paths = bakedReleasePaths(version);
+  const bakedEvidence = await readJson(join(root, paths.evidencePath));
+  assert(bakedEvidence.releaseVersion === version
+    && bakedEvidence.source?.exporter?.path === paths.exportScriptPath
+    && bakedEvidence.source?.atlas?.path === paths.lightmapPath
+    && bakedEvidence.source?.runtimeReview?.path === paths.runtimeReviewPath
+    && bakedEvidence.runtimeCapture?.path === paths.runtimeCapturePath
+    && bakedEvidence.release?.path === paths.releasePath, `baked_evidence_repository_path_drift:${version}`);
+  assert(JSON.stringify(Object.keys(bakedEvidence.release.files).sort()) === JSON.stringify(RELEASE_FILES), `baked_evidence_release_file_set_drift:${version}`);
+  assert(JSON.stringify(Object.keys(bakedEvidence.runtimeCapture.files)) === JSON.stringify(RUNTIME_CAPTURE_FILES), `runtime_capture_evidence_file_set_drift:${version}`);
+}
 
 for (const path of await walk(root)) {
   const repositoryPath = posix(relative(root, path));

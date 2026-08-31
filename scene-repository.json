@@ -3,12 +3,12 @@
   "repository": "vrata-labs/personal-workspace-v1",
   "sceneId": "personal-workspace-v1",
   "oneSceneOnly": true,
-  "releaseVersion": "0.1.1",
+  "releaseVersion": "0.2.0",
   "releaseStatus": "review",
   "acceptanceStatus": "pending-human-acceptance",
   "visualAcceptanceStatus": "pending-human-acceptance",
   "rightsApprovalStatus": "approved-for-public-staging-review",
   "rightsApproved": true,
   "publicationReady": false,
-  "platformValidatorCommit": "61736f6289f941e290f4fe156f17efdd64ef876b"
+  "platformValidatorCommit": "c54edb2239d225a71e9b934316f70792b3faafb6"
 }

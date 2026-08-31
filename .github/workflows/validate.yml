@@ -1,7 +1,6 @@
 name: Validate scene
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
@@ -16,6 +15,8 @@ jobs:
     steps:
       - name: Checkout scene
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -31,14 +32,68 @@ jobs:
       - name: Install scene dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes imagemagick
+
+      - name: Reject changes to published version paths
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [[ -z "$BASE_SHA" || "$BASE_SHA" =~ ^0+$ ]]; then
+            echo "immutable_baseline_sha_required" >&2
+            exit 1
+          fi
+          git fetch --no-tags --depth=1 origin "$BASE_SHA"
+          while IFS= read -r path; do
+            protected_root=""
+            case "$path" in
+              assets/scenes/*/*/*)
+                protected_root="$(cut -d/ -f1-4 <<< "$path")"
+                ;;
+              provenance/runtime-capture-*/*)
+                protected_root="$(cut -d/ -f1-2 <<< "$path")"
+                ;;
+              provenance/baked-lightmap-*.json|source/baked-lightmap-*.png|source/export_baked_release_*.py|source/runtime-review-*.json)
+                protected_root="$path"
+                ;;
+              *)
+                continue
+                ;;
+            esac
+            if git cat-file -e "$BASE_SHA:$protected_root" 2>/dev/null; then
+              echo "published_release_evidence_is_immutable:$path" >&2
+              exit 1
+            fi
+          done < <(git diff --no-renames --name-only "$BASE_SHA" HEAD -- assets/scenes provenance source)
+
       - name: Run tests
         run: pnpm test
 
-      - name: Validate repository and release records
+      - name: Validate committed runtime captures
+        run: pnpm validate:visual
+
+      - name: Validate repository, baked evidence, and release records
         run: pnpm validate
 
       - name: Inspect GLB release
         run: pnpm inspect
+
+      - name: Download pinned Blender
+        shell: bash
+        env:
+          BLENDER_TAR_SHA256: 95e3a2dfedba3bd32ca54fc355eac6b15a11986954ccb02815a07535d0120a25
+        run: |
+          archive="$RUNNER_TEMP/blender-4.5.12-linux-x64.tar.xz"
+          curl --fail --location --retry 3 --output "$archive" https://download.blender.org/release/Blender4.5/blender-4.5.12-linux-x64.tar.xz
+          printf '%s  %s\n' "$BLENDER_TAR_SHA256" "$archive" | sha256sum --check --strict
+          tar --extract --xz --file "$archive" --directory "$RUNNER_TEMP"
+          echo "BLENDER_BIN=$RUNNER_TEMP/blender-4.5.12-linux-x64/blender" >> "$GITHUB_ENV"
+
+      - name: Verify pinned Blender reproducibility
+        run: pnpm verify:reproducibility
 
       - name: Read platform validator lock
         id: platform-ref
@@ -65,7 +120,8 @@ jobs:
           pnpm --dir .platform --filter @vrata/templates build
           pnpm --dir .platform --filter @vrata/asset-pipeline build
 
-      - name: Validate exact Scene Bundle contract
+      - name: Validate exact Scene Bundle contracts
         run: |
-          node .platform/packages/asset-pipeline/dist/cli.js scenes validate assets/scenes/personal-workspace-v1/0.1.0
-          node .platform/packages/asset-pipeline/dist/cli.js scenes validate assets/scenes/personal-workspace-v1/0.1.1
+          for manifest in assets/scenes/*/*/scene.json; do
+            node .platform/packages/asset-pipeline/dist/cli.js scenes validate "$(dirname "$manifest")"
+          done
