@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "result": "valid",
+  "source": {
+    "path": "source/releases/0.3.0/panorama-city-park.jpg",
+    "sha256": "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6",
+    "sizeBytes": 435189,
+    "width": 4096,
+    "height": 2048,
+    "format": "JPEG",
+    "colorSpace": "sRGB"
+  },
+  "embedded": {
+    "textureName": "panorama-city-park",
+    "mimeType": "image/jpeg",
+    "sha256": "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6",
+    "sizeBytes": 435189
+  },
+  "byteIdenticalSourceAndEmbedded": true,
+  "generator": {
+    "path": "source/releases/0.3.0/generate-panorama.py",
+    "sha256": "2a88ad33d6da533c64c84dc5b7b65d662404b16c34f8a8340acd5879e1620b52",
+    "sizeBytes": 20981
+  },
+  "parameters": {
+    "path": "source/releases/0.3.0/panorama-parameters.json",
+    "sha256": "e5b5792c0354e6a76b25da6767b768836bf7a6d939f2a5615dc5bcb71106e63d",
+    "sizeBytes": 2258
+  },
+  "sphere": {
+    "name": "exterior.panorama-sphere",
+    "extras": {
+      "vrataObjectId": "exterior-panorama",
+      "vrataPartId": "sphere",
+      "vrataInteractionStatus": "passive",
+      "vrataBakePolicy": "exclude-unlit-background",
+      "vrataBakeExclusionReason": "unlit-panorama",
+      "vrataCollisionPolicy": "exclude",
+      "vrataSupportPolicy": "exclude",
+      "vrataNavigableBoundsPolicy": "exclude",
+      "vrataSourceAssetId": "asset-panorama-city-park-project-authored",
+      "vrataPanoramaSha256": "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6",
+      "vrataPanoramaRadiusM": 40,
+      "vrataPanoramaYawDegrees": -21.6
+    },
+    "inwardVisible": true
+  },
+  "budgets": {
+    "compressedBytes": 435189,
+    "compressedBytesMax": 2621440,
+    "baseDecodedRgbaBytes": 33554432,
+    "mipmappedGpuRgba8Bytes": 44739244,
+    "totalBaseDecodedTextureBytes": 50331648,
+    "totalMipmappedGpuRgba8Bytes": 67108864,
+    "totalBaseDecodedTextureBytesMax": 50331648,
+    "totalMipmappedGpuRgba8BytesMax": 67108864,
+    "gpuEstimateAssumption": "RGBA8 base level plus complete mip chain through 1x1"
+  },
+  "lightmap": {
+    "name": "baked-lightmap",
+    "mimeType": "image/png",
+    "sha256": "99efa06a464e15f04b496b2f21916de4b4e97603fafecb07edca35478a37283b",
+    "sizeBytes": 6058088,
+    "width": 2048,
+    "height": 2048,
+    "baseDecodedRgbaBytes": 16777216,
+    "mipmappedGpuRgba8Bytes": 22369620
+  }
+}

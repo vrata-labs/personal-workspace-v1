@@ -25,6 +25,7 @@ import {
   hashFile,
   isReleaseVersionPrefix,
   nextReleaseVersion,
+  pathTrackedInGit,
   readJson
 } from "./lib.mjs";
 
@@ -36,12 +37,6 @@ const secondGlb = join(root, "build", `baked-release-${BAKED_RELEASE_VERSION}.se
 const exportLightmap = join(root, "build", "baked-lightmap.png");
 const metadataReleaseDir = join(root, "assets", "scenes", SCENE_ID, METADATA_VERSION);
 const twice = process.argv.includes("--twice");
-
-function isTrackedAtHead(path) {
-  const result = spawnSync("git", ["cat-file", "-e", `HEAD:${path}`], { cwd: root, stdio: "ignore" });
-  if (result.error) throw result.error;
-  return result.status === 0;
-}
 
 function assertRecord(actual, expected, code) {
   assert(actual?.sha256 === expected?.sha256 && actual?.sizeBytes === expected?.sizeBytes, code);
@@ -140,7 +135,8 @@ assert(textures.length === 1
   && textures[0].sizeBytes === atlasBytes.length, "embedded_lightmap_atlas_drift");
 
 const releaseExists = await readdir(releaseDir).then(() => true, (error) => error.code === "ENOENT" ? false : Promise.reject(error));
-const releaseTrackedAtHead = isTrackedAtHead(BAKED_RELEASE.releasePath);
+const releaseTrackedAtHead = pathTrackedInGit(root, BAKED_RELEASE.releasePath);
+assert(!releaseTrackedAtHead || releaseExists, "tracked_baked_release_missing");
 if (releaseExists && releaseTrackedAtHead) {
   await assertExactFiles(releaseDir, "invalid_existing_baked_release_files");
   const existingFiles = await recordsFor(releaseDir);

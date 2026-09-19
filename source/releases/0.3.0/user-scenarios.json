@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "scenarios": [
+    {
+      "id": "entry-to-workspace",
+      "purpose": "Preserve entry spawn and clear access to the owner workspace.",
+      "implementationRequired": true,
+      "bindings": ["spawn:main", "media-surface:workspace-main"],
+      "acceptanceCriteria": [
+        { "measure": "spawn-position", "operator": "equals", "value": { "x": 2.25, "y": 0, "z": 1.8 } },
+        { "measure": "spawn-open-radius", "operator": "equals", "value": 0.8 }
+      ]
+    },
+    {
+      "id": "owner-seat-use",
+      "purpose": "Preserve the single owner desk seat and its runtime binding.",
+      "implementationRequired": true,
+      "bindings": ["seat:owner-desk-seat"],
+      "acceptanceCriteria": [
+        { "measure": "seat-position", "operator": "equals", "value": { "x": -1.05, "y": 0, "z": -0.92 } },
+        { "measure": "seat-height", "operator": "equals", "value": 0.48 }
+      ]
+    },
+    {
+      "id": "workspace-media-surface",
+      "purpose": "Preserve the workspace display dimensions, transform and visibility.",
+      "implementationRequired": true,
+      "bindings": ["media-surface:workspace-main"],
+      "acceptanceCriteria": [
+        { "measure": "surface-size", "operator": "equals", "value": { "widthM": 1.72, "heightM": 0.97 } },
+        { "measure": "surface-position", "operator": "equals", "value": { "x": -1.08, "y": 1.56, "z": -2.43 } }
+      ]
+    },
+    {
+      "id": "reading-zone-preserved",
+      "purpose": "Keep the accepted reading chair, library, side table and lamp composition.",
+      "implementationRequired": true,
+      "bindings": [],
+      "acceptanceCriteria": [
+        { "measure": "required-object-groups", "operator": "contains", "value": ["reading-chair", "reading-library", "reading-side-table", "reading-floor-lamp"] }
+      ]
+    },
+    {
+      "id": "open-window-panorama",
+      "purpose": "Provide an unobstructed exterior view through the retained frame without transparent glass artifacts.",
+      "implementationRequired": true,
+      "bindings": [],
+      "acceptanceCriteria": [
+        { "measure": "forbidden-node", "operator": "absent", "value": "architecture.window-glass" },
+        { "measure": "required-node", "operator": "present", "value": "exterior.panorama-sphere" },
+        { "measure": "panorama-inward-visible", "operator": "equals", "value": true }
+      ]
+    },
+    {
+      "id": "panorama-runtime-exclusions",
+      "purpose": "Keep the visual background out of bake, collision, support and navigable bounds.",
+      "implementationRequired": true,
+      "bindings": [],
+      "acceptanceCriteria": [
+        { "measure": "bake-policy", "operator": "equals", "value": "exclude-unlit-background" },
+        { "measure": "collision-policy", "operator": "equals", "value": "exclude" },
+        { "measure": "support-policy", "operator": "equals", "value": "exclude" },
+        { "measure": "navigable-bounds-policy", "operator": "equals", "value": "exclude" }
+      ]
+    },
+    {
+      "id": "fixed-source-review-coverage",
+      "purpose": "Bind stable source evidence to the technical regression baseline derived from three byte-stable runtime capture sets.",
+      "implementationRequired": true,
+      "bindings": [],
+      "acceptanceCriteria": [
+        { "measure": "review-view-count", "operator": "equals", "value": 7 },
+        { "measure": "panorama-visible-view-ids", "operator": "contains", "value": ["entry", "workspace", "window-detail", "exterior-view"] },
+        { "measure": "phash-thresholds", "operator": "equals", "value": "calibrated-from-three-byte-stable-runtime-capture-sets" },
+        { "measure": "ncc-thresholds", "operator": "equals", "value": "calibrated-from-three-byte-stable-runtime-capture-sets" }
+      ]
+    }
+  ]
+}

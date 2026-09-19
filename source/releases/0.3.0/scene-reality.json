@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "status": "review",
+  "coordinateSystem": {
+    "source": "semantic right-handed Y-up meters",
+    "blender": "right-handed Z-up meters",
+    "runtime": "glTF right-handed Y-up meters",
+    "sourceToBlender": "x=x,y=z,z=y",
+    "sourceToRuntime": "x=x,y=y,z=-z"
+  },
+  "preservedRuntimeBindings": {
+    "spawn": {
+      "id": "main",
+      "position": { "x": 2.25, "y": 0, "z": 1.8 },
+      "openRadiusM": 0.8,
+      "yaw": 0.6669082042393105
+    },
+    "ownerSeat": {
+      "id": "owner-desk-seat",
+      "position": { "x": -1.05, "y": 0, "z": -0.92 },
+      "yaw": 0,
+      "seatHeight": 0.48,
+      "radius": 0.42
+    },
+    "mediaSurface": {
+      "surfaceId": "workspace-main",
+      "widthM": 1.72,
+      "heightM": 0.97,
+      "transform": { "x": -1.08, "y": 1.56, "z": -2.43, "yaw": 0, "pitch": 0, "roll": 0 }
+    }
+  },
+  "room": {
+    "navigableBounds": { "width": 6.4, "height": 3.1, "depth": 5.2 },
+    "teleportFloorY": 0,
+    "preserveInteriorComposition": true
+  },
+  "glbContract": {
+    "meshNodes": 232,
+    "interiorMeshNodes": 231,
+    "panoramaMeshNodes": 1,
+    "materials": 16,
+    "lightMappedMaterials": 15,
+    "textures": 2,
+    "animations": 0,
+    "scenes": 1,
+    "requiredMeshTags": [
+      "vrataObjectId",
+      "vrataPartId",
+      "vrataInteractionStatus",
+      "vrataBakePolicy",
+      "vrataCollisionPolicy",
+      "vrataSupportPolicy",
+      "vrataNavigableBoundsPolicy"
+    ],
+    "forbiddenNodeNames": ["architecture.window-glass"],
+    "requiredNodeNames": [
+      "architecture.floor-slab",
+      "architecture.window-frame.bottom",
+      "architecture.window-frame.top",
+      "architecture.window-frame.south",
+      "architecture.window-frame.north",
+      "architecture.window-frame.mullion",
+      "architecture.window-sill-oak",
+      "furniture.owner-chair.seat-shell",
+      "surface.workspace-main.panel",
+      "exterior.panorama-sphere"
+    ]
+  },
+  "objectGroups": [
+    { "id": "ceiling-lighting", "status": "passive", "partCount": 9 },
+    { "id": "exterior-panorama", "status": "passive", "partCount": 1 },
+    { "id": "main-door", "status": "deferred", "partCount": 3 },
+    { "id": "main-window", "status": "passive", "partCount": 6 },
+    { "id": "owner-chair", "status": "interactive", "partCount": 20 },
+    { "id": "owner-desk", "status": "passive", "partCount": 11 },
+    { "id": "reading-chair", "status": "passive", "partCount": 9 },
+    { "id": "reading-floor-lamp", "status": "passive", "partCount": 4 },
+    { "id": "reading-library", "status": "passive", "partCount": 29 },
+    { "id": "reading-rug", "status": "passive", "partCount": 6 },
+    { "id": "reading-side-table", "status": "passive", "partCount": 4 },
+    { "id": "room-shell", "status": "passive", "partCount": 34 },
+    { "id": "storage-cabinet", "status": "passive", "partCount": 13 },
+    { "id": "window-bench", "status": "passive", "partCount": 3 },
+    { "id": "window-plant", "status": "passive", "partCount": 14 },
+    { "id": "workspace-accessories", "status": "passive", "partCount": 43 },
+    { "id": "workspace-backdrop", "status": "passive", "partCount": 12 },
+    { "id": "workspace-main", "status": "interactive", "partCount": 8 },
+    { "id": "workspace-pendant", "status": "passive", "partCount": 3 }
+  ],
+  "panorama": {
+    "nodeName": "exterior.panorama-sphere",
+    "objectId": "exterior-panorama",
+    "partId": "sphere",
+    "materialName": "material.exterior.panorama-unlit",
+    "sourceAssetId": "asset-panorama-city-park-project-authored",
+    "imagePath": "source/releases/0.3.0/panorama-city-park.jpg",
+    "sha256": "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6",
+    "compressedBytes": 435189,
+    "width": 4096,
+    "height": 2048,
+    "radiusM": 40,
+    "yawDegrees": -21.6,
+    "colorSpace": "sRGB",
+    "shading": "unlit-emissive",
+    "inwardVisible": true,
+    "bakePolicy": "exclude-unlit-background",
+    "collisionPolicy": "exclude",
+    "supportPolicy": "exclude",
+    "navigableBoundsPolicy": "exclude"
+  },
+  "budgets": {
+    "glbBytesMax": 15728640,
+    "panoramaCompressedBytesMax": 2621440,
+    "panoramaDecodedRgbaBytes": 33554432,
+    "panoramaMipmappedGpuRgba8Bytes": 44739244,
+    "lightmapDecodedRgbaBytes": 16777216,
+    "lightmapMipmappedGpuRgba8Bytes": 22369620,
+    "totalDecodedTextureBytes": 50331648,
+    "totalMipmappedGpuRgba8Bytes": 67108864,
+    "totalDecodedTextureBytesMax": 50331648,
+    "totalMipmappedGpuRgba8BytesMax": 67108864,
+    "trianglesMax": 90000,
+    "meshNodesMax": 250,
+    "materialsMax": 96,
+    "texturesMax": 48
+  },
+  "gates": {
+    "sourceReproducibility": "required",
+    "glbByteReproducibility": "required",
+    "khronosValidation": "required",
+    "sourceReview": "prepared-for-human-review",
+    "runtimeCapture": "required-before-technical-thresholds",
+    "visualAcceptance": "pending-human-acceptance",
+    "rightsApproval": "pending-human-rights-approval",
+    "publicationReady": false
+  }
+}

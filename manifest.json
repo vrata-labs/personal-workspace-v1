@@ -7,8 +7,8 @@
   "status": "review",
   "acceptanceStatus": "pending-human-acceptance",
   "visualAcceptanceStatus": "pending-human-acceptance",
-  "rightsApprovalStatus": "approved-for-public-staging-review",
-  "rightsApproved": true,
+  "rightsApprovalStatus": "pending-human-rights-approval",
+  "rightsApproved": false,
   "publicationReady": false,
   "releases": [
     {
@@ -127,6 +127,46 @@
         "primitives": 232,
         "materials": 16,
         "textures": 1,
+        "animations": 0,
+        "scenes": 1
+      }
+    },
+    {
+      "sceneId": "personal-workspace-v1",
+      "version": "0.3.0",
+      "releasePath": "assets/scenes/personal-workspace-v1/0.3.0",
+      "status": "review",
+      "acceptanceStatus": "pending-human-acceptance",
+      "visualAcceptanceStatus": "pending-human-acceptance",
+      "rightsApprovalStatus": "pending-human-rights-approval",
+      "rightsApproved": false,
+      "isCurrent": false,
+      "publicationReady": false,
+      "files": {
+        "LICENSES.md": {
+          "sha256": "964e6e54b5ac7716d3ea9462a5dea3fe7924538e5810f06940b0f8408f72e77d",
+          "sizeBytes": 1577
+        },
+        "preview.webp": {
+          "sha256": "514c8337095b3c03e3f5b7c1cd32c508f8c3f6a54d1c6071c7bf4a21f3983331",
+          "sizeBytes": 60820
+        },
+        "scene.glb": {
+          "sha256": "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf",
+          "sizeBytes": 10476924
+        },
+        "scene.json": {
+          "sha256": "cba4e3696b2fd2c0ae8a394924ec08e9365cc4a75e46c98851d3849928b2d9a1",
+          "sizeBytes": 3032
+        }
+      },
+      "stats": {
+        "triangles": 45772,
+        "objects": 232,
+        "meshes": 232,
+        "primitives": 232,
+        "materials": 16,
+        "textures": 2,
         "animations": 0,
         "scenes": 1
       }

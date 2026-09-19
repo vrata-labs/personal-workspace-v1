@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "status": "technical-runtime-capture-passed",
+  "releaseGlb": {
+    "path": "assets/scenes/personal-workspace-v1/0.3.0/scene.glb",
+    "sha256": "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf",
+    "sizeBytes": 10476924
+  },
+  "releaseManifest": {
+    "path": "assets/scenes/personal-workspace-v1/0.3.0/scene.json",
+    "sha256": "cba4e3696b2fd2c0ae8a394924ec08e9365cc4a75e46c98851d3849928b2d9a1",
+    "sizeBytes": 3032
+  },
+  "capture": {
+    "platformCommit": "c54edb2239d225a71e9b934316f70792b3faafb6",
+    "platformPatch": {
+      "path": "source/releases/0.3.0/platform-scene-visual-clean.patch",
+      "sha256": "897201febe0590988cc9f199367b3099deb79c4397ed70c0eb00202dae3f9755",
+      "sizeBytes": 3648
+    },
+    "bindingFile": "capture-binding.json",
+    "runtimeDiagnosticsFile": "scene-debug.json",
+    "renderSettingsFile": "capture-settings.json",
+    "requiredState": "loaded",
+    "requiredFailureReason": null,
+    "requireNoMissingAssets": true,
+    "requiredRenderProfile": "baked-pbr-v1",
+    "minimumLightMappedMaterialCount": 15,
+    "expectedRuntime": {
+      "objectCount": 234,
+      "meshCount": 232,
+      "materialCount": 16,
+      "texturedMaterialCount": 232,
+      "lightMappedMaterialCount": 15,
+      "geometryCount": 232,
+      "triangleEstimate": 45772,
+      "textureCount": 16
+    },
+    "expectedSpawn": {
+      "id": "main",
+      "position": {
+        "x": 2.25,
+        "y": 0,
+        "z": 1.8
+      },
+      "yaw": 0.6669082042393105,
+      "applied": true
+    },
+    "renderSettings": {
+      "environmentIntensity": 0.35,
+      "exposure": 1.2
+    },
+    "runtimeCaptureRoot": "provenance/runtime-capture-0.3.0",
+    "repeatSets": [
+      "run-1",
+      "run-2",
+      "run-3"
+    ],
+    "runner": {
+      "command": "pnpm test:e2e:private-assets tests/e2e/scene-visual.spec.ts --workers=1",
+      "executable": "pnpm",
+      "argv": [
+        "test:e2e:private-assets",
+        "tests/e2e/scene-visual.spec.ts",
+        "--workers=1"
+      ],
+      "bindingGenerator": {
+        "executable": "node",
+        "argv": [
+          "scripts/create-review-capture-binding.mjs",
+          "--version",
+          "0.3.0",
+          "--run",
+          "<capture-set>"
+        ],
+        "environment": {
+          "SCENE_VISUAL_CAPTURE_ROOT": "<capture-root>"
+        }
+      },
+      "environment": {
+        "SCENE_VISUAL_ASSET_PATH": "<candidate-root>/assets/scenes/personal-workspace-v1/0.3.0/scene.glb",
+        "SCENE_VISUAL_MANIFEST_PATH": "<candidate-root>/assets/scenes/personal-workspace-v1/0.3.0/scene.json",
+        "SCENE_VISUAL_CONFIG_PATH": "<candidate-root>/source/releases/0.3.0/visual-parity-config.json",
+        "SCENE_VISUAL_OUTPUT_DIR": "<capture-dir>",
+        "SCENE_VISUAL_VIEW_IDS": "<comma-separated runner batch>",
+        "SCENE_VISUAL_STRIP_ANCHORS": "1",
+        "SCENE_VISUAL_HIDE_MEDIA_SURFACES": "1",
+        "SCENE_VISUAL_FLIP_Z": "0",
+        "SCENE_VISUAL_ENVIRONMENT_INTENSITY": "0.35",
+        "SCENE_VISUAL_EXPOSURE": "1.2"
+      },
+      "batches": [
+        [
+          "entry",
+          "workspace",
+          "reading"
+        ],
+        [
+          "diagonal-overview",
+          "window-detail",
+          "exterior-view",
+          "owner-seat"
+        ]
+      ]
+    },
+    "cleanVisualMode": {
+      "stripAnchors": true,
+      "avatarsEnabled": true,
+      "avatarFallbackCapsulesEnabled": false,
+      "avatarSeatsEnabled": false,
+      "mediaSurfacesVisible": false,
+      "reason": "Interaction anchors, dynamic media planes, and fallback avatar meshes are validated separately and must not occlude fixed source-to-GLB composition evidence."
+    }
+  },
+  "reviewViews": [
+    {
+      "id": "entry",
+      "position": {
+        "x": 2.35,
+        "y": 1.58,
+        "z": 1.92
+      },
+      "target": {
+        "x": 1.6,
+        "y": 1.18,
+        "z": -0.9
+      },
+      "fovDegrees": 57.02161300598603,
+      "sourceHorizontalFovDegrees": 88
+    },
+    {
+      "id": "workspace",
+      "position": {
+        "x": -1,
+        "y": 2.02,
+        "z": 2.15
+      },
+      "target": {
+        "x": 0.42,
+        "y": 1.08,
+        "z": -0.72
+      },
+      "fovDegrees": 53.72235541744756,
+      "sourceHorizontalFovDegrees": 84
+    },
+    {
+      "id": "reading",
+      "position": {
+        "x": 0.55,
+        "y": 1.42,
+        "z": -0.95
+      },
+      "target": {
+        "x": -2.25,
+        "y": 1,
+        "z": 0.45
+      },
+      "fovDegrees": 32.64206322821485,
+      "sourceHorizontalFovDegrees": 55
+    },
+    {
+      "id": "diagonal-overview",
+      "position": {
+        "x": -1,
+        "y": 2.02,
+        "z": 2.15
+      },
+      "target": {
+        "x": 0.35,
+        "y": 1.06,
+        "z": -0.62
+      },
+      "fovDegrees": 41.554596568496,
+      "sourceHorizontalFovDegrees": 68
+    },
+    {
+      "id": "window-detail",
+      "position": {
+        "x": 1.15,
+        "y": 1.55,
+        "z": -0.2
+      },
+      "target": {
+        "x": 4.35,
+        "y": 1.44,
+        "z": -0.2
+      },
+      "fovDegrees": 34.63483611201092,
+      "sourceHorizontalFovDegrees": 58
+    },
+    {
+      "id": "exterior-view",
+      "position": {
+        "x": 0.05,
+        "y": 1.56,
+        "z": -0.2
+      },
+      "target": {
+        "x": 8,
+        "y": 1.37,
+        "z": -0.2
+      },
+      "fovDegrees": 44.457722167320206,
+      "sourceHorizontalFovDegrees": 72
+    },
+    {
+      "id": "owner-seat",
+      "position": {
+        "x": -1.05,
+        "y": 1.2,
+        "z": -0.92
+      },
+      "target": {
+        "x": 3.75,
+        "y": 1.38,
+        "z": -0.15
+      },
+      "fovDegrees": 42.99566141876367,
+      "sourceHorizontalFovDegrees": 70
+    }
+  ],
+  "views": [
+    {
+      "id": "entry",
+      "referencePath": "source/releases/0.3.0/review/entry.webp",
+      "referenceSha256": "514c8337095b3c03e3f5b7c1cd32c508f8c3f6a54d1c6071c7bf4a21f3983331",
+      "captureFile": "entry.png",
+      "thresholds": {
+        "status": "calibrated-from-three-byte-stable-runtime-capture-sets",
+        "phashMax": 60,
+        "nccMin": 0.44,
+        "observedPhashMax": 54.8399,
+        "observedNccMin": 0.472445,
+        "phashMarginAbsolute": 5,
+        "nccMarginAbsolute": 0.03
+      }
+    },
+    {
+      "id": "workspace",
+      "referencePath": "source/releases/0.3.0/review/workspace.webp",
+      "referenceSha256": "8fa5cf0a442441677f2706af0d81d344f48822d7ca807d7fcbc0d63d47a7bd1f",
+      "captureFile": "workspace.png",
+      "thresholds": {
+        "status": "calibrated-from-three-byte-stable-runtime-capture-sets",
+        "phashMax": 24,
+        "nccMin": 0.32,
+        "observedPhashMax": 18.2296,
+        "observedNccMin": 0.357301,
+        "phashMarginAbsolute": 5,
+        "nccMarginAbsolute": 0.03
+      }
+    },
+    {
+      "id": "reading",
+      "referencePath": "source/releases/0.3.0/review/reading.webp",
+      "referenceSha256": "6002448b03abc80e336ae3b491f3e62eeb8fbd0618c477514eb1e1df4fa8e79a",
+      "captureFile": "reading.png",
+      "thresholds": {
+        "status": "calibrated-from-three-byte-stable-runtime-capture-sets",
+        "phashMax": 29,
+        "nccMin": 0.5,
+        "observedPhashMax": 23.8535,
+        "observedNccMin": 0.535318,
+        "phashMarginAbsolute": 5,
+        "nccMarginAbsolute": 0.03
+      }
+    },
+    {
+      "id": "diagonal-overview",
+      "referencePath": "source/releases/0.3.0/review/diagonal-overview.webp",
+      "referenceSha256": "5f23b64b49ad9e50bb74615fe1dca098662f664a502b4a35bcdd940f60a834c3",
+      "captureFile": "diagonal-overview.png",
+      "thresholds": {
+        "status": "calibrated-from-three-byte-stable-runtime-capture-sets",
+        "phashMax": 57,
+        "nccMin": 0.27,
+        "observedPhashMax": 51.7006,
+        "observedNccMin": 0.302334,
+        "phashMarginAbsolute": 5,
+        "nccMarginAbsolute": 0.03
+      }
+    },
+    {
+      "id": "window-detail",
+      "referencePath": "source/releases/0.3.0/review/window-detail.webp",
+      "referenceSha256": "ce8b7ff07411fc023f591a47ffc2823a852272beb3b4f898b81b6b24b2c2455b",
+      "captureFile": "window-detail.png",
+      "thresholds": {
+        "status": "calibrated-from-three-byte-stable-runtime-capture-sets",
+        "phashMax": 26,
+        "nccMin": 0.86,
+        "observedPhashMax": 20.0218,
+        "observedNccMin": 0.895148,
+        "phashMarginAbsolute": 5,
+        "nccMarginAbsolute": 0.03
+      }
+    },
+    {
+      "id": "exterior-view",
+      "referencePath": "source/releases/0.3.0/review/exterior-view.webp",
+      "referenceSha256": "213b37f6dab8ba82490af164b203e86d2c6da2f5f0d5fc50967f383241a58897",
+      "captureFile": "exterior-view.png",
+      "thresholds": {
+        "status": "calibrated-from-three-byte-stable-runtime-capture-sets",
+        "phashMax": 58,
+        "nccMin": 0.56,
+        "observedPhashMax": 52.9607,
+        "observedNccMin": 0.594988,
+        "phashMarginAbsolute": 5,
+        "nccMarginAbsolute": 0.03
+      }
+    },
+    {
+      "id": "owner-seat",
+      "referencePath": "source/releases/0.3.0/review/owner-seat.webp",
+      "referenceSha256": "b3f0406e172755bf0733324791b0b360f62bd9a0bac19856cb54de123dda8922",
+      "captureFile": "owner-seat.png",
+      "thresholds": {
+        "status": "calibrated-from-three-byte-stable-runtime-capture-sets",
+        "phashMax": 119,
+        "nccMin": 0.21,
+        "observedPhashMax": 113.82,
+        "observedNccMin": 0.241582,
+        "phashMarginAbsolute": 5,
+        "nccMarginAbsolute": 0.03
+      }
+    }
+  ],
+  "aggregateThresholds": {
+    "status": "calibrated-from-three-byte-stable-runtime-capture-sets",
+    "phashTotalMax": 371,
+    "nccMeanMin": 0.45,
+    "observedPhashTotalMax": 335.4261,
+    "observedNccMeanMin": 0.485588,
+    "phashMarginAbsolute": 35,
+    "nccMarginAbsolute": 0.03
+  },
+  "calibration": {
+    "status": "established-from-three-byte-stable-runtime-capture-sets",
+    "purpose": "post-capture-regression-baseline-not-independent-acceptance",
+    "captureSets": [
+      "run-1",
+      "run-2",
+      "run-3"
+    ],
+    "sourceMetricThresholdFormula": {
+      "phashMax": "ceil(max(observed PHASH) + 5)",
+      "nccMin": "floor((min(observed NCC) - 0.03) * 100) / 100",
+      "aggregatePhashTotalMax": "ceil(max(observed PHASH total) + 5 * view count)",
+      "aggregateNccMeanMin": "floor((min(observed NCC mean) - 0.03) * 100) / 100"
+    },
+    "evidenceMetricTolerance": {
+      "scope": "recorded-metric-comparison-only",
+      "phashAbsolute": 0.001,
+      "nccAbsolute": 0.000001
+    },
+    "stabilityEvidencePath": "provenance/releases/0.3.0/visual-stability.json"
+  },
+  "humanGates": {
+    "visualAcceptance": "pending-human-acceptance",
+    "rightsApproval": "pending-human-rights-approval",
+    "publicationReady": false
+  }
+}

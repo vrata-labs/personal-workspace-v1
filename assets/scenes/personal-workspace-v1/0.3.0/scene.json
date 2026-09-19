@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "version": "0.3.0",
+  "label": "Personal Workspace",
+  "source": "Vrata project-authored deterministic Blender review source",
+  "status": "review",
+  "acceptanceStatus": "pending-human-acceptance",
+  "visualAcceptanceStatus": "pending-human-acceptance",
+  "rightsApprovalStatus": "pending-human-rights-approval",
+  "rightsApproved": false,
+  "publicationReady": false,
+  "glbPath": "scene.glb",
+  "renderMode": "clean",
+  "renderProfile": "baked-pbr-v1",
+  "spawnPoints": [
+    {
+      "id": "main",
+      "position": { "x": 2.25, "y": 0, "z": 1.8 },
+      "openRadiusM": 0.8,
+      "yaw": 0.6669082042393105
+    }
+  ],
+  "bounds": { "width": 6.4, "height": 3.1, "depth": 5.2 },
+  "anchors": {
+    "teleportFloorY": 0,
+    "seatAnchors": [
+      {
+        "id": "owner-desk-seat",
+        "role": "owner-only-optional-desk-seat",
+        "position": { "x": -1.05, "y": 0, "z": -0.92 },
+        "yaw": 0,
+        "seatHeight": 0.48,
+        "radius": 0.42
+      }
+    ]
+  },
+  "mediaSurfaces": [
+    {
+      "surfaceId": "workspace-main",
+      "label": "Personal workspace",
+      "kind": "wall",
+      "widthM": 1.72,
+      "heightM": 0.97,
+      "widthPx": 1920,
+      "heightPx": 1080,
+      "transform": { "x": -1.08, "y": 1.56, "z": -2.43, "yaw": 0, "pitch": 0, "roll": 0 },
+      "visible": true,
+      "allowedObjectTypes": ["markdown-board", "image-viewer", "video-player"]
+    }
+  ],
+  "preview": "preview.webp",
+  "visual": {
+    "intentionalDark": false,
+    "reviewStage": "source-review"
+  },
+  "rights": {
+    "owner": "vrata",
+    "license": "LicenseRef-Project-Authored-Pending-Human-Rights-Approval",
+    "approvalStatus": "pending-human-rights-approval",
+    "rightsApproved": false,
+    "clearedFor": [],
+    "sourceAssets": [
+      { "id": "asset-interior-source-project-authored", "type": "mesh", "author": "Vrata project team", "licenseRef": "LICENSES.md" },
+      { "id": "asset-baked-lightmap-project-authored", "type": "texture", "author": "Vrata project team", "licenseRef": "LICENSES.md" },
+      { "id": "asset-panorama-sphere-project-authored", "type": "mesh", "author": "Vrata project team", "licenseRef": "LICENSES.md" },
+      { "id": "asset-panorama-city-park-project-authored", "type": "texture", "author": "Vrata project team", "licenseRef": "LICENSES.md" },
+      { "id": "asset-review-imagery-project-authored", "type": "image", "author": "Vrata project team", "licenseRef": "LICENSES.md" }
+    ]
+  },
+  "notes": "Append-only review release preserving the existing Personal Workspace interior and functional runtime coordinates. The window glass is absent while the opening, frame and sill remain. One inward-visible project-authored city, park and coast panorama sphere is unlit/emissive sRGB and excluded from bake, collision, support and navigable bounds. Human visual acceptance and human rights approval for these exact new bytes remain pending; the release is non-current and not publication-ready.",
+  "isCurrent": false
+}

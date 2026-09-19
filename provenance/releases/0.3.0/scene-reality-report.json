@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "result": "valid",
+  "contracts": {
+    "sceneReality": {
+      "path": "source/releases/0.3.0/scene-reality.json",
+      "sha256": "5a117d7e17d6ed5e8524e39544d8c2048c4f78fe1cee05fb7b22ce6aa1cd4a2f",
+      "sizeBytes": 5032
+    },
+    "userScenarios": {
+      "path": "source/releases/0.3.0/user-scenarios.json",
+      "sha256": "72ce34e31522f423da88e28599259d963c71634ec88eeb3e3bd3670bd82a1681",
+      "sizeBytes": 3830
+    },
+    "scenarios": 7
+  },
+  "release": {
+    "sceneManifestValidated": true,
+    "glbValidated": true,
+    "meshNodesValidated": 232,
+    "taggedMeshNodesValidated": 232,
+    "uniqueObjectPartPairsValidated": 232,
+    "objectGroupsValidated": 19,
+    "requiredNodesValidated": 10,
+    "forbiddenNodesAbsent": 1,
+    "embeddedTexturesValidated": 2,
+    "preservedRuntimeBindingsValidated": 3,
+    "budgetsValidated": 14
+  },
+  "gates": {
+    "sourceReview": "prepared-for-human-review",
+    "runtimeCapture": "technical-runtime-capture-passed",
+    "runtimeCaptureSets": 3,
+    "humanVisualAcceptance": "pending-human-acceptance",
+    "humanRightsApproval": "pending-human-rights-approval",
+    "publicationReady": false
+  }
+}

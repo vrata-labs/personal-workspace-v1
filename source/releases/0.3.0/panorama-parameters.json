@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "design": "layered-atmospheric-organic-urban-coastal-park",
+  "seed": 3030417,
+  "width": 4096,
+  "height": 2048,
+  "format": "JPEG",
+  "quality": 88,
+  "chromaSubsampling": "4:2:0",
+  "progressive": true,
+  "compressedBytesMax": 2621440,
+  "decodedRgbaBytes": 33554432,
+  "decodedRgbSha256": "d3956c482d08057837ad4bd418523560819711cd3153aad8c1820bf36f52cdc6",
+  "horizonV": 0.49,
+  "heroLongitudeU": 0.56,
+  "sun": {
+    "u": 0.69,
+    "v": 0.215,
+    "radius": 0.032
+  },
+  "palette": {
+    "skyZenith": [55, 88, 119],
+    "skyHorizon": [205, 218, 216],
+    "sun": [255, 230, 181],
+    "haze": [178, 199, 197],
+    "horizonGlow": [221, 215, 197],
+    "distanceHaze": [166, 185, 181],
+    "cityMist": [137, 164, 159],
+    "farRidge": [113, 139, 140],
+    "nearRidge": [70, 105, 91],
+    "waterNear": [69, 119, 133],
+    "waterFar": [132, 164, 168],
+    "shoreline": [104, 126, 111],
+    "parkFar": [85, 116, 76],
+    "parkNear": [43, 79, 49],
+    "path": [174, 150, 116],
+    "cityLight": [232, 211, 169]
+  },
+  "cityPalettes": {
+    "far": [[137, 153, 154], [124, 145, 149], [151, 158, 151], [116, 140, 143]],
+    "mid": [[94, 116, 119], [119, 126, 121], [83, 109, 114], [133, 128, 116]],
+    "near": [[61, 79, 82], [82, 88, 84], [53, 73, 79], [92, 86, 77]]
+  },
+  "cityDistricts": [
+    { "offsetU": -0.176, "spreadU": 0.018, "weight": 0.11, "heightScale": 0.58 },
+    { "offsetU": -0.112, "spreadU": 0.026, "weight": 0.18, "heightScale": 0.82 },
+    { "offsetU": -0.041, "spreadU": 0.021, "weight": 0.25, "heightScale": 1.12 },
+    { "offsetU": 0.034, "spreadU": 0.017, "weight": 0.21, "heightScale": 0.94 },
+    { "offsetU": 0.106, "spreadU": 0.025, "weight": 0.16, "heightScale": 0.72 },
+    { "offsetU": 0.174, "spreadU": 0.016, "weight": 0.09, "heightScale": 0.49 }
+  ],
+  "counts": {
+    "cityBuildingsFar": 54,
+    "cityBuildingsMid": 39,
+    "cityBuildingsNear": 25,
+    "distantTrees": 118,
+    "foregroundTrees": 38,
+    "cloudLayers": 4
+  },
+  "generatorRuntime": {
+    "blenderVersion": "4.5.12 LTS",
+    "blenderBuildHash": "84afd5f785f7",
+    "numpyVersion": "1.26.4",
+    "imageMagickVersionPrefix": "ImageMagick 6.9.12-98 Q16 x86_64 18038"
+  }
+}

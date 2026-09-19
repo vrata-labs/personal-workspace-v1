@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releases": [
+    {
+      "version": "0.3.0",
+      "status": "review-source-lock",
+      "lockPath": "source/releases/0.3.0/review-source-lock.json",
+      "lockSha256": "a31e942af1c1a91cc19b0511188bd231d392fef8a17fff7e3c3ef7fe2be01e45",
+      "visualParityConfigPath": "source/releases/0.3.0/visual-parity-config.json",
+      "visualParityConfigSha256": "36bdbb09914dc1dbef19d9247aa83ae48615b61fcf7effaa93590b1965aeaf48",
+      "humanVisualAccepted": false,
+      "technicalRuntimeCapture": "passed-three-byte-stable-runtime-capture-sets"
+    }
+  ]
+}
