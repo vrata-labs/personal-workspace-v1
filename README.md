@@ -2,6 +2,21 @@
 
 Local review candidate for the FEAT-032 owner-bound private workspace. This is an original compact creative studio, not the eight-seat warm-modern meeting candidate.
 
+## Quality disposition: REWORK_REQUIRED
+
+On 2026-09-19 the user rejected the visual quality of 0.3.0 at merge commit
+`705ed359269b5f9cd19168e63f0d7c3fc15a73b0`: simplified object design, insufficient
+real-use/construction reasoning, flat material appearance and an illustrated
+panorama do not meet the inherited realistic quality target. Green technical
+checks and immutable pre-review pending fields are not a positive visual verdict.
+
+New work must use the [shared quality contract](https://github.com/vrata-labs/platform/blob/8ba49739d44518a3e877bc93432be591ce2e72da/docs/scene-quality-contract.md)
+and its [task packet](https://github.com/vrata-labs/platform/blob/8ba49739d44518a3e877bc93432be591ce2e72da/docs/scene-authoring-task-template.md),
+including all-object User/Builder/Physics passes, realistic materials and photographic
+exterior evidence. Passive objects remain allowed. Do not repeat the same-candidate
+capture calibration as a substitute for matching the accepted quality benchmark.
+This records the rejection separately; published 0.3.0 source/release evidence is immutable.
+
 ## Boundary
 
 The repository owns one scene ID, `personal-workspace-v1`, and four materialized immutable review releases: `0.1.0`, `0.1.1`, the baked `0.2.0`, and the derived-environment review release `0.3.0`. Historical public-staging rights apply only to the exact `0.1.x` and `0.2.0` bytes. The `0.3.0` technical runtime capture has passed, while exact-byte rights review and human visual acceptance remain pending. Nothing in this tree is current, production-active, or publication-ready.
