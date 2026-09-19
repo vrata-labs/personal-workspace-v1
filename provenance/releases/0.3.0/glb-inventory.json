@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "releaseGlb": {
+    "path": "assets/scenes/personal-workspace-v1/0.3.0/scene.glb",
+    "sha256": "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf",
+    "sizeBytes": 10476924
+  },
+  "stats": {
+    "triangles": 45772,
+    "objects": 232,
+    "meshes": 232,
+    "primitives": 232,
+    "materials": 16,
+    "textures": 2,
+    "animations": 0,
+    "scenes": 1
+  },
+  "meshSemantics": {
+    "requiredTags": [
+      "vrataObjectId",
+      "vrataPartId",
+      "vrataInteractionStatus",
+      "vrataBakePolicy",
+      "vrataCollisionPolicy",
+      "vrataSupportPolicy",
+      "vrataNavigableBoundsPolicy"
+    ],
+    "taggedMeshNodes": 232,
+    "uniqueObjectPartPairs": 232,
+    "interactionStatusCounts": {
+      "deferred": 3,
+      "interactive": 28,
+      "passive": 201
+    },
+    "objectGroups": [
+      {
+        "id": "ceiling-lighting",
+        "status": "passive",
+        "partCount": 9
+      },
+      {
+        "id": "exterior-panorama",
+        "status": "passive",
+        "partCount": 1
+      },
+      {
+        "id": "main-door",
+        "status": "deferred",
+        "partCount": 3
+      },
+      {
+        "id": "main-window",
+        "status": "passive",
+        "partCount": 6
+      },
+      {
+        "id": "owner-chair",
+        "status": "interactive",
+        "partCount": 20
+      },
+      {
+        "id": "owner-desk",
+        "status": "passive",
+        "partCount": 11
+      },
+      {
+        "id": "reading-chair",
+        "status": "passive",
+        "partCount": 9
+      },
+      {
+        "id": "reading-floor-lamp",
+        "status": "passive",
+        "partCount": 4
+      },
+      {
+        "id": "reading-library",
+        "status": "passive",
+        "partCount": 29
+      },
+      {
+        "id": "reading-rug",
+        "status": "passive",
+        "partCount": 6
+      },
+      {
+        "id": "reading-side-table",
+        "status": "passive",
+        "partCount": 4
+      },
+      {
+        "id": "room-shell",
+        "status": "passive",
+        "partCount": 34
+      },
+      {
+        "id": "storage-cabinet",
+        "status": "passive",
+        "partCount": 13
+      },
+      {
+        "id": "window-bench",
+        "status": "passive",
+        "partCount": 3
+      },
+      {
+        "id": "window-plant",
+        "status": "passive",
+        "partCount": 14
+      },
+      {
+        "id": "workspace-accessories",
+        "status": "passive",
+        "partCount": 43
+      },
+      {
+        "id": "workspace-backdrop",
+        "status": "passive",
+        "partCount": 12
+      },
+      {
+        "id": "workspace-main",
+        "status": "interactive",
+        "partCount": 8
+      },
+      {
+        "id": "workspace-pendant",
+        "status": "passive",
+        "partCount": 3
+      }
+    ]
+  },
+  "materials": {
+    "total": 16,
+    "lightMapped": [
+      {
+        "name": "material.charcoal-metal",
+        "lightMapIntensity": 2.7
+      },
+      {
+        "name": "material.mineral-plaster",
+        "lightMapIntensity": 3
+      },
+      {
+        "name": "material.muted-sage",
+        "lightMapIntensity": 3.2
+      },
+      {
+        "name": "material.natural-linen",
+        "lightMapIntensity": 3.1
+      },
+      {
+        "name": "material.oak-honey",
+        "lightMapIntensity": 4
+      },
+      {
+        "name": "material.oak-shadow",
+        "lightMapIntensity": 4.3
+      },
+      {
+        "name": "material.plant-leaf",
+        "lightMapIntensity": 3.2
+      },
+      {
+        "name": "material.plant-leaf-light",
+        "lightMapIntensity": 3.2
+      },
+      {
+        "name": "material.plant-soil",
+        "lightMapIntensity": 3
+      },
+      {
+        "name": "material.sage-woven",
+        "lightMapIntensity": 3.2
+      },
+      {
+        "name": "material.soft-clay",
+        "lightMapIntensity": 3.35
+      },
+      {
+        "name": "material.warm-oak",
+        "lightMapIntensity": 4.2
+      },
+      {
+        "name": "material.warm-paper",
+        "lightMapIntensity": 3
+      },
+      {
+        "name": "material.warm-practical-glow",
+        "lightMapIntensity": 3.2
+      },
+      {
+        "name": "material.workspace-screen",
+        "lightMapIntensity": 2.8
+      }
+    ],
+    "panorama": {
+      "name": "material.exterior.panorama-unlit",
+      "lightMapped": false,
+      "unlit": true,
+      "colorSpace": "sRGB"
+    }
+  },
+  "textures": [
+    {
+      "name": "baked-lightmap",
+      "mimeType": "image/png",
+      "sha256": "99efa06a464e15f04b496b2f21916de4b4e97603fafecb07edca35478a37283b",
+      "sizeBytes": 6058088
+    },
+    {
+      "name": "panorama-city-park",
+      "mimeType": "image/jpeg",
+      "sha256": "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6",
+      "sizeBytes": 435189
+    }
+  ],
+  "panoramaNode": {
+    "name": "exterior.panorama-sphere",
+    "extras": {
+      "vrataObjectId": "exterior-panorama",
+      "vrataPartId": "sphere",
+      "vrataInteractionStatus": "passive",
+      "vrataBakePolicy": "exclude-unlit-background",
+      "vrataBakeExclusionReason": "unlit-panorama",
+      "vrataCollisionPolicy": "exclude",
+      "vrataSupportPolicy": "exclude",
+      "vrataNavigableBoundsPolicy": "exclude",
+      "vrataSourceAssetId": "asset-panorama-city-park-project-authored",
+      "vrataPanoramaSha256": "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6",
+      "vrataPanoramaRadiusM": 40,
+      "vrataPanoramaYawDegrees": -21.6
+    }
+  },
+  "forbiddenNodesAbsent": [
+    "architecture.window-glass"
+  ],
+  "requiredNodesPresent": [
+    "architecture.floor-slab",
+    "architecture.window-frame.bottom",
+    "architecture.window-frame.top",
+    "architecture.window-frame.south",
+    "architecture.window-frame.north",
+    "architecture.window-frame.mullion",
+    "architecture.window-sill-oak",
+    "furniture.owner-chair.seat-shell",
+    "surface.workspace-main.panel",
+    "exterior.panorama-sphere"
+  ]
+}

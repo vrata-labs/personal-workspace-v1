@@ -97,21 +97,11 @@ const releaseRecord = (version, files) => ({
 });
 
 await writeJson(join(root, "manifest.json"), {
-  schemaVersion: 1,
-  sceneId: SCENE_ID,
-  blenderVersion: "4.5.12 LTS",
-  blenderBuildHash: "84afd5f785f7",
-  platformValidatorCommit: BAKED_PLATFORM_COMMIT,
-  status: "review",
-  acceptanceStatus: "pending-human-acceptance",
-  visualAcceptanceStatus: "pending-human-acceptance",
-  rightsApprovalStatus: RIGHTS_APPROVAL_STATUS,
-  rightsApproved: true,
-  publicationReady: false,
+  ...existingManifest,
   releases: [
     releaseRecord(SOURCE_VERSION, sourceFiles),
     releaseRecord(METADATA_VERSION, releaseFiles),
-    ...existingManifest.releases.slice(BASE_RELEASE_VERSIONS.length).filter(({ version }) => PUBLISHED_BAKED_VERSIONS.includes(version))
+    ...existingManifest.releases.slice(BASE_RELEASE_VERSIONS.length)
   ]
 });
 

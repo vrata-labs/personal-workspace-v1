@@ -34,7 +34,7 @@ function assertRecord(actual, expected, code) {
 }
 
 function runBlender(args, code) {
-  const result = spawnSync(blender, args, { cwd: root, stdio: "inherit" });
+  const result = spawnSync(blender, args, { cwd: root, env: { ...process.env, PYTHONDONTWRITEBYTECODE: "1" }, stdio: "inherit" });
   if (result.error?.code === "ENOENT") throw new Error("blender_not_found: set BLENDER_BIN to the pinned Blender binary");
   if (result.error || result.status !== 0) throw new Error(`${code}:${result.error?.message ?? result.status}`);
 }

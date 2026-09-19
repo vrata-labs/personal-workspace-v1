@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "result": "valid",
+  "adapter": {
+    "source": "semantic right-handed Y-up meters",
+    "blender": "right-handed Z-up meters",
+    "runtime": "glTF right-handed Y-up meters",
+    "sourceToBlender": "x=x,y=z,z=y",
+    "sourceToRuntime": "x=x,y=y,z=-z"
+  },
+  "bindings": {
+    "spawn": {
+      "id": "main",
+      "position": {
+        "x": 2.25,
+        "y": 0,
+        "z": 1.8
+      },
+      "openRadiusM": 0.8,
+      "yaw": 0.6669082042393105
+    },
+    "ownerSeat": {
+      "id": "owner-desk-seat",
+      "position": {
+        "x": -1.05,
+        "y": 0,
+        "z": -0.92
+      },
+      "yaw": 0,
+      "seatHeight": 0.48,
+      "radius": 0.42
+    },
+    "mediaSurface": {
+      "surfaceId": "workspace-main",
+      "widthM": 1.72,
+      "heightM": 0.97,
+      "transform": {
+        "x": -1.08,
+        "y": 1.56,
+        "z": -2.43,
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0
+      }
+    }
+  },
+  "previousReleaseVersion": "0.2.0",
+  "previousReleaseBindingsPreserved": true
+}

@@ -18,6 +18,13 @@ import {
   PUBLISHED_BAKED_VERSIONS,
   RELEASE_FILES,
   RELEASE_VERSIONS,
+  REVIEW_RELEASE,
+  REVIEW_RELEASE_VERSION,
+  REVIEW_RELEASE_VIEWS,
+  REVIEW_RIGHTS_APPROVAL_STATUS,
+  REVIEW_RIGHTS_LICENSE_REF,
+  REVIEW_RUNTIME_CAPTURE_FILES,
+  REVIEW_RUNTIME_CAPTURE_RUNS,
   REVIEW_VIEWS,
   RUNTIME_CAPTURE_ARTIFACT_FILES,
   RUNTIME_CAPTURE_FILES,
@@ -33,6 +40,8 @@ import {
   VERSION,
   bakedReleaseBinaryPaths,
   bakedReleasePaths,
+  assertAcceptanceIndexPrefix,
+  assertReviewOnlyGates,
   canonicalSha256,
   createBakedReleaseScene,
   createMetadataReleaseScene,
@@ -41,8 +50,10 @@ import {
   horizontalToVerticalFovDegrees,
   isReleaseVersionPrefix,
   nextReleaseVersion,
+  pathTrackedInGit,
   pngDimensions,
   readJson,
+  repositoryToolingPaths,
   sha256,
   toRuntimePosition,
   webpDimensions,
@@ -56,6 +67,64 @@ const sceneRoot = join(root, "assets", "scenes", SCENE_ID);
 test("coordinate adapter reflects semantic z exactly once", () => {
   assert.deepEqual(toRuntimePosition({ x: 1.25, y: 0.4, z: -2.5 }), { x: 1.25, y: 0.4, z: 2.5 });
   assert.deepEqual(toRuntimePosition({ x: -1, y: 0, z: 2 }), { x: -1, y: 0, z: -2 });
+});
+
+test("integrity helpers fail closed for mutable history, gate claims, and git state", async () => {
+  const baseIndex = { schemaVersion: 1, sceneId: SCENE_ID, releases: [{ version: "0.2.0", lockSha256: "base" }] };
+  assert.doesNotThrow(() => assertAcceptanceIndexPrefix(baseIndex, {
+    ...baseIndex,
+    releases: [...baseIndex.releases, { version: REVIEW_RELEASE_VERSION, lockSha256: "candidate" }]
+  }));
+  assert.throws(() => assertAcceptanceIndexPrefix(baseIndex, { ...baseIndex, releases: [] }), /acceptance_index_history_deleted/);
+  assert.throws(() => assertAcceptanceIndexPrefix(baseIndex, {
+    ...baseIndex,
+    releases: [{ version: "0.2.0", lockSha256: "changed" }]
+  }), /acceptance_index_history_changed/);
+  for (const claim of [
+    { status: "active" },
+    { visualApproval: "approved" },
+    { rightsApprovalStatus: RIGHTS_APPROVAL_STATUS },
+    { humanRightsApproval: RIGHTS_APPROVAL_STATUS },
+    { rightsApproval: { status: RIGHTS_APPROVAL_STATUS } },
+    { rightsApproval: null },
+    { rightsApproval: [] },
+    { visualAcceptance: "approved" },
+    { visualAcceptance: { status: "approved" } },
+    { humanRightsAccepted: true },
+    { humanGates: { visual: "approved" } },
+    { humanGates: { rights: RIGHTS_APPROVAL_STATUS } },
+    { immutableRelease: true },
+    { publicationReady: true }
+  ]) assert.throws(() => assertReviewOnlyGates(claim, "probe"));
+  assert.doesNotThrow(() => assertReviewOnlyGates({ rightsApprovalStatus: RIGHTS_APPROVAL_STATUS, rightsApproved: true }, "historical", { allowApprovedRights: true }));
+  assert.doesNotThrow(() => assertReviewOnlyGates({ rightsApproval: { status: RIGHTS_APPROVAL_STATUS } }, "historical", { allowApprovedRights: true }));
+  const historicalOptions = { allowHistoricalManifestRecords: true };
+  assert.doesNotThrow(() => assertReviewOnlyGates({ releases: [
+    { version: "0.2.0", rightsApprovalStatus: RIGHTS_APPROVAL_STATUS, rightsApproved: true },
+    { version: REVIEW_RELEASE_VERSION, rightsApprovalStatus: REVIEW_RIGHTS_APPROVAL_STATUS, rightsApproved: false }
+  ] }, "manifest.json", historicalOptions));
+  for (const claim of [
+    { version: "0.2.0", rightsApproved: true },
+    { extra: { version: "0.2.0", rightsApproved: true } },
+    { releases: [{ version: "0.4.0", rightsApproved: true }] },
+    { releases: [{ version: REVIEW_RELEASE_VERSION, details: { version: "0.2.0", rightsApproved: true } }] },
+    { releases: [{ version: REVIEW_RELEASE_VERSION, releases: [{ version: "0.2.0", rightsApproved: true }] }] }
+  ]) assert.throws(() => assertReviewOnlyGates(claim, "manifest.json", historicalOptions), /rights_approval_claim/);
+  assert.equal(pathTrackedInGit(root, "package.json"), true);
+  assert.equal(pathTrackedInGit(root, "missing-integrity-probe"), false);
+  const tooling = await repositoryToolingPaths(root);
+  for (const path of [
+    ".github/workflows/validate.yml",
+    "package.json",
+    "pnpm-lock.yaml",
+    "scripts/build-review-release.mjs",
+    "scripts/write-review-evidence.mjs",
+    "scripts/calibrate-review-visual.mjs",
+    "scripts/create-review-capture-binding.mjs",
+    "scripts/lib.mjs",
+    "scripts/validate-baked-visual-parity.mjs",
+    "tests/repository.test.mjs"
+  ]) assert.ok(tooling.includes(path), path);
 });
 
 test("0.1.0 remains the historical authoring source", async () => {
@@ -109,8 +178,13 @@ test("materialized releases preserve the runtime workspace contract", async () =
       roll: contract.mediaSurfaces[0].transform.roll
     });
     assert.equal(scene.renderMode, "clean");
-    assert.equal(scene.rights.license, RIGHTS_LICENSE_REF);
-    assert.deepEqual(scene.rights.clearedFor, RIGHTS_ALLOWED_USES);
+    if (version === REVIEW_RELEASE_VERSION) {
+      assert.equal(scene.rights.license, REVIEW_RIGHTS_LICENSE_REF);
+      assert.deepEqual(scene.rights.clearedFor, []);
+    } else {
+      assert.equal(scene.rights.license, RIGHTS_LICENSE_REF);
+      assert.deepEqual(scene.rights.clearedFor, RIGHTS_ALLOWED_USES);
+    }
     for (const field of ["input", "representation", "position", "pixelDimensions", "frontFace"]) assert.equal(field in scene.mediaSurfaces[0], false);
   }
 });
@@ -126,7 +200,8 @@ test("root records preserve historical releases and declare the baked review tar
   assert.equal(packageManifest.version, VERSION);
   assert.equal(repository.releaseVersion, VERSION);
   assert.deepEqual(PUBLISHED_BAKED_VERSIONS, [BAKED_RELEASE_VERSION]);
-  assert.equal(VERSION, PUBLISHED_BAKED_VERSIONS.at(-1));
+  assert.equal(BAKED_RELEASE_VERSION, "0.2.0");
+  assert.equal(VERSION, REVIEW_RELEASE_VERSION);
   const manifestVersions = manifest.releases.map(({ version }) => version);
   assert.deepEqual(manifestVersions, RELEASE_VERSIONS);
   assert.equal(manifest.releases.every(({ isCurrent, publicationReady }) => isCurrent === false && publicationReady === false), true);
@@ -135,6 +210,10 @@ test("root records preserve historical releases and declare the baked review tar
   assert.equal(releaseLedger.rights.humanVisualAccepted, false);
   assert.equal(repository.platformValidatorCommit, BAKED_PLATFORM_COMMIT);
   assert.equal(manifest.platformValidatorCommit, BAKED_PLATFORM_COMMIT);
+  assert.equal(repository.rightsApprovalStatus, REVIEW_RIGHTS_APPROVAL_STATUS);
+  assert.equal(repository.rightsApproved, false);
+  assert.equal(manifest.rightsApprovalStatus, REVIEW_RIGHTS_APPROVAL_STATUS);
+  assert.equal(manifest.rightsApproved, false);
   assert.equal(metadataEvidence.platformValidatorCommit, METADATA_PLATFORM_COMMIT);
   assert.equal(metadataEvidence.baseVersion, SOURCE_VERSION);
   assert.equal(metadataEvidence.targetVersion, METADATA_VERSION);
@@ -163,7 +242,7 @@ test("builders accept every exact release-history prefix and only advance to its
 });
 
 test("boundary allowlist retains versioned baked inputs and capture binaries across append-only history", () => {
-  const versions = [...PUBLISHED_BAKED_VERSIONS, "0.3.0"];
+  const versions = [...PUBLISHED_BAKED_VERSIONS];
   const binaryPaths = bakedReleaseBinaryPaths(versions);
   for (const version of versions) {
     const paths = bakedReleasePaths(version);
@@ -183,6 +262,10 @@ test("boundary allowlist retains versioned baked inputs and capture binaries acr
     }
   }
   assert.equal(new Set(binaryPaths).size, binaryPaths.length);
+  assert.equal(REVIEW_RELEASE.blendPath, "source/releases/0.3.0/review-scene.blend");
+  assert.equal(REVIEW_RELEASE.lightmapPath, "source/releases/0.3.0/baked-lightmap.png");
+  assert.equal(REVIEW_RELEASE.panoramaPath, "source/releases/0.3.0/panorama-city-park.jpg");
+  assert.equal(REVIEW_RELEASE.reviewPath, "source/releases/0.3.0/review");
 });
 
 test("release directories are exact and shared artifact hashes are unchanged", async () => {
@@ -200,6 +283,10 @@ test("release directories are exact and shared artifact hashes are unchanged", a
   assert.deepEqual(bakedRelease.files["LICENSES.md"], metadataRelease.files["LICENSES.md"]);
   assert.deepEqual(bakedRelease.files["preview.webp"], await fileRecord(join(root, BAKED_RELEASE.runtimeCapturePath, "preview.webp")));
   assert.equal(bakedRelease.files["preview.webp"].sha256, "799adff5172395b48f0a663c5408176bc0f58030b4d5b0b86bc9795a424def62");
+  const reviewRelease = manifest.releases.find(({ version }) => version === REVIEW_RELEASE_VERSION);
+  assert.equal(reviewRelease.rightsApprovalStatus, REVIEW_RIGHTS_APPROVAL_STATUS);
+  assert.equal(reviewRelease.rightsApproved, false);
+  assert.deepEqual(reviewRelease.files["preview.webp"], await fileRecord(join(root, REVIEW_RELEASE.reviewPath, "entry.webp")));
 });
 
 test("historical Blender evidence and current metadata tooling use distinct validator pins", async () => {
@@ -235,7 +322,15 @@ test("historical Blender evidence and current metadata tooling use distinct vali
   assert.match(workflow, /provenance\/runtime-capture-\*\/\*/);
   assert.match(workflow, /source\/baked-lightmap-\*\.png/);
   assert.match(workflow, /source\/export_baked_release_\*\.py/);
-  assert.match(workflow, /git cat-file -e "\$BASE_SHA:\$protected_root"/);
+  assert.match(workflow, /source\/releases\/\*\/\*/);
+  assert.match(workflow, /provenance\/releases\/\*\/\*/);
+  assert.match(workflow, /git ls-tree --name-only "\$BASE_SHA" -- "\$protected_root"/);
+  assert.match(workflow, /immutable_diff_failed/);
+  assert.match(workflow, /done < "\$changed_paths"/);
+  assert.doesNotMatch(workflow, /done < <\(git diff/);
+  assert.match(workflow, /source\/review\/\*/);
+  assert.match(workflow, /source\/review-candidate-lock\.json/);
+  assert.match(workflow, /validate-acceptance-index-prefix\.mjs/);
   assert.doesNotMatch(workflow, /workflow_dispatch/);
   assert.match(workflow, /fetch-depth: 1/);
   assert.match(workflow, /immutable_baseline_sha_required/);
@@ -243,6 +338,67 @@ test("historical Blender evidence and current metadata tooling use distinct vali
   assert.doesNotMatch(workflow, /git rev-parse HEAD\^/);
   assert.match(workflow, /Validate repository, baked evidence, and release records/);
   assert.match(workflow, /for manifest in assets\/scenes\/\*\/\*\/scene\.json/);
+});
+
+test("0.3.0 is an append-only reproducible review release with technical runtime evidence and pending human gates", async () => {
+  const [manifest, scene, previousScene, index, lock, visualConfig, visualEvidence, visualStability, generationLedger] = await Promise.all([
+    readJson(join(root, "manifest.json")),
+    readJson(join(sceneRoot, REVIEW_RELEASE_VERSION, "scene.json")),
+    readJson(join(sceneRoot, BAKED_RELEASE_VERSION, "scene.json")),
+    readJson(join(root, "source", "release-acceptance-index.json")),
+    readJson(join(root, REVIEW_RELEASE.sourceLockPath)),
+    readJson(join(root, REVIEW_RELEASE.visualParityConfigPath)),
+    readJson(join(root, REVIEW_RELEASE.provenancePath, "visual-parity.json")),
+    readJson(join(root, REVIEW_RELEASE.provenancePath, "visual-stability.json")),
+    readJson(join(root, REVIEW_RELEASE.provenancePath, "generation-ledger.json"))
+  ]);
+  const release = manifest.releases.find(({ version }) => version === REVIEW_RELEASE_VERSION);
+  assert.equal(release.isCurrent, false);
+  assert.equal(release.publicationReady, false);
+  assert.equal(release.rightsApprovalStatus, REVIEW_RIGHTS_APPROVAL_STATUS);
+  assert.equal(release.rightsApproved, false);
+  assert.equal(scene.rights.license, REVIEW_RIGHTS_LICENSE_REF);
+  assert.equal(scene.rights.rightsApproved, false);
+  assert.deepEqual(scene.rights.clearedFor, []);
+  for (const field of ["spawnPoints", "bounds", "anchors", "mediaSurfaces", "renderMode", "renderProfile"]) assert.deepEqual(scene[field], previousScene[field]);
+  assert.deepEqual(release.stats, { triangles: 45772, objects: 232, meshes: 232, primitives: 232, materials: 16, textures: 2, animations: 0, scenes: 1 });
+  assert.deepEqual(await glbTextureRecords(join(sceneRoot, REVIEW_RELEASE_VERSION, "scene.glb")), [
+    { name: "baked-lightmap", mimeType: "image/png", sha256: "99efa06a464e15f04b496b2f21916de4b4e97603fafecb07edca35478a37283b", sizeBytes: 6058088 },
+    { name: "panorama-city-park", mimeType: "image/jpeg", sha256: "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6", sizeBytes: 435189 }
+  ]);
+  assert.deepEqual(index.releases.map(({ version }) => version), [REVIEW_RELEASE_VERSION]);
+  assert.equal(index.releases[0].humanVisualAccepted, false);
+  assert.equal(lock.status, "review-source-lock");
+  assert.equal(lock.humanVisualAccepted, false);
+  assert.equal(lock.rightsApproved, false);
+  assert.deepEqual(lock.tooling.map(({ path }) => path), await repositoryToolingPaths(root));
+  assert.equal(lock.reproducibility.sourceContainer.reauthoringBytesClaimedReproducible, false);
+  assert.deepEqual(lock.reviewViews.map(({ id }) => id), REVIEW_RELEASE_VIEWS);
+  assert.equal(lock.technicalRuntimeCapture.status, "passed-three-byte-stable-runtime-capture-sets");
+  assert.equal(index.releases[0].technicalRuntimeCapture, "passed-three-byte-stable-runtime-capture-sets");
+  assert.equal(visualConfig.status, "technical-runtime-capture-passed");
+  assert.deepEqual(visualConfig.views.map(({ id }) => id), REVIEW_RELEASE_VIEWS);
+  assert.equal(visualConfig.views.every(({ thresholds }) => Number.isFinite(thresholds.phashMax) && Number.isFinite(thresholds.nccMin)), true);
+  assert.equal(visualEvidence.status, "technical-runtime-capture-passed");
+  assert.equal(visualEvidence.passed, true);
+  assert.deepEqual(visualEvidence.captureSets.map(({ id }) => id), REVIEW_RUNTIME_CAPTURE_RUNS);
+  assert.equal(visualStability.status, "stable-three-runtime-capture-sets");
+  assert.equal(visualStability.comparison.imagesByteIdenticalAcrossRuns, true);
+  assert.equal(visualStability.comparison.maximumPairwisePhash, 0);
+  assert.equal(visualStability.comparison.minimumPairwiseNcc, 1);
+  assert.deepEqual(generationLedger.tooling, lock.tooling);
+  assert.equal(generationLedger.derivation.acceptedSourceContainer, "locked-exact-bytes");
+  assert.equal(generationLedger.derivation.reauthoringBytesClaimedReproducible, false);
+  for (const run of REVIEW_RUNTIME_CAPTURE_RUNS) {
+    assert.deepEqual((await readdir(join(root, REVIEW_RELEASE.runtimeCapturePath, run))).sort(), [...REVIEW_RUNTIME_CAPTURE_FILES].sort());
+  }
+  for (const view of REVIEW_RELEASE_VIEWS) {
+    const records = await Promise.all(REVIEW_RUNTIME_CAPTURE_RUNS.map((run) => fileRecord(join(root, REVIEW_RELEASE.runtimeCapturePath, run, `${view}.png`))));
+    assert.equal(records.every((record) => record.sha256 === records[0].sha256 && record.sizeBytes === records[0].sizeBytes), true, view);
+  }
+  assert.equal(visualEvidence.humanVisualAcceptance, "pending-human-acceptance");
+  assert.equal(visualEvidence.humanRightsApproval, REVIEW_RIGHTS_APPROVAL_STATUS);
+  assert.equal(visualEvidence.publicationReady, false);
 });
 
 test("0.2.0 baked source plumbing is review-only and contains no invented artifact digest", async () => {
@@ -273,8 +429,15 @@ test("0.2.0 baked source plumbing is review-only and contains no invented artifa
   assert.match(buildScript, /publicationReady: false/);
   assert.match(buildScript, /releaseExists && releaseTrackedAtHead/);
   assert.match(buildScript, /immutable_baked_release_drift:/);
-  assert.match(buildScript, /isTrackedAtHead\(BAKED_RELEASE\.releasePath\)/);
+  assert.match(buildScript, /pathTrackedInGit\(root, BAKED_RELEASE\.releasePath\)/);
   assert.match(buildScript, /rename\(temporaryReleaseDir, releaseDir\)/);
+});
+
+test("0.3.0 exporter structurally rejects external Blend dependencies", async () => {
+  const exporter = await readFile(join(root, REVIEW_RELEASE.exportScriptPath), "utf8");
+  assert.match(exporter, /len\(bpy\.data\.libraries\) == 0/);
+  assert.match(exporter, /bpy\.utils\.blend_paths\(absolute=False, packed=False, local=True\)/);
+  assert.match(exporter, /image\.packed_file is not None/);
 });
 
 test("0.2.0 provenance binds source, committed runtime evidence, immutable release, and technical parity", async () => {

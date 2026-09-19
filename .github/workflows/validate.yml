@@ -47,6 +47,11 @@ jobs:
             exit 1
           fi
           git fetch --no-tags --depth=1 origin "$BASE_SHA"
+          changed_paths="$RUNNER_TEMP/scene-changed-paths.txt"
+          if ! git diff --no-renames --name-only "$BASE_SHA" HEAD -- assets/scenes provenance source > "$changed_paths"; then
+            echo "immutable_diff_failed" >&2
+            exit 1
+          fi
           while IFS= read -r path; do
             protected_root=""
             case "$path" in
@@ -59,15 +64,35 @@ jobs:
               provenance/baked-lightmap-*.json|source/baked-lightmap-*.png|source/export_baked_release_*.py|source/runtime-review-*.json)
                 protected_root="$path"
                 ;;
+              source/review/*)
+                protected_root="source/review"
+                ;;
+              source/review-candidate-lock.json)
+                protected_root="$path"
+                ;;
+              source/releases/*/*|provenance/releases/*/*)
+                protected_root="$(cut -d/ -f1-3 <<< "$path")"
+                ;;
+              source/release-acceptance-index.json)
+                continue
+                ;;
+              source/*|provenance/*)
+                protected_root="$path"
+                ;;
               *)
                 continue
                 ;;
             esac
-            if git cat-file -e "$BASE_SHA:$protected_root" 2>/dev/null; then
+            if ! baseline_path="$(git ls-tree --name-only "$BASE_SHA" -- "$protected_root")"; then
+              echo "immutable_baseline_query_failed:$path" >&2
+              exit 1
+            fi
+            if [[ -n "$baseline_path" ]]; then
               echo "published_release_evidence_is_immutable:$path" >&2
               exit 1
             fi
-          done < <(git diff --no-renames --name-only "$BASE_SHA" HEAD -- assets/scenes provenance source)
+          done < "$changed_paths"
+          BASE="$BASE_SHA" node scripts/validate-acceptance-index-prefix.mjs
 
       - name: Run tests
         run: pnpm test

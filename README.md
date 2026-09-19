@@ -4,9 +4,9 @@ Local review candidate for the FEAT-032 owner-bound private workspace. This is a
 
 ## Boundary
 
-The repository owns one scene ID, `personal-workspace-v1`, and three materialized immutable review releases: `0.1.0`, `0.1.1`, and the baked `0.2.0`. Human rights approval, local runtime verification, and technical visual regression checks have passed; human visual acceptance remains pending. Nothing in this tree is current, production-active, or publication-ready.
+The repository owns one scene ID, `personal-workspace-v1`, and four materialized immutable review releases: `0.1.0`, `0.1.1`, the baked `0.2.0`, and the derived-environment review release `0.3.0`. Historical public-staging rights apply only to the exact `0.1.x` and `0.2.0` bytes. The `0.3.0` technical runtime capture has passed, while exact-byte rights review and human visual acceptance remain pending. Nothing in this tree is current, production-active, or publication-ready.
 
-The historical source contract uses semantic Y-up coordinates. Release manifests use the explicit runtime adapter `x=x, y=y, z=-z` for the main spawn, owner seat, and `workspace-main` media surface. The separate `0.2.0` runtime-review input converts Blender horizontal camera FOV to runtime vertical FOV at 16:9 without modifying that historical contract.
+The historical source contract uses semantic Y-up coordinates. Release manifests use the explicit runtime adapter `x=x, y=y, z=-z` for the main spawn, owner seat, and `workspace-main` media surface. The separate `0.2.0` runtime-review input and versioned `0.3.0` visual-parity config convert Blender horizontal camera FOV to runtime vertical FOV at 16:9 without modifying that historical contract.
 
 ## Layout
 
@@ -20,10 +20,19 @@ source/runtime-review-0.2.0.json
 source/render_review.py
 source/review-candidate.blend
 source/review/{entry,workspace,reading,diagonal-overview}.webp
+source/release-acceptance-index.json
+source/releases/0.3.0/{review-scene.blend,panorama-city-park.jpg}
+source/releases/0.3.0/{generate-panorama,prepare-scene,export-release,render-review}.py
+source/releases/0.3.0/{scene-manifest,scene-reality,user-scenarios}.json
+source/releases/0.3.0/{review-source-lock,visual-parity-config}.json
+source/releases/0.3.0/review/*.webp
 provenance/*.json
+provenance/releases/0.3.0/*
+provenance/runtime-capture-0.3.0/{run-1,run-2,run-3}/
 assets/scenes/personal-workspace-v1/0.1.0/
 assets/scenes/personal-workspace-v1/0.1.1/
 assets/scenes/personal-workspace-v1/0.2.0/
+assets/scenes/personal-workspace-v1/0.3.0/
 provenance/baked-lightmap-0.2.0.json
 provenance/runtime-capture-0.2.0/
 manifest.json
@@ -34,6 +43,7 @@ manifest.json
 ```bash
 pnpm install
 pnpm build:metadata
+BLENDER_BIN=/path/to/blender pnpm build:release
 pnpm validate:visual
 pnpm test
 pnpm validate
@@ -47,8 +57,10 @@ The `0.1.0` source contract, saved Blend, review imagery, generation ledger, rel
 
 Runtime parity captures and diagnostics are committed under `provenance/runtime-capture-0.2.0/`. `capture-binding.json` binds the exact release GLB and scene manifest, runtime-review input, platform capture implementation commit, runtime statistics, and capture records without claiming human acceptance. Machine-local scene-debug URLs were normalized to `local-capture/*`. The baked release `preview.webp` is the committed runtime-capture preview. `pnpm validate:visual` recalculates ImageMagick metrics from the committed PNGs, records the measurement version, and allows only the documented small absolute evidence tolerance while enforcing the unchanged final technical regression thresholds.
 
-Published baked versions are listed explicitly in `PUBLISHED_BAKED_VERSIONS`. A future release appends to that list and to the manifest; it does not replace or hide `0.2.0`.
+The `0.3.0` source is isolated under `source/releases/0.3.0/`. It adds only project-authored deterministic panorama pixels and an inward-facing panorama sphere to a derived Blend while preserving the `0.2.0` runtime bindings and baked-lighting inputs. The accepted saved Blend is locked by exact bytes; byte-identical reauthoring of that Blend container is not claimed. Two-run reproducibility applies to panorama pixels before JPEG encoding and to GLB export from the accepted saved Blend. Seven fixed source-review views are locked by `review-source-lock.json`; they remain evidence for human review rather than a human acceptance decision. Three complete version-bound runtime capture sets are committed under `provenance/runtime-capture-0.3.0/`; all corresponding PNG bytes are identical across runs. The versioned visual config records thresholds calibrated only from those three sets with explicit PHASH and NCC margins, and `pnpm validate:visual` recalculates historical `0.2.0` parity before rechecking every `0.3.0` binding, runtime diagnostic, capture byte, stability comparison, and source-to-runtime metric.
 
-The pinned Blender reproducibility gate remains mandatory. `pnpm verify:reproducibility` requires `BLENDER_BIN`, verifies Blender 4.5.12 LTS build `84afd5f785f7` and its binary hash, exports the saved Blend twice through `source/export_scene.py`, and requires byte identity with the historical `0.1.0` GLB. It then materializes `0.1.1` twice and, after the real baked release exists, materializes `0.2.0` twice and compares all four generated files with each release.
+Append-only release history and versioned source/provenance directories are protected by validation and CI. A future release appends a new version; it does not replace, hide, or rewrite an existing release.
 
-The visual acceptance boundary remains open. Rights permit public staging review and the uses listed in the release notice, but a later human visual gate is still required before production activation or final publication.
+The pinned Blender reproducibility gate remains mandatory. `pnpm verify:reproducibility` requires `BLENDER_BIN`, verifies Blender 4.5.12 LTS build `84afd5f785f7` and its binary hash, reproduces the historical `0.1.0`, metadata-only `0.1.1`, and baked `0.2.0` releases, then reproduces the `0.3.0` GLB and decoded panorama pixels twice while verifying the exact hash-bound manifest, preview, and license inputs. Review WebP encoder bytes are not claimed reproducible.
+
+The visual acceptance boundary remains open for every release. The exact `0.3.0` panorama and combined release bytes additionally require human rights approval before public staging review, production activation, or final publication.

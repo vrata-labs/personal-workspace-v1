@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "status": "review-source-lock",
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "humanVisualAccepted": false,
+  "rightsApproved": false,
+  "derivationInputs": [
+    {
+      "path": "source/review-candidate.blend",
+      "sha256": "e11280ff35caa8b93cde90bec4e7650d13584be456d1d8a1ca78743dcf894c81",
+      "sizeBytes": 3941123
+    },
+    {
+      "path": "source/baked-lightmap-0.2.0.png",
+      "sha256": "99efa06a464e15f04b496b2f21916de4b4e97603fafecb07edca35478a37283b",
+      "sizeBytes": 6058088
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "source/releases/0.3.0/generate-panorama.py",
+      "sha256": "2a88ad33d6da533c64c84dc5b7b65d662404b16c34f8a8340acd5879e1620b52",
+      "sizeBytes": 20981
+    },
+    {
+      "path": "source/releases/0.3.0/panorama-parameters.json",
+      "sha256": "e5b5792c0354e6a76b25da6767b768836bf7a6d939f2a5615dc5bcb71106e63d",
+      "sizeBytes": 2258
+    },
+    {
+      "path": "source/releases/0.3.0/panorama-city-park.jpg",
+      "sha256": "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6",
+      "sizeBytes": 435189
+    },
+    {
+      "path": "source/releases/0.3.0/prepare-scene.py",
+      "sha256": "ae4a4bbadc345415cd0bd079b9f82f9cb18ded99d105e2817ad49dab57e0eb16",
+      "sizeBytes": 16240
+    },
+    {
+      "path": "source/releases/0.3.0/review-scene.blend",
+      "sha256": "dce974ec5382a51bf08001d2a50e0f918b1cf9c2d3c960e77a64dfd98c78be90",
+      "sizeBytes": 4735639
+    },
+    {
+      "path": "source/releases/0.3.0/baked-lightmap.png",
+      "sha256": "99efa06a464e15f04b496b2f21916de4b4e97603fafecb07edca35478a37283b",
+      "sizeBytes": 6058088
+    },
+    {
+      "path": "source/releases/0.3.0/export-release.py",
+      "sha256": "990bf2b79c29f1c7845b3e726a5fc1513216eec1ff65b466220d126dbc0a5ef0",
+      "sizeBytes": 16300
+    },
+    {
+      "path": "source/releases/0.3.0/render-review.py",
+      "sha256": "3d7b716cf2af3c3c1997a1c23dde038f367a84f8c9f5b5fb10f9ee8bc04c2f07",
+      "sizeBytes": 2885
+    },
+    {
+      "path": "source/releases/0.3.0/scene-manifest.json",
+      "sha256": "cba4e3696b2fd2c0ae8a394924ec08e9365cc4a75e46c98851d3849928b2d9a1",
+      "sizeBytes": 3032
+    },
+    {
+      "path": "source/releases/0.3.0/scene-reality.json",
+      "sha256": "5a117d7e17d6ed5e8524e39544d8c2048c4f78fe1cee05fb7b22ce6aa1cd4a2f",
+      "sizeBytes": 5032
+    },
+    {
+      "path": "source/releases/0.3.0/user-scenarios.json",
+      "sha256": "72ce34e31522f423da88e28599259d963c71634ec88eeb3e3bd3670bd82a1681",
+      "sizeBytes": 3830
+    },
+    {
+      "path": "source/releases/0.3.0/release-LICENSES.md",
+      "sha256": "964e6e54b5ac7716d3ea9462a5dea3fe7924538e5810f06940b0f8408f72e77d",
+      "sizeBytes": 1577
+    },
+    {
+      "path": "source/releases/0.3.0/platform-scene-visual-clean.patch",
+      "sha256": "897201febe0590988cc9f199367b3099deb79c4397ed70c0eb00202dae3f9755",
+      "sizeBytes": 3648
+    },
+    {
+      "path": "source/releases/0.3.0/visual-parity-config.json",
+      "sha256": "36bdbb09914dc1dbef19d9247aa83ae48615b61fcf7effaa93590b1965aeaf48",
+      "sizeBytes": 10813
+    }
+  ],
+  "tooling": [
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "7554f1d1a3ede0c959d0282b72c98b7fb0996bff20e9d78fe2f979b63bdd2961",
+      "sizeBytes": 5148
+    },
+    {
+      "path": "package.json",
+      "sha256": "546ddebfdea023ac3c82bf09438781538fd814542d6acc9b8656c52d3cacd11a",
+      "sizeBytes": 1513
+    },
+    {
+      "path": "platform-validator.lock",
+      "sha256": "a21ab732ebb29e0e6eab29fe810800bc127ad85eb442c4c06f5baf387a9fab81",
+      "sizeBytes": 41
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "6d7c08256fa8467709452052938d1bfb49e7227cc82d2498d1896f46316b16b7",
+      "sizeBytes": 63395
+    },
+    {
+      "path": "scripts/build-baked-release.mjs",
+      "sha256": "d85596be9087ad6a57b3d3b419cdb973a64414410039819236e510dad6c0c2f1",
+      "sizeBytes": 8955
+    },
+    {
+      "path": "scripts/build-candidate.mjs",
+      "sha256": "794d9b4a4db7a792962a98af095162025ba1b533085764be54f304ab3320174e",
+      "sizeBytes": 5616
+    },
+    {
+      "path": "scripts/build-review-release.mjs",
+      "sha256": "5d6e6df4c526b88d2f202f45b594b79579d0239021e22cc1a7f727bdcbed8cf6",
+      "sizeBytes": 11692
+    },
+    {
+      "path": "scripts/calibrate-review-visual.mjs",
+      "sha256": "a8375082e9cd1b6ad73e2a7bdad874e928e43df3a3736b18fd793e29e3433610",
+      "sizeBytes": 19293
+    },
+    {
+      "path": "scripts/check-boundary.mjs",
+      "sha256": "dc7940281d502e1c5f8af5e5c597d4f50f3a7c1f8acbb292933f57ab969fb42a",
+      "sizeBytes": 5479
+    },
+    {
+      "path": "scripts/create-review-capture-binding.mjs",
+      "sha256": "b514e3b72e18a207e6b6df8794a4a223b5c3deaa067bbc3e1f2fccc6a8a8a7e3",
+      "sizeBytes": 5394
+    },
+    {
+      "path": "scripts/inspect-release.mjs",
+      "sha256": "77d1322d7116982e8fca6fe5ba9a98bcd950b1cfe0147366d89084fcd5bf757c",
+      "sizeBytes": 1265
+    },
+    {
+      "path": "scripts/lib.mjs",
+      "sha256": "7e5bec148f05693ae27892d1c18009c8c5cabc0786ef0e5b8fed4e36e64d643c",
+      "sizeBytes": 24110
+    },
+    {
+      "path": "scripts/validate-acceptance-index-prefix.mjs",
+      "sha256": "64cc7111022244207dd0a4b7d7e02e93904e46f1a9e9c0746f35b4418699fc30",
+      "sizeBytes": 1279
+    },
+    {
+      "path": "scripts/validate-baked-visual-parity.mjs",
+      "sha256": "b1bb5270a749c6997e0f4d0f9817f14c0e27b347fc574d133f4edfa7c8e8dbb9",
+      "sizeBytes": 4972
+    },
+    {
+      "path": "scripts/validate-repository.mjs",
+      "sha256": "01d70f8dc0cea06ac9731f1979ff06659abc27aaaf290d82f66c249fe97183ee",
+      "sizeBytes": 33697
+    },
+    {
+      "path": "scripts/validate-review-release.mjs",
+      "sha256": "f29b5180444666841f28ef360f0a649a4d2633108e349d0dc792784c2101b027",
+      "sizeBytes": 26169
+    },
+    {
+      "path": "scripts/validate-visual-parity.mjs",
+      "sha256": "03117a4a705a53a8f8a4ada836680c015367f9ca8da02d151f312374dcb8276d",
+      "sizeBytes": 19306
+    },
+    {
+      "path": "scripts/verify-reproducibility.mjs",
+      "sha256": "ade7d9f99da3bca53c004fb4224c7d5b96bf3c19a00dc648957364913c1a451b",
+      "sizeBytes": 7009
+    },
+    {
+      "path": "scripts/visual-parity-config.mjs",
+      "sha256": "096d39c812a55e6fbdffa81099e90265022ee60753f453fecff9cbab498f576c",
+      "sizeBytes": 684
+    },
+    {
+      "path": "scripts/write-review-evidence.mjs",
+      "sha256": "a3b0ce67a0e5fe0c701f500b81f79baee60e549e3bf8ba1ec12b495cde49af3e",
+      "sizeBytes": 26380
+    },
+    {
+      "path": "source/author_scene.py",
+      "sha256": "fffed849341e7934cdc78769b22a626ee9f1ef9f1e20ace35c4461a9ad3ffdf0",
+      "sizeBytes": 27550
+    },
+    {
+      "path": "source/export_baked_release_0_2_0.py",
+      "sha256": "58d722dbc90863f9f45003c91172e6059c24f8c0734e4b976029c89bf7d666ad",
+      "sizeBytes": 9253
+    },
+    {
+      "path": "source/export_scene.py",
+      "sha256": "7cbd0b4c6932709cdffab2c4400d30d7aadcf50037eda50baa13f9516b259700",
+      "sizeBytes": 1382
+    },
+    {
+      "path": "source/releases/0.3.0/export-release.py",
+      "sha256": "990bf2b79c29f1c7845b3e726a5fc1513216eec1ff65b466220d126dbc0a5ef0",
+      "sizeBytes": 16300
+    },
+    {
+      "path": "source/releases/0.3.0/generate-panorama.py",
+      "sha256": "2a88ad33d6da533c64c84dc5b7b65d662404b16c34f8a8340acd5879e1620b52",
+      "sizeBytes": 20981
+    },
+    {
+      "path": "source/releases/0.3.0/prepare-scene.py",
+      "sha256": "ae4a4bbadc345415cd0bd079b9f82f9cb18ded99d105e2817ad49dab57e0eb16",
+      "sizeBytes": 16240
+    },
+    {
+      "path": "source/releases/0.3.0/render-review.py",
+      "sha256": "3d7b716cf2af3c3c1997a1c23dde038f367a84f8c9f5b5fb10f9ee8bc04c2f07",
+      "sizeBytes": 2885
+    },
+    {
+      "path": "source/render_review.py",
+      "sha256": "a17882ce383658d62d8138181774a585f53b718dbcf8321aff8933a1b836306a",
+      "sizeBytes": 1492
+    },
+    {
+      "path": "source/write_safety.py",
+      "sha256": "bd7370cd51909c5c7d68f7dafbfa0f016e61845f679a6714b64adde930ac70aa",
+      "sizeBytes": 1493
+    },
+    {
+      "path": "tests/immutability-workflow.test.mjs",
+      "sha256": "93dbe1f3ad5a5240cf4d6a91033809b01dd7434e48da5b22f7211187d6b0cfd4",
+      "sizeBytes": 2853
+    },
+    {
+      "path": "tests/repository.test.mjs",
+      "sha256": "b52b33b3318d9783804bfdeb3d8be3bf80d4623e6130ae1c9a0e7a4f283101ac",
+      "sizeBytes": 36941
+    },
+    {
+      "path": "tests/write-safety.test.mjs",
+      "sha256": "669ef1e8c0e5acb621ef2591454caa14b487780fb0f8950025332b195f784772",
+      "sizeBytes": 4408
+    }
+  ],
+  "toolchain": {
+    "blenderVersion": "4.5.12 LTS",
+    "blenderBuildHash": "84afd5f785f7",
+    "blenderBinarySha256": "33ac108ebce3c271f5357e5c664d0488717263bcf2145c80300edd0b12c31880",
+    "gltfExporter": "Khronos glTF Blender I/O v4.5.51",
+    "panoramaGenerator": "Blender 4.5.12 LTS Python with numpy 1.26.4",
+    "panoramaEncoder": "ImageMagick 6.9.12-98 Q16 x86_64 18038",
+    "reviewImageConverter": "cwebp 1.6.0",
+    "reviewImageQuality": 90
+  },
+  "captureHarness": {
+    "platformCommit": "c54edb2239d225a71e9b934316f70792b3faafb6",
+    "patchPath": "source/releases/0.3.0/platform-scene-visual-clean.patch",
+    "patchSha256": "897201febe0590988cc9f199367b3099deb79c4397ed70c0eb00202dae3f9755"
+  },
+  "reviewViews": [
+    {
+      "id": "entry",
+      "path": "source/releases/0.3.0/review/entry.webp",
+      "sha256": "514c8337095b3c03e3f5b7c1cd32c508f8c3f6a54d1c6071c7bf4a21f3983331",
+      "sizeBytes": 60820,
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": "workspace",
+      "path": "source/releases/0.3.0/review/workspace.webp",
+      "sha256": "8fa5cf0a442441677f2706af0d81d344f48822d7ca807d7fcbc0d63d47a7bd1f",
+      "sizeBytes": 77504,
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": "reading",
+      "path": "source/releases/0.3.0/review/reading.webp",
+      "sha256": "6002448b03abc80e336ae3b491f3e62eeb8fbd0618c477514eb1e1df4fa8e79a",
+      "sizeBytes": 55710,
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": "diagonal-overview",
+      "path": "source/releases/0.3.0/review/diagonal-overview.webp",
+      "sha256": "5f23b64b49ad9e50bb74615fe1dca098662f664a502b4a35bcdd940f60a834c3",
+      "sizeBytes": 76150,
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": "window-detail",
+      "path": "source/releases/0.3.0/review/window-detail.webp",
+      "sha256": "ce8b7ff07411fc023f591a47ffc2823a852272beb3b4f898b81b6b24b2c2455b",
+      "sizeBytes": 15998,
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": "exterior-view",
+      "path": "source/releases/0.3.0/review/exterior-view.webp",
+      "sha256": "213b37f6dab8ba82490af164b203e86d2c6da2f5f0d5fc50967f383241a58897",
+      "sizeBytes": 34240,
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": "owner-seat",
+      "path": "source/releases/0.3.0/review/owner-seat.webp",
+      "sha256": "b3f0406e172755bf0733324791b0b360f62bd9a0bac19856cb54de123dda8922",
+      "sizeBytes": 47758,
+      "width": 960,
+      "height": 540
+    }
+  ],
+  "release": {
+    "version": "0.3.0",
+    "path": "assets/scenes/personal-workspace-v1/0.3.0",
+    "files": {
+      "LICENSES.md": {
+        "sha256": "964e6e54b5ac7716d3ea9462a5dea3fe7924538e5810f06940b0f8408f72e77d",
+        "sizeBytes": 1577
+      },
+      "preview.webp": {
+        "sha256": "514c8337095b3c03e3f5b7c1cd32c508f8c3f6a54d1c6071c7bf4a21f3983331",
+        "sizeBytes": 60820
+      },
+      "scene.glb": {
+        "sha256": "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf",
+        "sizeBytes": 10476924
+      },
+      "scene.json": {
+        "sha256": "cba4e3696b2fd2c0ae8a394924ec08e9365cc4a75e46c98851d3849928b2d9a1",
+        "sizeBytes": 3032
+      }
+    },
+    "stats": {
+      "triangles": 45772,
+      "objects": 232,
+      "meshes": 232,
+      "primitives": 232,
+      "materials": 16,
+      "textures": 2,
+      "animations": 0,
+      "scenes": 1
+    }
+  },
+  "reproducibility": {
+    "panorama": {
+      "scope": "pinned-blender-generator-and-parameters-two-run-pre-encoding-rgb",
+      "runs": 2,
+      "result": "byte-identical-rgb-pixels-before-lossy-encoding",
+      "decodedRgbSha256": "d3956c482d08057837ad4bd418523560819711cd3153aad8c1820bf36f52cdc6",
+      "artifact": {
+        "path": "source/releases/0.3.0/panorama-city-park.jpg",
+        "sha256": "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6",
+        "sizeBytes": 435189
+      },
+      "jpegEncoderBytesClaimedReproducible": false
+    },
+    "glb": {
+      "scope": "same-pinned-blender-saved-blend-and-hash-bound-textures-two-run",
+      "runs": 2,
+      "result": "byte-identical-glb",
+      "sha256": "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf"
+    },
+    "reviewWebp": {
+      "scope": "hash-bound-review-inputs-only",
+      "result": "not-regenerated-by-ci",
+      "encoderBytesClaimedReproducible": false
+    },
+    "sourceContainer": {
+      "scope": "accepted-saved-blend-exact-bytes",
+      "result": "locked-not-claimed-byte-reproducible-from-reauthoring",
+      "reauthoringBytesClaimedReproducible": false
+    }
+  },
+  "humanGates": {
+    "visual": "pending-human-acceptance",
+    "rights": "pending-human-rights-approval",
+    "publicationReady": false
+  },
+  "technicalRuntimeCapture": {
+    "status": "passed-three-byte-stable-runtime-capture-sets",
+    "captureRoot": "provenance/runtime-capture-0.3.0",
+    "captureSets": [
+      "run-1",
+      "run-2",
+      "run-3"
+    ],
+    "visualEvidencePath": "provenance/releases/0.3.0/visual-parity.json",
+    "stabilityEvidencePath": "provenance/releases/0.3.0/visual-stability.json",
+    "humanVisualAcceptance": "pending-human-acceptance",
+    "humanRightsApproval": "pending-human-rights-approval"
+  }
+}

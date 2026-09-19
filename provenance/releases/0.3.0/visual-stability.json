@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "status": "stable-three-runtime-capture-sets",
+  "platformCommit": "c54edb2239d225a71e9b934316f70792b3faafb6",
+  "platformPatch": {
+    "path": "source/releases/0.3.0/platform-scene-visual-clean.patch",
+    "sha256": "897201febe0590988cc9f199367b3099deb79c4397ed70c0eb00202dae3f9755",
+    "sizeBytes": 3648
+  },
+  "releaseGlb": {
+    "path": "assets/scenes/personal-workspace-v1/0.3.0/scene.glb",
+    "sha256": "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf",
+    "sizeBytes": 10476924
+  },
+  "releaseManifest": {
+    "path": "assets/scenes/personal-workspace-v1/0.3.0/scene.json",
+    "sha256": "cba4e3696b2fd2c0ae8a394924ec08e9365cc4a75e46c98851d3849928b2d9a1",
+    "sizeBytes": 3032
+  },
+  "metricTool": "ImageMagick compare",
+  "metricToolVersion": "ImageMagick 6.9.12-98 Q16 x86_64 18038",
+  "policy": {
+    "requiredCaptureSets": 3,
+    "imageBytesIdenticalAcrossRuns": true,
+    "pairwisePhashMax": 0,
+    "pairwiseNccMin": 1
+  },
+  "captureSets": [
+    {
+      "id": "run-1",
+      "path": "provenance/runtime-capture-0.3.0/run-1",
+      "binding": {
+        "path": "provenance/runtime-capture-0.3.0/run-1/capture-binding.json",
+        "sha256": "d71f062c14fde8e43f147aae8aa8d7964de3910710ee3dc9e4985396fc44d85f",
+        "sizeBytes": 4814
+      },
+      "diagnostics": {
+        "record": {
+          "path": "provenance/runtime-capture-0.3.0/run-1/scene-debug.json",
+          "sha256": "1d4c78181bd3afc81958ee6f1a814dd7beca3671caabcaefb195c2d6e173d4d7",
+          "sizeBytes": 7756
+        },
+        "state": "loaded",
+        "failureReason": null,
+        "assetBytesLoaded": 10476924,
+        "assetBytesExpected": 10476924,
+        "renderProfile": "baked-pbr-v1",
+        "spawnPointId": "main",
+        "spawnYaw": 0.6669082042393105,
+        "spawnApplied": true,
+        "objectCount": 234,
+        "meshCount": 232,
+        "materialCount": 16,
+        "texturedMaterialCount": 232,
+        "lightMappedMaterialCount": 15,
+        "geometryCount": 232,
+        "triangleEstimate": 45772,
+        "textureCount": 16,
+        "missingAssets": [],
+        "loadMs": 1938,
+        "renderProfileApplyMs": 300
+      },
+      "settings": {
+        "path": "provenance/runtime-capture-0.3.0/run-1/capture-settings.json",
+        "sha256": "a4f53bb32e605d7ccce2178c26a99badb5d0eb39623cf99144d202ec4d61ad60",
+        "sizeBytes": 54
+      },
+      "images": [
+        {
+          "id": "entry",
+          "path": "provenance/runtime-capture-0.3.0/run-1/entry.png",
+          "sha256": "ec336efb884190242327f5108a1c7b3d35614bc086b9f4831b3654202bac21cd",
+          "sizeBytes": 237338
+        },
+        {
+          "id": "workspace",
+          "path": "provenance/runtime-capture-0.3.0/run-1/workspace.png",
+          "sha256": "2f2fef73eeb8e1c81640bcaaa89c044e670ea242af1ae73e8b31cc2a82499822",
+          "sizeBytes": 279346
+        },
+        {
+          "id": "reading",
+          "path": "provenance/runtime-capture-0.3.0/run-1/reading.png",
+          "sha256": "fa0d4da7a02914b3f5e88ede50c8512810919ae85a492af1db1ef052d60824d6",
+          "sizeBytes": 249808
+        },
+        {
+          "id": "diagonal-overview",
+          "path": "provenance/runtime-capture-0.3.0/run-1/diagonal-overview.png",
+          "sha256": "b34a33ff7998e17756082ce67fe789b3d7a9f4dc80203e3ae91315bc0b49174a",
+          "sizeBytes": 231828
+        },
+        {
+          "id": "window-detail",
+          "path": "provenance/runtime-capture-0.3.0/run-1/window-detail.png",
+          "sha256": "d0c40720152c87e99012ac793a43474439726be3b33d34a4ed8568f7498ccef3",
+          "sizeBytes": 210498
+        },
+        {
+          "id": "exterior-view",
+          "path": "provenance/runtime-capture-0.3.0/run-1/exterior-view.png",
+          "sha256": "e9271fa6cdbd6595eb3d87290eaf2ad1f64ec19c0d0f44de7508eab1d7e84565",
+          "sizeBytes": 288717
+        },
+        {
+          "id": "owner-seat",
+          "path": "provenance/runtime-capture-0.3.0/run-1/owner-seat.png",
+          "sha256": "4d0fae04691b4481084c4eb2d6f4b5e52d26383c3fdb6407ba4d5adf983a8c44",
+          "sizeBytes": 341588
+        }
+      ]
+    },
+    {
+      "id": "run-2",
+      "path": "provenance/runtime-capture-0.3.0/run-2",
+      "binding": {
+        "path": "provenance/runtime-capture-0.3.0/run-2/capture-binding.json",
+        "sha256": "ca31edfdc2e802555ae26b19bf058f73f554b8d063a9f304b0f8eda0db136589",
+        "sizeBytes": 4814
+      },
+      "diagnostics": {
+        "record": {
+          "path": "provenance/runtime-capture-0.3.0/run-2/scene-debug.json",
+          "sha256": "49f097603adc6be8166e1061071af67fade10dddf04b75309d1f1400437d78b2",
+          "sizeBytes": 7756
+        },
+        "state": "loaded",
+        "failureReason": null,
+        "assetBytesLoaded": 10476924,
+        "assetBytesExpected": 10476924,
+        "renderProfile": "baked-pbr-v1",
+        "spawnPointId": "main",
+        "spawnYaw": 0.6669082042393105,
+        "spawnApplied": true,
+        "objectCount": 234,
+        "meshCount": 232,
+        "materialCount": 16,
+        "texturedMaterialCount": 232,
+        "lightMappedMaterialCount": 15,
+        "geometryCount": 232,
+        "triangleEstimate": 45772,
+        "textureCount": 16,
+        "missingAssets": [],
+        "loadMs": 3335,
+        "renderProfileApplyMs": 573
+      },
+      "settings": {
+        "path": "provenance/runtime-capture-0.3.0/run-2/capture-settings.json",
+        "sha256": "a4f53bb32e605d7ccce2178c26a99badb5d0eb39623cf99144d202ec4d61ad60",
+        "sizeBytes": 54
+      },
+      "images": [
+        {
+          "id": "entry",
+          "path": "provenance/runtime-capture-0.3.0/run-2/entry.png",
+          "sha256": "ec336efb884190242327f5108a1c7b3d35614bc086b9f4831b3654202bac21cd",
+          "sizeBytes": 237338
+        },
+        {
+          "id": "workspace",
+          "path": "provenance/runtime-capture-0.3.0/run-2/workspace.png",
+          "sha256": "2f2fef73eeb8e1c81640bcaaa89c044e670ea242af1ae73e8b31cc2a82499822",
+          "sizeBytes": 279346
+        },
+        {
+          "id": "reading",
+          "path": "provenance/runtime-capture-0.3.0/run-2/reading.png",
+          "sha256": "fa0d4da7a02914b3f5e88ede50c8512810919ae85a492af1db1ef052d60824d6",
+          "sizeBytes": 249808
+        },
+        {
+          "id": "diagonal-overview",
+          "path": "provenance/runtime-capture-0.3.0/run-2/diagonal-overview.png",
+          "sha256": "b34a33ff7998e17756082ce67fe789b3d7a9f4dc80203e3ae91315bc0b49174a",
+          "sizeBytes": 231828
+        },
+        {
+          "id": "window-detail",
+          "path": "provenance/runtime-capture-0.3.0/run-2/window-detail.png",
+          "sha256": "d0c40720152c87e99012ac793a43474439726be3b33d34a4ed8568f7498ccef3",
+          "sizeBytes": 210498
+        },
+        {
+          "id": "exterior-view",
+          "path": "provenance/runtime-capture-0.3.0/run-2/exterior-view.png",
+          "sha256": "e9271fa6cdbd6595eb3d87290eaf2ad1f64ec19c0d0f44de7508eab1d7e84565",
+          "sizeBytes": 288717
+        },
+        {
+          "id": "owner-seat",
+          "path": "provenance/runtime-capture-0.3.0/run-2/owner-seat.png",
+          "sha256": "4d0fae04691b4481084c4eb2d6f4b5e52d26383c3fdb6407ba4d5adf983a8c44",
+          "sizeBytes": 341588
+        }
+      ]
+    },
+    {
+      "id": "run-3",
+      "path": "provenance/runtime-capture-0.3.0/run-3",
+      "binding": {
+        "path": "provenance/runtime-capture-0.3.0/run-3/capture-binding.json",
+        "sha256": "f5820267ffc57b6ad9e3ef940d0921b73662ba3c90bfddd1f342052a3f052a77",
+        "sizeBytes": 4814
+      },
+      "diagnostics": {
+        "record": {
+          "path": "provenance/runtime-capture-0.3.0/run-3/scene-debug.json",
+          "sha256": "d2090443f9511e60fa2a9859432d84b708025da459adf32b26e7a549f0456074",
+          "sizeBytes": 7756
+        },
+        "state": "loaded",
+        "failureReason": null,
+        "assetBytesLoaded": 10476924,
+        "assetBytesExpected": 10476924,
+        "renderProfile": "baked-pbr-v1",
+        "spawnPointId": "main",
+        "spawnYaw": 0.6669082042393105,
+        "spawnApplied": true,
+        "objectCount": 234,
+        "meshCount": 232,
+        "materialCount": 16,
+        "texturedMaterialCount": 232,
+        "lightMappedMaterialCount": 15,
+        "geometryCount": 232,
+        "triangleEstimate": 45772,
+        "textureCount": 16,
+        "missingAssets": [],
+        "loadMs": 1835,
+        "renderProfileApplyMs": 430
+      },
+      "settings": {
+        "path": "provenance/runtime-capture-0.3.0/run-3/capture-settings.json",
+        "sha256": "a4f53bb32e605d7ccce2178c26a99badb5d0eb39623cf99144d202ec4d61ad60",
+        "sizeBytes": 54
+      },
+      "images": [
+        {
+          "id": "entry",
+          "path": "provenance/runtime-capture-0.3.0/run-3/entry.png",
+          "sha256": "ec336efb884190242327f5108a1c7b3d35614bc086b9f4831b3654202bac21cd",
+          "sizeBytes": 237338
+        },
+        {
+          "id": "workspace",
+          "path": "provenance/runtime-capture-0.3.0/run-3/workspace.png",
+          "sha256": "2f2fef73eeb8e1c81640bcaaa89c044e670ea242af1ae73e8b31cc2a82499822",
+          "sizeBytes": 279346
+        },
+        {
+          "id": "reading",
+          "path": "provenance/runtime-capture-0.3.0/run-3/reading.png",
+          "sha256": "fa0d4da7a02914b3f5e88ede50c8512810919ae85a492af1db1ef052d60824d6",
+          "sizeBytes": 249808
+        },
+        {
+          "id": "diagonal-overview",
+          "path": "provenance/runtime-capture-0.3.0/run-3/diagonal-overview.png",
+          "sha256": "b34a33ff7998e17756082ce67fe789b3d7a9f4dc80203e3ae91315bc0b49174a",
+          "sizeBytes": 231828
+        },
+        {
+          "id": "window-detail",
+          "path": "provenance/runtime-capture-0.3.0/run-3/window-detail.png",
+          "sha256": "d0c40720152c87e99012ac793a43474439726be3b33d34a4ed8568f7498ccef3",
+          "sizeBytes": 210498
+        },
+        {
+          "id": "exterior-view",
+          "path": "provenance/runtime-capture-0.3.0/run-3/exterior-view.png",
+          "sha256": "e9271fa6cdbd6595eb3d87290eaf2ad1f64ec19c0d0f44de7508eab1d7e84565",
+          "sizeBytes": 288717
+        },
+        {
+          "id": "owner-seat",
+          "path": "provenance/runtime-capture-0.3.0/run-3/owner-seat.png",
+          "sha256": "4d0fae04691b4481084c4eb2d6f4b5e52d26383c3fdb6407ba4d5adf983a8c44",
+          "sizeBytes": 341588
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "imagesByteIdenticalAcrossRuns": true,
+    "maximumPairwisePhash": 0,
+    "minimumPairwiseNcc": 1,
+    "pairwise": [
+      {
+        "left": "run-1",
+        "right": "run-2",
+        "views": [
+          {
+            "id": "entry",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "workspace",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "reading",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "diagonal-overview",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "window-detail",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "exterior-view",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "owner-seat",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          }
+        ]
+      },
+      {
+        "left": "run-1",
+        "right": "run-3",
+        "views": [
+          {
+            "id": "entry",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "workspace",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "reading",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "diagonal-overview",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "window-detail",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "exterior-view",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "owner-seat",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          }
+        ]
+      },
+      {
+        "left": "run-2",
+        "right": "run-3",
+        "views": [
+          {
+            "id": "entry",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "workspace",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "reading",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "diagonal-overview",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "window-detail",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "exterior-view",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          },
+          {
+            "id": "owner-seat",
+            "phash": 0,
+            "ncc": 1,
+            "byteIdentical": true
+          }
+        ]
+      }
+    ]
+  },
+  "thresholdsEstablished": true,
+  "humanVisualAcceptance": "pending-human-acceptance",
+  "humanRightsApproval": "pending-human-rights-approval",
+  "publicationReady": false
+}

@@ -1,0 +1,5 @@
+Personal Workspace 0.3.0 project-authored review release
+
+The interior source, derived geometry, material tuning, lightmap, panorama generator, panorama pixels, export scripts, and source review renders are project-authored Vrata work. No downloaded image, scene, mesh, branding, or private reference is included.
+
+LicenseRef-Project-Authored-Pending-Human-Rights-Approval records provenance only. It is not a human rights decision. Human rights approval for the exact 0.3.0 bytes remains pending-human-rights-approval. Human visual acceptance remains pending-human-acceptance. This release is review-only, isCurrent=false, publicationReady=false, and is not approved for production activation or public publication.

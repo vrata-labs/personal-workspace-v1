@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "approval": {
+    "decision": "pending-human-rights-approval",
+    "rightsApproved": false,
+    "humanDecisionRecorded": false,
+    "evidencePath": null
+  },
+  "license": {
+    "name": "LicenseRef-Project-Authored-Pending-Human-Rights-Approval",
+    "reference": "provenance/releases/0.3.0/project-authored-review-release.txt",
+    "grantsPublicationRights": false
+  },
+  "records": [
+    {
+      "id": "asset-derived-scene-source-project-authored",
+      "kind": "project-authored-derived-scene-source",
+      "repositoryPath": "source/releases/0.3.0/review-scene.blend",
+      "originalSha256": "dce974ec5382a51bf08001d2a50e0f918b1cf9c2d3c960e77a64dfd98c78be90",
+      "sizeBytes": 4735639,
+      "outputSha256": [
+        "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf"
+      ],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-baked-lightmap-project-authored",
+      "kind": "project-authored-inherited-generated-texture",
+      "repositoryPath": "source/releases/0.3.0/baked-lightmap.png",
+      "originalSha256": "99efa06a464e15f04b496b2f21916de4b4e97603fafecb07edca35478a37283b",
+      "sizeBytes": 6058088,
+      "outputSha256": [
+        "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf"
+      ],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-panorama-generator-project-authored",
+      "kind": "project-authored-generator",
+      "repositoryPath": "source/releases/0.3.0/generate-panorama.py",
+      "originalSha256": "2a88ad33d6da533c64c84dc5b7b65d662404b16c34f8a8340acd5879e1620b52",
+      "sizeBytes": 20981,
+      "outputSha256": [
+        "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6"
+      ],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-panorama-city-park-project-authored",
+      "kind": "project-authored-generated-texture",
+      "repositoryPath": "source/releases/0.3.0/panorama-city-park.jpg",
+      "originalSha256": "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6",
+      "sizeBytes": 435189,
+      "outputSha256": [
+        "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf"
+      ],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-panorama-sphere-project-authored",
+      "kind": "project-authored-procedural-geometry",
+      "repositoryPath": "source/releases/0.3.0/prepare-scene.py",
+      "originalSha256": "ae4a4bbadc345415cd0bd079b9f82f9cb18ded99d105e2817ad49dab57e0eb16",
+      "sizeBytes": 16240,
+      "outputSha256": [
+        "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf"
+      ],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-release-exporter-project-authored",
+      "kind": "project-authored-build-script",
+      "repositoryPath": "source/releases/0.3.0/export-release.py",
+      "originalSha256": "990bf2b79c29f1c7845b3e726a5fc1513216eec1ff65b466220d126dbc0a5ef0",
+      "sizeBytes": 16300,
+      "outputSha256": [
+        "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf"
+      ],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-review-entry-project-authored",
+      "kind": "project-authored-review-render",
+      "repositoryPath": "source/releases/0.3.0/review/entry.webp",
+      "originalSha256": "514c8337095b3c03e3f5b7c1cd32c508f8c3f6a54d1c6071c7bf4a21f3983331",
+      "sizeBytes": 60820,
+      "outputSha256": [],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-review-workspace-project-authored",
+      "kind": "project-authored-review-render",
+      "repositoryPath": "source/releases/0.3.0/review/workspace.webp",
+      "originalSha256": "8fa5cf0a442441677f2706af0d81d344f48822d7ca807d7fcbc0d63d47a7bd1f",
+      "sizeBytes": 77504,
+      "outputSha256": [],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-review-reading-project-authored",
+      "kind": "project-authored-review-render",
+      "repositoryPath": "source/releases/0.3.0/review/reading.webp",
+      "originalSha256": "6002448b03abc80e336ae3b491f3e62eeb8fbd0618c477514eb1e1df4fa8e79a",
+      "sizeBytes": 55710,
+      "outputSha256": [],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-review-diagonal-overview-project-authored",
+      "kind": "project-authored-review-render",
+      "repositoryPath": "source/releases/0.3.0/review/diagonal-overview.webp",
+      "originalSha256": "5f23b64b49ad9e50bb74615fe1dca098662f664a502b4a35bcdd940f60a834c3",
+      "sizeBytes": 76150,
+      "outputSha256": [],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-review-window-detail-project-authored",
+      "kind": "project-authored-review-render",
+      "repositoryPath": "source/releases/0.3.0/review/window-detail.webp",
+      "originalSha256": "ce8b7ff07411fc023f591a47ffc2823a852272beb3b4f898b81b6b24b2c2455b",
+      "sizeBytes": 15998,
+      "outputSha256": [],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-review-exterior-view-project-authored",
+      "kind": "project-authored-review-render",
+      "repositoryPath": "source/releases/0.3.0/review/exterior-view.webp",
+      "originalSha256": "213b37f6dab8ba82490af164b203e86d2c6da2f5f0d5fc50967f383241a58897",
+      "sizeBytes": 34240,
+      "outputSha256": [],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    },
+    {
+      "id": "asset-review-owner-seat-project-authored",
+      "kind": "project-authored-review-render",
+      "repositoryPath": "source/releases/0.3.0/review/owner-seat.webp",
+      "originalSha256": "b3f0406e172755bf0733324791b0b360f62bd9a0bac19856cb54de123dda8922",
+      "sizeBytes": 47758,
+      "outputSha256": [],
+      "authorProvider": "project-team",
+      "externalSource": null,
+      "attribution": null
+    }
+  ],
+  "externalAssetCount": 0,
+  "downloadedAssetCount": 0,
+  "boundaries": {
+    "projectAuthoredOnly": true,
+    "humanVisualAccepted": false,
+    "humanRightsAccepted": false,
+    "publicationReady": false
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "kind": "version-bound-local-runtime-capture-record",
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.3.0",
+  "captureSet": "run-3",
+  "scope": "technical-runtime-capture-only",
+  "provenanceScope": {
+    "candidateCiReplaysCapture": false,
+    "candidateCiValidatesCommittedArtifacts": true,
+    "independentVerification": "required-on-exact-merge-sha-staging"
+  },
+  "humanVisualAccepted": false,
+  "rightsApproved": false,
+  "publicationReady": false,
+  "platformCommit": "c54edb2239d225a71e9b934316f70792b3faafb6",
+  "platformPatch": {
+    "path": "source/releases/0.3.0/platform-scene-visual-clean.patch",
+    "sha256": "897201febe0590988cc9f199367b3099deb79c4397ed70c0eb00202dae3f9755",
+    "sizeBytes": 3648
+  },
+  "captureRunner": {
+    "command": "pnpm test:e2e:private-assets tests/e2e/scene-visual.spec.ts --workers=1",
+    "executable": "pnpm",
+    "argv": [
+      "test:e2e:private-assets",
+      "tests/e2e/scene-visual.spec.ts",
+      "--workers=1"
+    ],
+    "bindingGenerator": {
+      "executable": "node",
+      "argv": [
+        "scripts/create-review-capture-binding.mjs",
+        "--version",
+        "0.3.0",
+        "--run",
+        "<capture-set>"
+      ],
+      "environment": {
+        "SCENE_VISUAL_CAPTURE_ROOT": "<capture-root>"
+      }
+    },
+    "environment": {
+      "SCENE_VISUAL_ASSET_PATH": "<candidate-root>/assets/scenes/personal-workspace-v1/0.3.0/scene.glb",
+      "SCENE_VISUAL_MANIFEST_PATH": "<candidate-root>/assets/scenes/personal-workspace-v1/0.3.0/scene.json",
+      "SCENE_VISUAL_CONFIG_PATH": "<candidate-root>/source/releases/0.3.0/visual-parity-config.json",
+      "SCENE_VISUAL_OUTPUT_DIR": "<capture-dir>",
+      "SCENE_VISUAL_VIEW_IDS": "<comma-separated runner batch>",
+      "SCENE_VISUAL_STRIP_ANCHORS": "1",
+      "SCENE_VISUAL_HIDE_MEDIA_SURFACES": "1",
+      "SCENE_VISUAL_FLIP_Z": "0",
+      "SCENE_VISUAL_ENVIRONMENT_INTENSITY": "0.35",
+      "SCENE_VISUAL_EXPOSURE": "1.2"
+    },
+    "batches": [
+      [
+        "entry",
+        "workspace",
+        "reading"
+      ],
+      [
+        "diagonal-overview",
+        "window-detail",
+        "exterior-view",
+        "owner-seat"
+      ]
+    ]
+  },
+  "capturePolicy": {
+    "stripAnchors": true,
+    "avatarsEnabled": true,
+    "avatarFallbackCapsulesEnabled": false,
+    "avatarSeatsEnabled": false,
+    "mediaSurfacesVisible": false,
+    "reason": "Interaction anchors, dynamic media planes, and fallback avatar meshes are validated separately and must not occlude fixed source-to-GLB composition evidence."
+  },
+  "normalization": {
+    "status": "applied",
+    "kind": "machine-local-url-replacement",
+    "fields": {
+      "bundleUrl": "local-capture/scene.json",
+      "assetUrl": "local-capture/scene.glb"
+    },
+    "machineLocalUrlsRetained": false
+  },
+  "releaseGlb": {
+    "path": "assets/scenes/personal-workspace-v1/0.3.0/scene.glb",
+    "sha256": "f86cacfc78dd77571732b0683eaef1ae75f672a59a70bbbb76cc65b8efd8eedf",
+    "sizeBytes": 10476924
+  },
+  "releaseManifest": {
+    "path": "assets/scenes/personal-workspace-v1/0.3.0/scene.json",
+    "sha256": "cba4e3696b2fd2c0ae8a394924ec08e9365cc4a75e46c98851d3849928b2d9a1",
+    "sizeBytes": 3032
+  },
+  "captureFiles": {
+    "entry.png": {
+      "path": "entry.png",
+      "sha256": "ec336efb884190242327f5108a1c7b3d35614bc086b9f4831b3654202bac21cd",
+      "sizeBytes": 237338
+    },
+    "workspace.png": {
+      "path": "workspace.png",
+      "sha256": "2f2fef73eeb8e1c81640bcaaa89c044e670ea242af1ae73e8b31cc2a82499822",
+      "sizeBytes": 279346
+    },
+    "reading.png": {
+      "path": "reading.png",
+      "sha256": "fa0d4da7a02914b3f5e88ede50c8512810919ae85a492af1db1ef052d60824d6",
+      "sizeBytes": 249808
+    },
+    "diagonal-overview.png": {
+      "path": "diagonal-overview.png",
+      "sha256": "b34a33ff7998e17756082ce67fe789b3d7a9f4dc80203e3ae91315bc0b49174a",
+      "sizeBytes": 231828
+    },
+    "window-detail.png": {
+      "path": "window-detail.png",
+      "sha256": "d0c40720152c87e99012ac793a43474439726be3b33d34a4ed8568f7498ccef3",
+      "sizeBytes": 210498
+    },
+    "exterior-view.png": {
+      "path": "exterior-view.png",
+      "sha256": "e9271fa6cdbd6595eb3d87290eaf2ad1f64ec19c0d0f44de7508eab1d7e84565",
+      "sizeBytes": 288717
+    },
+    "owner-seat.png": {
+      "path": "owner-seat.png",
+      "sha256": "4d0fae04691b4481084c4eb2d6f4b5e52d26383c3fdb6407ba4d5adf983a8c44",
+      "sizeBytes": 341588
+    },
+    "scene-debug.json": {
+      "path": "scene-debug.json",
+      "sha256": "d2090443f9511e60fa2a9859432d84b708025da459adf32b26e7a549f0456074",
+      "sizeBytes": 7756
+    },
+    "capture-settings.json": {
+      "path": "capture-settings.json",
+      "sha256": "a4f53bb32e605d7ccce2178c26a99badb5d0eb39623cf99144d202ec4d61ad60",
+      "sizeBytes": 54
+    }
+  }
+}
