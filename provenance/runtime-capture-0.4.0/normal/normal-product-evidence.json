@@ -1,0 +1,341 @@
+{
+  "platformCommit": "c6343de81b038b7937addac44c24fa7c46adf341",
+  "manifestSha256": "5016a7303092a84e0e7283abc0bfa2666dd47d5f5d69c53b6a7fd1150aacd2c6",
+  "glbSha256": "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9",
+  "syntheticReviewPoseUsed": false,
+  "seats": [
+    {
+      "seatId": "owner-desk-seat",
+      "authoritativeClaimAndRelease": true,
+      "seatedMovementLocked": true,
+      "localPose": {
+        "root": {
+          "x": -1.05,
+          "y": -0.401,
+          "z": -0.72,
+          "yaw": 0
+        },
+        "head": {
+          "x": -1.05,
+          "y": 1.199,
+          "z": -0.72,
+          "yaw": 0,
+          "pitch": 0
+        }
+      },
+      "actualCamera": {
+        "world": {
+          "x": -1.05,
+          "y": 1.199,
+          "z": -0.72
+        },
+        "forward": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        }
+      },
+      "eyeHeightAboveSeatM": 0.7200000000000001,
+      "afterRelease": {
+        "root": {
+          "x": 2.1,
+          "y": 0,
+          "z": 1.55,
+          "yaw": 0
+        },
+        "head": {
+          "x": 2.1,
+          "y": 1.6,
+          "z": 1.55,
+          "yaw": 0,
+          "pitch": 0
+        }
+      }
+    }
+  ],
+  "spawn": {
+    "participantId": "4ba5c03b-ed4f-40e5-b65c-7241adccea7d",
+    "roomStateConnected": true,
+    "currentSeatId": null,
+    "pendingSeatId": null,
+    "seatOccupancy": {},
+    "featureFlags": {
+      "enterVr": true,
+      "audioJoin": true,
+      "screenShare": true,
+      "roomStateRealtime": true,
+      "remoteDiagnostics": true,
+      "sceneBundles": true,
+      "hostControlsEnabled": true,
+      "documentsEnabled": true,
+      "notesEnabled": true,
+      "personalRoomsEnabled": true,
+      "remoteBrowserEnabled": true,
+      "remoteBrowserExperimental": true,
+      "spatialAudio": true,
+      "avatarsEnabled": true,
+      "avatarPoseBinaryEnabled": true,
+      "avatarLipsyncEnabled": false,
+      "avatarLegIkEnabled": false,
+      "avatarSeatingEnabled": true,
+      "avatarCustomizationEnabled": false,
+      "avatarFallbackCapsulesEnabled": false
+    },
+    "localPose": {
+      "root": {
+        "x": 2.1,
+        "y": 0,
+        "z": 1.55,
+        "yaw": 0.777
+      },
+      "head": {
+        "x": 2.1,
+        "y": 1.6,
+        "z": 1.55,
+        "yaw": 0.777,
+        "pitch": 0
+      }
+    },
+    "sceneDebug": {
+      "state": "loaded",
+      "spawnApplied": true,
+      "spawnPointId": "main",
+      "camera": {
+        "world": {
+          "x": 2.1,
+          "y": 1.6,
+          "z": 1.55
+        },
+        "forward": {
+          "x": -0.701,
+          "y": 0,
+          "z": -0.713
+        }
+      }
+    },
+    "mediaObjects": {
+      "physicalSurfaceIdsWithoutLogicalState": [],
+      "blockedReason": null,
+      "surfaces": [
+        {
+          "surfaceId": "workspace-main",
+          "label": "Work display",
+          "allowedObjectTypes": [
+            "markdown-board",
+            "image-viewer",
+            "video-player"
+          ],
+          "activeObjectId": null,
+          "activeObjectType": null,
+          "inputEnabled": true,
+          "maxDistanceM": 0.06,
+          "mediaAudioEnabled": false,
+          "lockedByParticipantId": null,
+          "visible": true,
+          "runtimeVisible": true,
+          "widthM": 1.2,
+          "heightM": 0.675,
+          "widthPx": 1920,
+          "heightPx": 1080,
+          "position": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "yaw": 0,
+          "pitch": 0,
+          "roll": 0,
+          "manifestPosition": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "manifestYaw": 0,
+          "manifestFormat": "legacy",
+          "worldPosition": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "worldYaw": 0,
+          "textureId": null
+        }
+      ]
+    }
+  },
+  "standingMovement": {
+    "from": {
+      "x": 2.1,
+      "y": 0,
+      "z": 1.55,
+      "yaw": 0
+    },
+    "to": {
+      "x": 2.1,
+      "y": 0,
+      "z": -1.153,
+      "yaw": 0
+    }
+  },
+  "physicalSurfacesMissingLogicalState": [],
+  "mediaAfterCreate": {
+    "physicalSurfaceIdsWithoutLogicalState": [],
+    "blockedReason": null,
+    "surfaces": [
+      {
+        "surfaceId": "workspace-main",
+        "label": "Work display",
+        "allowedObjectTypes": [
+          "markdown-board",
+          "image-viewer",
+          "video-player"
+        ],
+        "activeObjectId": "ee2f22ad-1903-4fde-9a62-89821851d474",
+        "activeObjectType": "markdown-board",
+        "inputEnabled": true,
+        "maxDistanceM": 0.06,
+        "mediaAudioEnabled": false,
+        "lockedByParticipantId": null,
+        "visible": true,
+        "runtimeVisible": true,
+        "widthM": 1.2,
+        "heightM": 0.675,
+        "widthPx": 1920,
+        "heightPx": 1080,
+        "position": {
+          "x": -1.05,
+          "y": 1.35,
+          "z": -2.422
+        },
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "manifestPosition": {
+          "x": -1.05,
+          "y": 1.35,
+          "z": -2.422
+        },
+        "manifestYaw": 0,
+        "manifestFormat": "legacy",
+        "worldPosition": {
+          "x": -1.05,
+          "y": 1.35,
+          "z": -2.422
+        },
+        "worldYaw": 0,
+        "textureId": 1
+      }
+    ]
+  },
+  "finalDebug": {
+    "participantId": "4ba5c03b-ed4f-40e5-b65c-7241adccea7d",
+    "roomStateConnected": true,
+    "currentSeatId": null,
+    "pendingSeatId": null,
+    "seatOccupancy": {},
+    "featureFlags": {
+      "enterVr": true,
+      "audioJoin": true,
+      "screenShare": true,
+      "roomStateRealtime": true,
+      "remoteDiagnostics": true,
+      "sceneBundles": true,
+      "hostControlsEnabled": true,
+      "documentsEnabled": true,
+      "notesEnabled": true,
+      "personalRoomsEnabled": true,
+      "remoteBrowserEnabled": true,
+      "remoteBrowserExperimental": true,
+      "spatialAudio": true,
+      "avatarsEnabled": true,
+      "avatarPoseBinaryEnabled": true,
+      "avatarLipsyncEnabled": false,
+      "avatarLegIkEnabled": false,
+      "avatarSeatingEnabled": true,
+      "avatarCustomizationEnabled": false,
+      "avatarFallbackCapsulesEnabled": false
+    },
+    "localPose": {
+      "root": {
+        "x": 2.1,
+        "y": 0,
+        "z": -1.153,
+        "yaw": 0
+      },
+      "head": {
+        "x": 2.1,
+        "y": 1.6,
+        "z": -1.153,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    "sceneDebug": {
+      "state": "loaded",
+      "spawnApplied": true,
+      "spawnPointId": "main",
+      "camera": {
+        "world": {
+          "x": 2.1,
+          "y": 1.6,
+          "z": -1.153
+        },
+        "forward": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        }
+      }
+    },
+    "mediaObjects": {
+      "physicalSurfaceIdsWithoutLogicalState": [],
+      "blockedReason": null,
+      "surfaces": [
+        {
+          "surfaceId": "workspace-main",
+          "label": "Work display",
+          "allowedObjectTypes": [
+            "markdown-board",
+            "image-viewer",
+            "video-player"
+          ],
+          "activeObjectId": "ee2f22ad-1903-4fde-9a62-89821851d474",
+          "activeObjectType": "markdown-board",
+          "inputEnabled": true,
+          "maxDistanceM": 0.06,
+          "mediaAudioEnabled": false,
+          "lockedByParticipantId": null,
+          "visible": true,
+          "runtimeVisible": true,
+          "widthM": 1.2,
+          "heightM": 0.675,
+          "widthPx": 1920,
+          "heightPx": 1080,
+          "position": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "yaw": 0,
+          "pitch": 0,
+          "roll": 0,
+          "manifestPosition": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "manifestYaw": 0,
+          "manifestFormat": "legacy",
+          "worldPosition": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "worldYaw": 0,
+          "textureId": 1
+        }
+      ]
+    }
+  },
+  "verdict": "functional-checks-passed"
+}

@@ -1,0 +1,7025 @@
+{
+  "kind": "declared-part-load-path-validation",
+  "sourceBlendSha256": "f227fb73135898b1fc318c50795aadc011bfdad1acfafda7ce4ec2cc8d2d5f7d",
+  "measurementScriptSha256": "4e6948880245a58765911f528fd2baccc0066ffcfd0496f78f1deffaa2837e26",
+  "registrySha256": "adf8edbb397ae14a97d841ceeaabc39bbe6599edac82e32a249404a863f556c1",
+  "coordinateSystem": "world Blender Z-up meters",
+  "toleranceM": 0.004,
+  "rootParts": [
+    "room-shell.floor"
+  ],
+  "physicalParts": 396,
+  "declaredParts": 395,
+  "edges": [
+    {
+      "part": "book-01.board--1",
+      "targets": [
+        "book-01.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-01.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-01.board-1",
+      "targets": [
+        "book-01.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-01.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0007499
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-01.pages",
+      "targets": [
+        "library.bottom"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-01.spine",
+      "targets": [
+        "book-01.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-01.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-02.board--1",
+      "targets": [
+        "book-02.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-02.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-02.board-1",
+      "targets": [
+        "book-02.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-02.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0007499
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-02.pages",
+      "targets": [
+        "library.bottom"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-02.spine",
+      "targets": [
+        "book-02.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-02.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-03.board--1",
+      "targets": [
+        "book-03.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-03.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-03.board-1",
+      "targets": [
+        "book-03.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-03.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-03.pages",
+      "targets": [
+        "library.bottom"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-03.spine",
+      "targets": [
+        "book-03.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-03.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-04.board--1",
+      "targets": [
+        "book-04.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-04.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-04.board-1",
+      "targets": [
+        "book-04.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-04.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-04.pages",
+      "targets": [
+        "library.bottom"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-04.spine",
+      "targets": [
+        "book-04.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-04.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-05.board--1",
+      "targets": [
+        "book-05.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-05.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-05.board-1",
+      "targets": [
+        "book-05.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-05.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-05.pages",
+      "targets": [
+        "library.bottom"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-05.spine",
+      "targets": [
+        "book-05.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-05.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-06.board--1",
+      "targets": [
+        "book-06.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-06.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-06.board-1",
+      "targets": [
+        "book-06.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-06.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0007499
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-06.pages",
+      "targets": [
+        "library.shelf-0"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-0",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-06.spine",
+      "targets": [
+        "book-06.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-06.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-07.board--1",
+      "targets": [
+        "book-07.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-07.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-07.board-1",
+      "targets": [
+        "book-07.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-07.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0007499
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-07.pages",
+      "targets": [
+        "library.shelf-0"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-0",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-07.spine",
+      "targets": [
+        "book-07.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-07.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-08.board--1",
+      "targets": [
+        "book-08.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-08.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-08.board-1",
+      "targets": [
+        "book-08.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-08.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-08.pages",
+      "targets": [
+        "library.shelf-0"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-0",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-08.spine",
+      "targets": [
+        "book-08.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-08.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-09.board--1",
+      "targets": [
+        "book-09.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-09.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-09.board-1",
+      "targets": [
+        "book-09.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-09.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-09.pages",
+      "targets": [
+        "library.shelf-0"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-0",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-09.spine",
+      "targets": [
+        "book-09.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-09.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-10.board--1",
+      "targets": [
+        "book-10.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-10.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-10.board-1",
+      "targets": [
+        "book-10.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-10.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-10.pages",
+      "targets": [
+        "library.shelf-0"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-0",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-10.spine",
+      "targets": [
+        "book-10.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-10.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-11.board--1",
+      "targets": [
+        "book-11.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-11.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-11.board-1",
+      "targets": [
+        "book-11.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-11.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0007499
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-11.pages",
+      "targets": [
+        "library.shelf-1"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-11.spine",
+      "targets": [
+        "book-11.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-11.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-12.board--1",
+      "targets": [
+        "book-12.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-12.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-12.board-1",
+      "targets": [
+        "book-12.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-12.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0007499
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-12.pages",
+      "targets": [
+        "library.shelf-1"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-12.spine",
+      "targets": [
+        "book-12.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-12.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-13.board--1",
+      "targets": [
+        "book-13.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-13.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-13.board-1",
+      "targets": [
+        "book-13.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-13.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-13.pages",
+      "targets": [
+        "library.shelf-1"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0034999
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-13.spine",
+      "targets": [
+        "book-13.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-13.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-14.board--1",
+      "targets": [
+        "book-14.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-14.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-14.board-1",
+      "targets": [
+        "book-14.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-14.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-14.pages",
+      "targets": [
+        "library.shelf-1"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-14.spine",
+      "targets": [
+        "book-14.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-14.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-15.board--1",
+      "targets": [
+        "book-15.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-15.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-15.board-1",
+      "targets": [
+        "book-15.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-15.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-15.pages",
+      "targets": [
+        "library.shelf-1"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0034999
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-15.spine",
+      "targets": [
+        "book-15.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-15.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027541
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-16.board--1",
+      "targets": [
+        "book-16.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-16.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-16.board-1",
+      "targets": [
+        "book-16.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-16.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0007499
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-16.pages",
+      "targets": [
+        "library.shelf-2"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-2",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-16.spine",
+      "targets": [
+        "book-16.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-16.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-17.board--1",
+      "targets": [
+        "book-17.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-17.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-17.board-1",
+      "targets": [
+        "book-17.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-17.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0007499
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-17.pages",
+      "targets": [
+        "library.shelf-2"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-2",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-17.spine",
+      "targets": [
+        "book-17.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-17.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-18.board--1",
+      "targets": [
+        "book-18.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-18.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-18.board-1",
+      "targets": [
+        "book-18.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-18.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-18.pages",
+      "targets": [
+        "library.shelf-2"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-2",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-18.spine",
+      "targets": [
+        "book-18.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-18.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-19.board--1",
+      "targets": [
+        "book-19.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-19.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-19.board-1",
+      "targets": [
+        "book-19.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-19.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-19.pages",
+      "targets": [
+        "library.shelf-2"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-2",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-19.spine",
+      "targets": [
+        "book-19.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-19.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-20.board--1",
+      "targets": [
+        "book-20.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-20.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-20.board-1",
+      "targets": [
+        "book-20.pages"
+      ],
+      "joint": "bound-cover-board",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-20.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.00075
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-20.pages",
+      "targets": [
+        "library.shelf-2"
+      ],
+      "joint": "resting-book-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.shelf-2",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "book-20.spine",
+      "targets": [
+        "book-20.pages"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "book-20.pages",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0027542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-downlights.optic-0",
+      "targets": [
+        "ceiling-downlights.trim-0"
+      ],
+      "joint": "optic-retaining-ring",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "ceiling-downlights.trim-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-downlights.optic-1",
+      "targets": [
+        "ceiling-downlights.trim-1"
+      ],
+      "joint": "optic-retaining-ring",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "ceiling-downlights.trim-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-downlights.optic-2",
+      "targets": [
+        "ceiling-downlights.trim-2"
+      ],
+      "joint": "optic-retaining-ring",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "ceiling-downlights.trim-2",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-downlights.optic-3",
+      "targets": [
+        "ceiling-downlights.trim-3"
+      ],
+      "joint": "optic-retaining-ring",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "ceiling-downlights.trim-3",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-downlights.trim-0",
+      "targets": [
+        "room-shell.ceiling"
+      ],
+      "joint": "recessed-ceiling-clip",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.ceiling",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0010002
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-downlights.trim-1",
+      "targets": [
+        "room-shell.ceiling"
+      ],
+      "joint": "recessed-ceiling-clip",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.ceiling",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0010002
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-downlights.trim-2",
+      "targets": [
+        "room-shell.ceiling"
+      ],
+      "joint": "recessed-ceiling-clip",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.ceiling",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0010002
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-downlights.trim-3",
+      "targets": [
+        "room-shell.ceiling"
+      ],
+      "joint": "recessed-ceiling-clip",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.ceiling",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0010002
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-luminaire.cable-0",
+      "targets": [
+        "ceiling-luminaire.canopy-0"
+      ],
+      "joint": "suspension-cable-clamp",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "ceiling-luminaire.canopy-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-luminaire.cable-1",
+      "targets": [
+        "ceiling-luminaire.canopy-1"
+      ],
+      "joint": "suspension-cable-clamp",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "ceiling-luminaire.canopy-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-luminaire.canopy-0",
+      "targets": [
+        "room-shell.ceiling"
+      ],
+      "joint": "ceiling-anchor",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.ceiling",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-luminaire.canopy-1",
+      "targets": [
+        "room-shell.ceiling"
+      ],
+      "joint": "ceiling-anchor",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.ceiling",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-luminaire.diffuser",
+      "targets": [
+        "ceiling-luminaire.housing"
+      ],
+      "joint": "diffuser-retaining-channel",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "ceiling-luminaire.housing",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0005
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "ceiling-luminaire.housing",
+      "targets": [
+        "ceiling-luminaire.cable-0",
+        "ceiling-luminaire.cable-1"
+      ],
+      "joint": "two-cable-suspension",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "ceiling-luminaire.cable-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "ceiling-luminaire.cable-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "coffee-cup.body",
+      "targets": [
+        "owner-desk.top"
+      ],
+      "joint": "stable-foot-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.top",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 1e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "coffee-cup.coffee",
+      "targets": [
+        "coffee-cup.body"
+      ],
+      "joint": "contained-liquid-surface",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "coffee-cup.body",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0008399
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "coffee-cup.handle",
+      "targets": [
+        "coffee-cup.body"
+      ],
+      "joint": "fired-ceramic-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "coffee-cup.body",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.cable",
+      "targets": [
+        "desk-power.plug"
+      ],
+      "joint": "molded-strain-relief",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.plug",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.earth-0--1",
+      "targets": [
+        "desk-power.socket-0"
+      ],
+      "joint": "spring-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.socket-0",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.earth-0-1",
+      "targets": [
+        "desk-power.socket-0"
+      ],
+      "joint": "spring-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.socket-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.earth-1--1",
+      "targets": [
+        "desk-power.socket-1"
+      ],
+      "joint": "spring-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.socket-1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.earth-1-1",
+      "targets": [
+        "desk-power.socket-1"
+      ],
+      "joint": "spring-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.socket-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.outlet",
+      "targets": [
+        "room-shell.north"
+      ],
+      "joint": "flush-wall-box",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.north",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.pin-well-0--1",
+      "targets": [
+        "desk-power.socket-0"
+      ],
+      "joint": "molded-receptacle",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.socket-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.pin-well-0-1",
+      "targets": [
+        "desk-power.socket-0"
+      ],
+      "joint": "molded-receptacle",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.socket-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.pin-well-1--1",
+      "targets": [
+        "desk-power.socket-1"
+      ],
+      "joint": "molded-receptacle",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.socket-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.pin-well-1-1",
+      "targets": [
+        "desk-power.socket-1"
+      ],
+      "joint": "molded-receptacle",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.socket-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.plug",
+      "targets": [
+        "desk-power.outlet"
+      ],
+      "joint": "inserted-plug",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.outlet",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.socket-0",
+      "targets": [
+        "desk-power.outlet"
+      ],
+      "joint": "receptacle-insert",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.outlet",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "desk-power.socket-1",
+      "targets": [
+        "desk-power.outlet"
+      ],
+      "joint": "receptacle-insert",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "desk-power.outlet",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.chassis",
+      "targets": [
+        "owner-desk.top"
+      ],
+      "joint": "resting-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.top",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 1e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-0-0",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-0-1",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-0-10",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-0-11",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-0-12",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-0-13",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-0-2",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-0",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-1",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-10",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-11",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-12",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-13",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-2",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-3",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-4",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-5",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-6",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-7",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-8",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-1-9",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-0",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-1",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-10",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-11",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-12",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-13",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-2",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-3",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-4",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-5",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-6",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-7",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-8",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-2-9",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-0",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-1",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-10",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-11",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-12",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-13",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-2",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-3",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-4",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-5",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-6",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-7",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-8",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-3-9",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-0",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-1",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-10",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-11",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-12",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-13",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-2",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-3",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-4",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-5",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-6",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-7",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-8",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.key-4-9",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "keyboard.spacebar",
+      "targets": [
+        "keyboard.chassis"
+      ],
+      "joint": "key-switch-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "keyboard.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "library.back",
+      "targets": [
+        "library.bottom",
+        "library.top"
+      ],
+      "joint": "fixed-backing",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.bottom",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "library.top",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.003
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "library.bottom",
+      "targets": [
+        "library.plinth"
+      ],
+      "joint": "carcass-base-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.plinth",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "library.plinth",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "floor-bearing-plinth",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "library.shelf-0",
+      "targets": [
+        "library.side-south",
+        "library.side-north"
+      ],
+      "joint": "two-sided-shelf-support",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.side-south",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "library.side-north",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "library.shelf-1",
+      "targets": [
+        "library.side-south",
+        "library.side-north"
+      ],
+      "joint": "two-sided-shelf-support",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.side-south",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "library.side-north",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "library.shelf-2",
+      "targets": [
+        "library.side-south",
+        "library.side-north"
+      ],
+      "joint": "two-sided-shelf-support",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.side-south",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "library.side-north",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "library.side-north",
+      "targets": [
+        "library.bottom"
+      ],
+      "joint": "carcass-dowel-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.bottom",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "library.side-south",
+      "targets": [
+        "library.bottom"
+      ],
+      "joint": "carcass-dowel-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.bottom",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "library.top",
+      "targets": [
+        "library.side-south",
+        "library.side-north"
+      ],
+      "joint": "carcass-top-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "library.side-south",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "library.side-north",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.hinge-0",
+      "targets": [
+        "main-door.hinge-jamb-0"
+      ],
+      "joint": "hinge-pin-bearing",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.hinge-jamb-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.hinge-1",
+      "targets": [
+        "main-door.hinge-jamb-1"
+      ],
+      "joint": "hinge-pin-bearing",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.hinge-jamb-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.hinge-2",
+      "targets": [
+        "main-door.hinge-jamb-2"
+      ],
+      "joint": "hinge-pin-bearing",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.hinge-jamb-2",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.hinge-door-0",
+      "targets": [
+        "main-door.hinge-0"
+      ],
+      "joint": "hinge-pin-bearing",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.hinge-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.hinge-door-1",
+      "targets": [
+        "main-door.hinge-1"
+      ],
+      "joint": "hinge-pin-bearing",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.hinge-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.hinge-door-2",
+      "targets": [
+        "main-door.hinge-2"
+      ],
+      "joint": "hinge-pin-bearing",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.hinge-2",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.hinge-jamb-0",
+      "targets": [
+        "main-door.jamb-right"
+      ],
+      "joint": "screwed-hinge-leaf",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.jamb-right",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.hinge-jamb-1",
+      "targets": [
+        "main-door.jamb-right"
+      ],
+      "joint": "screwed-hinge-leaf",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.jamb-right",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.hinge-jamb-2",
+      "targets": [
+        "main-door.jamb-right"
+      ],
+      "joint": "screwed-hinge-leaf",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.jamb-right",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.jamb-head",
+      "targets": [
+        "main-door.jamb-left",
+        "main-door.jamb-right"
+      ],
+      "joint": "joined-jamb-head",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.jamb-left",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "main-door.jamb-right",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.jamb-left",
+      "targets": [
+        "room-shell.south-left"
+      ],
+      "joint": "fixed-jamb",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.south-left",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.jamb-right",
+      "targets": [
+        "room-shell.door-lintel"
+      ],
+      "joint": "fixed-jamb",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.door-lintel",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.latch",
+      "targets": [
+        "main-door.leaf"
+      ],
+      "joint": "mortised-latch",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.leaf",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.leaf",
+      "targets": [
+        "main-door.hinge-door-0",
+        "main-door.hinge-door-1",
+        "main-door.hinge-door-2"
+      ],
+      "joint": "three-hinge-door-support",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.hinge-door-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "main-door.hinge-door-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "main-door.hinge-door-2",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.lever",
+      "targets": [
+        "main-door.rosette"
+      ],
+      "joint": "lever-spindle-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.rosette",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-door.rosette",
+      "targets": [
+        "main-door.leaf"
+      ],
+      "joint": "through-bolted-rosette",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-door.leaf",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.frame-bottom",
+      "targets": [
+        "main-window.sill"
+      ],
+      "joint": "screwed-frame-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.sill",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.frame-north",
+      "targets": [
+        "main-window.frame-bottom"
+      ],
+      "joint": "screwed-frame-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 1e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.frame-south",
+      "targets": [
+        "main-window.frame-bottom"
+      ],
+      "joint": "screwed-frame-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 1e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.frame-top",
+      "targets": [
+        "main-window.frame-south",
+        "main-window.frame-north"
+      ],
+      "joint": "screwed-frame-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-south",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        },
+        {
+          "target": "main-window.frame-north",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.mullion",
+      "targets": [
+        "main-window.frame-bottom",
+        "main-window.frame-top"
+      ],
+      "joint": "mechanical-mullion-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 1e-07
+        },
+        {
+          "target": "main-window.frame-top",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.north-gasket-a",
+      "targets": [
+        "main-window.mullion"
+      ],
+      "joint": "compression-gasket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.mullion",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.north-gasket-b",
+      "targets": [
+        "main-window.frame-north"
+      ],
+      "joint": "compression-gasket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-north",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.north-gasket-bottom",
+      "targets": [
+        "main-window.frame-bottom"
+      ],
+      "joint": "compression-gasket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 1e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.north-gasket-top",
+      "targets": [
+        "main-window.frame-top"
+      ],
+      "joint": "compression-gasket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-top",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.sill",
+      "targets": [
+        "room-shell.window-below"
+      ],
+      "joint": "bedded-sill",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.window-below",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.south-gasket-a",
+      "targets": [
+        "main-window.frame-south"
+      ],
+      "joint": "compression-gasket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-south",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.south-gasket-b",
+      "targets": [
+        "main-window.mullion"
+      ],
+      "joint": "compression-gasket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.mullion",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.south-gasket-bottom",
+      "targets": [
+        "main-window.frame-bottom"
+      ],
+      "joint": "compression-gasket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-bottom",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 1e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "main-window.south-gasket-top",
+      "targets": [
+        "main-window.frame-top"
+      ],
+      "joint": "compression-gasket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "main-window.frame-top",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 3e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "mouse.body",
+      "targets": [
+        "owner-desk.top"
+      ],
+      "joint": "resting-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.top",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 1e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "mouse.wheel",
+      "targets": [
+        "mouse.body"
+      ],
+      "joint": "axle-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "mouse.body",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "notebook.bottom-board",
+      "targets": [
+        "owner-desk.top"
+      ],
+      "joint": "resting-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.top",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "notebook.pages",
+      "targets": [
+        "notebook.bottom-board"
+      ],
+      "joint": "bound-signature-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "notebook.bottom-board",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "notebook.spine",
+      "targets": [
+        "notebook.bottom-board",
+        "notebook.top-board"
+      ],
+      "joint": "bound-spine",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "notebook.bottom-board",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "notebook.top-board",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "notebook.top-board",
+      "targets": [
+        "notebook.pages"
+      ],
+      "joint": "bound-board-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "notebook.pages",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.arm--1",
+      "targets": [
+        "owner-chair.seat"
+      ],
+      "joint": "bolted-arm-bracket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.seat",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.arm-1",
+      "targets": [
+        "owner-chair.seat"
+      ],
+      "joint": "bolted-arm-bracket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.seat",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.arm-pad--1",
+      "targets": [
+        "owner-chair.arm--1"
+      ],
+      "joint": "fastened-arm-pad",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.arm--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.arm-pad-1",
+      "targets": [
+        "owner-chair.arm-1"
+      ],
+      "joint": "fastened-arm-pad",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.arm-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.back-carrier",
+      "targets": [
+        "owner-chair.carrier"
+      ],
+      "joint": "bolted-back-carrier",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.carrier",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.back-cushion",
+      "targets": [
+        "owner-chair.back-shell"
+      ],
+      "joint": "upholstery-on-shell",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.back-shell",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.back-shell",
+      "targets": [
+        "owner-chair.back-carrier"
+      ],
+      "joint": "bolted-back-shell",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.back-carrier",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.carrier",
+      "targets": [
+        "owner-chair.gas-lift"
+      ],
+      "joint": "seat-carrier-taper",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.gas-lift",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.caster-fork-0",
+      "targets": [
+        "owner-chair.wheel-0--1",
+        "owner-chair.wheel-0-1"
+      ],
+      "joint": "twin-wheel-axle",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.wheel-0--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-chair.wheel-0-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.caster-fork-1",
+      "targets": [
+        "owner-chair.wheel-1--1",
+        "owner-chair.wheel-1-1"
+      ],
+      "joint": "twin-wheel-axle",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.wheel-1--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-chair.wheel-1-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.caster-fork-2",
+      "targets": [
+        "owner-chair.wheel-2--1",
+        "owner-chair.wheel-2-1"
+      ],
+      "joint": "twin-wheel-axle",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.wheel-2--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-chair.wheel-2-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.caster-fork-3",
+      "targets": [
+        "owner-chair.wheel-3--1",
+        "owner-chair.wheel-3-1"
+      ],
+      "joint": "twin-wheel-axle",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.wheel-3--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-chair.wheel-3-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.caster-fork-4",
+      "targets": [
+        "owner-chair.wheel-4--1",
+        "owner-chair.wheel-4-1"
+      ],
+      "joint": "twin-wheel-axle",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.wheel-4--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-chair.wheel-4-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.gas-lift",
+      "targets": [
+        "owner-chair.sleeve"
+      ],
+      "joint": "telescoping-column",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.sleeve",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.seat",
+      "targets": [
+        "owner-chair.carrier"
+      ],
+      "joint": "bolted-seat-pan",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.carrier",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.sleeve",
+      "targets": [
+        "owner-chair.spoke-0",
+        "owner-chair.spoke-1",
+        "owner-chair.spoke-2",
+        "owner-chair.spoke-3",
+        "owner-chair.spoke-4"
+      ],
+      "joint": "five-star-hub",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.spoke-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-chair.spoke-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-chair.spoke-2",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-chair.spoke-3",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-chair.spoke-4",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.spoke-0",
+      "targets": [
+        "owner-chair.caster-fork-0"
+      ],
+      "joint": "caster-stem-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.caster-fork-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.spoke-1",
+      "targets": [
+        "owner-chair.caster-fork-1"
+      ],
+      "joint": "caster-stem-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.caster-fork-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.spoke-2",
+      "targets": [
+        "owner-chair.caster-fork-2"
+      ],
+      "joint": "caster-stem-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.caster-fork-2",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.spoke-3",
+      "targets": [
+        "owner-chair.caster-fork-3"
+      ],
+      "joint": "caster-stem-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.caster-fork-3",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.spoke-4",
+      "targets": [
+        "owner-chair.caster-fork-4"
+      ],
+      "joint": "caster-stem-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-chair.caster-fork-4",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-0--1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-0-1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-1--1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-1-1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-2--1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-2-1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-3--1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-3-1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-4--1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-chair.wheel-4-1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "rolling-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.column-0",
+      "targets": [
+        "owner-desk.foot-0"
+      ],
+      "joint": "bolted-column-foot",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.foot-0",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 7e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.column-1",
+      "targets": [
+        "owner-desk.foot-1"
+      ],
+      "joint": "bolted-column-foot",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.foot-1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 7e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.cross-rail",
+      "targets": [
+        "owner-desk.column-0",
+        "owner-desk.column-1"
+      ],
+      "joint": "bolted-cross-rail",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.column-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-desk.column-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.foot-0",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "floor-bearing-foot",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.foot-1",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "floor-bearing-foot",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.mount-0",
+      "targets": [
+        "owner-desk.column-0"
+      ],
+      "joint": "bolted-top-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.column-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.mount-1",
+      "targets": [
+        "owner-desk.column-1"
+      ],
+      "joint": "bolted-top-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.column-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.top",
+      "targets": [
+        "owner-desk.mount-0",
+        "owner-desk.mount-1"
+      ],
+      "joint": "two-point-bolted-worktop",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.mount-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-desk.mount-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.tray",
+      "targets": [
+        "owner-desk.tray-bracket-0",
+        "owner-desk.tray-bracket-1"
+      ],
+      "joint": "two-bracket-tray",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.tray-bracket-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "owner-desk.tray-bracket-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.tray-bracket-0",
+      "targets": [
+        "owner-desk.top"
+      ],
+      "joint": "screwed-tray-bracket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.top",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "owner-desk.tray-bracket-1",
+      "targets": [
+        "owner-desk.top"
+      ],
+      "joint": "screwed-tray-bracket",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "owner-desk.top",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "pen.barrel",
+      "targets": [
+        "notebook.top-board"
+      ],
+      "joint": "resting-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "notebook.top-board",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "pen.cap",
+      "targets": [
+        "pen.barrel"
+      ],
+      "joint": "friction-fit-cap",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "pen.barrel",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.arm-post--1",
+      "targets": [
+        "reading-chair.side-rail--1"
+      ],
+      "joint": "joined-arm-post",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.side-rail--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.arm-post-1",
+      "targets": [
+        "reading-chair.side-rail-1"
+      ],
+      "joint": "joined-arm-post",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.side-rail-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.armrest--1",
+      "targets": [
+        "reading-chair.arm-post--1",
+        "reading-chair.back-stile--1"
+      ],
+      "joint": "two-point-armrest-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.arm-post--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-chair.back-stile--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.armrest-1",
+      "targets": [
+        "reading-chair.arm-post-1",
+        "reading-chair.back-stile-1"
+      ],
+      "joint": "two-point-armrest-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.arm-post-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-chair.back-stile-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.back",
+      "targets": [
+        "reading-chair.plywood-back"
+      ],
+      "joint": "upholstery-on-shell",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.plywood-back",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.back-stile--1",
+      "targets": [
+        "reading-chair.leg--1-rear"
+      ],
+      "joint": "continuous-rear-stile",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.leg--1-rear",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.back-stile-1",
+      "targets": [
+        "reading-chair.leg-1-rear"
+      ],
+      "joint": "continuous-rear-stile",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.leg-1-rear",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.cross-rail-0",
+      "targets": [
+        "reading-chair.side-rail--1",
+        "reading-chair.side-rail-1"
+      ],
+      "joint": "cross-rail-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.side-rail--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-chair.side-rail-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.cross-rail-1",
+      "targets": [
+        "reading-chair.side-rail--1",
+        "reading-chair.side-rail-1"
+      ],
+      "joint": "cross-rail-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.side-rail--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-chair.side-rail-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.cushion",
+      "targets": [
+        "reading-chair.seat-deck"
+      ],
+      "joint": "upholstered-seat-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.seat-deck",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.leg--1-front",
+      "targets": [
+        "reading-rug.woven-body"
+      ],
+      "joint": "floor-bearing-leg",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-rug.woven-body",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.leg--1-rear",
+      "targets": [
+        "reading-rug.woven-body"
+      ],
+      "joint": "floor-bearing-leg",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-rug.woven-body",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.leg-1-front",
+      "targets": [
+        "reading-rug.woven-body"
+      ],
+      "joint": "floor-bearing-leg",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-rug.woven-body",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.leg-1-rear",
+      "targets": [
+        "reading-rug.woven-body"
+      ],
+      "joint": "floor-bearing-leg",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-rug.woven-body",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.plywood-back",
+      "targets": [
+        "reading-chair.back-stile--1",
+        "reading-chair.back-stile-1"
+      ],
+      "joint": "back-panel-fasteners",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.back-stile--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-chair.back-stile-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.seat-deck",
+      "targets": [
+        "reading-chair.side-rail--1",
+        "reading-chair.side-rail-1"
+      ],
+      "joint": "seat-deck-bearing",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.side-rail--1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-chair.side-rail-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.side-rail--1",
+      "targets": [
+        "reading-chair.leg--1-front",
+        "reading-chair.leg--1-rear"
+      ],
+      "joint": "mortise-and-tenon-rail",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.leg--1-front",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-chair.leg--1-rear",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-chair.side-rail-1",
+      "targets": [
+        "reading-chair.leg-1-front",
+        "reading-chair.leg-1-rear"
+      ],
+      "joint": "mortise-and-tenon-rail",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-chair.leg-1-front",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-chair.leg-1-rear",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-lamp.base",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "weighted-floor-base",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-lamp.diffuser",
+      "targets": [
+        "reading-lamp.shade"
+      ],
+      "joint": "diffuser-retaining-lip",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-lamp.shade",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-lamp.foot-switch",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "floor-resting-switch",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-lamp.lead",
+      "targets": [
+        "reading-lamp.plug"
+      ],
+      "joint": "molded-strain-relief",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-lamp.plug",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-lamp.plug",
+      "targets": [
+        "reading-lamp.socket-plate"
+      ],
+      "joint": "inserted-plug",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-lamp.socket-plate",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-lamp.shade",
+      "targets": [
+        "reading-lamp.top-cap"
+      ],
+      "joint": "shade-retaining-ring",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-lamp.top-cap",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-lamp.socket-plate",
+      "targets": [
+        "room-shell.west"
+      ],
+      "joint": "flush-wall-box",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.west",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-lamp.stem",
+      "targets": [
+        "reading-lamp.base"
+      ],
+      "joint": "threaded-stem-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-lamp.base",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-lamp.top-cap",
+      "targets": [
+        "reading-lamp.stem"
+      ],
+      "joint": "threaded-cap-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-lamp.stem",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-rug.woven-body",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "non-slip-floor-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-table.leg-0",
+      "targets": [
+        "reading-rug.woven-body"
+      ],
+      "joint": "floor-bearing-leg",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-rug.woven-body",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-table.leg-1",
+      "targets": [
+        "reading-rug.woven-body"
+      ],
+      "joint": "floor-bearing-leg",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-rug.woven-body",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-table.leg-2",
+      "targets": [
+        "reading-rug.woven-body"
+      ],
+      "joint": "floor-bearing-leg",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-rug.woven-body",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-table.mount",
+      "targets": [
+        "reading-table.leg-0",
+        "reading-table.leg-1",
+        "reading-table.leg-2"
+      ],
+      "joint": "three-leg-mount",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-table.leg-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-table.leg-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "reading-table.leg-2",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "reading-table.top",
+      "targets": [
+        "reading-table.mount"
+      ],
+      "joint": "top-fastener-block",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "reading-table.mount",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.ceiling",
+      "targets": [
+        "room-shell.north",
+        "room-shell.west"
+      ],
+      "joint": "ceiling-bearing-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.north",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        },
+        {
+          "target": "room-shell.west",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 3e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.door-lintel",
+      "targets": [
+        "room-shell.south-left"
+      ],
+      "joint": "continuous-masonry-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.south-left",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.east-north",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "masonry-bearing-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.east-south",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "masonry-bearing-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.north",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "masonry-bearing-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.south-left",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "masonry-bearing-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.south-right",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "masonry-bearing-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.west",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "masonry-bearing-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.window-above",
+      "targets": [
+        "room-shell.east-south",
+        "room-shell.east-north"
+      ],
+      "joint": "continuous-masonry-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.east-south",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 1e-07
+        },
+        {
+          "target": "room-shell.east-north",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "room-shell.window-below",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "masonry-bearing-contact",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "skirting.east",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "fixed-floor-wall-junction",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "skirting.north",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "fixed-floor-wall-junction",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "skirting.south-left",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "fixed-floor-wall-junction",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "skirting.south-right",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "fixed-floor-wall-junction",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "skirting.west",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "fixed-floor-wall-junction",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.back",
+      "targets": [
+        "storage-cabinet.base"
+      ],
+      "joint": "fixed-backing",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.base",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.base",
+      "targets": [
+        "storage-cabinet.plinth"
+      ],
+      "joint": "carcass-base-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.plinth",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.door--1",
+      "targets": [
+        "storage-cabinet.hinge--1-0",
+        "storage-cabinet.hinge--1-1"
+      ],
+      "joint": "two-hinge-door-support",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.hinge--1-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "storage-cabinet.hinge--1-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.door-1",
+      "targets": [
+        "storage-cabinet.hinge-1-0",
+        "storage-cabinet.hinge-1-1"
+      ],
+      "joint": "two-hinge-door-support",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.hinge-1-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "storage-cabinet.hinge-1-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.hinge--1-0",
+      "targets": [
+        "storage-cabinet.side-left"
+      ],
+      "joint": "concealed-cabinet-hinge",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.side-left",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.hinge--1-1",
+      "targets": [
+        "storage-cabinet.side-left"
+      ],
+      "joint": "concealed-cabinet-hinge",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.side-left",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.hinge-1-0",
+      "targets": [
+        "storage-cabinet.side-right"
+      ],
+      "joint": "concealed-cabinet-hinge",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.side-right",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.hinge-1-1",
+      "targets": [
+        "storage-cabinet.side-right"
+      ],
+      "joint": "concealed-cabinet-hinge",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.side-right",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.middle",
+      "targets": [
+        "storage-cabinet.side-left",
+        "storage-cabinet.side-right"
+      ],
+      "joint": "two-sided-carcass-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.side-left",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        },
+        {
+          "target": "storage-cabinet.side-right",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.plinth",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "floor-bearing-plinth",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.pull--1",
+      "targets": [
+        "storage-cabinet.door--1"
+      ],
+      "joint": "through-bolted-pull",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.door--1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.pull-1",
+      "targets": [
+        "storage-cabinet.door-1"
+      ],
+      "joint": "through-bolted-pull",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.door-1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0035
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.shelf",
+      "targets": [
+        "storage-cabinet.side-left",
+        "storage-cabinet.side-right"
+      ],
+      "joint": "two-sided-carcass-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.side-left",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        },
+        {
+          "target": "storage-cabinet.side-right",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.side-left",
+      "targets": [
+        "storage-cabinet.base"
+      ],
+      "joint": "carcass-dowel-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.base",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.side-right",
+      "targets": [
+        "storage-cabinet.base"
+      ],
+      "joint": "carcass-dowel-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.base",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "storage-cabinet.top",
+      "targets": [
+        "storage-cabinet.side-left",
+        "storage-cabinet.side-right"
+      ],
+      "joint": "two-sided-carcass-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "storage-cabinet.side-left",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        },
+        {
+          "target": "storage-cabinet.side-right",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-0",
+      "targets": [
+        "window-plant.petiole-0"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-0",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-1",
+      "targets": [
+        "window-plant.petiole-1"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-1",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-10",
+      "targets": [
+        "window-plant.petiole-10"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-10",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-11",
+      "targets": [
+        "window-plant.petiole-11"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-11",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-12",
+      "targets": [
+        "window-plant.petiole-12"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-12",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-13",
+      "targets": [
+        "window-plant.petiole-13"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-13",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-14",
+      "targets": [
+        "window-plant.petiole-14"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-14",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-15",
+      "targets": [
+        "window-plant.petiole-15"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-15",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-16",
+      "targets": [
+        "window-plant.petiole-16"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-16",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-17",
+      "targets": [
+        "window-plant.petiole-17"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-17",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-18",
+      "targets": [
+        "window-plant.petiole-18"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-18",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-19",
+      "targets": [
+        "window-plant.petiole-19"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-19",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-2",
+      "targets": [
+        "window-plant.petiole-2"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-2",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-3",
+      "targets": [
+        "window-plant.petiole-3"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-3",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-4",
+      "targets": [
+        "window-plant.petiole-4"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-4",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-5",
+      "targets": [
+        "window-plant.petiole-5"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-5",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-6",
+      "targets": [
+        "window-plant.petiole-6"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-6",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-7",
+      "targets": [
+        "window-plant.petiole-7"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-7",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-8",
+      "targets": [
+        "window-plant.petiole-8"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-8",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.leaf-9",
+      "targets": [
+        "window-plant.petiole-9"
+      ],
+      "joint": "leaf-petiole-joint",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.petiole-9",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-0",
+      "targets": [
+        "window-plant.leaf-0"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-0",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-1",
+      "targets": [
+        "window-plant.leaf-1"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-1",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-10",
+      "targets": [
+        "window-plant.leaf-10"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-10",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-11",
+      "targets": [
+        "window-plant.leaf-11"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-11",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-12",
+      "targets": [
+        "window-plant.leaf-12"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-12",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-13",
+      "targets": [
+        "window-plant.leaf-13"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-13",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-14",
+      "targets": [
+        "window-plant.leaf-14"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-14",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-15",
+      "targets": [
+        "window-plant.leaf-15"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-15",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-16",
+      "targets": [
+        "window-plant.leaf-16"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-16",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-17",
+      "targets": [
+        "window-plant.leaf-17"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-17",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-18",
+      "targets": [
+        "window-plant.leaf-18"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-18",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-19",
+      "targets": [
+        "window-plant.leaf-19"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-19",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-2",
+      "targets": [
+        "window-plant.leaf-2"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-2",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-3",
+      "targets": [
+        "window-plant.leaf-3"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-3",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-4",
+      "targets": [
+        "window-plant.leaf-4"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-4",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-5",
+      "targets": [
+        "window-plant.leaf-5"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-5",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-6",
+      "targets": [
+        "window-plant.leaf-6"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-6",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-7",
+      "targets": [
+        "window-plant.leaf-7"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-7",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-8",
+      "targets": [
+        "window-plant.leaf-8"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-8",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.midrib-9",
+      "targets": [
+        "window-plant.leaf-9"
+      ],
+      "joint": "integrated-leaf-vein",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.leaf-9",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-0",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-1",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-10",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-11",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-12",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-13",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-14",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-15",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-16",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-17",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-18",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-19",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-2",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-3",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-4",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-5",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-6",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-7",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-8",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.petiole-9",
+      "targets": [
+        "window-plant.trunk"
+      ],
+      "joint": "botanical-node",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.trunk",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.pot",
+      "targets": [
+        "room-shell.floor"
+      ],
+      "joint": "stable-planter-foot",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.floor",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.soil",
+      "targets": [
+        "window-plant.pot"
+      ],
+      "joint": "contained-soil",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.pot",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "window-plant.trunk",
+      "targets": [
+        "window-plant.soil"
+      ],
+      "joint": "rooted-trunk",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "window-plant.soil",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "workspace-main.chassis",
+      "targets": [
+        "workspace-main.mount"
+      ],
+      "joint": "vesa-bolts",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "workspace-main.mount",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "workspace-main.face",
+      "targets": [
+        "workspace-main.chassis"
+      ],
+      "joint": "integrated-display-face",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "workspace-main.chassis",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 0.0009999
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "workspace-main.mount",
+      "targets": [
+        "room-shell.north"
+      ],
+      "joint": "wall-anchor",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "room-shell.north",
+          "contact": true,
+          "method": "world-vertex-to-triangle-distance",
+          "distanceM": 2e-07
+        }
+      ],
+      "passed": true
+    },
+    {
+      "part": "workspace-main.status-led",
+      "targets": [
+        "workspace-main.chassis"
+      ],
+      "joint": "integrated-indicator",
+      "allRequired": true,
+      "measurements": [
+        {
+          "target": "workspace-main.chassis",
+          "contact": true,
+          "method": "world-triangle-bvh-overlap",
+          "distanceM": 0.0
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "failures": {
+    "coverage": [],
+    "missingTargets": [],
+    "cycles": [],
+    "pathsWithoutRoot": [],
+    "contacts": []
+  },
+  "limits": "Geometric contact and rooted acyclic support are verified for every declared part. This does not establish material strength, fastener capacity, human visual acceptance, or rights approval."
+}

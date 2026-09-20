@@ -11,6 +11,20 @@
       "visualParityConfigSha256": "36bdbb09914dc1dbef19d9247aa83ae48615b61fcf7effaa93590b1965aeaf48",
       "humanVisualAccepted": false,
       "technicalRuntimeCapture": "passed-three-byte-stable-runtime-capture-sets"
+    },
+    {
+      "version": "0.4.0",
+      "status": "review-source-lock",
+      "lockPath": "source/releases/0.4.0/review-source-lock.json",
+      "lockSha256": "dca03f5ac70d344fd2defb2a95d789823ad0acdab40248dee4c551c48f3bf9fa",
+      "releaseLedgerPath": "provenance/releases/0.4.0/release-ledger.json",
+      "releaseLedgerSha256": "d69634d96a67e417514b05a4abe65cf1c0af38bacaf164401145f297906195a9",
+      "qualityOutcome": "REWORK_REQUIRED",
+      "humanVisualAccepted": false,
+      "rightsApproved": false,
+      "technicalRuntimeCapture": "passed-single-exact-byte-clean-and-normal-capture",
+      "publicationReady": false,
+      "isCurrent": false
     }
   ]
 }

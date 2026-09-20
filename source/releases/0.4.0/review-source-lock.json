@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "status": "review-source-lock",
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.0",
+  "qualityOutcome": "REWORK_REQUIRED",
+  "sourceFiles": [
+    {
+      "path": "source/releases/0.4.0/author-scene.py",
+      "sha256": "741799953e6d25899f0bc07aefdf2e8f050cb5aac1a086a2f02550b9bec38bb0",
+      "sizeBytes": 35723
+    },
+    {
+      "path": "source/releases/0.4.0/authoring-task.md",
+      "sha256": "62b485997057aacd02e1fc0c9118c94a1acb5450e36c77ee0b072d83d6a44330",
+      "sizeBytes": 12487
+    },
+    {
+      "path": "source/releases/0.4.0/baked-source-0.4.0.blend",
+      "sha256": "2315b0eb4df823ae7badb644a0a9f00eb083331547dda6773a56b64a4c9468d9",
+      "sizeBytes": 23584016
+    },
+    {
+      "path": "source/releases/0.4.0/capture-config.json",
+      "sha256": "c8921ebe048dab7a79f49c0a0f2b6d83e3e6f20fcca21ca0ea66b47c9ab70fdf",
+      "sizeBytes": 2502
+    },
+    {
+      "path": "source/releases/0.4.0/denoise-atlas.py",
+      "sha256": "f9d3bd216e40bac032fa85ea58b811064e3e91451b40351824c798fd6e55bab6",
+      "sizeBytes": 2297
+    },
+    {
+      "path": "source/releases/0.4.0/draft-scene.blend",
+      "sha256": "f227fb73135898b1fc318c50795aadc011bfdad1acfafda7ce4ec2cc8d2d5f7d",
+      "sizeBytes": 18641525
+    },
+    {
+      "path": "source/releases/0.4.0/export-scene.py",
+      "sha256": "9590d7b72fea4a91fceeae2720b5adea0cf452568c2df12c81501941db34d640",
+      "sizeBytes": 9391
+    },
+    {
+      "path": "source/releases/0.4.0/fetch-assets.py",
+      "sha256": "78e0816677f093e666dc8c865da3d325b22233198b9649fc58fd14462ea64bb6",
+      "sizeBytes": 4097
+    },
+    {
+      "path": "source/releases/0.4.0/finalize-glb.mjs",
+      "sha256": "c7d0cd96386eed5dc147904f69aa28c6b98a95957b8559b1e3c35314d359c0c2",
+      "sizeBytes": 2898
+    },
+    {
+      "path": "source/releases/0.4.0/lightmap-0.4.0.png",
+      "sha256": "7f772b66a2514b7f31d234ad885ba3eb4a9ba0df590ade62c5e19af219de8916",
+      "sizeBytes": 1690909
+    },
+    {
+      "path": "source/releases/0.4.0/measure-geometry.py",
+      "sha256": "d961c8d0d6678a1e448b93efa04d70c57eee12ddff40bf62a9ee4abd1c65d89d",
+      "sizeBytes": 6189
+    },
+    {
+      "path": "source/releases/0.4.0/measure-support-contacts.py",
+      "sha256": "4e6948880245a58765911f528fd2baccc0066ffcfd0496f78f1deffaa2837e26",
+      "sizeBytes": 5008
+    },
+    {
+      "path": "source/releases/0.4.0/object-registry.json",
+      "sha256": "adf8edbb397ae14a97d841ceeaabc39bbe6599edac82e32a249404a863f556c1",
+      "sizeBytes": 281465
+    },
+    {
+      "path": "source/releases/0.4.0/preview.webp",
+      "sha256": "a41e5bd676e8d3cdeff8cb89d072fe9b9b8683b38860ef63b8be2cdcc04fdb21",
+      "sizeBytes": 26628
+    },
+    {
+      "path": "source/releases/0.4.0/release-LICENSES.md",
+      "sha256": "45abac823cb27361a82ac6bf417ebbec7738d7c7d8e7186f4ecfd69b3d335ef1",
+      "sizeBytes": 1654
+    },
+    {
+      "path": "source/releases/0.4.0/render-review.py",
+      "sha256": "c5315173f6c191a149fbeba23afc1a82b227ea4d0a40cde747c57e06b976e065",
+      "sizeBytes": 1823
+    },
+    {
+      "path": "source/releases/0.4.0/review/desk-underneath.png",
+      "sha256": "579a20f225e977455e789a9e9f57119764d0285fe52ad6c08c726d95a64d6572",
+      "sizeBytes": 1106100
+    },
+    {
+      "path": "source/releases/0.4.0/review/diagonal-overview.png",
+      "sha256": "6b376c5f9480321996fd56d26e0d11b6f086fad842dac6731998cda750fcc354",
+      "sizeBytes": 1074770
+    },
+    {
+      "path": "source/releases/0.4.0/review/door-detail.png",
+      "sha256": "7570cd63bb5e271d9f7ef1ca4abed70401a7bd4e2ca97aa9fc2c06068dbff635",
+      "sizeBytes": 922000
+    },
+    {
+      "path": "source/releases/0.4.0/review/entry.png",
+      "sha256": "d117df19f489aec49d82f14af2ae2e4592dd13a13f2fcedbabffaec909784502",
+      "sizeBytes": 1103792
+    },
+    {
+      "path": "source/releases/0.4.0/review/owner-seated.png",
+      "sha256": "efc3603832c817dca33ec528342da877b02f8384d1b1f1e7de81c09445c340d1",
+      "sizeBytes": 959548
+    },
+    {
+      "path": "source/releases/0.4.0/review/reading.png",
+      "sha256": "02d09dea16137aa2930fd705c86b27cce05a67f5ec883d44d02f045a8656315e",
+      "sizeBytes": 1184807
+    },
+    {
+      "path": "source/releases/0.4.0/review/shelf-detail.png",
+      "sha256": "b858be17d55c48343a3ccb1800462c394181cf221e054f420edf4dea2c7d552c",
+      "sizeBytes": 1027563
+    },
+    {
+      "path": "source/releases/0.4.0/review/source-render-settings.json",
+      "sha256": "2388d1e7688c87c9fd0092b2bebd44c3904bfc44a42d89d5588fe78d639d4b49",
+      "sizeBytes": 3134
+    },
+    {
+      "path": "source/releases/0.4.0/review/window-near.png",
+      "sha256": "9110581851869e94db284b4fd167d60a3716a08b984adf546e6f6178514e4bfa",
+      "sizeBytes": 1146628
+    },
+    {
+      "path": "source/releases/0.4.0/review/window-seated.png",
+      "sha256": "2913d3e2597830ab33ad5f9b911fcf6ab5e05ae4f8629f28eafcab35b1eaa54b",
+      "sizeBytes": 893027
+    },
+    {
+      "path": "source/releases/0.4.0/review/workspace-detail.png",
+      "sha256": "96f22d689c5a64895343dbbb85084170693a1daa4a3a51a02ff0a9320f09afc8",
+      "sizeBytes": 1170724
+    },
+    {
+      "path": "source/releases/0.4.0/runtime-harness.spec.ts",
+      "sha256": "9c8be84d37b692edfa766d4edc945c662c816ee1c6e3f83a46e7f9cc235428c5",
+      "sizeBytes": 18827
+    },
+    {
+      "path": "source/releases/0.4.0/scene-manifest.json",
+      "sha256": "5016a7303092a84e0e7283abc0bfa2666dd47d5f5d69c53b6a7fd1150aacd2c6",
+      "sizeBytes": 6456
+    },
+    {
+      "path": "source/releases/0.4.0/support_graph.py",
+      "sha256": "7a407c6d267e3a30b1b879d02c21cad09184dd90e7f12bd96753dce5c3092fe9",
+      "sizeBytes": 12904
+    },
+    {
+      "path": "source/releases/0.4.0/textures/cannon-4k.jpg",
+      "sha256": "65e365da8d3f192c5c091f60d8da2da63867cf7aa793c7a231fcdb582472b9ee",
+      "sizeBytes": 1537549
+    },
+    {
+      "path": "source/releases/0.4.0/textures/cannon.jpg",
+      "sha256": "4e960796faa85fc88d8e8647a713c695bcba92f8b6b27832a28f436428425d30",
+      "sizeBytes": 5104291
+    },
+    {
+      "path": "source/releases/0.4.0/textures/fabric_pattern_05-diff.jpg",
+      "sha256": "b9ece89a45044945ce4d1402672cfd605f1f074b313cb3cc12b7b2ea66fad7fe",
+      "sizeBytes": 797220
+    },
+    {
+      "path": "source/releases/0.4.0/textures/fabric_pattern_05-info.json",
+      "sha256": "f9bbb8d51202b3bf66f53c526de007b2ad5834873ee73e4542c42efdfdf13997",
+      "sizeBytes": 922
+    },
+    {
+      "path": "source/releases/0.4.0/textures/fabric_pattern_05-nor_gl.jpg",
+      "sha256": "caa5a948c768c7173b1d8647aa2618d39b4ec5ba4575820e02fb500dac54596d",
+      "sizeBytes": 903085
+    },
+    {
+      "path": "source/releases/0.4.0/textures/fabric_pattern_05-rough.jpg",
+      "sha256": "e48d14e87a5493bc4ef9bea61e85b4397ec41f93d1c3fd1ac17494475781610e",
+      "sizeBytes": 438194
+    },
+    {
+      "path": "source/releases/0.4.0/textures/leather_red_02-diff.jpg",
+      "sha256": "8b4f967175754b7224c98cfb3f048105dbf3dd7b265c6954f7729ef0f2691112",
+      "sizeBytes": 1002834
+    },
+    {
+      "path": "source/releases/0.4.0/textures/leather_red_02-info.json",
+      "sha256": "0791e764675c61d076970c74b4c260209beb747c2d888184a4163d18e35f4c12",
+      "sizeBytes": 940
+    },
+    {
+      "path": "source/releases/0.4.0/textures/leather_red_02-nor_gl.jpg",
+      "sha256": "d0057cdbee5be6223b35f0a463441404144fcdae699f69ff610eec4d86d48970",
+      "sizeBytes": 1033319
+    },
+    {
+      "path": "source/releases/0.4.0/textures/leather_red_02-rough.jpg",
+      "sha256": "dd3b860a9510a44fd857c04e0c8cc63ea1f944c25abe9bdcbf844cc4a22c88d8",
+      "sizeBytes": 879217
+    },
+    {
+      "path": "source/releases/0.4.0/textures/polyhaven-license.html",
+      "sha256": "f530abb18e6317a9b0f2a128b94150e372c8456d7491a14e4860c4ed5f5fe69a",
+      "sizeBytes": 72336
+    },
+    {
+      "path": "source/releases/0.4.0/textures/source-ledger.json",
+      "sha256": "8afdf58d42ad721944114983c356daf61aa95075af0fcb5e0acf6b60685f7c22",
+      "sizeBytes": 10735
+    },
+    {
+      "path": "source/releases/0.4.0/textures/wood_floor-diff.jpg",
+      "sha256": "2a1c07687b6dbb214c4b9213739c6d92d425f1f0fc8ab3ac157f105d78240789",
+      "sizeBytes": 734493
+    },
+    {
+      "path": "source/releases/0.4.0/textures/wood_floor-info.json",
+      "sha256": "78827d2c554f82ddd63dd170761a4e58f4489220ed29f91caed25364d5831dac",
+      "sizeBytes": 915
+    },
+    {
+      "path": "source/releases/0.4.0/textures/wood_floor-nor_gl.jpg",
+      "sha256": "452247f0d0d1b7fc7f8324ff3b6ed60bcc6de1405f4284eeb8d9bce90d4939c2",
+      "sizeBytes": 423303
+    },
+    {
+      "path": "source/releases/0.4.0/textures/wood_floor-rough.jpg",
+      "sha256": "061f1e1293251b2d28c76e3fac1ea9452b0e8648bb8f9b3728e09db386166e5c",
+      "sizeBytes": 527754
+    },
+    {
+      "path": "source/releases/0.4.0/textures/wood_table_001-diff.jpg",
+      "sha256": "460dd08d240f4a1f02982415048c3c5c200f385db212da18dc7e2df68bf4d0be",
+      "sizeBytes": 215573
+    },
+    {
+      "path": "source/releases/0.4.0/textures/wood_table_001-info.json",
+      "sha256": "2c62703118781c5c8b06d53f541912ea7ab9f544b525afaf26eddb0171b524ed",
+      "sizeBytes": 901
+    },
+    {
+      "path": "source/releases/0.4.0/textures/wood_table_001-nor_gl.jpg",
+      "sha256": "9bf7ddf5721e225c20290f1772ae37f9bdfd49658f6d458259eb794e2149d3cf",
+      "sizeBytes": 51927
+    },
+    {
+      "path": "source/releases/0.4.0/textures/wood_table_001-rough.jpg",
+      "sha256": "a2ca9ae89dfe7b8e2e5e92f0aa43467845417de8a50205b5852ef0d57c7624f9",
+      "sizeBytes": 237261
+    }
+  ],
+  "toolchain": {
+    "blenderVersion": "4.5.12 LTS",
+    "blenderBuildHash": "84afd5f785f7",
+    "blenderBinarySha256": "33ac108ebce3c271f5357e5c664d0488717263bcf2145c80300edd0b12c31880",
+    "gltfExporter": "Khronos glTF Blender I/O v4.5.51",
+    "gltfTransform": "4.4.2",
+    "meshoptimizer": "1.0.1",
+    "imageMagick": "6.9.12-98 Q16"
+  },
+  "reviewViews": [
+    "source/releases/0.4.0/review/entry.png",
+    "source/releases/0.4.0/review/owner-seated.png",
+    "source/releases/0.4.0/review/workspace-detail.png",
+    "source/releases/0.4.0/review/reading.png",
+    "source/releases/0.4.0/review/diagonal-overview.png",
+    "source/releases/0.4.0/review/window-near.png",
+    "source/releases/0.4.0/review/window-seated.png",
+    "source/releases/0.4.0/review/desk-underneath.png",
+    "source/releases/0.4.0/review/shelf-detail.png",
+    "source/releases/0.4.0/review/door-detail.png",
+    "source/releases/0.4.0/review/source-render-settings.json"
+  ],
+  "release": {
+    "path": "assets/scenes/personal-workspace-v1/0.4.0",
+    "files": {
+      "LICENSES.md": {
+        "sha256": "45abac823cb27361a82ac6bf417ebbec7738d7c7d8e7186f4ecfd69b3d335ef1",
+        "sizeBytes": 1654
+      },
+      "preview.webp": {
+        "sha256": "a41e5bd676e8d3cdeff8cb89d072fe9b9b8683b38860ef63b8be2cdcc04fdb21",
+        "sizeBytes": 26628
+      },
+      "scene.glb": {
+        "sha256": "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9",
+        "sizeBytes": 6674412
+      },
+      "scene.json": {
+        "sha256": "5016a7303092a84e0e7283abc0bfa2666dd47d5f5d69c53b6a7fd1150aacd2c6",
+        "sizeBytes": 6456
+      }
+    },
+    "stats": {
+      "triangles": 87888,
+      "objects": 397,
+      "meshes": 397,
+      "primitives": 397,
+      "materials": 23,
+      "textures": 14,
+      "animations": 0,
+      "scenes": 1
+    }
+  },
+  "reproducibility": {
+    "authoredSourceContainer": {
+      "path": "source/releases/0.4.0/draft-scene.blend",
+      "sha256": "f227fb73135898b1fc318c50795aadc011bfdad1acfafda7ce4ec2cc8d2d5f7d",
+      "result": "locked-exact-bytes-not-claimed-reproducible-from-reauthoring"
+    },
+    "bakedSourceContainer": {
+      "path": "source/releases/0.4.0/baked-source-0.4.0.blend",
+      "sha256": "2315b0eb4df823ae7badb644a0a9f00eb083331547dda6773a56b64a4c9468d9",
+      "result": "locked-exact-bytes"
+    },
+    "atlas": {
+      "path": "source/releases/0.4.0/lightmap-0.4.0.png",
+      "sha256": "7f772b66a2514b7f31d234ad885ba3eb4a9ba0df590ade62c5e19af219de8916",
+      "result": "locked-exact-bytes-not-rebaked-by-ci"
+    },
+    "releaseMaterialization": {
+      "scope": "two-independent-exports-from-accepted-baked-source-and-atlas-with-pinned-toolchain",
+      "runs": 2,
+      "rawGlbSha256": "5943b9b47323308300053de7dfb36653e0baae5d36827e2182978ac1281647e9",
+      "finalGlbSha256": "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9",
+      "result": "byte-identical-to-accepted-release"
+    },
+    "reviewImages": {
+      "result": "locked-exact-bytes-not-regenerated-by-ci"
+    }
+  },
+  "humanGates": {
+    "visual": "pending-human-acceptance",
+    "rights": "pending-human-rights-approval",
+    "publicationReady": false
+  }
+}

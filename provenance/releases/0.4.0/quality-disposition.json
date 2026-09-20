@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.0",
+  "sharedQualityContractCommit": "8ba49739d44518a3e877bc93432be591ce2e72da",
+  "benchmark": {
+    "scene": "Warm Modern Meeting Room Candidate 01 0.3.3",
+    "commit": "5580a7b080cf6195e28ebc77b654fd71111b0cd1"
+  },
+  "inspectedSourceRuntimePairs": [
+    "entry",
+    "owner-seated",
+    "workspace-detail",
+    "reading",
+    "diagonal-overview",
+    "window-near",
+    "window-seated",
+    "desk-underneath",
+    "shelf-detail",
+    "door-detail"
+  ],
+  "verdicts": {
+    "inheritedQualityTarget": "REWORK_REQUIRED",
+    "sourceToRuntimeFidelity": "REWORK_REQUIRED",
+    "exactByteRegression": "passed",
+    "functionalNormalProductChecks": "passed"
+  },
+  "unresolvedDefects": [
+    {
+      "id": "Q1-runtime-material-response",
+      "evidence": [
+        "provenance/runtime-capture-0.4.0/clean/compare-role-views.png",
+        "provenance/runtime-capture-0.4.0/clean/compare-detail-views.png"
+      ],
+      "observation": "Browser wood is materially darker, redder, and more saturated than the paired Cycles source views; fine material response is flattened.",
+      "blocksReadyForUserReview": true
+    },
+    {
+      "id": "Q1-lightmap-seams",
+      "evidence": [
+        "provenance/runtime-capture-0.4.0/clean/compare-detail-views.png",
+        "provenance/runtime-capture-0.4.0/clean/window-near.png"
+      ],
+      "observation": "Visible wall/window and assembly seams remain in browser lighting transfer.",
+      "blocksReadyForUserReview": true
+    },
+    {
+      "id": "technical-mesh-budget",
+      "evidence": [
+        "provenance/releases/0.4.0/glb-inventory.json"
+      ],
+      "observation": "The release has 397 meshes against the inherited maximum of 250; no exception is approved.",
+      "blocksReadyForUserReview": true
+    }
+  ],
+  "measuredRoleEvidence": {
+    "geometry": "provenance/releases/0.4.0/geometry-measurements.json",
+    "support": "provenance/releases/0.4.0/support-measurements.json",
+    "scope": "Automated User/Builder/Physics measurements passed; they do not override unresolved visual defects or human gates."
+  },
+  "humanGates": {
+    "visual": "pending-human-acceptance",
+    "rights": "pending-human-rights-approval",
+    "publicationReady": false,
+    "isCurrent": false
+  }
+}

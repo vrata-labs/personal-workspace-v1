@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.0",
+  "platformCommit": "c6343de81b038b7937addac44c24fa7c46adf341",
+  "scope": "single-exact-byte-local-clean-and-normal-capture",
+  "repeatabilityClaim": "not-a-three-run-stability-claim",
+  "bindings": {
+    "releaseGlb": {
+      "path": "assets/scenes/personal-workspace-v1/0.4.0/scene.glb",
+      "sha256": "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9",
+      "sizeBytes": 6674412
+    },
+    "releaseManifest": {
+      "path": "assets/scenes/personal-workspace-v1/0.4.0/scene.json",
+      "sha256": "5016a7303092a84e0e7283abc0bfa2666dd47d5f5d69c53b6a7fd1150aacd2c6",
+      "sizeBytes": 6456
+    },
+    "captureConfig": {
+      "path": "source/releases/0.4.0/capture-config.json",
+      "sha256": "c8921ebe048dab7a79f49c0a0f2b6d83e3e6f20fcca21ca0ea66b47c9ab70fdf",
+      "sizeBytes": 2502
+    },
+    "captureHarness": {
+      "path": "source/releases/0.4.0/runtime-harness.spec.ts",
+      "sha256": "9c8be84d37b692edfa766d4edc945c662c816ee1c6e3f83a46e7f9cc235428c5",
+      "sizeBytes": 18827
+    }
+  },
+  "clean": {
+    "path": "provenance/runtime-capture-0.4.0/clean",
+    "files": [
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/capture-settings.json",
+        "sha256": "5c21bb1049e35ca7cd2f8fdfdf21e3be3e38787d9018ba8edf85f68cb6683354",
+        "sizeBytes": 9373
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/clean-spawn.png",
+        "sha256": "9a5b263b83bcc3965ad50cd9edac4f6517a0c4b1d3226c391d82a8cd3d32fbb5",
+        "sizeBytes": 560532
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/compare-detail-views.png",
+        "sha256": "01f2aab8a73a6aa0eb3ddc53cef78db73300ff5d4aca71ec7635124bfe418033",
+        "sizeBytes": 11025069
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/compare-role-views.png",
+        "sha256": "e88d7a84d6393aa9ecb543ba8424a75e9546f15023867126b189c4e77f3dd3dc",
+        "sizeBytes": 10017545
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/entry.png",
+        "sha256": "d7cc03f4bfbf756fa91504a9cf6d44e432db33cbfb8074d0f6a17ffcff8fea04",
+        "sizeBytes": 629292
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/owner-seated.png",
+        "sha256": "0d54813c37116a90c10199efa9c2e971914cc6d9d655c5527995d2bebdb3f5cd",
+        "sizeBytes": 404173
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/workspace-detail.png",
+        "sha256": "16a225a0ceba4a5b34c14af2974334a3a46fa04aa3e5e1d60ff128e24d23a0ef",
+        "sizeBytes": 712276
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/reading.png",
+        "sha256": "0c04d0b68543910a3484e068750a3bba81bf24575d457e966aac6b35713420ad",
+        "sizeBytes": 818761
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/diagonal-overview.png",
+        "sha256": "90602166fd45f1e854c7b5f7b4ec236f1848abd7435a8cae5831f22f224b4081",
+        "sizeBytes": 582345
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/window-near.png",
+        "sha256": "6b3e5696ac710dd954ca5713250146e1acc009864421463171b7a4a7b574df9c",
+        "sizeBytes": 778420
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/window-seated.png",
+        "sha256": "f9c4298657bfcdb1d270cfcfa110aa552b655d588743da9c447430ea15060596",
+        "sizeBytes": 292913
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/desk-underneath.png",
+        "sha256": "06ca26b8b8b0b639f89838a25c608bbdae2799742f2a034f828cdc833e6dceea",
+        "sizeBytes": 620611
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/shelf-detail.png",
+        "sha256": "1a8f265650807a528e721c52b05bdfea60ad5a66ff979248599305c44ce34865",
+        "sizeBytes": 792024
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/door-detail.png",
+        "sha256": "fad97a3b438573c83899e022df05df9a73b774ce4b0a33003c07d902b0193145",
+        "sizeBytes": 530401
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/clean/scene-debug.json",
+        "sha256": "6e3091d002058a764b779eb52917472aa802fc549d74f4278520f07debe4a6f3",
+        "sizeBytes": 11738
+      }
+    ],
+    "state": "loaded",
+    "failureReason": null,
+    "missingAssets": [],
+    "assetBytesLoaded": 6674412,
+    "renderProfile": "baked-pbr-v1",
+    "meshCount": 397,
+    "materialCount": 23,
+    "lightMappedMaterialCount": 22,
+    "triangleEstimate": 87888,
+    "spawnApplied": true
+  },
+  "normal": {
+    "path": "provenance/runtime-capture-0.4.0/normal",
+    "files": [
+      {
+        "path": "provenance/runtime-capture-0.4.0/normal/normal-media.png",
+        "sha256": "3a686d83bdec6db5594fde1013057fc6fd18b7e9ec1e401d69890e3dda1dcd39",
+        "sizeBytes": 395896
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/normal/normal-owner-desk-seat.png",
+        "sha256": "1113d88d4946edcc134dc00e53c7c7a495e126f94ee895d2bb0de0cbf3d5d92d",
+        "sizeBytes": 410577
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/normal/normal-product-evidence.json",
+        "sha256": "13114e3803e643ea313635c2fac4e093103766dc2a6fa43f29b6d03a75fbeee4",
+        "sizeBytes": 8200
+      },
+      {
+        "path": "provenance/runtime-capture-0.4.0/normal/normal-spawn.png",
+        "sha256": "31113c784a75f9c065a1be3b211666eb608da2d383b466a3344e9865517f2b97",
+        "sizeBytes": 556276
+      }
+    ],
+    "platformCommit": "c6343de81b038b7937addac44c24fa7c46adf341",
+    "manifestSha256": "5016a7303092a84e0e7283abc0bfa2666dd47d5f5d69c53b6a7fd1150aacd2c6",
+    "glbSha256": "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9",
+    "syntheticReviewPoseUsed": false,
+    "verdict": "functional-checks-passed"
+  },
+  "qualityOutcome": "REWORK_REQUIRED",
+  "humanVisualAcceptance": "pending-human-acceptance",
+  "humanRightsApproval": "pending-human-rights-approval",
+  "publicationReady": false
+}

@@ -1,0 +1,463 @@
+{
+  "environmentIntensity": 0.35,
+  "exposure": 1.2,
+  "width": 1280,
+  "height": 800,
+  "glbSha256": "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9",
+  "views": [
+    {
+      "id": "entry",
+      "position": {
+        "x": 2.45,
+        "y": 1.6,
+        "z": 2.12
+      },
+      "target": {
+        "x": -0.65,
+        "y": 1.26,
+        "z": -1.25
+      },
+      "fovDegrees": 43.42181939563756
+    },
+    {
+      "id": "owner-seated",
+      "position": {
+        "x": -1.05,
+        "y": 1.2,
+        "z": -0.72
+      },
+      "target": {
+        "x": -1.05,
+        "y": 1.05,
+        "z": -2.05
+      },
+      "fovDegrees": 48.844560349235906
+    },
+    {
+      "id": "workspace-detail",
+      "position": {
+        "x": 0.6,
+        "y": 1.45,
+        "z": -0.05
+      },
+      "target": {
+        "x": -1.12,
+        "y": 0.85,
+        "z": -1.62
+      },
+      "fovDegrees": 35.32850679473494
+    },
+    {
+      "id": "reading",
+      "position": {
+        "x": 0.7,
+        "y": 1.5,
+        "z": 0.15
+      },
+      "target": {
+        "x": -2,
+        "y": 0.78,
+        "z": 1.18
+      },
+      "fovDegrees": 36.765192743102475
+    },
+    {
+      "id": "diagonal-overview",
+      "position": {
+        "x": -0.25,
+        "y": 1.65,
+        "z": 2.2
+      },
+      "target": {
+        "x": 0.3,
+        "y": 1.2,
+        "z": -1.05
+      },
+      "fovDegrees": 48.844560349235906
+    },
+    {
+      "id": "window-near",
+      "position": {
+        "x": 1.65,
+        "y": 1.6,
+        "z": 0.35
+      },
+      "target": {
+        "x": 3.3,
+        "y": 1.5,
+        "z": -0.28
+      },
+      "fovDegrees": 38.216586580062355
+    },
+    {
+      "id": "window-seated",
+      "position": {
+        "x": -1.05,
+        "y": 1.2,
+        "z": -0.72
+      },
+      "target": {
+        "x": 3.25,
+        "y": 1.4,
+        "z": -0.2
+      },
+      "fovDegrees": 38.216586580062355
+    },
+    {
+      "id": "desk-underneath",
+      "position": {
+        "x": 0.55,
+        "y": 0.35,
+        "z": -1.15
+      },
+      "target": {
+        "x": -0.9,
+        "y": 0.57,
+        "z": -1.72
+      },
+      "fovDegrees": 44.182474313044715
+    },
+    {
+      "id": "shelf-detail",
+      "position": {
+        "x": -1.74,
+        "y": 1.06,
+        "z": -0.18
+      },
+      "target": {
+        "x": -3,
+        "y": 1.06,
+        "z": -0.22
+      },
+      "fovDegrees": 31.100359082058986
+    },
+    {
+      "id": "door-detail",
+      "position": {
+        "x": 0.75,
+        "y": 1.25,
+        "z": 1.17
+      },
+      "target": {
+        "x": 2,
+        "y": 1.13,
+        "z": 2.52
+      },
+      "fovDegrees": 33.905889002505766
+    }
+  ],
+  "cameraEvidence": [
+    {
+      "id": "entry",
+      "requestedEye": {
+        "x": 2.45,
+        "y": 1.6,
+        "z": 2.12
+      },
+      "appliedRigPose": {
+        "id": "entry",
+        "position": {
+          "x": 2.530210722282975,
+          "y": 0.00439260622874027,
+          "z": 2.2071968174495566
+        },
+        "yaw": 0.7436912962886624,
+        "pitch": -0.07411661079190965,
+        "fovDegrees": 43.42181939563756
+      },
+      "actualCamera": {
+        "world": {
+          "x": 2.45,
+          "y": 1.6,
+          "z": 2.12
+        },
+        "forward": {
+          "x": -0.675,
+          "y": -0.074,
+          "z": -0.734
+        }
+      }
+    },
+    {
+      "id": "owner-seated",
+      "requestedEye": {
+        "x": -1.05,
+        "y": 1.2,
+        "z": -0.72
+      },
+      "appliedRigPose": {
+        "id": "owner-seated",
+        "position": {
+          "x": -1.05,
+          "y": -0.38992024238173717,
+          "z": -0.5406856869494282
+        },
+        "yaw": 0,
+        "pitch": -0.1123073846925754,
+        "fovDegrees": 48.844560349235906
+      },
+      "actualCamera": {
+        "world": {
+          "x": -1.05,
+          "y": 1.2,
+          "z": -0.72
+        },
+        "forward": {
+          "x": 0,
+          "y": -0.112,
+          "z": -0.994
+        }
+      }
+    },
+    {
+      "id": "workspace-detail",
+      "requestedEye": {
+        "x": 0.6,
+        "y": 1.45,
+        "z": -0.05
+      },
+      "appliedRigPose": {
+        "id": "workspace-detail",
+        "position": {
+          "x": 0.894835656692424,
+          "y": -0.09940137300389895,
+          "z": 0.2191232447715732
+        },
+        "yaw": 0.8309593168013311,
+        "pitch": -0.2521596439572746,
+        "fovDegrees": 35.32850679473494
+      },
+      "actualCamera": {
+        "world": {
+          "x": 0.6,
+          "y": 1.45,
+          "z": -0.05
+        },
+        "forward": {
+          "x": -0.715,
+          "y": -0.249,
+          "z": -0.653
+        }
+      }
+    },
+    {
+      "id": "reading",
+      "requestedEye": {
+        "x": 0.7,
+        "y": 1.5,
+        "z": 0.15
+      },
+      "appliedRigPose": {
+        "id": "reading",
+        "position": {
+          "x": 1.0614139646254237,
+          "y": -0.05253697386340073,
+          "z": 0.012127265346597554
+        },
+        "yaw": 1.9352372481623463,
+        "pitch": -0.2441811842751108,
+        "fovDegrees": 36.765192743102475
+      },
+      "actualCamera": {
+        "world": {
+          "x": 0.7,
+          "y": 1.5,
+          "z": 0.15
+        },
+        "forward": {
+          "x": -0.907,
+          "y": -0.242,
+          "z": 0.346
+        }
+      }
+    },
+    {
+      "id": "diagonal-overview",
+      "requestedEye": {
+        "x": -0.25,
+        "y": 1.65,
+        "z": 2.2
+      },
+      "appliedRigPose": {
+        "id": "diagonal-overview",
+        "position": {
+          "x": -0.28611233373106043,
+          "y": 0.06470502631122566,
+          "z": 2.4133910629562663
+        },
+        "yaw": -0.1676424378312157,
+        "pitch": -0.13568164231994362,
+        "fovDegrees": 48.844560349235906
+      },
+      "actualCamera": {
+        "world": {
+          "x": -0.25,
+          "y": 1.65,
+          "z": 2.2
+        },
+        "forward": {
+          "x": 0.165,
+          "y": -0.135,
+          "z": -0.977
+        }
+      }
+    },
+    {
+      "id": "window-near",
+      "requestedEye": {
+        "x": 1.65,
+        "y": 1.6,
+        "z": 0.35
+      },
+      "appliedRigPose": {
+        "id": "window-near",
+        "position": {
+          "x": 1.565503668528214,
+          "y": 0.0025584461024907856,
+          "z": 0.3822622356528637
+        },
+        "yaw": -1.2060615125304834,
+        "pitch": -0.05655890990323817,
+        "fovDegrees": 38.216586580062355
+      },
+      "actualCamera": {
+        "world": {
+          "x": 1.65,
+          "y": 1.6,
+          "z": 0.35
+        },
+        "forward": {
+          "x": 0.933,
+          "y": -0.057,
+          "z": -0.356
+        }
+      }
+    },
+    {
+      "id": "window-seated",
+      "requestedEye": {
+        "x": -1.05,
+        "y": 1.2,
+        "z": -0.72
+      },
+      "appliedRigPose": {
+        "id": "window-seated",
+        "position": {
+          "x": -0.9767320834348787,
+          "y": -0.39829700224221143,
+          "z": -0.7111396938107295
+        },
+        "yaw": -1.691142179018763,
+        "pitch": 0.046142441795406476,
+        "fovDegrees": 38.216586580062355
+      },
+      "actualCamera": {
+        "world": {
+          "x": -1.05,
+          "y": 1.2,
+          "z": -0.72
+        },
+        "forward": {
+          "x": 0.992,
+          "y": 0.046,
+          "z": 0.12
+        }
+      }
+    },
+    {
+      "id": "desk-underneath",
+      "requestedEye": {
+        "x": 0.55,
+        "y": 0.35,
+        "z": -1.15
+      },
+      "appliedRigPose": {
+        "id": "desk-underneath",
+        "position": {
+          "x": 0.341799286924842,
+          "y": -1.2342834198076447,
+          "z": -1.231844418243338
+        },
+        "yaw": 1.1962493546992337,
+        "pitch": 0.1402781972812196,
+        "fovDegrees": 44.182474313044715
+      },
+      "actualCamera": {
+        "world": {
+          "x": 0.55,
+          "y": 0.35,
+          "z": -1.15
+        },
+        "forward": {
+          "x": -0.922,
+          "y": 0.14,
+          "z": -0.362
+        }
+      }
+    },
+    {
+      "id": "shelf-detail",
+      "requestedEye": {
+        "x": -1.74,
+        "y": 1.06,
+        "z": -0.18
+      },
+      "appliedRigPose": {
+        "id": "shelf-detail",
+        "position": {
+          "x": -1.74,
+          "y": -0.54,
+          "z": -0.18
+        },
+        "yaw": 1.5390609532664388,
+        "pitch": 0,
+        "fovDegrees": 31.100359082058986
+      },
+      "actualCamera": {
+        "world": {
+          "x": -1.74,
+          "y": 1.06,
+          "z": -0.18
+        },
+        "forward": {
+          "x": -0.999,
+          "y": 0,
+          "z": -0.032
+        }
+      }
+    },
+    {
+      "id": "door-detail",
+      "requestedEye": {
+        "x": 0.75,
+        "y": 1.25,
+        "z": 1.17
+      },
+      "appliedRigPose": {
+        "id": "door-detail",
+        "position": {
+          "x": 0.6792492952623927,
+          "y": -0.34660757024533484,
+          "z": 1.093589238883384
+        },
+        "yaw": -2.394637080213533,
+        "pitch": -0.0651309185729032,
+        "fovDegrees": 33.905889002505766
+      },
+      "actualCamera": {
+        "world": {
+          "x": 0.75,
+          "y": 1.25,
+          "z": 1.17
+        },
+        "forward": {
+          "x": 0.678,
+          "y": -0.065,
+          "z": 0.732
+        }
+      }
+    }
+  ],
+  "normalProductMode": false,
+  "qualityOutcome": "not-evaluated-by-this-test"
+}

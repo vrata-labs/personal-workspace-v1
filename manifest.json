@@ -3,7 +3,7 @@
   "sceneId": "personal-workspace-v1",
   "blenderVersion": "4.5.12 LTS",
   "blenderBuildHash": "84afd5f785f7",
-  "platformValidatorCommit": "c54edb2239d225a71e9b934316f70792b3faafb6",
+  "platformValidatorCommit": "c6343de81b038b7937addac44c24fa7c46adf341",
   "status": "review",
   "acceptanceStatus": "pending-human-acceptance",
   "visualAcceptanceStatus": "pending-human-acceptance",
@@ -167,6 +167,47 @@
         "primitives": 232,
         "materials": 16,
         "textures": 2,
+        "animations": 0,
+        "scenes": 1
+      }
+    },
+    {
+      "sceneId": "personal-workspace-v1",
+      "version": "0.4.0",
+      "releasePath": "assets/scenes/personal-workspace-v1/0.4.0",
+      "status": "review",
+      "acceptanceStatus": "pending-human-acceptance",
+      "visualAcceptanceStatus": "pending-human-acceptance",
+      "rightsApprovalStatus": "pending-human-rights-approval",
+      "rightsApproved": false,
+      "isCurrent": false,
+      "publicationReady": false,
+      "qualityOutcome": "REWORK_REQUIRED",
+      "files": {
+        "LICENSES.md": {
+          "sha256": "45abac823cb27361a82ac6bf417ebbec7738d7c7d8e7186f4ecfd69b3d335ef1",
+          "sizeBytes": 1654
+        },
+        "preview.webp": {
+          "sha256": "a41e5bd676e8d3cdeff8cb89d072fe9b9b8683b38860ef63b8be2cdcc04fdb21",
+          "sizeBytes": 26628
+        },
+        "scene.glb": {
+          "sha256": "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9",
+          "sizeBytes": 6674412
+        },
+        "scene.json": {
+          "sha256": "5016a7303092a84e0e7283abc0bfa2666dd47d5f5d69c53b6a7fd1150aacd2c6",
+          "sizeBytes": 6456
+        }
+      },
+      "stats": {
+        "triangles": 87888,
+        "objects": 397,
+        "meshes": 397,
+        "primitives": 397,
+        "materials": 23,
+        "textures": 14,
         "animations": 0,
         "scenes": 1
       }

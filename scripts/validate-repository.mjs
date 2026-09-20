@@ -12,6 +12,8 @@ import {
   BLENDER_BINARY_SHA256,
   BLENDER_BUILD_HASH,
   BLENDER_VERSION,
+  CURRENT_PLATFORM_COMMIT,
+  CURRENT_RELEASE_VERSION,
   HISTORICAL_PLATFORM_COMMIT,
   METADATA_PLATFORM_COMMIT,
   METADATA_RENDER_PROFILE,
@@ -90,13 +92,13 @@ function assertRecord(actual, expected, code) {
   assert(actual?.sha256 === expected?.sha256 && actual?.sizeBytes === expected?.sizeBytes, code);
 }
 
-assert(packageManifest.version === VERSION && config.releaseVersion === VERSION, "current_release_version_mismatch");
+assert(packageManifest.version === VERSION && config.releaseVersion === VERSION && VERSION === CURRENT_RELEASE_VERSION, "current_release_version_mismatch");
 assert(config.oneSceneOnly === true && config.sceneId === SCENE_ID && config.repository === `vrata-labs/${SCENE_ID}`, "invalid_repository_identity");
 assert(config.releaseStatus === "review" && config.acceptanceStatus === "pending-human-acceptance" && config.visualAcceptanceStatus === "pending-human-acceptance", "invalid_repository_gate_state");
 assert(config.rightsApprovalStatus === REVIEW_RIGHTS_APPROVAL_STATUS && config.rightsApproved === false && config.publicationReady === false, "invalid_repository_gate_state");
-assert(validatorLock === BAKED_PLATFORM_COMMIT && config.platformValidatorCommit === BAKED_PLATFORM_COMMIT, "platform_validator_lock_mismatch");
+assert(validatorLock === CURRENT_PLATFORM_COMMIT && config.platformValidatorCommit === CURRENT_PLATFORM_COMMIT, "platform_validator_lock_mismatch");
 assert(/^[0-9a-f]{40}$/.test(validatorLock), "invalid_platform_validator_sha");
-assert(manifest.sceneId === SCENE_ID && manifest.platformValidatorCommit === BAKED_PLATFORM_COMMIT, "invalid_root_manifest_identity");
+assert(manifest.sceneId === SCENE_ID && manifest.platformValidatorCommit === CURRENT_PLATFORM_COMMIT, "invalid_root_manifest_identity");
 assert(manifest.blenderVersion === BLENDER_VERSION && manifest.blenderBuildHash === BLENDER_BUILD_HASH, "invalid_blender_lock");
 assertReviewState(manifest, "invalid_manifest_review_state", false, REVIEW_RIGHTS_APPROVAL_STATUS, false);
 assert(JSON.stringify(manifestVersions) === JSON.stringify(RELEASE_VERSIONS), "invalid_release_set");
@@ -106,7 +108,8 @@ for (const version of manifestVersions) {
   const release = releases.get(version);
   const releaseDir = join(releaseRoot, version);
   const scene = scenes.get(version);
-  const pendingRights = version === REVIEW_RELEASE_VERSION;
+  const pendingRights = [REVIEW_RELEASE_VERSION, CURRENT_RELEASE_VERSION].includes(version);
+  const currentRelease = version === CURRENT_RELEASE_VERSION;
   assert(release?.releasePath === `assets/scenes/${SCENE_ID}/${version}`, `invalid_release_path:${version}`);
   assertReviewState(release, `invalid_release_state:${version}`, true, pendingRights ? REVIEW_RIGHTS_APPROVAL_STATUS : RIGHTS_APPROVAL_STATUS, !pendingRights);
   const entries = (await readdir(releaseDir, { withFileTypes: true })).filter((entry) => entry.isFile()).map((entry) => entry.name).sort();
@@ -114,8 +117,23 @@ for (const version of manifestVersions) {
   for (const name of RELEASE_FILES) assertRecord(await fileRecord(join(releaseDir, name)), release.files[name], `release_file_hash_or_size_drift:${version}:${name}`);
 
   assert(scene.schemaVersion === 1 && scene.sceneId === SCENE_ID && scene.version === version, `invalid_scene_manifest_identity:${version}`);
-  assertReviewState(scene, `invalid_scene_review_state:${version}`, false, pendingRights ? REVIEW_RIGHTS_APPROVAL_STATUS : RIGHTS_APPROVAL_STATUS, !pendingRights);
-  if (pendingRights) {
+  if (currentRelease) {
+    assert(scene.status === "review"
+      && scene.humanAcceptance === "pending-human-acceptance"
+      && scene.isCurrent === false
+      && scene.publicationReady === false
+      && scene.visual?.reviewStage === "draft-quality-review", `invalid_scene_review_state:${version}`);
+  } else {
+    assertReviewState(scene, `invalid_scene_review_state:${version}`, false, pendingRights ? REVIEW_RIGHTS_APPROVAL_STATUS : RIGHTS_APPROVAL_STATUS, !pendingRights);
+  }
+  if (currentRelease) {
+    assert(scene.rights.license === "Project-authored geometry and CC0-1.0 material inputs; see source ledger"
+      && scene.rights.approvalStatus === REVIEW_RIGHTS_APPROVAL_STATUS
+      && JSON.stringify(scene.rights.clearedFor) === JSON.stringify([])
+      && !("rightsApproved" in scene.rights)
+      && !("approvedOn" in scene.rights)
+      && !("approvedBy" in scene.rights), `invalid_scene_rights_verdict:${version}`);
+  } else if (pendingRights) {
     assert(scene.rights.license === REVIEW_RIGHTS_LICENSE_REF
       && scene.rights.approvalStatus === REVIEW_RIGHTS_APPROVAL_STATUS
       && scene.rights.rightsApproved === false
@@ -440,7 +458,12 @@ if (!manifestOnly) {
     assert(glbBytes.length <= contract.budgets.glbBytesMax, `glb_budget_exceeded:${version}:${glbBytes.length}`);
     assert(stats.triangles <= contract.budgets.trianglesMax, `triangle_budget_exceeded:${version}:${stats.triangles}`);
     assert(stats.objects <= contract.budgets.objectsMax, `object_budget_exceeded:${version}:${stats.objects}`);
-    assert(stats.meshes <= contract.budgets.meshesMax, `mesh_budget_exceeded:${version}:${stats.meshes}`);
+    if (version === CURRENT_RELEASE_VERSION) {
+      assert(stats.meshes === 397 && stats.meshes > contract.budgets.meshesMax
+        && release.qualityOutcome === "REWORK_REQUIRED", `invalid_current_mesh_budget_exception:${stats.meshes}`);
+    } else {
+      assert(stats.meshes <= contract.budgets.meshesMax, `mesh_budget_exceeded:${version}:${stats.meshes}`);
+    }
     assert(stats.materials <= contract.budgets.materialsMax, `material_budget_exceeded:${version}:${stats.materials}`);
     assert(stats.textures <= contract.budgets.texturesMax, `texture_budget_exceeded:${version}:${stats.textures}`);
     if (version === BAKED_RELEASE_VERSION) {

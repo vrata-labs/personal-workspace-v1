@@ -100,7 +100,7 @@ jobs:
       - name: Validate committed runtime captures
         run: pnpm validate:visual
 
-      - name: Validate repository, baked evidence, and release records
+      - name: Validate repository, historical evidence, and current release records
         run: pnpm validate
 
       - name: Inspect GLB release
@@ -117,7 +117,7 @@ jobs:
           tar --extract --xz --file "$archive" --directory "$RUNNER_TEMP"
           echo "BLENDER_BIN=$RUNNER_TEMP/blender-4.5.12-linux-x64/blender" >> "$GITHUB_ENV"
 
-      - name: Verify pinned Blender reproducibility
+      - name: Verify historical and current pinned Blender reproducibility
         run: pnpm verify:reproducibility
 
       - name: Read platform validator lock

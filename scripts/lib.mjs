@@ -6,6 +6,7 @@ import { isAbsolute, join, relative, resolve, sep } from "node:path";
 
 import { NodeIO } from "@gltf-transform/core";
 import { ALL_EXTENSIONS } from "@gltf-transform/extensions";
+import { MeshoptDecoder } from "meshoptimizer";
 
 export const SCENE_ID = "personal-workspace-v1";
 export const SOURCE_VERSION = "0.1.0";
@@ -13,13 +14,15 @@ export const METADATA_VERSION = "0.1.1";
 export const PUBLISHED_BAKED_VERSIONS = Object.freeze(["0.2.0"]);
 export const BAKED_RELEASE_VERSION = PUBLISHED_BAKED_VERSIONS.at(-1);
 export const REVIEW_RELEASE_VERSION = "0.3.0";
-export const VERSION = REVIEW_RELEASE_VERSION;
+export const CURRENT_RELEASE_VERSION = "0.4.0";
+export const VERSION = CURRENT_RELEASE_VERSION;
 export const BASE_RELEASE_VERSIONS = Object.freeze([SOURCE_VERSION, METADATA_VERSION]);
-export const RELEASE_VERSIONS = Object.freeze([...BASE_RELEASE_VERSIONS, ...PUBLISHED_BAKED_VERSIONS, REVIEW_RELEASE_VERSION]);
+export const RELEASE_VERSIONS = Object.freeze([...BASE_RELEASE_VERSIONS, ...PUBLISHED_BAKED_VERSIONS, REVIEW_RELEASE_VERSION, CURRENT_RELEASE_VERSION]);
 export const HISTORICAL_PLATFORM_COMMIT = "9153bb9818a2907fb33ba96375f7b31c1641f12f";
 export const METADATA_PLATFORM_COMMIT = "61736f6289f941e290f4fe156f17efdd64ef876b";
 export const BAKED_PLATFORM_COMMIT = "c54edb2239d225a71e9b934316f70792b3faafb6";
-export const PLATFORM_COMMIT = BAKED_PLATFORM_COMMIT;
+export const CURRENT_PLATFORM_COMMIT = "c6343de81b038b7937addac44c24fa7c46adf341";
+export const PLATFORM_COMMIT = CURRENT_PLATFORM_COMMIT;
 export const BLENDER_VERSION = "4.5.12 LTS";
 export const BLENDER_BUILD_HASH = "84afd5f785f7";
 export const BLENDER_BINARY_SHA256 = "33ac108ebce3c271f5357e5c664d0488717263bcf2145c80300edd0b12c31880";
@@ -276,6 +279,12 @@ export function canonicalSha256(value) {
   return sha256(stableJson(value));
 }
 
+export function createNodeIO() {
+  return new NodeIO()
+    .registerExtensions(ALL_EXTENSIONS)
+    .registerDependencies({ "meshopt.decoder": MeshoptDecoder });
+}
+
 export async function hashFile(path) {
   const hash = createHash("sha256");
   await new Promise((resolve, reject) => {
@@ -350,7 +359,7 @@ function primitiveTriangleCount(primitive) {
 }
 
 export async function glbStats(path) {
-  const document = await new NodeIO().registerExtensions(ALL_EXTENSIONS).read(path);
+  const document = await createNodeIO().read(path);
   const root = document.getRoot();
   const meshes = root.listMeshes();
   return {
@@ -366,7 +375,7 @@ export async function glbStats(path) {
 }
 
 export async function bakedMaterialMetadata(path) {
-  const document = await new NodeIO().registerExtensions(ALL_EXTENSIONS).read(path);
+  const document = await createNodeIO().read(path);
   return document.getRoot().listMaterials().map((material) => ({
     name: material.getName(),
     extras: material.getExtras(),
@@ -429,7 +438,7 @@ export async function assertReviewReleaseMaterialContract(path) {
 }
 
 export async function glbTextureRecords(path) {
-  const document = await new NodeIO().registerExtensions(ALL_EXTENSIONS).read(path);
+  const document = await createNodeIO().read(path);
   return document.getRoot().listTextures().map((texture) => {
     const bytes = texture.getImage();
     assert(bytes !== null, `missing_embedded_texture:${texture.getName()}`);
