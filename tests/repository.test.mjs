@@ -304,11 +304,12 @@ test("release directories are exact and shared artifact hashes are unchanged", a
 });
 
 test("historical Blender evidence and current metadata tooling use distinct validator pins", async () => {
-  const [validatorLock, generationLedger, metadataEvidence, buildScript, reproducibilityScript, workflow, readme] = await Promise.all([
+  const [validatorLock, generationLedger, metadataEvidence, buildScript, legacyReviewBuildScript, reproducibilityScript, workflow, readme] = await Promise.all([
     readFile(join(root, "platform-validator.lock"), "utf8"),
     readJson(join(root, "provenance", "generation-ledger.json")),
     readJson(join(root, "provenance", `metadata-release-${METADATA_VERSION}.json`)),
     readFile(join(root, "scripts", "build-candidate.mjs"), "utf8"),
+    readFile(join(root, "scripts", "build-review-release.mjs"), "utf8"),
     readFile(join(root, "scripts", "verify-reproducibility.mjs"), "utf8"),
     readFile(join(root, ".github", "workflows", "validate.yml"), "utf8"),
     readFile(join(root, "README.md"), "utf8")
@@ -318,6 +319,7 @@ test("historical Blender evidence and current metadata tooling use distinct vali
   assert.equal(generationLedger.toolchain.blenderBinarySha256, BLENDER_BINARY_SHA256);
   assert.equal(metadataEvidence.platformValidatorCommit, METADATA_PLATFORM_COMMIT);
   assert.doesNotMatch(buildScript, /BLENDER_BIN|spawnSync|review-candidate\.blend/);
+  assert.match(legacyReviewBuildScript, /sys\.stdout\.flush\(\)/);
   assert.match(reproducibilityScript, /BLENDER_BIN/);
   assert.match(reproducibilityScript, /export_scene\.py/);
   assert.match(reproducibilityScript, /historical-run-1\.glb/);
