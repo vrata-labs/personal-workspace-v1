@@ -5,7 +5,6 @@ import { dirname, join, resolve } from "node:path";
 import validator from "gltf-validator";
 
 import {
-  BAKED_PLATFORM_COMMIT,
   BLENDER_BINARY_SHA256,
   BLENDER_BUILD_HASH,
   BLENDER_VERSION,
@@ -14,7 +13,6 @@ import {
   REVIEW_RELEASE_VERSION,
   REVIEW_RIGHTS_APPROVAL_STATUS,
   SCENE_ID,
-  VERSION,
   assert,
   assertReviewReleaseMaterialContract,
   fileRecord,
@@ -105,9 +103,7 @@ const [packageManifest, repository, manifest, reality, sourceScene, previousScen
   readJson(join(root, "assets", "scenes", SCENE_ID, "0.2.0", "scene.json")),
   readJson(join(root, REVIEW_RELEASE.panoramaParametersPath))
 ]);
-assert(packageManifest.version === VERSION && repository.releaseVersion === VERSION, "current_release_version_mismatch");
-assert(VERSION === REVIEW_RELEASE_VERSION, "review_release_not_current_target");
-assert(repository.platformValidatorCommit === BAKED_PLATFORM_COMMIT && manifest.platformValidatorCommit === BAKED_PLATFORM_COMMIT, "review_platform_validator_mismatch");
+assert(packageManifest.version === repository.releaseVersion, "current_release_version_mismatch");
 const manifestVersions = manifest.releases.map(({ version }) => version);
 assert(isReleaseVersionPrefix(manifestVersions), "invalid_release_set_before_review_build");
 const nextVersion = nextReleaseVersion(manifestVersions);

@@ -15,11 +15,11 @@ and its [task packet](https://github.com/vrata-labs/platform/blob/8ba49739d44518
 including all-object User/Builder/Physics passes, realistic materials and photographic
 exterior evidence. Passive objects remain allowed. Do not repeat the same-candidate
 capture calibration as a substitute for matching the accepted quality benchmark.
-This records the rejection separately; published 0.3.0 source/release evidence is immutable.
+This records the rejection separately; published 0.3.0 source/release evidence is immutable. Release `0.4.0` is a new from-scratch candidate built under that contract. Its functional runtime capture passed, but source-to-runtime wood appearance and lightmap seams remain unresolved, and 397 meshes exceed the 250-mesh budget without an approved exception. It therefore remains `REWORK_REQUIRED`, non-current, and not publication-ready.
 
 ## Boundary
 
-The repository owns one scene ID, `personal-workspace-v1`, and four materialized immutable review releases: `0.1.0`, `0.1.1`, the baked `0.2.0`, and the derived-environment review release `0.3.0`. Historical public-staging rights apply only to the exact `0.1.x` and `0.2.0` bytes. The `0.3.0` technical runtime capture has passed, while exact-byte rights review and human visual acceptance remain pending. Nothing in this tree is current, production-active, or publication-ready.
+The repository owns one scene ID, `personal-workspace-v1`, and five materialized immutable review releases: `0.1.0`, `0.1.1`, the baked `0.2.0`, the derived-environment `0.3.0`, and the separately authored `0.4.0`. Historical public-staging rights apply only to the exact `0.1.x` and `0.2.0` bytes. Technical runtime checks passed for `0.3.0` and `0.4.0`, while their exact-byte rights review and human visual acceptance remain pending. Nothing in this tree is current, production-active, or publication-ready.
 
 The historical source contract uses semantic Y-up coordinates. Release manifests use the explicit runtime adapter `x=x, y=y, z=-z` for the main spawn, owner seat, and `workspace-main` media surface. The separate `0.2.0` runtime-review input and versioned `0.3.0` visual-parity config convert Blender horizontal camera FOV to runtime vertical FOV at 16:9 without modifying that historical contract.
 
@@ -41,13 +41,22 @@ source/releases/0.3.0/{generate-panorama,prepare-scene,export-release,render-rev
 source/releases/0.3.0/{scene-manifest,scene-reality,user-scenarios}.json
 source/releases/0.3.0/{review-source-lock,visual-parity-config}.json
 source/releases/0.3.0/review/*.webp
+source/releases/0.4.0/{authoring-task,release-LICENSES}.md
+source/releases/0.4.0/{author-scene,export-scene,fetch-assets,render-review}.py
+source/releases/0.4.0/{authored-scene,baked-scene}.blend
+source/releases/0.4.0/{scene-manifest,object-registry,review-source-lock}.json
+source/releases/0.4.0/review/*.{webp,png}
+source/releases/0.4.0/textures/*
 provenance/*.json
 provenance/releases/0.3.0/*
+provenance/releases/0.4.0/*
 provenance/runtime-capture-0.3.0/{run-1,run-2,run-3}/
+provenance/runtime-capture-0.4.0/{clean,normal}/
 assets/scenes/personal-workspace-v1/0.1.0/
 assets/scenes/personal-workspace-v1/0.1.1/
 assets/scenes/personal-workspace-v1/0.2.0/
 assets/scenes/personal-workspace-v1/0.3.0/
+assets/scenes/personal-workspace-v1/0.4.0/
 provenance/baked-lightmap-0.2.0.json
 provenance/runtime-capture-0.2.0/
 manifest.json
@@ -56,7 +65,7 @@ manifest.json
 ## Local Pipeline
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 pnpm build:metadata
 BLENDER_BIN=/path/to/blender pnpm build:release
 pnpm validate:visual
@@ -74,8 +83,10 @@ Runtime parity captures and diagnostics are committed under `provenance/runtime-
 
 The `0.3.0` source is isolated under `source/releases/0.3.0/`. It adds only project-authored deterministic panorama pixels and an inward-facing panorama sphere to a derived Blend while preserving the `0.2.0` runtime bindings and baked-lighting inputs. The accepted saved Blend is locked by exact bytes; byte-identical reauthoring of that Blend container is not claimed. Two-run reproducibility applies to panorama pixels before JPEG encoding and to GLB export from the accepted saved Blend. Seven fixed source-review views are locked by `review-source-lock.json`; they remain evidence for human review rather than a human acceptance decision. Three complete version-bound runtime capture sets are committed under `provenance/runtime-capture-0.3.0/`; all corresponding PNG bytes are identical across runs. The versioned visual config records thresholds calibrated only from those three sets with explicit PHASH and NCC margins, and `pnpm validate:visual` recalculates historical `0.2.0` parity before rechecking every `0.3.0` binding, runtime diagnostic, capture byte, stability comparison, and source-to-runtime metric.
 
+The `0.4.0` source is isolated under `source/releases/0.4.0/`. Its authoring task, object cards, support graph, source images, accepted authored and baked Blend files, export script, fixed review views, and license snapshots are bound by `review-source-lock.json`. Four Poly Haven assets are admitted only through the exact URLs and downloaded bytes recorded in that lock; their CC0 terms are documented, but the release-level rights gate remains pending. Materialization exports twice from the accepted baked Blend and requires byte-identical raw and meshopt-compressed GLBs before accepting the four-file release directory. The release ledger binds the GLB inventory, role measurements, support measurements, quality disposition, runtime capture index, source lock, and release records. The clean and normal browser captures are one exact-byte functional evidence pair, not a three-run stability claim and not human visual acceptance.
+
 Append-only release history and versioned source/provenance directories are protected by validation and CI. A future release appends a new version; it does not replace, hide, or rewrite an existing release.
 
-The pinned Blender reproducibility gate remains mandatory. `pnpm verify:reproducibility` requires `BLENDER_BIN`, verifies Blender 4.5.12 LTS build `84afd5f785f7` and its binary hash, reproduces the historical `0.1.0`, metadata-only `0.1.1`, and baked `0.2.0` releases, then reproduces the `0.3.0` GLB and decoded panorama pixels twice while verifying the exact hash-bound manifest, preview, and license inputs. Review WebP encoder bytes are not claimed reproducible.
+The pinned Blender reproducibility gate remains mandatory. `pnpm verify:reproducibility` requires `BLENDER_BIN`, verifies Blender 4.5.12 LTS build `84afd5f785f7` and its binary hash, reproduces the historical `0.1.0`, metadata-only `0.1.1`, and baked `0.2.0` releases, reproduces the `0.3.0` GLB and decoded panorama pixels twice, and independently materializes `0.4.0` twice from its accepted baked Blend. Every run must match the exact hash-bound release inputs and outputs. Review WebP encoder bytes are not claimed reproducible.
 
-The visual acceptance boundary remains open for every release. The exact `0.3.0` panorama and combined release bytes additionally require human rights approval before public staging review, production activation, or final publication.
+The visual acceptance boundary remains open for every release. The exact `0.3.0` and `0.4.0` release bytes additionally require human rights approval before public staging review, production activation, or final publication. Release `0.4.0` also requires a new version that resolves its recorded visual-fidelity defects and mesh-budget failure; immutable review bytes are not repaired in place.

@@ -17,11 +17,21 @@ import {
   bakedReleasePaths,
   readJson
 } from "./lib.mjs";
+import {
+  CURRENT_CLEAN_CAPTURE_FILES,
+  CURRENT_NORMAL_CAPTURE_FILES,
+  CURRENT_RUNTIME_CAPTURE_PATH,
+  CURRENT_SOURCE_PATH,
+  POLY_HAVEN_INFO_URLS,
+  POLY_HAVEN_LICENSE_URL,
+  POLY_HAVEN_SOURCE_URLS
+} from "./release-0.4.0.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const binaryExtensions = new Set([".blend", ".glb", ".webp", ".png", ".jpg", ".jpeg", ".fbx", ".gltf"]);
 const machineLocalPathRoots = ["tmp", "home", "mnt", "Users", "private/tmp"].map((path) => `/${path}/`);
 const windowsLocalPathPattern = /(?:^|[\s"'=(])[A-Za-z]:[\\/]/m;
+const currentSourceLock = await readJson(join(root, CURRENT_SOURCE_PATH, "review-source-lock.json"));
 const allowedBinaries = new Set([
   "source/review-candidate.blend",
   ...REVIEW_VIEWS.map((view) => `source/review/${view}.webp`),
@@ -31,11 +41,22 @@ const allowedBinaries = new Set([
   REVIEW_RELEASE.panoramaPath,
   ...REVIEW_RELEASE_VIEWS.map((view) => `${REVIEW_RELEASE.reviewPath}/${view}.webp`),
   ...REVIEW_RUNTIME_CAPTURE_RUNS.flatMap((run) => REVIEW_RELEASE_VIEWS.map((view) => `${REVIEW_RELEASE.runtimeCapturePath}/${run}/${view}.png`)),
+  ...currentSourceLock.sourceFiles.filter(({ path }) => binaryExtensions.has(extname(path).toLowerCase())).map(({ path }) => path),
+  ...CURRENT_CLEAN_CAPTURE_FILES.filter((name) => binaryExtensions.has(extname(name).toLowerCase())).map((name) => `${CURRENT_RUNTIME_CAPTURE_PATH}/clean/${name}`),
+  ...CURRENT_NORMAL_CAPTURE_FILES.filter((name) => binaryExtensions.has(extname(name).toLowerCase())).map((name) => `${CURRENT_RUNTIME_CAPTURE_PATH}/normal/${name}`),
   ...RELEASE_VERSIONS.flatMap((version) => [
     `assets/scenes/${SCENE_ID}/${version}/scene.glb`,
     `assets/scenes/${SCENE_ID}/${version}/preview.webp`
   ])
 ]);
+const allowedCurrentUrls = new Set([
+  POLY_HAVEN_LICENSE_URL,
+  ...POLY_HAVEN_INFO_URLS,
+  ...POLY_HAVEN_SOURCE_URLS,
+  "https://api.polyhaven.com/info/{asset}",
+  "https://api.polyhaven.com/files/{asset}"
+]);
+const currentInfoNames = new Set(["wood_floor", "wood_table_001", "fabric_pattern_05", "leather_red_02"]);
 const historicalRightsJsonPaths = new Set([
   "source/scene-contract.json",
   "source/scene-contract-lock.json",
@@ -100,7 +121,21 @@ for (const path of await walk(root)) {
     });
   }
   if (/^(source|provenance|assets)\//.test(repositoryPath)) {
-    assert(!/(sensetower|warm-modern-meeting-room|https?:\/\/)/i.test(text), `restricted_or_external_reference:${repositoryPath}`);
+    assert(!/(sensetower|warm-modern-meeting-room)/i.test(text), `restricted_reference:${repositoryPath}`);
+    const urls = text.match(/https?:\/\/[^\s"'<>]+/g) ?? [];
+    if (repositoryPath === `${CURRENT_SOURCE_PATH}/textures/polyhaven-license.html`) {
+      assert(currentSourceLock.sourceFiles.some((record) => record.path === repositoryPath), `unlocked_external_snapshot:${repositoryPath}`);
+    } else if (repositoryPath.startsWith(`${CURRENT_SOURCE_PATH}/textures/`) && repositoryPath.endsWith("-info.json")) {
+      const info = JSON.parse(text);
+      const asset = repositoryPath.slice(`${CURRENT_SOURCE_PATH}/textures/`.length, -"-info.json".length);
+      assert(currentInfoNames.has(asset)
+        && urls.length === 1
+        && urls[0] === info.thumbnail_url
+        && new URL(urls[0]).hostname === "cdn.polyhaven.com"
+        && new URL(urls[0]).pathname === `/asset_img/thumbs/${asset}.png`, `unexpected_metadata_snapshot_url:${repositoryPath}`);
+    } else {
+      for (const url of urls) assert(allowedCurrentUrls.has(url), `unexpected_external_url:${repositoryPath}:${url}`);
+    }
   }
 }
 

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.0",
+  "status": "review",
+  "qualityOutcome": "REWORK_REQUIRED",
+  "sourceLock": {
+    "path": "source/releases/0.4.0/review-source-lock.json",
+    "sha256": "dca03f5ac70d344fd2defb2a95d789823ad0acdab40248dee4c551c48f3bf9fa",
+    "sizeBytes": 12728
+  },
+  "evidence": [
+    {
+      "path": "provenance/releases/0.4.0/geometry-measurements.json",
+      "sha256": "733d0f2594809be7050067ef45eabd137c6816f3ba27180fdecd8efb009f2ce0",
+      "sizeBytes": 3836
+    },
+    {
+      "path": "provenance/releases/0.4.0/glb-inventory.json",
+      "sha256": "899790f22ac6f7c831b1db8b1e8341d60fd3865098aa153b9a1ee83193c75d43",
+      "sizeBytes": 4003
+    },
+    {
+      "path": "provenance/releases/0.4.0/quality-disposition.json",
+      "sha256": "498bfea3c898f6828dc63da8796ae1a88c40efba5e7ab8f87164f8eeebb992e3",
+      "sizeBytes": 2323
+    },
+    {
+      "path": "provenance/releases/0.4.0/runtime-capture-index.json",
+      "sha256": "7ba20e309d1c3e818edfa8d304a71f2e2f07f238cdd464296e85feaca3fad5bd",
+      "sizeBytes": 6045
+    },
+    {
+      "path": "provenance/releases/0.4.0/support-measurements.json",
+      "sha256": "482ec7fdb1ba4cdcbecd09036a0dd8cdac9962b474a49a15d05d616010e446ad",
+      "sizeBytes": 164675
+    }
+  ],
+  "release": {
+    "path": "assets/scenes/personal-workspace-v1/0.4.0",
+    "files": {
+      "LICENSES.md": {
+        "sha256": "45abac823cb27361a82ac6bf417ebbec7738d7c7d8e7186f4ecfd69b3d335ef1",
+        "sizeBytes": 1654
+      },
+      "preview.webp": {
+        "sha256": "a41e5bd676e8d3cdeff8cb89d072fe9b9b8683b38860ef63b8be2cdcc04fdb21",
+        "sizeBytes": 26628
+      },
+      "scene.glb": {
+        "sha256": "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9",
+        "sizeBytes": 6674412
+      },
+      "scene.json": {
+        "sha256": "5016a7303092a84e0e7283abc0bfa2666dd47d5f5d69c53b6a7fd1150aacd2c6",
+        "sizeBytes": 6456
+      }
+    },
+    "stats": {
+      "triangles": 87888,
+      "objects": 397,
+      "meshes": 397,
+      "primitives": 397,
+      "materials": 23,
+      "textures": 14,
+      "animations": 0,
+      "scenes": 1
+    }
+  },
+  "gates": {
+    "exactByteMaterialization": "passed-two-run",
+    "gltfValidation": "passed-zero-errors-zero-warnings",
+    "geometryMeasurements": "passed",
+    "supportMeasurements": "passed",
+    "cleanRuntimeCapture": "passed",
+    "normalProductRuntimeChecks": "passed",
+    "inheritedQualityTarget": "REWORK_REQUIRED",
+    "meshBudget": "failed-unapproved-exception",
+    "humanVisualAcceptance": "pending-human-acceptance",
+    "humanRightsApproval": "pending-human-rights-approval",
+    "staging": "not-published",
+    "publicationReady": false,
+    "isCurrent": false
+  }
+}

@@ -11,6 +11,8 @@ import {
   BASE_RELEASE_VERSIONS,
   BLENDER_REVIEW_HORIZONTAL_FOV_DEGREES,
   BLENDER_BINARY_SHA256,
+  CURRENT_PLATFORM_COMMIT,
+  CURRENT_RELEASE_VERSION,
   HISTORICAL_PLATFORM_COMMIT,
   METADATA_PLATFORM_COMMIT,
   METADATA_RENDER_PROFILE,
@@ -169,17 +171,23 @@ test("materialized releases preserve the runtime workspace contract", async () =
   const manifest = await readJson(join(root, "manifest.json"));
   for (const { version } of manifest.releases) {
     const scene = await readJson(join(sceneRoot, version, "scene.json"));
-    assert.deepEqual(scene.spawnPoints[0].position, toRuntimePosition(contract.spawn.position));
-    assert.deepEqual(scene.anchors.seatAnchors[0].position, toRuntimePosition(contract.seats[0].position));
-    assert.deepEqual(scene.mediaSurfaces[0].transform, {
-      ...toRuntimePosition(contract.mediaSurfaces[0].transform),
-      yaw: contract.mediaSurfaces[0].transform.yaw,
-      pitch: contract.mediaSurfaces[0].transform.pitch,
-      roll: contract.mediaSurfaces[0].transform.roll
-    });
+    if (version === CURRENT_RELEASE_VERSION) {
+      assert.deepEqual(scene.spawnPoints[0].position, { x: 2.1, y: 0, z: 1.55 });
+      assert.deepEqual(scene.anchors.seatAnchors[0].position, { x: -1.05, y: 0, z: -0.72 });
+      assert.deepEqual(scene.mediaSurfaces[0].transform, { x: -1.05, y: 1.35, z: -2.422, yaw: 0, pitch: 0, roll: 0 });
+    } else {
+      assert.deepEqual(scene.spawnPoints[0].position, toRuntimePosition(contract.spawn.position));
+      assert.deepEqual(scene.anchors.seatAnchors[0].position, toRuntimePosition(contract.seats[0].position));
+      assert.deepEqual(scene.mediaSurfaces[0].transform, {
+        ...toRuntimePosition(contract.mediaSurfaces[0].transform),
+        yaw: contract.mediaSurfaces[0].transform.yaw,
+        pitch: contract.mediaSurfaces[0].transform.pitch,
+        roll: contract.mediaSurfaces[0].transform.roll
+      });
+    }
     assert.equal(scene.renderMode, "clean");
-    if (version === REVIEW_RELEASE_VERSION) {
-      assert.equal(scene.rights.license, REVIEW_RIGHTS_LICENSE_REF);
+    if ([REVIEW_RELEASE_VERSION, CURRENT_RELEASE_VERSION].includes(version)) {
+      if (version === REVIEW_RELEASE_VERSION) assert.equal(scene.rights.license, REVIEW_RIGHTS_LICENSE_REF);
       assert.deepEqual(scene.rights.clearedFor, []);
     } else {
       assert.equal(scene.rights.license, RIGHTS_LICENSE_REF);
@@ -189,7 +197,7 @@ test("materialized releases preserve the runtime workspace contract", async () =
   }
 });
 
-test("root records preserve historical releases and declare the baked review target", async () => {
+test("root records preserve historical releases and declare 0.4.0 as the review target", async () => {
   const [packageManifest, repository, manifest, releaseLedger, metadataEvidence] = await Promise.all([
     readJson(join(root, "package.json")),
     readJson(join(root, "scene-repository.json")),
@@ -201,15 +209,16 @@ test("root records preserve historical releases and declare the baked review tar
   assert.equal(repository.releaseVersion, VERSION);
   assert.deepEqual(PUBLISHED_BAKED_VERSIONS, [BAKED_RELEASE_VERSION]);
   assert.equal(BAKED_RELEASE_VERSION, "0.2.0");
-  assert.equal(VERSION, REVIEW_RELEASE_VERSION);
+  assert.equal(VERSION, CURRENT_RELEASE_VERSION);
   const manifestVersions = manifest.releases.map(({ version }) => version);
   assert.deepEqual(manifestVersions, RELEASE_VERSIONS);
   assert.equal(manifest.releases.every(({ isCurrent, publicationReady }) => isCurrent === false && publicationReady === false), true);
   assert.equal(releaseLedger.releaseVersion, SOURCE_VERSION);
   assert.equal(releaseLedger.rights.productionActivation, false);
   assert.equal(releaseLedger.rights.humanVisualAccepted, false);
-  assert.equal(repository.platformValidatorCommit, BAKED_PLATFORM_COMMIT);
-  assert.equal(manifest.platformValidatorCommit, BAKED_PLATFORM_COMMIT);
+  assert.equal(repository.platformValidatorCommit, CURRENT_PLATFORM_COMMIT);
+  assert.equal(manifest.platformValidatorCommit, CURRENT_PLATFORM_COMMIT);
+  assert.equal(repository.qualityOutcome, "REWORK_REQUIRED");
   assert.equal(repository.rightsApprovalStatus, REVIEW_RIGHTS_APPROVAL_STATUS);
   assert.equal(repository.rightsApproved, false);
   assert.equal(manifest.rightsApprovalStatus, REVIEW_RIGHTS_APPROVAL_STATUS);
@@ -287,6 +296,11 @@ test("release directories are exact and shared artifact hashes are unchanged", a
   assert.equal(reviewRelease.rightsApprovalStatus, REVIEW_RIGHTS_APPROVAL_STATUS);
   assert.equal(reviewRelease.rightsApproved, false);
   assert.deepEqual(reviewRelease.files["preview.webp"], await fileRecord(join(root, REVIEW_RELEASE.reviewPath, "entry.webp")));
+  const currentRelease = manifest.releases.find(({ version }) => version === CURRENT_RELEASE_VERSION);
+  assert.equal(currentRelease.qualityOutcome, "REWORK_REQUIRED");
+  assert.equal(currentRelease.isCurrent, false);
+  assert.equal(currentRelease.publicationReady, false);
+  assert.equal(currentRelease.files["scene.glb"].sha256, "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9");
 });
 
 test("historical Blender evidence and current metadata tooling use distinct validator pins", async () => {
@@ -299,7 +313,7 @@ test("historical Blender evidence and current metadata tooling use distinct vali
     readFile(join(root, ".github", "workflows", "validate.yml"), "utf8"),
     readFile(join(root, "README.md"), "utf8")
   ]);
-  assert.equal(validatorLock.trim(), BAKED_PLATFORM_COMMIT);
+  assert.equal(validatorLock.trim(), CURRENT_PLATFORM_COMMIT);
   assert.equal(generationLedger.toolchain.platformValidatorCommit, HISTORICAL_PLATFORM_COMMIT);
   assert.equal(generationLedger.toolchain.blenderBinarySha256, BLENDER_BINARY_SHA256);
   assert.equal(metadataEvidence.platformValidatorCommit, METADATA_PLATFORM_COMMIT);
@@ -336,7 +350,7 @@ test("historical Blender evidence and current metadata tooling use distinct vali
   assert.match(workflow, /immutable_baseline_sha_required/);
   assert.match(workflow, /if \[\[ -z "\$BASE_SHA" \|\| "\$BASE_SHA" =~ \^0\+\$ \]\]; then[\s\S]{0,120}exit 1/);
   assert.doesNotMatch(workflow, /git rev-parse HEAD\^/);
-  assert.match(workflow, /Validate repository, baked evidence, and release records/);
+  assert.match(workflow, /Validate repository, historical evidence, and current release records/);
   assert.match(workflow, /for manifest in assets\/scenes\/\*\/\*\/scene\.json/);
 });
 
@@ -366,12 +380,13 @@ test("0.3.0 is an append-only reproducible review release with technical runtime
     { name: "baked-lightmap", mimeType: "image/png", sha256: "99efa06a464e15f04b496b2f21916de4b4e97603fafecb07edca35478a37283b", sizeBytes: 6058088 },
     { name: "panorama-city-park", mimeType: "image/jpeg", sha256: "f974eaeb4d19bdf3ce25b4d2d3f9fe65b9b6c1ac2fc38a74757edbd5a17656d6", sizeBytes: 435189 }
   ]);
-  assert.deepEqual(index.releases.map(({ version }) => version), [REVIEW_RELEASE_VERSION]);
+  assert.deepEqual(index.releases.map(({ version }) => version), [REVIEW_RELEASE_VERSION, CURRENT_RELEASE_VERSION]);
   assert.equal(index.releases[0].humanVisualAccepted, false);
   assert.equal(lock.status, "review-source-lock");
   assert.equal(lock.humanVisualAccepted, false);
   assert.equal(lock.rightsApproved, false);
-  assert.deepEqual(lock.tooling.map(({ path }) => path), await repositoryToolingPaths(root));
+  assert.deepEqual(lock.tooling, generationLedger.tooling);
+  assert.notDeepEqual(lock.tooling.map(({ path }) => path), await repositoryToolingPaths(root));
   assert.equal(lock.reproducibility.sourceContainer.reauthoringBytesClaimedReproducible, false);
   assert.deepEqual(lock.reviewViews.map(({ id }) => id), REVIEW_RELEASE_VIEWS);
   assert.equal(lock.technicalRuntimeCapture.status, "passed-three-byte-stable-runtime-capture-sets");
@@ -399,6 +414,43 @@ test("0.3.0 is an append-only reproducible review release with technical runtime
   assert.equal(visualEvidence.humanVisualAcceptance, "pending-human-acceptance");
   assert.equal(visualEvidence.humanRightsApproval, REVIEW_RIGHTS_APPROVAL_STATUS);
   assert.equal(visualEvidence.publicationReady, false);
+});
+
+test("0.4.0 is locked as an exact-byte REWORK_REQUIRED review release", async () => {
+  const [manifest, scene, index, lock, inventory, quality, captureIndex, releaseLedger] = await Promise.all([
+    readJson(join(root, "manifest.json")),
+    readJson(join(sceneRoot, CURRENT_RELEASE_VERSION, "scene.json")),
+    readJson(join(root, "source", "release-acceptance-index.json")),
+    readJson(join(root, "source", "releases", CURRENT_RELEASE_VERSION, "review-source-lock.json")),
+    readJson(join(root, "provenance", "releases", CURRENT_RELEASE_VERSION, "glb-inventory.json")),
+    readJson(join(root, "provenance", "releases", CURRENT_RELEASE_VERSION, "quality-disposition.json")),
+    readJson(join(root, "provenance", "releases", CURRENT_RELEASE_VERSION, "runtime-capture-index.json")),
+    readJson(join(root, "provenance", "releases", CURRENT_RELEASE_VERSION, "release-ledger.json"))
+  ]);
+  const release = manifest.releases.at(-1);
+  assert.equal(release.version, CURRENT_RELEASE_VERSION);
+  assert.equal(release.qualityOutcome, "REWORK_REQUIRED");
+  assert.equal(release.isCurrent, false);
+  assert.equal(release.publicationReady, false);
+  assert.equal(scene.glbSha256, release.files["scene.glb"].sha256);
+  assert.equal(lock.release.files["scene.glb"].sha256, release.files["scene.glb"].sha256);
+  assert.equal(lock.reproducibility.releaseMaterialization.runs, 2);
+  assert.equal(inventory.budgets.meshes.actual, 397);
+  assert.equal(inventory.budgets.meshes.maximum, 250);
+  assert.equal(inventory.budgets.meshes.withinBudget, false);
+  assert.equal(inventory.budgets.meshes.blocksPublication, true);
+  assert.equal(quality.verdicts.inheritedQualityTarget, "REWORK_REQUIRED");
+  assert.equal(quality.unresolvedDefects.every(({ blocksReadyForUserReview }) => blocksReadyForUserReview), true);
+  assert.equal(captureIndex.repeatabilityClaim, "not-a-three-run-stability-claim");
+  assert.equal(captureIndex.normal.verdict, "functional-checks-passed");
+  assert.equal(releaseLedger.gates.meshBudget, "failed-unapproved-exception");
+  assert.equal(releaseLedger.gates.staging, "not-published");
+  const record = index.releases.at(-1);
+  assert.equal(record.version, CURRENT_RELEASE_VERSION);
+  assert.equal(record.lockSha256, (await fileRecord(join(root, record.lockPath))).sha256);
+  assert.equal(record.releaseLedgerSha256, (await fileRecord(join(root, record.releaseLedgerPath))).sha256);
+  assert.equal(record.humanVisualAccepted, false);
+  assert.equal(record.rightsApproved, false);
 });
 
 test("0.2.0 baked source plumbing is review-only and contains no invented artifact digest", async () => {

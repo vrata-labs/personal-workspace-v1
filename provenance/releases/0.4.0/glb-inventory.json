@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.0",
+  "qualityOutcome": "REWORK_REQUIRED",
+  "glb": {
+    "path": "assets/scenes/personal-workspace-v1/0.4.0/scene.glb",
+    "sha256": "ae45bdab2aeec5c8c66e7957c13ca769f356d17df86db13660461a9825ca64b9",
+    "sizeBytes": 6674412
+  },
+  "stats": {
+    "triangles": 87888,
+    "objects": 397,
+    "meshes": 397,
+    "primitives": 397,
+    "materials": 23,
+    "textures": 14,
+    "animations": 0,
+    "scenes": 1
+  },
+  "extensionsUsed": [
+    "EXT_meshopt_compression",
+    "KHR_mesh_quantization"
+  ],
+  "textures": [
+    {
+      "name": "lightmap-0.4.0-pipeline-median5",
+      "mimeType": "image/png",
+      "sha256": "7f772b66a2514b7f31d234ad885ba3eb4a9ba0df590ade62c5e19af219de8916",
+      "sizeBytes": 1690909
+    },
+    {
+      "name": "wood_floor-nor_gl",
+      "mimeType": "image/jpeg",
+      "sha256": "7cd29b0763d89fba68fb8c6f8ce569cc37861d74b7162c2af7d99a9d89ec00ea",
+      "sizeBytes": 5647
+    },
+    {
+      "name": "wood_floor-diff",
+      "mimeType": "image/jpeg",
+      "sha256": "3d1c9f27915bc935af0ea9989e5a4b34fc0162b3105b92deac0e72a48dd78cbe",
+      "sizeBytes": 29325
+    },
+    {
+      "name": "wood_floor-rough",
+      "mimeType": "image/png",
+      "sha256": "6ccbe6b44b63447b52ef8c365b5d1707f46355e098be3cad55402bfae5501eb0",
+      "sizeBytes": 212644
+    },
+    {
+      "name": "wood_table_001-nor_gl",
+      "mimeType": "image/jpeg",
+      "sha256": "ee4d33e3e057f09825b986eb6f0cb017a4383117411254dc62a0499feff4af2e",
+      "sizeBytes": 5166
+    },
+    {
+      "name": "satin-walnut-diff",
+      "mimeType": "image/png",
+      "sha256": "8d427a5372623f4a2ca50d47e594654be73c93e7e4936fb0cefce99fb8ca2e44",
+      "sizeBytes": 381700
+    },
+    {
+      "name": "satin-walnut-rough",
+      "mimeType": "image/png",
+      "sha256": "8729a38ee2341a6634c0b7eced07d89d5ba3ff33777713cf177f5c7a8ac2bc21",
+      "sizeBytes": 175069
+    },
+    {
+      "name": "leather_red_02-nor_gl",
+      "mimeType": "image/jpeg",
+      "sha256": "7ee8d30d964a67d656dd1d3dfeed23e836d266e89db5235a55c7f99a61d2c8e3",
+      "sizeBytes": 29047
+    },
+    {
+      "name": "leather_red_02-diff",
+      "mimeType": "image/jpeg",
+      "sha256": "398a961f37e41d05dd45e51d8556fd6d83efa782f91adbe623629454ee4e8823",
+      "sizeBytes": 45132
+    },
+    {
+      "name": "leather_red_02-rough",
+      "mimeType": "image/png",
+      "sha256": "ca73b9c60af8cc131c96587c75831cd0e3bc42fcfe0d3d29b3cf20c0401ac3fd",
+      "sizeBytes": 299777
+    },
+    {
+      "name": "fabric_pattern_05-nor_gl",
+      "mimeType": "image/jpeg",
+      "sha256": "4c568ba858141c357e6e3bc8369327686039d1af1dca55008356132d9bd3db71",
+      "sizeBytes": 47093
+    },
+    {
+      "name": "fabric_pattern_05-diff",
+      "mimeType": "image/jpeg",
+      "sha256": "3dcd4408ed731e7b7ef2921577cd073b103287213ba1508bfb1f641da991ff87",
+      "sizeBytes": 83091
+    },
+    {
+      "name": "fabric_pattern_05-rough",
+      "mimeType": "image/png",
+      "sha256": "9c4746fce5638f8b846752a791fa049a30fbc0840e31561cab168c9ea8eca991",
+      "sizeBytes": 278941
+    },
+    {
+      "name": "cannon-4k",
+      "mimeType": "image/jpeg",
+      "sha256": "65e365da8d3f192c5c091f60d8da2da63867cf7aa793c7a231fcdb582472b9ee",
+      "sizeBytes": 1537549
+    }
+  ],
+  "validation": {
+    "tool": "gltf-validator",
+    "errors": 0,
+    "warnings": 0,
+    "result": "passed"
+  },
+  "budgets": {
+    "glbBytes": {
+      "actual": 6674412,
+      "maximum": 15728640,
+      "withinBudget": true
+    },
+    "triangles": {
+      "actual": 87888,
+      "maximum": 90000,
+      "withinBudget": true
+    },
+    "meshes": {
+      "actual": 397,
+      "maximum": 250,
+      "withinBudget": false,
+      "disposition": "documented-unapproved-review-exception",
+      "blocksPublication": true
+    },
+    "materials": {
+      "actual": 23,
+      "maximum": 96,
+      "withinBudget": true
+    },
+    "textures": {
+      "actual": 14,
+      "maximum": 48,
+      "withinBudget": true
+    }
+  }
+}

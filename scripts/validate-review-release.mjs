@@ -20,7 +20,6 @@ import {
   REVIEW_RUNTIME_CAPTURE_FILES,
   REVIEW_RUNTIME_CAPTURE_RUNS,
   SCENE_ID,
-  VERSION,
   assert,
   assertReviewReleaseMaterialContract,
   fileRecord,
@@ -30,9 +29,9 @@ import {
   jpegDimensions,
   pngDimensions,
   readJson,
-  repositoryToolingPaths,
   webpDimensions
 } from "./lib.mjs";
+import { CURRENT_PLATFORM_COMMIT, CURRENT_RELEASE_VERSION } from "./release-0.4.0.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const releaseDir = join(root, REVIEW_RELEASE.releasePath);
@@ -109,11 +108,11 @@ const [
   readJson(join(root, REVIEW_RELEASE.panoramaParametersPath))
 ]);
 
-assert(VERSION === REVIEW_RELEASE_VERSION && packageManifest.version === VERSION && repository.releaseVersion === VERSION, "review_release_target_drift");
+assert(packageManifest.version === CURRENT_RELEASE_VERSION && repository.releaseVersion === CURRENT_RELEASE_VERSION, "review_release_target_drift");
 for (const value of [repository, manifest]) {
   assert(value.rightsApprovalStatus === REVIEW_RIGHTS_APPROVAL_STATUS && value.rightsApproved === false && value.publicationReady === false, "review_root_rights_gate_drift");
 }
-assert(repository.platformValidatorCommit === BAKED_PLATFORM_COMMIT && manifest.platformValidatorCommit === BAKED_PLATFORM_COMMIT, "review_platform_commit_drift");
+assert(repository.platformValidatorCommit === CURRENT_PLATFORM_COMMIT && manifest.platformValidatorCommit === CURRENT_PLATFORM_COMMIT, "review_platform_commit_drift");
 assert(JSON.stringify((await readdir(releaseDir)).sort()) === JSON.stringify(RELEASE_FILES), "review_release_file_set_drift");
 assert(JSON.stringify((await readdir(join(root, REVIEW_RELEASE.provenancePath))).sort()) === JSON.stringify(expectedProvenanceFiles), "review_provenance_file_set_drift");
 assert(JSON.stringify((await readdir(join(root, REVIEW_RELEASE.reviewPath))).sort()) === JSON.stringify([...REVIEW_RELEASE_VIEWS].map((id) => `${id}.webp`).sort()), "review_view_file_set_drift");
@@ -239,9 +238,11 @@ assert(lock.toolchain.blenderVersion === BLENDER_VERSION
   && lock.toolchain.blenderBuildHash === BLENDER_BUILD_HASH
   && lock.toolchain.blenderBinarySha256 === BLENDER_BINARY_SHA256
   && lock.toolchain.gltfExporter === "Khronos glTF Blender I/O v4.5.51", "review_source_toolchain_drift");
-const expectedToolingPaths = await repositoryToolingPaths(root);
-assert(JSON.stringify(lock.tooling.map(({ path }) => path)) === JSON.stringify(expectedToolingPaths), "review_source_tooling_paths_drift");
-for (const record of [...lock.derivationInputs, ...lock.sourceFiles, ...lock.tooling, ...lock.reviewViews]) await assertPathRecord(record, `review_locked_source_drift:${record.path}`);
+assert(lock.tooling.length > 0
+  && new Set(lock.tooling.map(({ path }) => path)).size === lock.tooling.length
+  && lock.tooling.every(({ path, sha256, sizeBytes }) => typeof path === "string" && !path.startsWith("/") && !path.includes("..")
+    && /^[0-9a-f]{64}$/.test(sha256) && Number.isInteger(sizeBytes) && sizeBytes > 0), "review_historical_tooling_snapshot_drift");
+for (const record of [...lock.derivationInputs, ...lock.sourceFiles, ...lock.reviewViews]) await assertPathRecord(record, `review_locked_source_drift:${record.path}`);
 assert(JSON.stringify(lock.release.files) === JSON.stringify(release.files) && JSON.stringify(lock.release.stats) === JSON.stringify(release.stats), "review_source_lock_release_drift");
 assert(lock.reproducibility.panorama.runs === 2
   && lock.reproducibility.panorama.result === "byte-identical-rgb-pixels-before-lossy-encoding"

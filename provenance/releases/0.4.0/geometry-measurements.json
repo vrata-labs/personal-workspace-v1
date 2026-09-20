@@ -1,0 +1,173 @@
+{
+  "sourceBlendSha256": "f227fb73135898b1fc318c50795aadc011bfdad1acfafda7ce4ec2cc8d2d5f7d",
+  "measurementScriptSha256": "d961c8d0d6678a1e448b93efa04d70c57eee12ddff40bf62a9ee4abd1c65d89d",
+  "registrySha256": "adf8edbb397ae14a97d841ceeaabc39bbe6599edac82e32a249404a863f556c1",
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.0",
+  "meshParts": 397,
+  "screenVisibility": {
+    "method": "evaluated-scene ray cast from the seated eye to five inset display points",
+    "allClear": true,
+    "rays": [
+      {
+        "seat": "owner-desk-seat",
+        "sample": [
+          -0.48,
+          -0.48
+        ],
+        "clear": true,
+        "obstruction": null,
+        "distanceM": 1.809
+      },
+      {
+        "seat": "owner-desk-seat",
+        "sample": [
+          -0.48,
+          0.48
+        ],
+        "clear": true,
+        "obstruction": null,
+        "distanceM": 1.862
+      },
+      {
+        "seat": "owner-desk-seat",
+        "sample": [
+          0.48,
+          -0.48
+        ],
+        "clear": true,
+        "obstruction": null,
+        "distanceM": 1.809
+      },
+      {
+        "seat": "owner-desk-seat",
+        "sample": [
+          0.48,
+          0.48
+        ],
+        "clear": true,
+        "obstruction": null,
+        "distanceM": 1.862
+      },
+      {
+        "seat": "owner-desk-seat",
+        "sample": [
+          0,
+          0
+        ],
+        "clear": true,
+        "obstruction": null,
+        "distanceM": 1.7126
+      }
+    ]
+  },
+  "userClearances": {
+    "scope": "Conservative bounds/point screening only. The 0.85m extended reach is a screening ceiling, not a validated frequent-use ergonomic envelope. Failed targets require layout or posture review; do not tune per-target limits to pass.",
+    "kneeEnvelope": {
+      "bounds": [
+        [
+          -1.4,
+          1.0,
+          0.2
+        ],
+        [
+          -0.7,
+          1.5,
+          0.67
+        ]
+      ],
+      "obstructions": [],
+      "clear": true
+    },
+    "handReach": [
+      {
+        "target": "keyboard",
+        "sourcePart": "keyboard.spacebar",
+        "worldPoint": [
+          -1.075,
+          1.374,
+          0.762
+        ],
+        "distanceM": 0.6567,
+        "maximumReachM": 0.85,
+        "reachable": true
+      },
+      {
+        "target": "mouse",
+        "sourcePart": "mouse.body",
+        "worldPoint": [
+          -0.64,
+          1.425,
+          0.757
+        ],
+        "distanceM": 0.8143,
+        "maximumReachM": 0.85,
+        "reachable": true
+      },
+      {
+        "target": "notebook",
+        "sourcePart": "notebook.top-board",
+        "worldPoint": [
+          -1.5,
+          1.41,
+          0.75875
+        ],
+        "distanceM": 0.8233,
+        "maximumReachM": 0.85,
+        "reachable": true
+      },
+      {
+        "target": "pen",
+        "sourcePart": "pen.barrel",
+        "worldPoint": [
+          -1.515,
+          1.33,
+          0.764
+        ],
+        "distanceM": 0.7726,
+        "maximumReachM": 0.85,
+        "reachable": true
+      }
+    ],
+    "routes": [
+      {
+        "id": "entrance-to-desk",
+        "actorRadiusM": 0.3,
+        "minimumClearanceM": 0.316,
+        "nearestPart": "owner-chair.back-carrier",
+        "clear": true
+      },
+      {
+        "id": "entrance-to-reading-chair",
+        "actorRadiusM": 0.3,
+        "minimumClearanceM": 0.3399,
+        "nearestPart": "reading-chair.armrest-1",
+        "clear": true
+      }
+    ],
+    "spawnOpenRadius": {
+      "radiusM": 0.8,
+      "obstructions": [],
+      "clear": true
+    },
+    "plantRouteClearance": {
+      "minimumClearanceM": 2.0897,
+      "requiredM": 0.3,
+      "clear": true
+    }
+  },
+  "surface": {
+    "center": [
+      -1.05,
+      2.426,
+      1.35
+    ],
+    "width": 1.2,
+    "height": 0.675,
+    "normal": [
+      0,
+      -1,
+      0
+    ]
+  }
+}

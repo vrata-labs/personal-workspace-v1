@@ -22,7 +22,10 @@ test("actual CI immutability gate distinguishes absent paths from failed Git que
       "provenance/release-artifact-ledger.json",
       "provenance/metadata-release-0.1.1.json",
       "source/review-candidate.blend",
-      "source/scene-contract.json"
+      "source/scene-contract.json",
+      "source/releases/0.4.0/review-source-lock.json",
+      "provenance/releases/0.4.0/release-ledger.json",
+      "provenance/runtime-capture-0.4.0/clean/entry.png"
     ]) for (const [scenario, expectedStatus, expectedError] of [
       ["missing", 0, null],
       ["existing", 1, /immutable/],
