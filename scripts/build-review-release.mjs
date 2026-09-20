@@ -74,6 +74,8 @@ function reproducePanoramaRgb() {
     "--background",
     "--python",
     join(root, REVIEW_RELEASE.panoramaGeneratorPath),
+    "--python-expr",
+    "import sys; sys.stdout.flush()",
     "--",
     "--parameters",
     join(root, REVIEW_RELEASE.panoramaParametersPath),
