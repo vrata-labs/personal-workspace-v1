@@ -1,0 +1,649 @@
+{
+  "captureBinding": {
+    "glbSha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+    "manifestSha256": "26fd4b264f1d0085c756108ad03818ce390a7b4ceb3615282e698ece1560f2a9",
+    "configSha256": "c0dc1a2cb9eb899bb56bffd965bd401e54c07aaca468f32d0ba7a932563170f5",
+    "baseSha256": "5ba1e6dcd535e707af76fe6c5fd708158e9c6c37cffe8e1e9e410cd0f236b2f1",
+    "runnerSha256": "42fa50156f89e62943147a756c3af88db8c000bee5035711fb1a2a6dd4ae826d",
+    "runtimePlatformCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d"
+  },
+  "platformCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d",
+  "publicRoomUrl": null,
+  "manifestSha256": "26fd4b264f1d0085c756108ad03818ce390a7b4ceb3615282e698ece1560f2a9",
+  "glbSha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+  "syntheticReviewPoseUsed": false,
+  "seats": [
+    {
+      "seatId": "owner-desk-seat",
+      "authoritativeClaimAndRelease": true,
+      "seatedMovementLocked": true,
+      "localPose": {
+        "root": {
+          "x": -1.05,
+          "y": -0.401,
+          "z": -0.72,
+          "yaw": 0
+        },
+        "head": {
+          "x": -1.05,
+          "y": 1.199,
+          "z": -0.72,
+          "yaw": 0,
+          "pitch": 0
+        }
+      },
+      "actualCamera": {
+        "world": {
+          "x": -1.05,
+          "y": 1.199,
+          "z": -0.72
+        },
+        "forward": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        }
+      },
+      "eyeHeightAboveSeatM": 0.7200000000000001,
+      "afterRelease": {
+        "root": {
+          "x": 2.1,
+          "y": 0,
+          "z": 1.55,
+          "yaw": 0
+        },
+        "head": {
+          "x": 2.1,
+          "y": 1.6,
+          "z": 1.55,
+          "yaw": 0,
+          "pitch": 0
+        }
+      }
+    }
+  ],
+  "spawn": {
+    "participantId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad",
+    "roomStateConnected": true,
+    "currentSeatId": null,
+    "pendingSeatId": null,
+    "seatOccupancy": {},
+    "featureFlags": {
+      "enterVr": true,
+      "audioJoin": true,
+      "screenShare": true,
+      "roomStateRealtime": true,
+      "remoteDiagnostics": true,
+      "sceneBundles": true,
+      "hostControlsEnabled": true,
+      "documentsEnabled": true,
+      "notesEnabled": true,
+      "personalRoomsEnabled": true,
+      "remoteBrowserEnabled": true,
+      "remoteBrowserExperimental": true,
+      "spatialAudio": true,
+      "avatarsEnabled": true,
+      "avatarPoseBinaryEnabled": true,
+      "avatarLipsyncEnabled": false,
+      "avatarLegIkEnabled": false,
+      "avatarSeatingEnabled": true,
+      "avatarCustomizationEnabled": false,
+      "avatarFallbackCapsulesEnabled": false
+    },
+    "localPose": {
+      "root": {
+        "x": 2.1,
+        "y": 0,
+        "z": 1.55,
+        "yaw": 0.777
+      },
+      "head": {
+        "x": 2.1,
+        "y": 1.6,
+        "z": 1.55,
+        "yaw": 0.777,
+        "pitch": 0
+      }
+    },
+    "sceneDebug": {
+      "state": "loaded",
+      "spawnApplied": true,
+      "spawnPointId": "main",
+      "camera": {
+        "world": {
+          "x": 2.1,
+          "y": 1.6,
+          "z": 1.55
+        },
+        "forward": {
+          "x": -0.701,
+          "y": 0,
+          "z": -0.713
+        }
+      }
+    },
+    "mediaObjects": {
+      "physicalSurfaceIdsWithoutLogicalState": [],
+      "blockedReason": null,
+      "surfaces": [
+        {
+          "surfaceId": "workspace-main",
+          "label": "Work display",
+          "allowedObjectTypes": [
+            "markdown-board",
+            "image-viewer",
+            "video-player"
+          ],
+          "activeObjectId": null,
+          "activeObjectType": null,
+          "inputEnabled": true,
+          "maxDistanceM": 0.06,
+          "mediaAudioEnabled": false,
+          "lockedByParticipantId": null,
+          "visible": true,
+          "runtimeVisible": true,
+          "widthM": 1.2,
+          "heightM": 0.675,
+          "widthPx": 1920,
+          "heightPx": 1080,
+          "position": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "yaw": 0,
+          "pitch": 0,
+          "roll": 0,
+          "manifestPosition": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "manifestYaw": 0,
+          "manifestFormat": "legacy",
+          "worldPosition": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "worldYaw": 0,
+          "textureId": null
+        }
+      ]
+    }
+  },
+  "beforeTeleport": {
+    "claimed": {
+      "participantId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad",
+      "roomStateConnected": true,
+      "currentSeatId": "owner-desk-seat",
+      "pendingSeatId": null,
+      "seatOccupancy": {
+        "owner-desk-seat": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad"
+      },
+      "featureFlags": {
+        "enterVr": true,
+        "audioJoin": true,
+        "screenShare": true,
+        "roomStateRealtime": true,
+        "remoteDiagnostics": true,
+        "sceneBundles": true,
+        "hostControlsEnabled": true,
+        "documentsEnabled": true,
+        "notesEnabled": true,
+        "personalRoomsEnabled": true,
+        "remoteBrowserEnabled": true,
+        "remoteBrowserExperimental": true,
+        "spatialAudio": true,
+        "avatarsEnabled": true,
+        "avatarPoseBinaryEnabled": true,
+        "avatarLipsyncEnabled": false,
+        "avatarLegIkEnabled": false,
+        "avatarSeatingEnabled": true,
+        "avatarCustomizationEnabled": false,
+        "avatarFallbackCapsulesEnabled": false
+      },
+      "localPose": {
+        "root": {
+          "x": -1.05,
+          "y": -0.401,
+          "z": -0.72,
+          "yaw": 0
+        },
+        "head": {
+          "x": -1.05,
+          "y": 1.199,
+          "z": -0.72,
+          "yaw": 0,
+          "pitch": 0
+        }
+      },
+      "sceneDebug": {
+        "state": "loaded",
+        "spawnApplied": true,
+        "spawnPointId": "main",
+        "camera": {
+          "world": {
+            "x": -1.05,
+            "y": 1.199,
+            "z": -0.72
+          },
+          "forward": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          }
+        }
+      },
+      "mediaObjects": {
+        "physicalSurfaceIdsWithoutLogicalState": [],
+        "blockedReason": null,
+        "surfaces": [
+          {
+            "surfaceId": "workspace-main",
+            "label": "Work display",
+            "allowedObjectTypes": [
+              "markdown-board",
+              "image-viewer",
+              "video-player"
+            ],
+            "activeObjectId": null,
+            "activeObjectType": null,
+            "inputEnabled": true,
+            "maxDistanceM": 0.06,
+            "mediaAudioEnabled": false,
+            "lockedByParticipantId": null,
+            "visible": true,
+            "runtimeVisible": true,
+            "widthM": 1.2,
+            "heightM": 0.675,
+            "widthPx": 1920,
+            "heightPx": 1080,
+            "position": {
+              "x": -1.05,
+              "y": 1.35,
+              "z": -2.422
+            },
+            "yaw": 0,
+            "pitch": 0,
+            "roll": 0,
+            "manifestPosition": {
+              "x": -1.05,
+              "y": 1.35,
+              "z": -2.422
+            },
+            "manifestYaw": 0,
+            "manifestFormat": "legacy",
+            "worldPosition": {
+              "x": -1.05,
+              "y": 1.35,
+              "z": -2.422
+            },
+            "worldYaw": 0,
+            "textureId": null
+          }
+        ]
+      }
+    },
+    "locked": {
+      "participantId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad",
+      "roomStateConnected": true,
+      "currentSeatId": "owner-desk-seat",
+      "pendingSeatId": null,
+      "seatOccupancy": {
+        "owner-desk-seat": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad"
+      },
+      "featureFlags": {
+        "enterVr": true,
+        "audioJoin": true,
+        "screenShare": true,
+        "roomStateRealtime": true,
+        "remoteDiagnostics": true,
+        "sceneBundles": true,
+        "hostControlsEnabled": true,
+        "documentsEnabled": true,
+        "notesEnabled": true,
+        "personalRoomsEnabled": true,
+        "remoteBrowserEnabled": true,
+        "remoteBrowserExperimental": true,
+        "spatialAudio": true,
+        "avatarsEnabled": true,
+        "avatarPoseBinaryEnabled": true,
+        "avatarLipsyncEnabled": false,
+        "avatarLegIkEnabled": false,
+        "avatarSeatingEnabled": true,
+        "avatarCustomizationEnabled": false,
+        "avatarFallbackCapsulesEnabled": false
+      },
+      "localPose": {
+        "root": {
+          "x": -1.05,
+          "y": -0.401,
+          "z": -0.72,
+          "yaw": 0
+        },
+        "head": {
+          "x": -1.05,
+          "y": 1.199,
+          "z": -0.72,
+          "yaw": 0,
+          "pitch": 0
+        }
+      },
+      "sceneDebug": {
+        "state": "loaded",
+        "spawnApplied": true,
+        "spawnPointId": "main",
+        "camera": {
+          "world": {
+            "x": -1.05,
+            "y": 1.199,
+            "z": -0.72
+          },
+          "forward": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          }
+        }
+      },
+      "mediaObjects": {
+        "physicalSurfaceIdsWithoutLogicalState": [],
+        "blockedReason": null,
+        "surfaces": [
+          {
+            "surfaceId": "workspace-main",
+            "label": "Work display",
+            "allowedObjectTypes": [
+              "markdown-board",
+              "image-viewer",
+              "video-player"
+            ],
+            "activeObjectId": null,
+            "activeObjectType": null,
+            "inputEnabled": true,
+            "maxDistanceM": 0.06,
+            "mediaAudioEnabled": false,
+            "lockedByParticipantId": null,
+            "visible": true,
+            "runtimeVisible": true,
+            "widthM": 1.2,
+            "heightM": 0.675,
+            "widthPx": 1920,
+            "heightPx": 1080,
+            "position": {
+              "x": -1.05,
+              "y": 1.35,
+              "z": -2.422
+            },
+            "yaw": 0,
+            "pitch": 0,
+            "roll": 0,
+            "manifestPosition": {
+              "x": -1.05,
+              "y": 1.35,
+              "z": -2.422
+            },
+            "manifestYaw": 0,
+            "manifestFormat": "legacy",
+            "worldPosition": {
+              "x": -1.05,
+              "y": 1.35,
+              "z": -2.422
+            },
+            "worldYaw": 0,
+            "textureId": null
+          }
+        ]
+      }
+    }
+  },
+  "standingMovement": {
+    "from": {
+      "x": 2.1,
+      "y": 0,
+      "z": 1.55,
+      "yaw": 0
+    },
+    "to": {
+      "x": 2.1,
+      "y": 0,
+      "z": -0.744,
+      "yaw": 0
+    }
+  },
+  "physicalSurfacesMissingLogicalState": [],
+  "mediaAfterCreate": {
+    "physicalSurfaceIdsWithoutLogicalState": [],
+    "blockedReason": null,
+    "surfaces": [
+      {
+        "surfaceId": "workspace-main",
+        "label": "Work display",
+        "allowedObjectTypes": [
+          "markdown-board",
+          "image-viewer",
+          "video-player"
+        ],
+        "activeObjectId": "9d0256e7-a90f-4bb0-84cf-4630fec5ea0c",
+        "activeObjectType": "markdown-board",
+        "inputEnabled": true,
+        "maxDistanceM": 0.06,
+        "mediaAudioEnabled": false,
+        "lockedByParticipantId": null,
+        "visible": true,
+        "runtimeVisible": true,
+        "widthM": 1.2,
+        "heightM": 0.675,
+        "widthPx": 1920,
+        "heightPx": 1080,
+        "position": {
+          "x": -1.05,
+          "y": 1.35,
+          "z": -2.422
+        },
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "manifestPosition": {
+          "x": -1.05,
+          "y": 1.35,
+          "z": -2.422
+        },
+        "manifestYaw": 0,
+        "manifestFormat": "legacy",
+        "worldPosition": {
+          "x": -1.05,
+          "y": 1.35,
+          "z": -2.422
+        },
+        "worldYaw": 0,
+        "textureId": 1
+      }
+    ]
+  },
+  "observerFinalDebug": null,
+  "seatWire": {
+    "local": [
+      {
+        "direction": "framereceived",
+        "type": "room_state",
+        "occupancy": "{}"
+      },
+      {
+        "direction": "framesent",
+        "type": "seat_claim",
+        "seatId": "owner-desk-seat"
+      },
+      {
+        "direction": "framereceived",
+        "type": "room_state",
+        "occupancy": "{}"
+      },
+      {
+        "direction": "framereceived",
+        "type": "room_state",
+        "occupancy": "{\"owner-desk-seat\":\"4c5b9e98-7311-41bb-a858-7419d7ecd6ad\"}"
+      },
+      {
+        "direction": "framereceived",
+        "type": "seat_claim_result",
+        "result": {
+          "seatId": "owner-desk-seat",
+          "accepted": true,
+          "occupantId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad",
+          "previousSeatId": null
+        }
+      },
+      {
+        "direction": "framereceived",
+        "type": "room_state",
+        "occupancy": "{\"owner-desk-seat\":\"4c5b9e98-7311-41bb-a858-7419d7ecd6ad\"}"
+      },
+      {
+        "direction": "framesent",
+        "type": "seat_release",
+        "seatId": "owner-desk-seat"
+      },
+      {
+        "direction": "framereceived",
+        "type": "room_state",
+        "occupancy": "{\"owner-desk-seat\":\"4c5b9e98-7311-41bb-a858-7419d7ecd6ad\"}"
+      },
+      {
+        "direction": "framereceived",
+        "type": "room_state",
+        "occupancy": "{}"
+      }
+    ],
+    "observer": [
+      {
+        "direction": "framereceived",
+        "type": "room_state",
+        "occupancy": "{}"
+      },
+      {
+        "direction": "framereceived",
+        "type": "room_state",
+        "occupancy": "{\"owner-desk-seat\":\"4c5b9e98-7311-41bb-a858-7419d7ecd6ad\"}"
+      },
+      {
+        "direction": "framereceived",
+        "type": "room_state",
+        "occupancy": "{}"
+      }
+    ]
+  },
+  "finalDebug": {
+    "participantId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad",
+    "roomStateConnected": true,
+    "currentSeatId": null,
+    "pendingSeatId": null,
+    "seatOccupancy": {},
+    "featureFlags": {
+      "enterVr": true,
+      "audioJoin": true,
+      "screenShare": true,
+      "roomStateRealtime": true,
+      "remoteDiagnostics": true,
+      "sceneBundles": true,
+      "hostControlsEnabled": true,
+      "documentsEnabled": true,
+      "notesEnabled": true,
+      "personalRoomsEnabled": true,
+      "remoteBrowserEnabled": true,
+      "remoteBrowserExperimental": true,
+      "spatialAudio": true,
+      "avatarsEnabled": true,
+      "avatarPoseBinaryEnabled": true,
+      "avatarLipsyncEnabled": false,
+      "avatarLegIkEnabled": false,
+      "avatarSeatingEnabled": true,
+      "avatarCustomizationEnabled": false,
+      "avatarFallbackCapsulesEnabled": false
+    },
+    "localPose": {
+      "root": {
+        "x": 2.1,
+        "y": 0,
+        "z": -0.744,
+        "yaw": 0
+      },
+      "head": {
+        "x": 2.1,
+        "y": 1.6,
+        "z": -0.744,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    "sceneDebug": {
+      "state": "loaded",
+      "spawnApplied": true,
+      "spawnPointId": "main",
+      "camera": {
+        "world": {
+          "x": 2.1,
+          "y": 1.6,
+          "z": -0.744
+        },
+        "forward": {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        }
+      }
+    },
+    "mediaObjects": {
+      "physicalSurfaceIdsWithoutLogicalState": [],
+      "blockedReason": null,
+      "surfaces": [
+        {
+          "surfaceId": "workspace-main",
+          "label": "Work display",
+          "allowedObjectTypes": [
+            "markdown-board",
+            "image-viewer",
+            "video-player"
+          ],
+          "activeObjectId": "9d0256e7-a90f-4bb0-84cf-4630fec5ea0c",
+          "activeObjectType": "markdown-board",
+          "inputEnabled": true,
+          "maxDistanceM": 0.06,
+          "mediaAudioEnabled": false,
+          "lockedByParticipantId": null,
+          "visible": true,
+          "runtimeVisible": true,
+          "widthM": 1.2,
+          "heightM": 0.675,
+          "widthPx": 1920,
+          "heightPx": 1080,
+          "position": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "yaw": 0,
+          "pitch": 0,
+          "roll": 0,
+          "manifestPosition": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "manifestYaw": 0,
+          "manifestFormat": "legacy",
+          "worldPosition": {
+            "x": -1.05,
+            "y": 1.35,
+            "z": -2.422
+          },
+          "worldYaw": 0,
+          "textureId": 1
+        }
+      ]
+    }
+  },
+  "verdict": "functional-checks-passed",
+  "scope": "Spawn, authoritative seat state, movement and media object lifecycle; rendered-content evidence is recorded separately."
+}

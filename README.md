@@ -2,7 +2,28 @@
 
 Local review candidate for the FEAT-032 owner-bound private workspace. This is an original compact creative studio, not the eight-seat warm-modern meeting candidate.
 
-## Quality disposition: REWORK_REQUIRED
+## 0.4.1 — ready for user review
+
+The current review bundle is [0.4.1](assets/scenes/personal-workspace-v1/0.4.1/scene.json).
+It contains 149 supported reference volumes, realistic binding/page geometry,
+restrained timber finishes, a photographic exterior and a continuous baked enclosure.
+Shipping cost is 79,546 triangles and 214 render primitives. Book clustering,
+restraints, retrieval space and shelf load paths follow the shared Q8 arrangement rule.
+
+See the [source views](source/releases/0.4.1/review), [browser views](provenance/runtime-capture-0.4.1/clean),
+[working display](provenance/runtime-capture-0.4.1/normal-product/normal-workspace-content.png)
+and [quality assessment](provenance/releases/0.4.1/quality-review.json).
+Public staging review is explicitly authorized; human visual acceptance is still
+pending, with isCurrent=false and publicationReady=false.
+
+The validator binds actual geometry bounds, source/capture bytes and the exact
+platform revision a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d. Historical checks run in
+the pinned 0.4.0 tooling worktree; the current checkout's historical bytes and
+append-only indexes are independently checked. This avoids rewriting old evidence
+to accommodate new tooling. Reproducibility means two identical saved-baked-source
+exports, not independent author/bake runs.
+
+## Historical quality disposition: 0.3.0 and 0.4.0 require rework
 
 On 2026-09-19 the user rejected the visual quality of 0.3.0 at merge commit
 `705ed359269b5f9cd19168e63f0d7c3fc15a73b0`: simplified object design, insufficient
@@ -19,7 +40,7 @@ This records the rejection separately; published 0.3.0 source/release evidence i
 
 ## Boundary
 
-The repository owns one scene ID, `personal-workspace-v1`, and five materialized immutable review releases: `0.1.0`, `0.1.1`, the baked `0.2.0`, the derived-environment `0.3.0`, and the separately authored `0.4.0`. Historical public-staging rights apply only to the exact `0.1.x` and `0.2.0` bytes. Technical runtime checks passed for `0.3.0` and `0.4.0`, while their exact-byte rights review and human visual acceptance remain pending. Nothing in this tree is current, production-active, or publication-ready.
+The repository owns one scene ID, `personal-workspace-v1`, and six immutable review versions through `0.4.1`. Historical public-staging rights apply to the exact `0.1.x` and `0.2.0` bytes. Versions `0.3.0` and `0.4.0` keep their pending-rights and rework records. A new explicit decision authorizes `0.4.1` for isolated public staging review. No version is marked current, production-active or publication-ready.
 
 The historical source contract uses semantic Y-up coordinates. Release manifests use the explicit runtime adapter `x=x, y=y, z=-z` for the main spawn, owner seat, and `workspace-main` media surface. The separate `0.2.0` runtime-review input and versioned `0.3.0` visual-parity config convert Blender horizontal camera FOV to runtime vertical FOV at 16:9 without modifying that historical contract.
 
@@ -66,7 +87,6 @@ manifest.json
 
 ```bash
 pnpm install --frozen-lockfile
-pnpm build:metadata
 BLENDER_BIN=/path/to/blender pnpm build:release
 pnpm validate:visual
 pnpm test

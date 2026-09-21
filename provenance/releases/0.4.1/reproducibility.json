@@ -1,0 +1,52 @@
+{
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.1",
+  "result": "passed",
+  "runs": [
+    {
+      "rawGlb": {
+        "sha256": "b1cb0e1b15e929d86cb42a45b660febbad92d3d31eb105a2c5560178c9b73d55",
+        "sizeBytes": 13960440
+      },
+      "finalGlb": {
+        "sha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+        "sizeBytes": 12071664
+      }
+    },
+    {
+      "rawGlb": {
+        "sha256": "b1cb0e1b15e929d86cb42a45b660febbad92d3d31eb105a2c5560178c9b73d55",
+        "sizeBytes": 13960440
+      },
+      "finalGlb": {
+        "sha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+        "sizeBytes": 12071664
+      }
+    }
+  ],
+  "source": {
+    "sha256": "23c89a77249c2347b5a844130e59d2fc21bf46c032330901c4b4793bfc5b7596",
+    "sizeBytes": 46650503
+  },
+  "atlas": {
+    "sha256": "8b75f9a7512ae5d87a956b03508dc8d06dd3097c3826248761a002817f17d92b",
+    "sizeBytes": 3136415
+  },
+  "exporter": {
+    "sha256": "eaf9d09a109124c897e7a1a40b5861de09435cf5cbca910ae8f130a81af31fbc",
+    "sizeBytes": 8743
+  },
+  "finalizer": {
+    "sha256": "68b5e8c09b54bf8f40f4f1ba96111541ec557cdd6e284db1b05b4f36c572c9e8",
+    "sizeBytes": 2861
+  },
+  "blender": {
+    "sha256": "33ac108ebce3c271f5357e5c664d0488717263bcf2145c80300edd0b12c31880",
+    "sizeBytes": 163595448
+  },
+  "expected": {
+    "sha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+    "sizeBytes": 12071664
+  },
+  "scope": "Two byte-identical exports from the saved baked source; not a fresh-author or fresh-bake repeatability claim."
+}

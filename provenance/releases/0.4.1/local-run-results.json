@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.1",
+  "runs": [
+    {
+      "mode": "clean",
+      "reportSha256": "2e292b60ae5c3224d961db7b049e0e920dfd7f8efb26cbd1468e3c82504b7100",
+      "stats": {
+        "startTime": "2026-09-21T14:45:14.739Z",
+        "duration": 169814.34100000001,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "captureBinding": {
+        "glbSha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+        "manifestSha256": "26fd4b264f1d0085c756108ad03818ce390a7b4ceb3615282e698ece1560f2a9",
+        "configSha256": "c0dc1a2cb9eb899bb56bffd965bd401e54c07aaca468f32d0ba7a932563170f5",
+        "baseSha256": "5ba1e6dcd535e707af76fe6c5fd708158e9c6c37cffe8e1e9e410cd0f236b2f1",
+        "runnerSha256": "42fa50156f89e62943147a756c3af88db8c000bee5035711fb1a2a6dd4ae826d",
+        "runtimePlatformCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d"
+      }
+    },
+    {
+      "mode": "normal",
+      "reportSha256": "85770c211ef97165fdbfaeae561a123fcdd314afe24a2f627fbf8d5903735cf4",
+      "stats": {
+        "startTime": "2026-09-21T14:48:06.878Z",
+        "duration": 107451.49200000001,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "captureBinding": {
+        "glbSha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+        "manifestSha256": "26fd4b264f1d0085c756108ad03818ce390a7b4ceb3615282e698ece1560f2a9",
+        "configSha256": "c0dc1a2cb9eb899bb56bffd965bd401e54c07aaca468f32d0ba7a932563170f5",
+        "baseSha256": "5ba1e6dcd535e707af76fe6c5fd708158e9c6c37cffe8e1e9e410cd0f236b2f1",
+        "runnerSha256": "42fa50156f89e62943147a756c3af88db8c000bee5035711fb1a2a6dd4ae826d",
+        "runtimePlatformCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d"
+      }
+    }
+  ]
+}

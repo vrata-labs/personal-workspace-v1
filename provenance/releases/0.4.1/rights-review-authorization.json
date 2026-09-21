@@ -1,0 +1,11 @@
+{
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.1",
+  "glbSha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+  "approvalStatus": "approved-for-public-staging-review",
+  "userDecision": "Да, разрешаю review-публикацию",
+  "scope": "Existing documented Poly Haven CC0 inputs and project-authored corrected scenes in isolated public staging review rooms; current rooms stay unchanged pending evaluation.",
+  "humanAcceptance": "pending-human-acceptance",
+  "isCurrent": false,
+  "publicationReady": false
+}

@@ -1,0 +1,940 @@
+{
+  "kind": "supported-library-arrangement",
+  "sourceSha256": "82e822b0d92230afc14b3660a07a79b17ea96293daf2b724f49d07033fbe5003",
+  "registrySha256": "4ddbfed6308c6f3d109283686342ee6ea16930c1947dfc002a79bfdcea3d353c",
+  "method": "world-space actual mesh vertices; flat board contact, shelf bearing, end restraint and overhead access",
+  "groups": [
+    {
+      "shelf": "library.bottom",
+      "books": 38,
+      "neighbourContacts": [
+        {
+          "left": "book-001",
+          "right": "book-002",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-002",
+          "right": "book-003",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-003",
+          "right": "book-004",
+          "gapM": -5.960464477539063e-08
+        },
+        {
+          "left": "book-004",
+          "right": "book-005",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-005",
+          "right": "book-006",
+          "gapM": -5.960464477539063e-08
+        },
+        {
+          "left": "book-006",
+          "right": "book-007",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-007",
+          "right": "book-008",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-008",
+          "right": "book-009",
+          "gapM": -2.9802322387695312e-08
+        },
+        {
+          "left": "book-009",
+          "right": "book-010",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-010",
+          "right": "book-011",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-011",
+          "right": "book-012",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-012",
+          "right": "book-013",
+          "gapM": 2.9802322387695312e-08
+        },
+        {
+          "left": "book-013",
+          "right": "book-014",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-014",
+          "right": "book-015",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-015",
+          "right": "book-016",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-016",
+          "right": "book-017",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-017",
+          "right": "book-018",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-018",
+          "right": "book-019",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-019",
+          "right": "book-020",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-020",
+          "right": "book-021",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-021",
+          "right": "book-022",
+          "gapM": -7.450580596923828e-09
+        },
+        {
+          "left": "book-022",
+          "right": "book-023",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-023",
+          "right": "book-024",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-024",
+          "right": "book-025",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-025",
+          "right": "book-026",
+          "gapM": -1.862645149230957e-09
+        },
+        {
+          "left": "book-026",
+          "right": "book-027",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-027",
+          "right": "book-028",
+          "gapM": -7.450580596923828e-09
+        },
+        {
+          "left": "book-028",
+          "right": "book-029",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-029",
+          "right": "book-030",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-030",
+          "right": "book-031",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-031",
+          "right": "book-032",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-032",
+          "right": "book-033",
+          "gapM": 2.9802322387695312e-08
+        },
+        {
+          "left": "book-033",
+          "right": "book-034",
+          "gapM": 2.9802322387695312e-08
+        },
+        {
+          "left": "book-034",
+          "right": "book-035",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-035",
+          "right": "book-036",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-036",
+          "right": "book-037",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-037",
+          "right": "book-038",
+          "gapM": -2.9802322387695312e-08
+        }
+      ],
+      "endRestraintGapsM": [
+        -5.960464477539063e-08,
+        0.0
+      ],
+      "shelfBearingGapsM": [
+        -1.4901161193847656e-08,
+        0.0,
+        -1.4901161193847656e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -7.450580596923828e-09,
+        -7.450580596923828e-09,
+        -7.450580596923828e-09,
+        0.0,
+        0.0,
+        -1.4901161193847656e-08,
+        0.0,
+        -7.450580596923828e-09,
+        -7.450580596923828e-09,
+        0.0,
+        -7.450580596923828e-09,
+        0.0,
+        0.0,
+        -7.450580596923828e-09,
+        0.0,
+        0.0,
+        -7.450580596923828e-09,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -7.450580596923828e-09,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -7.450580596923828e-09,
+        0.0,
+        0.0
+      ],
+      "minimumRetrievalHeadroomM": 0.07599997520446777,
+      "passed": true
+    },
+    {
+      "shelf": "library.shelf-0",
+      "books": 34,
+      "neighbourContacts": [
+        {
+          "left": "book-039",
+          "right": "book-040",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-040",
+          "right": "book-041",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-041",
+          "right": "book-042",
+          "gapM": -5.960464477539063e-08
+        },
+        {
+          "left": "book-042",
+          "right": "book-043",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-043",
+          "right": "book-044",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-044",
+          "right": "book-045",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-045",
+          "right": "book-046",
+          "gapM": 5.960464477539063e-08
+        },
+        {
+          "left": "book-046",
+          "right": "book-047",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-047",
+          "right": "book-048",
+          "gapM": -2.9802322387695312e-08
+        },
+        {
+          "left": "book-048",
+          "right": "book-049",
+          "gapM": 2.9802322387695312e-08
+        },
+        {
+          "left": "book-049",
+          "right": "book-050",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-050",
+          "right": "book-051",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-051",
+          "right": "book-052",
+          "gapM": 2.9802322387695312e-08
+        },
+        {
+          "left": "book-052",
+          "right": "book-053",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-053",
+          "right": "book-054",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-054",
+          "right": "book-055",
+          "gapM": 2.9802322387695312e-08
+        },
+        {
+          "left": "book-055",
+          "right": "book-056",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-056",
+          "right": "book-057",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-057",
+          "right": "book-058",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-058",
+          "right": "book-059",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-059",
+          "right": "book-060",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-060",
+          "right": "book-061",
+          "gapM": -7.450580596923828e-09
+        },
+        {
+          "left": "book-061",
+          "right": "book-062",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-062",
+          "right": "book-063",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-063",
+          "right": "book-064",
+          "gapM": -9.313225746154785e-10
+        },
+        {
+          "left": "book-064",
+          "right": "book-065",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-065",
+          "right": "book-066",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-066",
+          "right": "book-067",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-067",
+          "right": "book-068",
+          "gapM": -7.450580596923828e-09
+        },
+        {
+          "left": "book-068",
+          "right": "book-069",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-069",
+          "right": "book-070",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-070",
+          "right": "book-071",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-071",
+          "right": "book-072",
+          "gapM": 0.0
+        }
+      ],
+      "endRestraintGapsM": [
+        0.0,
+        0.0
+      ],
+      "shelfBearingGapsM": [
+        0.0,
+        0.0,
+        5.960464477539063e-08,
+        0.0,
+        0.0,
+        5.960464477539063e-08,
+        2.9802322387695312e-08,
+        2.9802322387695312e-08,
+        0.0,
+        0.0,
+        5.960464477539063e-08,
+        2.9802322387695312e-08,
+        0.0,
+        0.0,
+        0.0,
+        2.9802322387695312e-08,
+        0.0,
+        0.0,
+        0.0,
+        2.9802322387695312e-08,
+        0.0,
+        5.960464477539063e-08,
+        0.0,
+        0.0,
+        2.9802322387695312e-08,
+        2.9802322387695312e-08,
+        0.0,
+        2.9802322387695312e-08,
+        0.0,
+        0.0,
+        0.0,
+        2.9802322387695312e-08,
+        0.0,
+        5.960464477539063e-08
+      ],
+      "minimumRetrievalHeadroomM": 0.07599997520446777,
+      "passed": true
+    },
+    {
+      "shelf": "library.shelf-1",
+      "books": 41,
+      "neighbourContacts": [
+        {
+          "left": "book-073",
+          "right": "book-074",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-074",
+          "right": "book-075",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-075",
+          "right": "book-076",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-076",
+          "right": "book-077",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-077",
+          "right": "book-078",
+          "gapM": -5.960464477539063e-08
+        },
+        {
+          "left": "book-078",
+          "right": "book-079",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-079",
+          "right": "book-080",
+          "gapM": -5.960464477539063e-08
+        },
+        {
+          "left": "book-080",
+          "right": "book-081",
+          "gapM": -5.960464477539063e-08
+        },
+        {
+          "left": "book-081",
+          "right": "book-082",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-082",
+          "right": "book-083",
+          "gapM": -2.9802322387695312e-08
+        },
+        {
+          "left": "book-083",
+          "right": "book-084",
+          "gapM": -2.9802322387695312e-08
+        },
+        {
+          "left": "book-084",
+          "right": "book-085",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-085",
+          "right": "book-086",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-086",
+          "right": "book-087",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-087",
+          "right": "book-088",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-088",
+          "right": "book-089",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-089",
+          "right": "book-090",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-090",
+          "right": "book-091",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-091",
+          "right": "book-092",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-092",
+          "right": "book-093",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-093",
+          "right": "book-094",
+          "gapM": -7.450580596923828e-09
+        },
+        {
+          "left": "book-094",
+          "right": "book-095",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-095",
+          "right": "book-096",
+          "gapM": -7.450580596923828e-09
+        },
+        {
+          "left": "book-096",
+          "right": "book-097",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-097",
+          "right": "book-098",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-098",
+          "right": "book-099",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-099",
+          "right": "book-100",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-100",
+          "right": "book-101",
+          "gapM": -7.450580596923828e-09
+        },
+        {
+          "left": "book-101",
+          "right": "book-102",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-102",
+          "right": "book-103",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-103",
+          "right": "book-104",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-104",
+          "right": "book-105",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-105",
+          "right": "book-106",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-106",
+          "right": "book-107",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-107",
+          "right": "book-108",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-108",
+          "right": "book-109",
+          "gapM": 2.9802322387695312e-08
+        },
+        {
+          "left": "book-109",
+          "right": "book-110",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-110",
+          "right": "book-111",
+          "gapM": -2.9802322387695312e-08
+        },
+        {
+          "left": "book-111",
+          "right": "book-112",
+          "gapM": -2.9802322387695312e-08
+        },
+        {
+          "left": "book-112",
+          "right": "book-113",
+          "gapM": 0.0
+        }
+      ],
+      "endRestraintGapsM": [
+        -5.960464477539063e-08,
+        0.0
+      ],
+      "shelfBearingGapsM": [
+        0.0,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        0.0,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        0.0,
+        0.0,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        0.0,
+        0.0,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        0.0,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        0.0,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        0.0,
+        0.0,
+        -5.960464477539063e-08,
+        0.0,
+        0.0,
+        -5.960464477539063e-08,
+        0.0,
+        -5.960464477539063e-08,
+        0.0,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08,
+        0.0,
+        -5.960464477539063e-08,
+        -5.960464477539063e-08
+      ],
+      "minimumRetrievalHeadroomM": 0.07700002193450928,
+      "passed": true
+    },
+    {
+      "shelf": "library.shelf-2",
+      "books": 36,
+      "neighbourContacts": [
+        {
+          "left": "book-114",
+          "right": "book-115",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-115",
+          "right": "book-116",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-116",
+          "right": "book-117",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-117",
+          "right": "book-118",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-118",
+          "right": "book-119",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-119",
+          "right": "book-120",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-120",
+          "right": "book-121",
+          "gapM": -5.960464477539063e-08
+        },
+        {
+          "left": "book-121",
+          "right": "book-122",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-122",
+          "right": "book-123",
+          "gapM": -2.9802322387695312e-08
+        },
+        {
+          "left": "book-123",
+          "right": "book-124",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-124",
+          "right": "book-125",
+          "gapM": -2.9802322387695312e-08
+        },
+        {
+          "left": "book-125",
+          "right": "book-126",
+          "gapM": -2.9802322387695312e-08
+        },
+        {
+          "left": "book-126",
+          "right": "book-127",
+          "gapM": 2.9802322387695312e-08
+        },
+        {
+          "left": "book-127",
+          "right": "book-128",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-128",
+          "right": "book-129",
+          "gapM": 2.9802322387695312e-08
+        },
+        {
+          "left": "book-129",
+          "right": "book-130",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-130",
+          "right": "book-131",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-131",
+          "right": "book-132",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-132",
+          "right": "book-133",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-133",
+          "right": "book-134",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-134",
+          "right": "book-135",
+          "gapM": -7.450580596923828e-09
+        },
+        {
+          "left": "book-135",
+          "right": "book-136",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-136",
+          "right": "book-137",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-137",
+          "right": "book-138",
+          "gapM": -9.313225746154785e-10
+        },
+        {
+          "left": "book-138",
+          "right": "book-139",
+          "gapM": -1.862645149230957e-09
+        },
+        {
+          "left": "book-139",
+          "right": "book-140",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-140",
+          "right": "book-141",
+          "gapM": -7.450580596923828e-09
+        },
+        {
+          "left": "book-141",
+          "right": "book-142",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-142",
+          "right": "book-143",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-143",
+          "right": "book-144",
+          "gapM": -1.4901161193847656e-08
+        },
+        {
+          "left": "book-144",
+          "right": "book-145",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-145",
+          "right": "book-146",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-146",
+          "right": "book-147",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-147",
+          "right": "book-148",
+          "gapM": 0.0
+        },
+        {
+          "left": "book-148",
+          "right": "book-149",
+          "gapM": 0.0
+        }
+      ],
+      "endRestraintGapsM": [
+        -5.960464477539063e-08,
+        0.0
+      ],
+      "shelfBearingGapsM": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.1920928955078125e-07,
+        0.0,
+        0.0,
+        0.0,
+        1.1920928955078125e-07,
+        0.0,
+        0.0,
+        1.1920928955078125e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.1920928955078125e-07,
+        0.0,
+        0.0,
+        0.0,
+        1.1920928955078125e-07,
+        0.0,
+        0.0,
+        1.1920928955078125e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "minimumRetrievalHeadroomM": 0.08700001239776611,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "limits": "Geometric evidence only; source/browser images and real-use references establish the group-level visual verdict."
+}

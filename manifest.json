@@ -3,12 +3,12 @@
   "sceneId": "personal-workspace-v1",
   "blenderVersion": "4.5.12 LTS",
   "blenderBuildHash": "84afd5f785f7",
-  "platformValidatorCommit": "c6343de81b038b7937addac44c24fa7c46adf341",
+  "platformValidatorCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d",
   "status": "review",
   "acceptanceStatus": "pending-human-acceptance",
   "visualAcceptanceStatus": "pending-human-acceptance",
-  "rightsApprovalStatus": "pending-human-rights-approval",
-  "rightsApproved": false,
+  "rightsApprovalStatus": "approved-for-public-staging-review",
+  "rightsApproved": true,
   "publicationReady": false,
   "releases": [
     {
@@ -211,6 +211,63 @@
         "animations": 0,
         "scenes": 1
       }
+    },
+    {
+      "sceneId": "personal-workspace-v1",
+      "version": "0.4.1",
+      "baseVersion": "0.4.0",
+      "releaseKind": "quality-rework-review",
+      "releasePath": "assets/scenes/personal-workspace-v1/0.4.1",
+      "status": "review",
+      "humanAcceptance": "pending-human-acceptance",
+      "acceptanceStatus": "pending-human-acceptance",
+      "visualAcceptanceStatus": "pending-human-acceptance",
+      "qualityOutcome": "READY_FOR_USER_REVIEW",
+      "rightsStatus": "approved-for-public-staging-review",
+      "rightsApprovalStatus": "approved-for-public-staging-review",
+      "rightsApproved": true,
+      "isCurrent": false,
+      "publicationReady": false,
+      "platformValidatorCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d",
+      "files": {
+        "LICENSES.md": {
+          "sha256": "d8cd675e11b2882db37b33f1ee73d6a53bae795e2307ae32b204ad15ad92aa5b",
+          "sizeBytes": 1605
+        },
+        "preview.webp": {
+          "sha256": "a261623c4dbf70a015269866ec164ae061fcc17c1a9dd6dfbb9acee324e62377",
+          "sizeBytes": 38098
+        },
+        "scene.glb": {
+          "sha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+          "sizeBytes": 12071664
+        },
+        "scene.json": {
+          "sha256": "26fd4b264f1d0085c756108ad03818ce390a7b4ceb3615282e698ece1560f2a9",
+          "sizeBytes": 6658
+        }
+      },
+      "stats": {
+        "triangles": 79546,
+        "objects": 178,
+        "meshes": 178,
+        "primitives": 214,
+        "materials": 23,
+        "textures": 16,
+        "animations": 0,
+        "scenes": 1
+      },
+      "sourceLockPath": "source/releases/0.4.1/review-source-lock.json",
+      "sourceLockSha256": "fd6f2da3e72450be9bb95efd9eac4de0398b1b482442a8ea32b79ebaca72e868",
+      "releaseLedgerPath": "provenance/releases/0.4.1/release-ledger.json",
+      "releaseLedgerSha256": "372c480fa90ce4ebc64b4929473ad800eb1958f9da94d752d122cb5f43509bfe",
+      "reproducibility": {
+        "result": "byte-identical-raw-and-final-glb",
+        "runs": 2,
+        "scope": "Two byte-identical exports from the saved baked source; not a fresh-author or fresh-bake repeatability claim."
+      }
     }
-  ]
+  ],
+  "qualityOutcome": "READY_FOR_USER_REVIEW",
+  "isCurrent": false
 }

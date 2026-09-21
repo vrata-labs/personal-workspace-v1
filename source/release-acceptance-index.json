@@ -25,6 +25,21 @@
       "technicalRuntimeCapture": "passed-single-exact-byte-clean-and-normal-capture",
       "publicationReady": false,
       "isCurrent": false
+    },
+    {
+      "version": "0.4.1",
+      "status": "review-source-lock",
+      "lockPath": "source/releases/0.4.1/review-source-lock.json",
+      "lockSha256": "fd6f2da3e72450be9bb95efd9eac4de0398b1b482442a8ea32b79ebaca72e868",
+      "releaseLedgerPath": "provenance/releases/0.4.1/release-ledger.json",
+      "releaseLedgerSha256": "372c480fa90ce4ebc64b4929473ad800eb1958f9da94d752d122cb5f43509bfe",
+      "visualParityConfigPath": "source/releases/0.4.1/visual-parity-config.json",
+      "visualParityConfigSha256": "cdbad641e72aac06fc16ec1d3877f25a0ac92f4aeea0fdbabfc266062a506794",
+      "qualityOutcome": "READY_FOR_USER_REVIEW",
+      "humanVisualAccepted": false,
+      "rightsApproved": true,
+      "publicationReady": false,
+      "isCurrent": false
     }
   ]
 }

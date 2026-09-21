@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.1",
+  "platformRuntimeCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d",
+  "reviewViews": [
+    {
+      "id": "desk-underneath",
+      "position": {
+        "x": 0.550000011920929,
+        "y": 0.3499999940395355,
+        "z": -1.149999976158142
+      },
+      "target": {
+        "x": -0.37153154611587524,
+        "y": 0.4898187518119812,
+        "z": -1.5122570991516113
+      },
+      "fovDegrees": 44.18247571420401
+    },
+    {
+      "id": "diagonal-overview",
+      "position": {
+        "x": -0.25,
+        "y": 1.649999976158142,
+        "z": 2.200000047683716
+      },
+      "target": {
+        "x": -0.08467516303062439,
+        "y": 1.5147346258163452,
+        "z": 1.2230808734893799
+      },
+      "fovDegrees": 48.84456193542063
+    },
+    {
+      "id": "door-detail",
+      "position": {
+        "x": 0.75,
+        "y": 1.25,
+        "z": 1.1699999570846558
+      },
+      "target": {
+        "x": 1.4279674291610718,
+        "y": 1.18491530418396,
+        "z": 1.9022048711776733
+      },
+      "fovDegrees": 33.90588841516515
+    },
+    {
+      "id": "entry",
+      "position": {
+        "x": 2.450000047683716,
+        "y": 1.600000023841858,
+        "z": 2.119999885559082
+      },
+      "target": {
+        "x": 1.7748494148254395,
+        "y": 1.5259512662887573,
+        "z": 1.3860456943511963
+      },
+      "fovDegrees": 43.421819904102854
+    },
+    {
+      "id": "owner-seated",
+      "position": {
+        "x": -1.0499999523162842,
+        "y": 1.2000000476837158,
+        "z": -0.7200000286102295
+      },
+      "target": {
+        "x": -1.0499999523162842,
+        "y": 1.0879285335540771,
+        "z": -1.713700294494629
+      },
+      "fovDegrees": 48.84456193542063
+    },
+    {
+      "id": "reading",
+      "position": {
+        "x": 0.699999988079071,
+        "y": 1.5,
+        "z": 0.15000000596046448
+      },
+      "target": {
+        "x": -0.20660698413848877,
+        "y": 1.2582380771636963,
+        "z": 0.4958537518978119
+      },
+      "fovDegrees": 36.765193046311715
+    },
+    {
+      "id": "shelf-detail",
+      "position": {
+        "x": -1.9800000190734863,
+        "y": 0.8600000143051147,
+        "z": 0.019999999552965164
+      },
+      "target": {
+        "x": -2.9787025451660156,
+        "y": 0.8100649118423462,
+        "z": 0.029987085610628128
+      },
+      "fovDegrees": 41.16611695103978
+    },
+    {
+      "id": "shelf-group",
+      "position": {
+        "x": -1.059999942779541,
+        "y": 1.1200000047683716,
+        "z": -0.2199999988079071
+      },
+      "target": {
+        "x": -2.0511534214019775,
+        "y": 0.9909437894821167,
+        "z": -0.18902644515037537
+      },
+      "fovDegrees": 42.665599749358314
+    },
+    {
+      "id": "window-near",
+      "position": {
+        "x": 1.649999976158142,
+        "y": 1.600000023841858,
+        "z": 0.3499999940395355
+      },
+      "target": {
+        "x": 2.5827245712280273,
+        "y": 1.5434715747833252,
+        "z": -0.006130963563919067
+      },
+      "fovDegrees": 38.216586096610754
+    },
+    {
+      "id": "window-seated",
+      "position": {
+        "x": -1.0499999523162842,
+        "y": 1.2000000476837158,
+        "z": -0.7200000286102295
+      },
+      "target": {
+        "x": -0.058289408683776855,
+        "y": 1.2461262941360474,
+        "z": -0.6000720858573914
+      },
+      "fovDegrees": 38.216586096610754
+    },
+    {
+      "id": "workspace-detail",
+      "position": {
+        "x": 0.6000000238418579,
+        "y": 1.4500000476837158,
+        "z": -0.05000000074505806
+      },
+      "target": {
+        "x": -0.11522156000137329,
+        "y": 1.2005040645599365,
+        "z": -0.7028475403785706
+      },
+      "fovDegrees": 35.32850786881517
+    }
+  ],
+  "qualityOutcome": "READY_FOR_USER_REVIEW",
+  "humanAcceptance": "pending-human-acceptance",
+  "thresholds": {
+    "finalThresholdsDefined": false
+  },
+  "regressionScope": "Exact-byte input/camera/coverage checks and manual paired-image assessment; no calibrated image-score quality claim.",
+  "captureRunner": {
+    "executable": "pnpm",
+    "argv": [
+      "test:e2e",
+      "tests/e2e/scene-quality-0.4.1-local.spec.ts",
+      "--grep-invert",
+      "@staging",
+      "--workers=1"
+    ],
+    "workers": 1,
+    "environment": [
+      "SCENE_QUALITY_DIR",
+      "SCENE_QUALITY_OUTPUT",
+      "SCENE_QUALITY_NORMAL",
+      "BASE_URL",
+      "E2E_API_PORT",
+      "E2E_ROOM_STATE_PORT",
+      "E2E_REMOTE_BROWSER_PORT"
+    ]
+  }
+}
