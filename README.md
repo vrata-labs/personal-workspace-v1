@@ -16,6 +16,11 @@ and [quality assessment](provenance/releases/0.4.1/quality-review.json).
 Public staging review is explicitly authorized; human visual acceptance is still
 pending, with isCurrent=false and publicationReady=false.
 
+[Open the public review room](https://158.160.10.234.sslip.io/rooms/review-personal-workspace-041-e0042809).
+[Published-scene evidence](docs/staging/0.4.1/verification.json) and
+[the corrected library on staging](docs/staging/0.4.1/detail-shelf-group.png)
+are recorded separately from the immutable release.
+
 The validator binds actual geometry bounds, source/capture bytes and the exact
 platform revision a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d. Historical checks run in
 the pinned 0.4.0 tooling worktree; the current checkout's historical bytes and

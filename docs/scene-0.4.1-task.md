@@ -42,7 +42,7 @@ run lengths leave useful reserve space. Keep the spines visible and retrieval
 clearance above. No mandatory random leaning, dirt or arbitrary shelf-fill target.
 Measure neighbour/end contacts and shelf bearing; inspect group and close-up views.
 
-## Remaining inherited blockers
+## Corrected inherited blockers
 
 Wood response differs from Cycles; wall/window lightmap seams; 397 meshes exceed
 250. Optimization must preserve constituent identities, construction evidence and
@@ -67,9 +67,11 @@ Scene publication and exact-SHA review-room observations are recorded separately
 Source/browser views: entry, owner-seated, workspace-detail, reading, overview,
 window-near/seated, underside, shelf-group, shelf-detail, door-detail; normal product
 checks separately. Paired camera transforms and received GLB hash must agree.
-Before/after correction log, source-lock/reproducibility, final bundle budgets,
-exact-SHA staging links and human verdict remain pending. No human acceptance or
-new rights approval is inferred from the instruction to continue development.
+The correction log, source lock, reproducibility and bundle budget checks passed.
+The [public-stage record](staging/0.4.1/verification.json) binds the exact merge SHA,
+owner-seat/display flow, library/window detail images and the 40-test staging pass.
+Existing room bindings were preserved. Human visual acceptance remains pending;
+review-publication rights are the separate explicit decision below.
 
 ## Explicit review-publication authorization
 

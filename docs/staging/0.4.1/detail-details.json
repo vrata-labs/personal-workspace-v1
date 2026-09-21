@@ -1,0 +1,70 @@
+{
+  "roomUrl": "https://158.160.10.234.sslip.io/rooms/review-personal-workspace-041-e0042809",
+  "candidateCommit": "e0042809cd05691b9e09e244820f95f334eb2bbf",
+  "platformCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d",
+  "receivedGlbSha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+  "syntheticReviewPoseUsed": true,
+  "scope": "Visual close-ups in the actual product manifest; functional seat evidence is recorded separately",
+  "cameras": [
+    {
+      "id": "shelf-group",
+      "requestedEye": {
+        "x": -1.059999942779541,
+        "y": 1.1200000047683716,
+        "z": -0.2199999988079071
+      },
+      "camera": {
+        "world": {
+          "x": -1.06,
+          "y": 1.12,
+          "z": -0.22
+        },
+        "forward": {
+          "x": -0.991,
+          "y": -0.129,
+          "z": 0.031
+        }
+      }
+    },
+    {
+      "id": "shelf-detail",
+      "requestedEye": {
+        "x": -1.9800000190734863,
+        "y": 0.8600000143051147,
+        "z": 0.019999999552965164
+      },
+      "camera": {
+        "world": {
+          "x": -1.98,
+          "y": 0.86,
+          "z": 0.02
+        },
+        "forward": {
+          "x": -0.999,
+          "y": -0.05,
+          "z": 0.01
+        }
+      }
+    },
+    {
+      "id": "window-seated",
+      "requestedEye": {
+        "x": -1.0499999523162842,
+        "y": 1.2000000476837158,
+        "z": -0.7200000286102295
+      },
+      "camera": {
+        "world": {
+          "x": -1.05,
+          "y": 1.2,
+          "z": -0.72
+        },
+        "forward": {
+          "x": 0.992,
+          "y": 0.046,
+          "z": 0.12
+        }
+      }
+    }
+  ]
+}
