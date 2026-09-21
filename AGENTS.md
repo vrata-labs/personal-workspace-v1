@@ -8,6 +8,8 @@
 
 ## Shared scene-quality workflow
 
+- Personal Workspace 0.4.1 at `e0042809cd05691b9e09e244820f95f334eb2bbf` was explicitly visually accepted by the user on 2026-09-21: `VISUALLY_ACCEPTED`. See `docs/reviews/2026-09-21-0.4.1-visual-acceptance.md`. Preserve this accepted quality in future revisions; immutable pre-review pending fields do not negate the later verdict. Rights and promotion remain separate gates.
+
 - Before every new or resumed art task, read the [shared quality contract](https://github.com/vrata-labs/platform/blob/a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d/docs/scene-quality-contract.md) and fill the [task packet](https://github.com/vrata-labs/platform/blob/a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d/docs/scene-authoring-task-template.md). Record that revision and any later applicable shared feedback.
 - Every recognizable object needs purpose, intended users/actions, believable construction/materials and support. Run User/Builder/Physics passes against final geometry and views. Passive/deferred props are valid without runtime interaction.
 - Inherit realistic materials and photographic-quality distant surroundings from the accepted Warm Modern Meeting 0.3.3 benchmark. Inspect actual source/browser pairs, seated views and close-ups; self-calibrated PHASH/NCC, tags and loaded-state checks prove neither realism nor usefulness.

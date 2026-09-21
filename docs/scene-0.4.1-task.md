@@ -1,6 +1,6 @@
 # Personal Workspace 0.4.1 — quality rework
 
-Outcome: READY_FOR_USER_REVIEW; human acceptance pending. Base: a13fb5ab5fefc50a64d3b0634deb1220cf6138a8.
+Outcome: VISUALLY_ACCEPTED; explicit [human acceptance](reviews/2026-09-21-0.4.1-visual-acceptance.md) received on 2026-09-21. Base: a13fb5ab5fefc50a64d3b0634deb1220cf6138a8.
 Shared contract: platform c6343de81b038b7937addac44c24fa7c46adf341 plus
 2026-09-20 Q8 context/arrangement feedback published as platform
 73876058784c581605bf7047d8643864f6b45868 (PR #103).
@@ -70,8 +70,9 @@ checks separately. Paired camera transforms and received GLB hash must agree.
 The correction log, source lock, reproducibility and bundle budget checks passed.
 The [public-stage record](staging/0.4.1/verification.json) binds the exact merge SHA,
 owner-seat/display flow, library/window detail images and the 40-test staging pass.
-Existing room bindings were preserved. Human visual acceptance remains pending;
-review-publication rights are the separate explicit decision below.
+Existing room bindings were preserved. Human visual acceptance was subsequently
+received and is recorded separately above; review-publication rights are the
+separate explicit decision below.
 
 ## Explicit review-publication authorization
 
