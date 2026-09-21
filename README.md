@@ -1,8 +1,8 @@
 # Personal Workspace v1
 
-Local review candidate for the FEAT-032 owner-bound private workspace. This is an original compact creative studio, not the eight-seat warm-modern meeting candidate.
+Visually accepted scene for the FEAT-032 owner-bound private workspace. This is an original compact creative studio, not the eight-seat warm-modern meeting candidate.
 
-## 0.4.1 — ready for user review
+## 0.4.1 — visually accepted
 
 The current review bundle is [0.4.1](assets/scenes/personal-workspace-v1/0.4.1/scene.json).
 It contains 149 supported reference volumes, realistic binding/page geometry,
@@ -13,8 +13,12 @@ restraints, retrieval space and shelf load paths follow the shared Q8 arrangemen
 See the [source views](source/releases/0.4.1/review), [browser views](provenance/runtime-capture-0.4.1/clean),
 [working display](provenance/runtime-capture-0.4.1/normal-product/normal-workspace-content.png)
 and [quality assessment](provenance/releases/0.4.1/quality-review.json).
-Public staging review is explicitly authorized; human visual acceptance is still
-pending, with isCurrent=false and publicationReady=false.
+The user explicitly accepted the delivered 0.4.1 scene on 2026-09-21:
+[human visual acceptance](docs/reviews/2026-09-21-0.4.1-visual-acceptance.md).
+Workflow outcome: **VISUALLY_ACCEPTED**. Frozen release/evidence pending fields
+record the pre-review state; the later human verdict is recorded separately.
+Public staging review is authorized; current-release selection and publication
+readiness retain their separate gates (isCurrent=false, publicationReady=false).
 
 [Open the public review room](https://158.160.10.234.sslip.io/rooms/review-personal-workspace-041-e0042809).
 [Published-scene evidence](docs/staging/0.4.1/verification.json) and
