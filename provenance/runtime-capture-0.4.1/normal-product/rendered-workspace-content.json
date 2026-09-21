@@ -1,0 +1,469 @@
+{
+  "captureBinding": {
+    "glbSha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+    "manifestSha256": "26fd4b264f1d0085c756108ad03818ce390a7b4ceb3615282e698ece1560f2a9",
+    "configSha256": "c0dc1a2cb9eb899bb56bffd965bd401e54c07aaca468f32d0ba7a932563170f5",
+    "baseSha256": "5ba1e6dcd535e707af76fe6c5fd708158e9c6c37cffe8e1e9e410cd0f236b2f1",
+    "runnerSha256": "42fa50156f89e62943147a756c3af88db8c000bee5035711fb1a2a6dd4ae826d",
+    "runtimePlatformCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d"
+  },
+  "seatId": "owner-desk-seat",
+  "camera": {
+    "world": {
+      "x": -1.05,
+      "y": 1.199,
+      "z": -0.72
+    },
+    "forward": {
+      "x": 0,
+      "y": 0,
+      "z": -1
+    }
+  },
+  "board": {
+    "objectId": "9d0256e7-a90f-4bb0-84cf-4630fec5ea0c",
+    "surfaceId": "workspace-main",
+    "active": true,
+    "noteCount": 1,
+    "revision": 1,
+    "localCanEdit": true,
+    "lastInputEventId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad:markdown-board:create:1790002171795:wmytvl",
+    "errorCode": null,
+    "notes": [
+      {
+        "noteId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad:note:1790002171795:93n7h9",
+        "text": "Workspace review 0.4.1 — a readable note on the work display",
+        "x": 0.08,
+        "y": 0.16,
+        "width": 0.24,
+        "height": 0.18
+      }
+    ]
+  },
+  "media": {
+    "selectedSurfaceId": "workspace-main",
+    "physicalSurfaceIdsWithoutLogicalState": [],
+    "logicalSurfaceIdsWithoutPhysicalView": [
+      "debug-main",
+      "whiteboard-wall",
+      "laptop-screen"
+    ],
+    "unrenderedObjectIds": [],
+    "runtimeResetCount": 3,
+    "lastRuntimeResetSurfaceIds": [
+      "debug-main",
+      "whiteboard-wall",
+      "laptop-screen"
+    ],
+    "lastRuntimeResetSurfaceIdsWithCachedRuntimes": [],
+    "surfaces": [
+      {
+        "surfaceId": "workspace-main",
+        "label": "Work display",
+        "allowedObjectTypes": [
+          "markdown-board",
+          "image-viewer",
+          "video-player"
+        ],
+        "activeObjectId": "9d0256e7-a90f-4bb0-84cf-4630fec5ea0c",
+        "activeObjectType": "markdown-board",
+        "inputEnabled": true,
+        "maxDistanceM": 0.06,
+        "mediaAudioEnabled": false,
+        "lockedByParticipantId": null,
+        "visible": true,
+        "runtimeVisible": true,
+        "widthM": 1.2,
+        "heightM": 0.675,
+        "widthPx": 1920,
+        "heightPx": 1080,
+        "position": {
+          "x": -1.05,
+          "y": 1.35,
+          "z": -2.422
+        },
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "manifestPosition": {
+          "x": -1.05,
+          "y": 1.35,
+          "z": -2.422
+        },
+        "manifestYaw": 0,
+        "manifestFormat": "legacy",
+        "worldPosition": {
+          "x": -1.05,
+          "y": 1.35,
+          "z": -2.422
+        },
+        "worldYaw": 0,
+        "textureId": 1
+      }
+    ],
+    "objects": [
+      {
+        "objectId": "9d0256e7-a90f-4bb0-84cf-4630fec5ea0c",
+        "type": "markdown-board",
+        "surfaceId": "workspace-main",
+        "ownerParticipantId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad",
+        "state": {
+          "status": "active",
+          "notes": [
+            {
+              "noteId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad:note:1790002171795:93n7h9",
+              "authorParticipantId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad",
+              "text": "Workspace review 0.4.1 — a readable note on the work display",
+              "x": 0.08,
+              "y": 0.16,
+              "width": 0.24,
+              "height": 0.18,
+              "color": "#fde68a",
+              "createdAtMs": 1790002171796,
+              "updatedAtMs": 1790002171796
+            }
+          ],
+          "revision": 1,
+          "lastInputEventId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad:markdown-board:create:1790002171795:wmytvl"
+        },
+        "revision": 1,
+        "status": "active"
+      }
+    ],
+    "extensions": [
+      {
+        "id": "vrata.surface-test-card",
+        "version": "0.1.0",
+        "displayName": "Surface Test Card",
+        "enabled": true,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "surface-test-card",
+            "displayName": "Surface Test Card",
+            "stateKind": "surface-test-card",
+            "enabled": true,
+            "available": true,
+            "requiredCapabilities": [
+              "surface.render",
+              "surface.input.pointer",
+              "room.state.read",
+              "room.state.write"
+            ],
+            "requiredPermissions": [
+              "surface.input"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.screen-share",
+        "version": "0.1.0",
+        "displayName": "Screen Share",
+        "enabled": true,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "screen-share",
+            "displayName": "Screen Share",
+            "stateKind": "screen-share",
+            "enabled": true,
+            "available": true,
+            "requiredCapabilities": [
+              "surface.render",
+              "room.state.read",
+              "room.state.write",
+              "media.publish",
+              "media.subscribe"
+            ],
+            "requiredPermissions": [
+              "screen-share.start",
+              "screen-share.stop"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.whiteboard",
+        "version": "0.1.0",
+        "displayName": "Interactive Whiteboard",
+        "enabled": true,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "whiteboard",
+            "displayName": "Interactive Whiteboard",
+            "stateKind": "whiteboard",
+            "enabled": true,
+            "available": true,
+            "requiredCapabilities": [
+              "surface.render",
+              "surface.input.pointer",
+              "room.state.read",
+              "room.state.write"
+            ],
+            "requiredPermissions": [
+              "whiteboard.draw",
+              "whiteboard.clear"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.markdown-board",
+        "version": "0.1.0",
+        "displayName": "Markdown Sticky Board",
+        "enabled": true,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "markdown-board",
+            "displayName": "Markdown Sticky Board",
+            "stateKind": "markdown-board",
+            "enabled": true,
+            "available": true,
+            "requiredCapabilities": [
+              "surface.render",
+              "room.state.read",
+              "room.state.write"
+            ],
+            "requiredPermissions": [
+              "markdown-board.view",
+              "markdown-board.edit"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.remote-browser",
+        "version": "0.1.0",
+        "displayName": "Remote Browser",
+        "enabled": true,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "remote-browser",
+            "displayName": "Remote Browser",
+            "stateKind": "remote-browser",
+            "enabled": true,
+            "available": true,
+            "requiredCapabilities": [
+              "surface.render",
+              "surface.input.pointer",
+              "surface.input.keyboard",
+              "room.state.read",
+              "room.state.write",
+              "media.subscribe",
+              "remote.executor"
+            ],
+            "requiredPermissions": [
+              "remote-browser.open-url",
+              "remote-browser.input",
+              "remote-browser.stop"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.pdf-presentation",
+        "version": "0.1.0",
+        "displayName": "PDF Presentation",
+        "enabled": true,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "pdf-presentation",
+            "displayName": "PDF Presentation",
+            "stateKind": "pdf-presentation",
+            "enabled": true,
+            "available": true,
+            "requiredCapabilities": [
+              "surface.render",
+              "room.state.read",
+              "room.state.write"
+            ],
+            "requiredPermissions": [
+              "document.present"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.image-viewer",
+        "version": "0.1.0",
+        "displayName": "Image Viewer",
+        "enabled": true,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "image-viewer",
+            "displayName": "Image Viewer",
+            "stateKind": "image-viewer",
+            "enabled": true,
+            "available": true,
+            "requiredCapabilities": [
+              "surface.render",
+              "room.state.read",
+              "room.state.write"
+            ],
+            "requiredPermissions": [
+              "document.present"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.video-player",
+        "version": "0.1.0",
+        "displayName": "Video Player",
+        "enabled": true,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "video-player",
+            "displayName": "Video Player",
+            "stateKind": "video-player",
+            "enabled": true,
+            "available": true,
+            "requiredCapabilities": [
+              "surface.render",
+              "room.state.read",
+              "room.state.write"
+            ],
+            "requiredPermissions": [
+              "document.present"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.extension-test-card",
+        "version": "0.1.0",
+        "displayName": "Extension Test Card",
+        "enabled": true,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "extension-test-card",
+            "displayName": "Extension Test Card",
+            "stateKind": "surface-test-card",
+            "enabled": true,
+            "available": true,
+            "requiredCapabilities": [
+              "surface.render",
+              "surface.input.pointer",
+              "room.state.read",
+              "room.state.write"
+            ],
+            "requiredPermissions": [
+              "surface.input"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.missing-capability-demo",
+        "version": "0.1.0",
+        "displayName": "Missing Capability Demo",
+        "enabled": true,
+        "valid": false,
+        "validationErrors": [
+          "missing-capability:missing-capability-extension-card:surface.render"
+        ],
+        "objectTypes": [
+          {
+            "objectType": "missing-capability-extension-card",
+            "displayName": "Missing Capability Card",
+            "stateKind": "surface-test-card",
+            "enabled": true,
+            "available": false,
+            "requiredCapabilities": [
+              "surface.render",
+              "room.state.read"
+            ],
+            "requiredPermissions": [
+              "surface.input"
+            ],
+            "missingCapabilities": [
+              "surface.render"
+            ],
+            "missingPermissions": []
+          }
+        ]
+      },
+      {
+        "id": "vrata.disabled-demo",
+        "version": "0.1.0",
+        "displayName": "Disabled Demo Extension",
+        "enabled": false,
+        "valid": true,
+        "validationErrors": [],
+        "objectTypes": [
+          {
+            "objectType": "disabled-extension-card",
+            "displayName": "Disabled Extension Card",
+            "stateKind": "surface-test-card",
+            "enabled": false,
+            "available": false,
+            "requiredCapabilities": [
+              "surface.render",
+              "surface.input.pointer",
+              "room.state.read",
+              "room.state.write"
+            ],
+            "requiredPermissions": [
+              "surface.input"
+            ],
+            "missingCapabilities": [],
+            "missingPermissions": []
+          }
+        ]
+      }
+    ],
+    "availableObjectTypes": [
+      "markdown-board",
+      "image-viewer",
+      "video-player"
+    ],
+    "lastCommand": {
+      "accepted": true,
+      "permission": "markdown-board.edit",
+      "role": "host",
+      "commandId": "4c5b9e98-7311-41bb-a858-7419d7ecd6ad:markdown-board-create-note:1790002171795:e1db6eea89ea2",
+      "blockedReason": null,
+      "surfaceId": "workspace-main",
+      "objectId": "9d0256e7-a90f-4bb0-84cf-4630fec5ea0c",
+      "objectType": "markdown-board",
+      "revision": 1
+    },
+    "blockedReason": null,
+    "activeTestCardClickCount": null
+  }
+}

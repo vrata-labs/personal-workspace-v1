@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.1",
+  "releasePath": "assets/scenes/personal-workspace-v1/0.4.1",
+  "files": {
+    "LICENSES.md": {
+      "sha256": "d8cd675e11b2882db37b33f1ee73d6a53bae795e2307ae32b204ad15ad92aa5b",
+      "sizeBytes": 1605
+    },
+    "preview.webp": {
+      "sha256": "a261623c4dbf70a015269866ec164ae061fcc17c1a9dd6dfbb9acee324e62377",
+      "sizeBytes": 38098
+    },
+    "scene.glb": {
+      "sha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+      "sizeBytes": 12071664
+    },
+    "scene.json": {
+      "sha256": "26fd4b264f1d0085c756108ad03818ce390a7b4ceb3615282e698ece1560f2a9",
+      "sizeBytes": 6658
+    }
+  },
+  "stats": {
+    "triangles": 79546,
+    "objects": 178,
+    "meshes": 178,
+    "primitives": 214,
+    "materials": 23,
+    "textures": 16,
+    "animations": 0,
+    "scenes": 1
+  },
+  "sourceLock": {
+    "path": "source/releases/0.4.1/review-source-lock.json",
+    "sha256": "fd6f2da3e72450be9bb95efd9eac4de0398b1b482442a8ea32b79ebaca72e868",
+    "sizeBytes": 8972
+  },
+  "evidenceFiles": [
+    {
+      "path": "provenance/releases/0.4.1/arrangement-measurements.json",
+      "sha256": "1459819818ac8981dcc6e071a2fea33a7ec562895ce9a076f6a2df61e209ce0f",
+      "sizeBytes": 20803
+    },
+    {
+      "path": "provenance/releases/0.4.1/export-geometry.json",
+      "sha256": "f94831f78ef2f31906c52769da7ea6cdf99ab62d9079ea27929a486893b31384",
+      "sizeBytes": 234936
+    },
+    {
+      "path": "provenance/releases/0.4.1/geometry-measurements.json",
+      "sha256": "08035eb7cb1e6a31acac42643b02cbff0fd22a67be15414c4bd8c703ec3cf67c",
+      "sizeBytes": 3836
+    },
+    {
+      "path": "provenance/releases/0.4.1/local-run-results.json",
+      "sha256": "b7761caae744cdee2d9138f7d742536445fccf40414b1cda67a510014e70dfa6",
+      "sizeBytes": 1903
+    },
+    {
+      "path": "provenance/releases/0.4.1/quality-review.json",
+      "sha256": "1da7880d920c424c3520cf0fde4cbd6a1b396f40b8103cf40191bebf2b183531",
+      "sizeBytes": 3990
+    },
+    {
+      "path": "provenance/releases/0.4.1/reproducibility.json",
+      "sha256": "36d28ff989a8c3ff7e9873ee8dece0a2f26ab0ddd0ea0fd8e75f2d4ba307f9f9",
+      "sizeBytes": 1593
+    },
+    {
+      "path": "provenance/releases/0.4.1/rights-review-authorization.json",
+      "sha256": "a9a7f955858a5f38c4461e58eeb17f4e6b3bc0f673bfef6edd97fbc5518a4c23",
+      "sizeBytes": 567
+    },
+    {
+      "path": "provenance/releases/0.4.1/support-measurements.json",
+      "sha256": "1117bf1729cfff4847be9d3cfe6033698eca13fe1868104a0145e7777fa1f5a1",
+      "sizeBytes": 378086
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/capture-settings.json",
+      "sha256": "c0bf7d158a4739bc37232125483e41d4bf871b688558470b4bca8891c97f4740",
+      "sizeBytes": 12279
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/clean-spawn.png",
+      "sha256": "503a2591566d80ea1440d7e54982180f19898c84603cd901f3115eac19aa0f26",
+      "sizeBytes": 549065
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/desk-underneath.png",
+      "sha256": "a5901eb6223c7009a424b148a77964d02abd7b3ab6ce61f12517e36396186beb",
+      "sizeBytes": 661977
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/diagonal-overview.png",
+      "sha256": "f7d5af4971a170033572f503218e0224ad30a5ef20f8bb9648078e9e119dd4f0",
+      "sizeBytes": 573075
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/door-detail.png",
+      "sha256": "fa2c0e3ae6f03f0f459a2d7d1478b2742acd306f059a304fa57f7ac9f78c7faf",
+      "sizeBytes": 469347
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/entry.png",
+      "sha256": "9a6ac9c279b7b4d0bf7bb1031c17aa78a51fce139dc8b1fa952f334b67e31a4e",
+      "sizeBytes": 623926
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/owner-seated.png",
+      "sha256": "dd00600f885591a1cf43385f14150bfe92caa8c923f6e5ace051203cf87ee1bb",
+      "sizeBytes": 391800
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/reading.png",
+      "sha256": "9b587c6706f8da879063e68777f35ebc94444d592029df53b63405d1f1eb430a",
+      "sizeBytes": 797326
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/scene-debug.json",
+      "sha256": "c6890bb227696f173f944e482a3ca1e7ddee4d3361c1210f57c465a214acdccc",
+      "sizeBytes": 11826
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/shelf-detail.png",
+      "sha256": "23cd701d9068c315be94c7dbdd3f0881c77d7f874712a26126a5d1206d7955bd",
+      "sizeBytes": 918858
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/shelf-group.png",
+      "sha256": "198e6f795de4ef7b9f610b711fa579ef87ce84bf1a2cb2186d1582258563fe37",
+      "sizeBytes": 998725
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/window-near.png",
+      "sha256": "11756003931d4021eba3cde5328f4001309973e11ca2ecd4760bddaa23d09b50",
+      "sizeBytes": 780174
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/window-seated.png",
+      "sha256": "a98b15843bfa26ab38ede45ddaccc0cbbb7ce687fd4deb3f858b375403b1cd7f",
+      "sizeBytes": 285125
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/clean/workspace-detail.png",
+      "sha256": "6ed3e5264e13e93a7ece021ef79fa876a4976c6ec5221f2d53b01c58ac8dd42e",
+      "sizeBytes": 690329
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/normal-product/normal-media.png",
+      "sha256": "3358446e7376477e1aee862f4717c3d3c5cbccdf6e28ecbbec7d88bac1175046",
+      "sizeBytes": 352646
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/normal-product/normal-owner-desk-seat.png",
+      "sha256": "1e41298ca988b8e1929586c7d4e698076d892db4e89d3712fe9944f30dcf267f",
+      "sizeBytes": 392045
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/normal-product/normal-product-evidence.json",
+      "sha256": "f06147636131ec1fccf7931ce8507622f510acf0325d1d4958abc8410baa51bb",
+      "sizeBytes": 16832
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/normal-product/normal-spawn.png",
+      "sha256": "bf3097a5a0b07dba169a9b955171e1abb996700d272c6a2848dd0c8e627d64e3",
+      "sizeBytes": 544418
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/normal-product/normal-workspace-content.png",
+      "sha256": "a45b12cb3e6355efc2601710714a14450fc928650ffa073ebf60ad715b321131",
+      "sizeBytes": 409336
+    },
+    {
+      "path": "provenance/runtime-capture-0.4.1/normal-product/rendered-workspace-content.json",
+      "sha256": "60f06410d3e1e2a4149836247271bfb7f610561498e5abdf4b81a5d9a0b85813",
+      "sizeBytes": 13750
+    }
+  ],
+  "qualityOutcome": "READY_FOR_USER_REVIEW",
+  "humanAcceptance": "pending-human-acceptance",
+  "rightsStatus": "approved-for-public-staging-review",
+  "rightsApproved": true,
+  "isCurrent": false,
+  "publicationReady": false
+}

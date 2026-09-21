@@ -1,0 +1,29 @@
+{
+  "origin": "project-authored fictional titles and procedural cloth; no scanned cover artwork",
+  "pillow": "11.3.0",
+  "fonts": [
+    {
+      "name": "DejaVuSans.ttf",
+      "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+    },
+    {
+      "name": "DejaVuSerif.ttf",
+      "sha256": "8f2c103bfa3fd5de71f1b92b18f21906b5a26871fb7e19a9a4c9af539c3cc7ab"
+    }
+  ],
+  "sha256": "964845faad59235411e0a10715cb0c6a1ab4df0940b6ac5212a48b601b7d9815",
+  "tiles": 128,
+  "width": 2112,
+  "height": 2048,
+  "pageStrip": {
+    "x": 2048,
+    "width": 64,
+    "purpose": "paper edges share the binding atlas, preserving one primitive per book"
+  },
+  "roughnessMask": {
+    "name": "book-finish.png",
+    "sha256": "2bd2bab1f67a10bd536320bdeca94d148d8eaae80f8710dd0df09635a813ad6a",
+    "width": 64,
+    "height": 1
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "personal-workspace-v1",
+  "releaseVersion": "0.4.1",
+  "qualityOutcome": "READY_FOR_USER_REVIEW",
+  "humanAcceptance": "pending-human-acceptance",
+  "reviewedOn": "2026-09-21",
+  "sharedQualityContractCommit": "a3a905ea3bcbe290e77fa4c7fc2dd92214097a4d",
+  "benchmarkCommit": "5580a7b080cf6195e28ebc77b654fd71111b0cd1",
+  "sourceViews": "source/releases/0.4.1/review",
+  "browserViews": "provenance/runtime-capture-0.4.1/clean",
+  "inspectedPairs": ["entry", "owner-seated", "workspace-detail", "reading", "diagonal-overview", "window-near", "window-seated", "desk-underneath", "shelf-detail", "shelf-group", "door-detail"],
+  "verdicts": {
+    "inheritedQualityTarget": "passed-author-review",
+    "sourceToRuntimeFidelity": "passed-author-review-with-renderer-differences-described",
+    "functionalNormalProduct": "passed-local-authoritative-seat-and-rendered-workspace-content",
+    "repeatability": "two-exports-from-saved-baked-source"
+  },
+  "requirements": {
+    "Q1": "All eleven source/browser camera pairs inspected, including ordinary entry, reading, seated use and close-ups. The former dark/red timber and detached-looking wall/window joins are corrected.",
+    "Q2": "Each book, restraint, fixture and furniture assembly retains object/part identity; batch membership maps back to source parts.",
+    "Q3": "Declared part contacts, shelf bearing, lateral book restraint and world geometry are measured. Rear shelf ledgers carry the denser library. Masonry is a closed exact union with conserved volume and original constituent evidence.",
+    "Q4": "Owner claim/release, seated movement lock and standing movement are exercised against server state and another participant. The workspace board displays an actual note. Books and door operation remain physically plausible deferred uses.",
+    "Q5": "The current geometry passes the unchanged reach, knee, route, spawn and display-ray checks. Actual seated camera and post-release floor position are recorded.",
+    "Q6": "The cleared photographic Cannon exterior is retained and inspected in near-window and seated views; frame, sill and reveals read as one installation.",
+    "Q7": "Warm Modern Meeting 0.3.3 quality level and later shared feedback are retained; 0.4.0 is historical rejected/rework evidence rather than the target.",
+    "Q8": "149 reference volumes form four supported runs. Neighbours touch, the case side and a clamped bookend retain each run, retrieval headroom remains, and related formats vary as series rather than isolated display props. The shelf group was compared with real-use photographs."
+  },
+  "corrections": [
+    "Replaced 120 mm isolated-book pitch with measured contiguous runs and readable project-authored bindings.",
+    "Added rear shelf load paths and corrected bookend/clamp and spine/board interfaces.",
+    "Combined paper/binding texture regions without removing book parts, reducing actual shipping primitives below 250.",
+    "Revised the source timber finish consistently in both renderers rather than overriding runtime colors.",
+    "Removed plaster T-junction raster cracks by joining the enclosure before lightmap generation; verified closed topology and union volume.",
+    "Preserved Float32 positions, normals and UVs through lossless Meshopt encoding and checked decoded attributes."
+  ],
+  "renderingDifferences": [
+    "Cycles area-light reflections and the runtime room environment differ on metal and grazing timber; the corresponding finish, grain scale, shapes and material distinctions remain recognizable.",
+    "The baked browser view retains stronger fine book-edge/contact contrast than the path-traced source."
+  ],
+  "unresolvedQualityBlockers": [],
+  "limits": ["No human visual acceptance is inferred.", "Physical-headset comfort is not claimed.", "Saved-source export repeatability is not a fresh-author/fresh-bake proof.", "Public exact-commit staging observations are recorded separately after publication."]
+}
