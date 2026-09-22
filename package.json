@@ -1,27 +1,27 @@
 {
   "name": "@vrata/personal-workspace-v1",
   "private": true,
-  "version": "0.4.1",
+  "version": "0.4.2",
   "type": "module",
   "packageManager": "pnpm@10.34.1",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "build": "node scripts/materialize-review-release-0.4.1.mjs",
+    "build": "node scripts/metadata-release.mjs build",
     "build:metadata": "node scripts/build-candidate.mjs",
-    "build:release": "node scripts/materialize-review-release-0.4.1.mjs",
+    "build:release": "node scripts/metadata-release.mjs build",
     "preview:review": "node scripts/rework-preview-0.4.1.mjs",
     "build:legacy-review": "node scripts/build-review-release.mjs && node scripts/write-review-evidence.mjs",
     "build:legacy-baked": "node scripts/build-baked-release.mjs",
     "calibrate:visual": "node scripts/calibrate-review-visual.mjs",
-    "manifest:check": "node source/releases/0.4.1/validate-review.mjs",
-    "validate": "node source/releases/0.4.1/validate-review.mjs && node scripts/historical-check.mjs validate",
-    "validate:review": "node source/releases/0.4.1/validate-review.mjs",
-    "validate:visual": "node source/releases/0.4.1/validate-review.mjs && node scripts/historical-check.mjs validate:visual",
-    "inspect": "gltf-transform inspect assets/scenes/personal-workspace-v1/0.4.1/scene.glb",
-    "test": "node scripts/historical-check.mjs test && node --test tests/immutability-workflow.test.mjs tests/release-0.4.1.test.mjs",
-    "verify:reproducibility": "node scripts/historical-check.mjs verify:reproducibility && node source/releases/0.4.1/verify-reproducibility.mjs"
+    "manifest:check": "node scripts/metadata-release.mjs validate",
+    "validate": "node scripts/historical-check.mjs validate && node scripts/metadata-release.mjs validate",
+    "validate:review": "node scripts/metadata-release.mjs validate",
+    "validate:visual": "node scripts/historical-check.mjs validate:visual && node scripts/metadata-release.mjs validate",
+    "inspect": "gltf-transform inspect assets/scenes/personal-workspace-v1/0.4.2/scene.glb",
+    "test": "node scripts/historical-check.mjs test && node --test tests/immutability-workflow.test.mjs tests/metadata-release.test.mjs",
+    "verify:reproducibility": "node scripts/historical-check.mjs verify:reproducibility && node scripts/metadata-release.mjs validate"
   },
   "devDependencies": {
     "@gltf-transform/cli": "4.4.2",
