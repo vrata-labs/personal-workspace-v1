@@ -118,7 +118,17 @@ jobs:
           echo "BLENDER_BIN=$RUNNER_TEMP/blender-4.5.12-linux-x64/blender" >> "$GITHUB_ENV"
 
       - name: Verify historical and current pinned Blender reproducibility
+        id: reproducibility
         run: pnpm verify:reproducibility
+
+      - name: Diagnose a historical panorama reproduction failure
+        if: failure() && steps.reproducibility.outcome == 'failure'
+        run: |
+          "$BLENDER_BIN" --background --python-exit-code 1 \
+            --python-expr 'import numpy as np; print("numpy_cpu_features", np.core._multiarray_umath.__cpu_features__)' \
+            --python source/releases/0.3.0/generate-panorama.py \
+            --python-expr 'import sys; sys.stdout.flush()' -- \
+            --parameters source/releases/0.3.0/panorama-parameters.json --decoded-only
 
       - name: Read platform validator lock
         id: platform-ref

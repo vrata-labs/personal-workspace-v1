@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "releaseKind": "rights-metadata-only",
+  "base": {
+    "schemaVersion": 1,
+    "sceneId": "personal-workspace-v1",
+    "version": "0.4.2",
+    "baseVersion": "0.4.1",
+    "baseCommit": "322aa40562472b50d2de3bbc0aae660b6fed5918",
+    "visualAcceptancePath": "docs/reviews/2026-09-21-0.4.1-visual-acceptance.md",
+    "rightsDate": "2026-09-22",
+    "rightsQuestion": "Для Personal и Presentation ранее было отдельно разрешено только публичное staging-ревью. Подтверждаете использование тех же принятых сцен и задокументированных CC0-материалов как стандартных сцен продукта, включая production и распространение в публичных GLB?",
+    "rightsAnswer": "Да, разрешаю основной выпуск"
+  },
+  "files": {
+    "scene.json": {
+      "sha256": "60f5090745ae4ac1131bb35380fc9f6c5569c691b87c60e29aa781edfec85149",
+      "sizeBytes": 6717
+    },
+    "scene.glb": {
+      "sha256": "d69bd6fe61edc74254e35d421a2ca9fa1ddf9760fbc129dbc851a9485073e6f2",
+      "sizeBytes": 12071664
+    },
+    "preview.webp": {
+      "sha256": "a261623c4dbf70a015269866ec164ae061fcc17c1a9dd6dfbb9acee324e62377",
+      "sizeBytes": 38098
+    },
+    "LICENSES.md": {
+      "sha256": "6291a5903d3ed9fa4452f1a6c1b504de765ad383effff3413d439b821e66175a",
+      "sizeBytes": 1349
+    }
+  },
+  "visualAcceptance": {
+    "path": "docs/reviews/2026-09-21-0.4.1-visual-acceptance.md",
+    "commit": "322aa40562472b50d2de3bbc0aae660b6fed5918",
+    "sha256": "4ff74c603f18b89798ce2a60f0ef1eff82d080de2134a4d44d7b91e7226ec229",
+    "sizeBytes": 1851
+  },
+  "baseSourceManifest": {
+    "path": "assets/scenes/personal-workspace-v1/0.4.1/scene.json",
+    "sha256": "26fd4b264f1d0085c756108ad03818ce390a7b4ceb3615282e698ece1560f2a9",
+    "sizeBytes": 6658
+  },
+  "rightsEvidence": {
+    "path": "provenance/releases/0.4.2/rights-approval.md",
+    "sha256": "a0ef15770b8303b00d54bb683d99ddfbba97cb52133d3fa325e2a846353c4701",
+    "sizeBytes": 1058
+  }
+}

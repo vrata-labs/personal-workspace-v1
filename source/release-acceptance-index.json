@@ -40,6 +40,14 @@
       "rightsApproved": true,
       "publicationReady": false,
       "isCurrent": false
+    },
+    {
+      "version": "0.4.2",
+      "releaseKind": "rights-metadata-only",
+      "sourceLockPath": "source/releases/0.4.2/release-lock.json",
+      "sourceLockSha256": "0d61273204b1300125506d6b4087f3c32418f86039b12189a46188c0896d055c",
+      "isCurrent": false,
+      "publicationReady": false
     }
   ]
 }

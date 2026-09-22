@@ -1,6 +1,7 @@
 # Project Contract
 
 - This repository owns only `personal-workspace-v1`.
+- On 2026-09-22 the owner explicitly approved production/product use and public GLB redistribution of the accepted scene and its documented CC0 inputs. Release 0.4.2 records that permission without changing the accepted 0.4.1 GLB/preview. See `provenance/releases/0.4.2/rights-approval.md`; physical-device acceptance and catalog activation remain distinct platform steps.
 - Historical rights approval on 2026-08-29 covers its recorded release bytes; it does not approve later assets or visual quality. Keep release status `review`, `isCurrent=false`, and `publicationReady=false` until the separate gates are resolved.
 - Do not add uncleared third-party assets, branding, private references, credentials, or local paths to release files. Cleared photographic panoramas/PBR inputs are allowed with exact source/license/provenance and required rights approval; do not replace a realistic target with a cartoon to avoid asset clearance.
 - Release directories are immutable once published and contain exactly `scene.json`, `scene.glb`, `preview.webp`, and `LICENSES.md`.

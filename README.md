@@ -2,6 +2,20 @@
 
 Visually accepted scene for the FEAT-032 owner-bound private workspace. This is an original compact creative studio, not the eight-seat warm-modern meeting candidate.
 
+## 0.4.2 — product rights metadata
+
+The owner explicitly authorized standard product use, production and public GLB
+redistribution on 2026-09-22. [Release 0.4.2](assets/scenes/personal-workspace-v1/0.4.2/scene.json)
+changes only version/rights metadata and license text; the accepted 0.4.1 GLB and
+preview are byte-identical. The [rights record](provenance/releases/0.4.2/rights-approval.md)
+and [metadata lock](source/releases/0.4.2/release-lock.json) preserve the decision
+and exact base. Historical records remain unchanged. Physical device acceptance
+and product catalog activation remain pending in the platform plan.
+
+Use pnpm build for scratch materialization and pnpm validate for exact metadata,
+payload, history and source checks. The 0.4.1 checks run in their exact historical
+worktree; the current metadata validator independently verifies unchanged history.
+
 ## 0.4.1 — visually accepted
 
 The current review bundle is [0.4.1](assets/scenes/personal-workspace-v1/0.4.1/scene.json).
@@ -49,7 +63,7 @@ This records the rejection separately; published 0.3.0 source/release evidence i
 
 ## Boundary
 
-The repository owns one scene ID, `personal-workspace-v1`, and six immutable review versions through `0.4.1`. Historical public-staging rights apply to the exact `0.1.x` and `0.2.0` bytes. Versions `0.3.0` and `0.4.0` keep their pending-rights and rework records. A new explicit decision authorizes `0.4.1` for isolated public staging review. No version is marked current, production-active or publication-ready.
+The repository owns one scene ID, `personal-workspace-v1`, and seven immutable versions through `0.4.2`. Historical public-staging rights apply to the exact `0.1.x` and `0.2.0` bytes. Versions `0.3.0` and `0.4.0` keep their pending-rights and rework records. The `0.4.1` staging-review decision is retained; `0.4.2` records the later explicit product/production and redistribution permission. No version is marked current, production-active or publication-ready.
 
 The historical source contract uses semantic Y-up coordinates. Release manifests use the explicit runtime adapter `x=x, y=y, z=-z` for the main spawn, owner seat, and `workspace-main` media surface. The separate `0.2.0` runtime-review input and versioned `0.3.0` visual-parity config convert Blender horizontal camera FOV to runtime vertical FOV at 16:9 without modifying that historical contract.
 
